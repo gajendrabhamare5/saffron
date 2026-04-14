@@ -1159,6 +1159,7 @@ jQuery(document).on("click", ".commontabsworli", function () {
             if (data && data['t1'] && data['t1'][0]) {
                 if (oldGameId != data.t1[0].mid && data.t1[0].mid != 0 && data.t1[0].mid != "0") {
                     setTimeout(function () {
+                        
                         clearCards();
                     },
     <?php echo CASINO_RESULT_TIMEOUT; ?>);
