@@ -1,0 +1,43 @@
+<?php
+
+include('../include/conn.php');
+
+include "../session.php";
+
+$user_id = $_SESSION['CLIENT_LOGIN_ID'];
+$eventType = $conn->real_escape_string($_REQUEST['eventType']);
+
+if($eventType == "All" or $eventType ==""){		
+	$event_type_selection = "";	
+}else{
+	$event_type_selection = "and event_type='$eventType'";
+}
+	$get_all_open_bet_data = $conn->query("SELECT * FROM unmatched_bet_details where user_id=$user_id and bet_status=1 order by bet_time desc");
+
+	while($fetch_open_bet_data = mysqli_fetch_assoc($get_all_open_bet_data)){
+
+		$open_bet_data [] = $fetch_open_bet_data;
+
+	}
+
+	
+	if($open_bet_data != null){
+		$return_array = array(
+
+					"status" =>'ok',
+"message"=>"",
+					"unmatched_bet_data"=>$open_bet_data,
+
+					);
+	}else{
+		$return_array = array(
+						"status" =>'ok',
+						"message"=>"No unmatched bet available.",
+						);
+		
+	}
+	
+
+	echo json_encode($return_array);
+
+?>

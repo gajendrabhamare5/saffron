@@ -1,0 +1,52 @@
+.sixplayer-image img {
+    width: 40px;
+}
+.winner-img{
+	width: 50px;
+	margin-top: 10px;
+}
+.br1{
+	border-right: 1px solid #bfbfbf;
+}
+.rules-table td, .rules-table th{
+	padding: 7px;
+}
+.sidebar-right-inner{
+	height: 90vh;
+    overflow-y: auto;
+    overflow-X: hidden;
+}
+
+
+.b-table-sticky-header, .table-responsive, [class*="table-responsive-"]{
+	margin-bottom: 0 !important;
+}
+
+.table{
+	margin-bottom: 0 !important;
+}
+
+.video-overlay .ab-rtlslider {
+    margin: 0 10px !important;
+    width: 110px !important;
+}
+
+.video-overlay .ab-rtlslider .owl-prev {
+    position: absolute !important;
+    top: 0px !important;
+    right: -10px !important;
+}
+
+.video-overlay .ab-rtlslider .owl-next {
+    position: absolute !important;
+    top: 0px !important;
+    left: -10px !important;
+}
+
+.video-overlay .ab-rtlslider .owl-next span,
+.video-overlay .ab-rtlslider .owl-prev span {
+    color: #fff !important;
+    font-size: 26px !important;
+    line-height: 1 !important;
+}
+

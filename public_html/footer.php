@@ -1,0 +1,8555 @@
+            <link href="/toastr/toastr.min.css?319" rel="stylesheet">
+            <script src="/toastr/toastr.min.js?213" type="text/javascript"></script>
+<section class="footer">
+    <div class="footer-top">
+        <div class="footer-links">
+            <nav class="navbar navbar-expand-sm">
+                <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="/terms-and-conditions" target="_blank"> Terms and Conditions </a></li>
+                <li class="nav-item"><a class="nav-link" href="/responsible-gaming" target="_blank"> Responsible Gaming </a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="support-detail">
+            <h2>24X7 Support</h2>
+            <p></p>
+        </div>
+        <div class="social-icons-box"></div>
+    </div>
+</section>
+<div class="footer-bottom">
+   <div class="secure-logo">
+      <div><img src="storage/front/img/ssl.png"></div>
+      <div class="ml-2">
+         <b>100% SAFE</b>
+         <div>Protected connection and encrypted data.</div>
+      </div>
+   </div>
+   <div class="d-inline-block"><button class="btn p-0"><img src="storage/front/img/18plus.png"></button><a href="https://www.gamcare.org.uk/" target="_blank"><img src="storage/front/img/gamecare.png"></a><a href="https://www.gamblingtherapy.org/" target="_blank"><img src="storage/front/img/gt.png"></a></div>
+</div>
+<footer>
+	<p class="text-center">
+		&copy; Copyright 2021. All Rights Reserved. Powered by <?php echo SITE_NAME;?>.
+	</p>
+</footer>
+
+<div role="dialog" class="modal fade" id="modal_login_popup" aria-modal="true">
+	<div class="modal-dialog modal-lg"><span tabindex="0"></span>
+		<div role="document" tabindex="-1" class="modal-content" id="__BVID__151___BV_modal_content_">
+			<header class="modal-header" id="__BVID__151___BV_modal_header_">
+				<h5 class="modal-title" id="__BVID__151___BV_modal_title_"></h5>
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+			</header>
+			<div class="modal-body" id="__BVID__151___BV_modal_body_">
+				<div style="box-shadow: 0px 0px 5px; padding: 10px;">
+					<h2>Dear Client,</h2>
+					<h5 class="mb-1">You are requested to login with our official site <a href="javascript:void(0)">'<?php echo WEB_URL;?>'</a> only. Please check the site name before you login.</h5>
+					<h5 class="mb-1">Thanks for your support.</h5>
+					<h5 class="mb-1">Team <?php echo SITE_NAME;?></h5></div>
+				<div class="mt-5 font-hindi" style="box-shadow: 0px 0px 5px; padding: 10px;">
+					<h2>प्रिय ग्राहक,</h2>
+					<h5 class="mb-1">आपसे अनुरोध है कि केवल हमारी आधिकारिक साइट <a href="javascript:void(0)">'<?php echo WEB_URL;?>'</a> से लॉगिन करें। लॉगइन करने से पहले साइट का नाम जरूर देख लें।</h5>
+					<h5 class="mb-1">आपके समर्थन के लिए धन्यवाद।</h5>
+					<h5 class="mb-1">टीम <?php echo SITE_NAME;?></h5></div>
+				<div class="text-right mt-3">
+					<button class="btn btn-primary" style="min-width: 100px;" class="close" data-dismiss="modal">OK</button>
+				</div>
+			</div>
+			<!---->
+		</div><span tabindex="0"></span></div>
+</div>
+
+
+<div id="myMarketModal" role="dialog" class="modal fade" aria-modal="true">
+   <div class="modal-dialog modal-lg">
+      <span tabindex="0"></span>
+      <div role="document" tabindex="-1" class="modal-content">
+         <header class="modal-header">
+            <h5 class="modal-title">My Market</h5>
+            <button type="button" aria-label="Close" class="close" data-dismiss="modal">&times;</button>
+         </header>
+         <div class="modal-body">
+            <table class="table table-hover">
+               <thead>
+                  <tr class="theme1font">
+                     <th>Event Type</th>
+                     <th>Event Name</th>
+                     <th>Match Name</th>
+                     <th>Trade</th>
+                  </tr>
+               </thead>
+               <tbody id="myMarketTableBody"></tbody>
+            </table>
+         </div>
+      </div>
+      <span tabindex="0"></span>
+   </div>
+</div>
+
+
+
+<div role="dialog" class="modal fade rules-container-modal" id="rulesPopup" aria-modal="true">
+	<div class="modal-dialog modal-lg rulespopup-modal-dialog"><span tabindex="0"></span>
+		<div role="document" tabindex="-1" class="modal-content" id="__BVID__151___BV_modal_content_">
+			<header class="modal-header" id="__BVID__151___BV_modal_header_">
+				<h5 class="modal-title" id="__BVID__151___BV_modal_title_">Rules</h5>
+            <div class="rules-langualge">
+               <div class="show dropdown">
+                  <button type="button" id="lang-dropdown" aria-expanded="true" class="dropdown-toggle show btn"><img src="storage/front/img/flag_english.png">English</button>
+                  <div x-placement="bottom-start" aria-labelledby="lang-dropdown" class="dropdown-menu show" data-popper-reference-hidden="false" data-popper-escaped="false" data-popper-placement="bottom-start" style="position: absolute; inset: 0px auto auto 0px; transform: translate(912px, 40px);"><a data-rr-ui-dropdown-item="" class="dropdown-item" role="button" tabindex="0" href="javascript:void(0)"><img src="storage/front/img/flag_english.png">English</a></div>
+               </div>
+            </div>
+				<button type="button" class="close btn-close" data-dismiss="modal"></button>
+			</header>
+			<div class="modal-body" id="__BVID__151___BV_modal_body_">
+            <div class="rules-left-sidebar">
+               <div class="nav nav-pills" role="tablist">
+                  <div class="nav-item"><a role="tab" data-rr-ui-event-key="0" id="tules-tabs-tab-0" aria-controls="tules-tabs-tabpane-0" aria-selected="true" class="nav-link active" tabindex="0" href="#">Football</a></div>
+                  <div class="nav-item"><a role="tab" data-rr-ui-event-key="1" id="tules-tabs-tab-1" aria-controls="tules-tabs-tabpane-1" aria-selected="false" tabindex="-1" class="nav-link" href="#">Horse Racing</a></div>
+                  <div class="nav-item"><a role="tab" data-rr-ui-event-key="2" id="tules-tabs-tab-2" aria-controls="tules-tabs-tabpane-2" aria-selected="false" tabindex="-1" class="nav-link" href="#">E Games</a></div>
+                  <div class="nav-item"><a role="tab" data-rr-ui-event-key="3" id="tules-tabs-tab-3" aria-controls="tules-tabs-tabpane-3" aria-selected="false" tabindex="-1" class="nav-link" href="#">Basketball</a></div>
+                  <div class="nav-item"><a role="tab" data-rr-ui-event-key="4" id="tules-tabs-tab-4" aria-controls="tules-tabs-tabpane-4" aria-selected="false" tabindex="-1" class="nav-link" href="#">MotoGP</a></div>
+                  <div class="nav-item"><a role="tab" data-rr-ui-event-key="5" id="tules-tabs-tab-5" aria-controls="tules-tabs-tabpane-5" aria-selected="false" tabindex="-1" class="nav-link" href="#">Chess</a></div>
+                  <div class="nav-item"><a role="tab" data-rr-ui-event-key="6" id="tules-tabs-tab-6" aria-controls="tules-tabs-tabpane-6" aria-selected="false" tabindex="-1" class="nav-link" href="#">Volleyball</a></div>
+                  <div class="nav-item"><a role="tab" data-rr-ui-event-key="7" id="tules-tabs-tab-7" aria-controls="tules-tabs-tabpane-7" aria-selected="false" tabindex="-1" class="nav-link" href="#">Ice Hockey</a></div>
+                  <div class="nav-item"><a role="tab" data-rr-ui-event-key="8" id="tules-tabs-tab-8" aria-controls="tules-tabs-tabpane-8" aria-selected="false" tabindex="-1" class="nav-link" href="#">Tennis</a></div>
+                  <div class="nav-item"><a role="tab" data-rr-ui-event-key="9" id="tules-tabs-tab-9" aria-controls="tules-tabs-tabpane-9" aria-selected="false" tabindex="-1" class="nav-link" href="#">Badminton</a></div>
+                  <div class="nav-item"><a role="tab" data-rr-ui-event-key="10" id="tules-tabs-tab-10" aria-controls="tules-tabs-tabpane-10" aria-selected="false" tabindex="-1" class="nav-link" href="#">Cycling</a></div>
+                  <div class="nav-item"><a role="tab" data-rr-ui-event-key="11" id="tules-tabs-tab-11" aria-controls="tules-tabs-tabpane-11" aria-selected="false" tabindex="-1" class="nav-link" href="#">Mixed Martial Arts</a></div>
+                  <div class="nav-item"><a role="tab" data-rr-ui-event-key="12" id="tules-tabs-tab-12" aria-controls="tules-tabs-tabpane-12" aria-selected="false" tabindex="-1" class="nav-link" href="#">Motorbikes</a></div>
+                  <div class="nav-item"><a role="tab" data-rr-ui-event-key="13" id="tules-tabs-tab-13" aria-controls="tules-tabs-tabpane-13" aria-selected="false" tabindex="-1" class="nav-link" href="#">Athletics</a></div>
+                  <div class="nav-item"><a role="tab" data-rr-ui-event-key="14" id="tules-tabs-tab-14" aria-controls="tules-tabs-tabpane-14" aria-selected="false" tabindex="-1" class="nav-link" href="#">Basketball 3X3</a></div>
+                  <div class="nav-item"><a role="tab" data-rr-ui-event-key="15" id="tules-tabs-tab-15" aria-controls="tules-tabs-tabpane-15" aria-selected="false" tabindex="-1" class="nav-link" href="#">Sumo</a></div>
+                  <div class="nav-item"><a role="tab" data-rr-ui-event-key="16" id="tules-tabs-tab-16" aria-controls="tules-tabs-tabpane-16" aria-selected="false" tabindex="-1" class="nav-link" href="#">Virtual sports</a></div>
+                  <div class="nav-item"><a role="tab" data-rr-ui-event-key="17" id="tules-tabs-tab-17" aria-controls="tules-tabs-tabpane-17" aria-selected="false" tabindex="-1" class="nav-link" href="#">Handball</a></div>
+                  <div class="nav-item"><a role="tab" data-rr-ui-event-key="18" id="tules-tabs-tab-18" aria-controls="tules-tabs-tabpane-18" aria-selected="false" tabindex="-1" class="nav-link" href="#">Cricket</a></div>
+                  <div class="nav-item"><a role="tab" data-rr-ui-event-key="19" id="tules-tabs-tab-19" aria-controls="tules-tabs-tabpane-19" aria-selected="false" tabindex="-1" class="nav-link" href="#">Politics</a></div>
+                  <div class="nav-item"><a role="tab" data-rr-ui-event-key="20" id="tules-tabs-tab-20" aria-controls="tules-tabs-tabpane-20" aria-selected="false" tabindex="-1" class="nav-link" href="#">Golf</a></div>
+                  <div class="nav-item"><a role="tab" data-rr-ui-event-key="21" id="tules-tabs-tab-21" aria-controls="tules-tabs-tabpane-21" aria-selected="false" tabindex="-1" class="nav-link" href="#">Motor Sports</a></div>
+                  <div class="nav-item"><a role="tab" data-rr-ui-event-key="22" id="tules-tabs-tab-22" aria-controls="tules-tabs-tabpane-22" aria-selected="false" tabindex="-1" class="nav-link" href="#">Baseball</a></div>
+                  <div class="nav-item"><a role="tab" data-rr-ui-event-key="23" id="tules-tabs-tab-23" aria-controls="tules-tabs-tabpane-23" aria-selected="false" tabindex="-1" class="nav-link" href="#">Rugby Union</a></div>
+                  <div class="nav-item"><a role="tab" data-rr-ui-event-key="24" id="tules-tabs-tab-24" aria-controls="tules-tabs-tabpane-24" aria-selected="false" tabindex="-1" class="nav-link" href="#">Rugby League</a></div>
+                  <div class="nav-item"><a role="tab" data-rr-ui-event-key="25" id="tules-tabs-tab-25" aria-controls="tules-tabs-tabpane-25" aria-selected="false" tabindex="-1" class="nav-link" href="#">Darts</a></div>
+                  <div class="nav-item"><a role="tab" data-rr-ui-event-key="26" id="tules-tabs-tab-26" aria-controls="tules-tabs-tabpane-26" aria-selected="false" tabindex="-1" class="nav-link" href="#">American Football</a></div>
+                  <div class="nav-item"><a role="tab" data-rr-ui-event-key="27" id="tules-tabs-tab-27" aria-controls="tules-tabs-tabpane-27" aria-selected="false" tabindex="-1" class="nav-link" href="#">Snooker</a></div>
+                  <div class="nav-item"><a role="tab" data-rr-ui-event-key="28" id="tules-tabs-tab-28" aria-controls="tules-tabs-tabpane-28" aria-selected="false" tabindex="-1" class="nav-link" href="#">Boxing</a></div>
+                  <div class="nav-item"><a role="tab" data-rr-ui-event-key="29" id="tules-tabs-tab-29" aria-controls="tules-tabs-tabpane-29" aria-selected="false" tabindex="-1" class="nav-link" href="#">Soccer</a></div>
+                  <div class="nav-item"><a role="tab" data-rr-ui-event-key="30" id="tules-tabs-tab-30" aria-controls="tules-tabs-tabpane-30" aria-selected="false" tabindex="-1" class="nav-link" href="#">Esports</a></div>
+                  <div class="nav-item"><a role="tab" data-rr-ui-event-key="31" id="tules-tabs-tab-31" aria-controls="tules-tabs-tabpane-31" aria-selected="false" tabindex="-1" class="nav-link" href="#">Greyhound Racing</a></div>
+                  <div class="nav-item"><a role="tab" data-rr-ui-event-key="32" id="tules-tabs-tab-32" aria-controls="tules-tabs-tabpane-32" aria-selected="false" tabindex="-1" class="nav-link" href="#">Kabaddi</a></div>
+                  <div class="nav-item"><a role="tab" data-rr-ui-event-key="33" id="tules-tabs-tab-33" aria-controls="tules-tabs-tabpane-33" aria-selected="false" tabindex="-1" class="nav-link" href="#">Boat Racing</a></div>
+                  <div class="nav-item"><a role="tab" data-rr-ui-event-key="34" id="tules-tabs-tab-34" aria-controls="tules-tabs-tabpane-34" aria-selected="false" tabindex="-1" class="nav-link" href="#">Esoccer</a></div>
+                  <div class="nav-item"><a role="tab" data-rr-ui-event-key="35" id="tules-tabs-tab-35" aria-controls="tules-tabs-tabpane-35" aria-selected="false" tabindex="-1" class="nav-link" href="#">Beach Volleyball</a></div>
+                  <div class="nav-item"><a role="tab" data-rr-ui-event-key="36" id="tules-tabs-tab-36" aria-controls="tules-tabs-tabpane-36" aria-selected="false" tabindex="-1" class="nav-link" href="#">Table Tennis</a></div>
+                  <div class="nav-item"><a role="tab" data-rr-ui-event-key="37" id="tules-tabs-tab-37" aria-controls="tules-tabs-tabpane-37" aria-selected="false" tabindex="-1" class="nav-link" href="#">Futsal</a></div>
+               </div>
+            </div>
+
+            <div class="rules-content">
+               <div class="tab-content">
+                  <div role="tabpanel" id="tules-tabs-tabpane-0" aria-labelledby="tules-tabs-tab-0" class="fade tab-pane active show">
+                     <div class="rules-content-title">bookmaker</div>
+                     <div class="rules-content-desc">
+                        <div class="table-responsive">
+                           <table class="table table-bordered">
+                              <tbody>
+                                 <tr>
+                                    <td><span class="">If the match will not take place within 48 hours of the original kick-off time bets will be void.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">If the selection is in a multiple bet or accumulator any refund must be requested before kick-off of the first leg of the multiple bet.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Where a confirmed postponed match features as part of a multiple bet, the bet will stand on the remaining selections in the multiple.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Please note that games which have their kick-off altered well in advance to accommodate live TV, or to ease fixture congestion will not be classed as postponed.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">If a match is forfeited or a team is given a walkover victory without the match having kicked off, then all bets will be void. Any subsequently awarded scoreline will not count for settlement purposes.</span></td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                     <div class="rules-content-title">fancy</div>
+                     <div class="rules-content-desc">
+                        <div class="table-responsive">
+                           <table class="table table-bordered">
+                              <tbody>
+                                 <tr>
+                                    <td><span class="text-danger">Tournament Total Goals, Team Total Goals goals. scored in 90 minutes or in extra-time will count.Goals scored in penalty shootouts do not count.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Tournament Corners - Only corners taken in 90 minutes count.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Tournament Penalties Missed/Converted - Penalties taken in 90 minutes, extra-time and penalty shootouts all count. If a penalty has to be re-taken the previous disallowed penalty(ies) do not count.</span></td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                     <div class="rules-content-title">match</div>
+                     <div class="rules-content-desc">
+                        <div class="table-responsive">
+                           <table class="table table-bordered">
+                              <tbody>
+                                 <tr>
+                                    <td><span class="">Match Odds :-  
+                                       All bets apply to the relevant full 'regular time' period including stoppage time. Any extra-time
+                                       and/or penalty shoot-out is not included.
+                                       For the cancellation of a goal, due to VAR, bets matched between the time of the goal being
+                                       scored and the time at which the video assistant referee finishes the review will be voided.
+                                       For the cancellation of a red card, due to VAR, bets matched after the time at which the video
+                                       assistant referee commences the review will be voided.
+                                       </span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Under_Over Goals :-  
+                                       In the event of a match starting but not being completed, all bets will be void, unless the
+                                       specific market outcome is already determined,</span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">1st Period Winner :- 
+                                       Bets will be void if the match is abandoned before half-time.</span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Next Goal :- 
+                                       Own goals count to the side credited with the goal.</span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Draw No Bet :- 
+                                       Predict which team will be the winner. In case of a draw, all bets will be void. If a game is
+                                       abandoned, bets will be void.</span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Both Teams to Score :-  
+                                       Predict whether both teams will score at least one goal in the game. Own goals count towards
+                                       the team credited with the goal. If a game is abandoned, bets will be void, unless the outcome
+                                       of these bets is already determined.
+                                       Yes” – meaning that both teams will score.
+                                       “No” – meaning that either team will not score.</span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Corners :- 
+                                       Predict which team will take the named corner in the game. If this specific corner is not taken in
+                                       the game, bets will be void. For example, game finishes or is abandoned with 8 corners taken –
+                                       all bets on any corner after the 8th will be void (9th, 10th, etc.).</span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Goals Odd/Even :-  
+                                       Any match resulting in 0-0 will be settled on an even number of goals. For Team Odd/Even
+                                       markets, if the specified team does not score then we will settle on an even number of goals. In
+                                       the event of an abandoned match then bets for that match will be void.</span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">1X2 Corners :-  
+                                       Predict which team will get more corners in a match. Awarded, but not taken corners (there is a
+                                       corner, but before it is taken the referee signals for the end of the first half or the match) will
+                                       not count for settlement purposes. Also if a corner needs to be re-taken for any reason, it will
+                                       be counted as 1 corner.</span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Under/Over Card in Match (Number of cards) :-  
+                                       Predict the number of the cards which will be shown in a match. If a player is sent off for 2
+                                       yellow cards, this counts as 2 yellow cards and 1 red card for betting purpose es. If the match is
+                                       abandoned for any reason, all bets will be void unless market is already determined, e.g. Team
+                                       1 over 2,5 yellow cards - 3 yellow cards awarded to Team 1 before abandonment is settled as a
+                                       winner. Cards for non-players (already substituted players, managers, players on bench which
+                                       are not substituted in) are not considered.
+                                       Settlement will be made with reference to all available evidence to cards shown during the
+                                       scheduled 90 minutes play. Any card shown after the full-time whistle blow will be disregarded.</span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">First Half Under/Over Goals :- How many goals will be scored in this first half of this match? 
+                                       All bets apply to Full Time according to the match officials, plus any stoppage time. Extra-time/penalty shoot-outs are not included.
+                                       </span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Penalty Taken? :- Will a penalty be awarded and taken during this match?
+                                       All bets apply to Full Time according to the match officials, plus any stoppage time. Extra-time/penalty shoot-outs are not included.
+                                       </span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Correct Score :- Predict the score of this match.
+                                       This market will not be partially settled during the fixture and will be fully settled at full time.
+                                       All bets apply to Full Time according to the match officials, plus any stoppage time. Extra-time/penalty shoot-outs are not included.
+                                       </span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Corners Number/Odds : - How many corners will be taken in the match? Only corners that are taken will be counted.
+                                       All bets apply to Full Time according to the match officials, plus any stoppage time. Extra-time/penalty shoot-outs are not included.
+                                       </span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Team_A/B +1/2/3 : - Who will win this match with the stated handicap applied? 
+                                       All bets apply to Full Time according to the match officials, plus any stoppage time. Extra-time/penalty shoot-outs are&nbsp;not&nbsp;included.</span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">HT/FT :-  
+                                       Bets will be void if the match is abandoned. Extra-time and penalty shootouts do not count.</span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Company reserves the right to suspend/void any id/bets if the same is found to be illegitimate. For example incase of VPN/robot-use/multiple entry from same or different IP and others. Note : only winning bets will be voided.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">for live streaming and animation :- Although the current score, time elapsed, video and other data provided on this site is sourced from "live" feeds provided by third parties, you should be aware that this data may be subject to a time delay and/or be inaccurate. Please also be aware that other customers may have access to data that is faster and/or more accurate than the data shown on the site. If you rely on this data to place bets, you do so entirely at your own risk. provides this data AS IS with no warranty as to the accuracy, completeness or timeliness of such data and accepts no responsibility for any loss (direct or indirect) suffered by you as a result of your reliance on it.	</span></td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                  </div>
+                  <div role="tabpanel" id="tules-tabs-tabpane-1" aria-labelledby="tules-tabs-tab-1" class="fade tab-pane">
+                     <div class="rules-content-title">match</div>
+                     <div class="rules-content-desc">
+                        <div class="table-responsive">
+                           <table class="table table-bordered">
+                              <tbody>
+                                 <tr>
+                                    <td><span class="text-danger">1.General</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">All individual race markets will be determined according to the official result at the time of the 'weigh-in' announcement (or equivalent). Subsequent disqualifications, appeals or amendments to the result will be disregarded.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">If a race is abandoned or otherwise declared void, or in the event of a walkover, all bets on that race will be void.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">If the scheduled venue is changed after the market has been loaded by us, all bets will be void.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Where a race does not take part on its scheduled day, all bets will be void.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">If a scheduled surface type is changed (e.g. turf to dirt) all bets will stand.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">2.Non-Runner Rule</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Our's non-runner rule relates to the adjustment of odds on bets already matched when a horse in a race is declared a non-runner. In order to make the adjustment We applies a reduction factor to the remaining runners. The reduction factor allocated to a non-runner is a calculation (the details of which are described below) of that horse's chances of winning (or being placed, etc as appropriate) and is applied to bets already matched on the other runners in the relevant market or markets.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Any horse listed when the relevant market is loaded which does not subsequently come under starter's orders is deemed to be a non-runner.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">When the market is loaded each horse is given a 'reduction factor', based on a forecast price, which is expressed as a percentage. These reduction factors may be updated periodically at the discretion of Us based on trading in the market, but after approximately 15 minutes (approximately 5 minutes for Australian and US markets) from the scheduled 'off' time of a given race, they will be updated only in exceptional circumstances. The current reduction factor percentage for each horse can be viewed on the 'info' page on Our website or by asking the Helpdesk.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Accurate reduction factors will only be applied to selections in the event of a non-runner. Once a non-runner is declared each selection in the market will be given an appropriate reduction factor. Reduction factors can be amended at Our’s discretion at any time throughout the market life cycle (including post-race).</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">For Australian racing, reduction factors may be updated periodically at the discretion of Us based on trading in the market, but after approximately five minutes from the scheduled off time of a given race they will be updated only in exceptional circumstances.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">For Australian racing, reduction factors may be updated periodically at the discretion of Us based on trading in the market, but after approximately five minutes from the scheduled off time of a given race they will be updated only in exceptional circumstances.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Reductions will be made to both win and place markets but applied differently (as described below), and horses will have a different reduction factor for each market.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">As soon as We becomes aware that a horse is an official non-runner or a highly likely non-runner, following a statement to the press from connections, the following will happen:</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">All matched bets on that horse will be void and the horse will be removed from the market.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">In the win market: if the reduction factor of the non-runner is 2.5% or greater, the traded price of all the matched bets on the remaining horses will be reduced by an amount equal to the non-runner's final reduction factor and all the unmatched offers to lay will be cancelled. If the non-runner's reduction factor is less than 2.5%, reductions will not be applied and unmatched bets will not be cancelled.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">In the place market the reduction factor of all non-runners will be applied (even if less than 2.5%) and the potential winnings in relation to matched bets on the remaining horses will be reduced by an amount equal to the non-runner's final reduction factor. Only if the non-runner's reduction factor is 4.0% or greater will all the unmatched offers to lay be cancelled.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">All the reduction factors on the remaining horses will be adjusted to reflect their improved chance of winning.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Reduction factors are not applied to bets which are struck in-play. However, if a market is turned in-play prematurely by error (or, for example, there is a false start), all bets matched during this time will be subject to any later reduction factor, provided the market is turned out of play before the race commences. In the event of a late withdrawal, We reserves the right to remove the runner after completion of the race. In this case only those bets matched prior to the off will be affected by a reduction factor.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">In the event of a non-runner being removed from a race in error or following incorrect information regarding a runner’s participation, we will reinstate both the runner and all previously matched bets associated with that runner. All bets made between the time of withdrawal and reinstatement will be void in both the place market and the win market. The reduction factor applied to matched bets at the time of withdrawal will be reversed and the original prices will become valid.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Any non-runners will be removed from the relevant markets in the order in which they are brought to Our's attention. If We becomes aware of more than one non-runner at the same time, it will remove the non-runners from the relevant markets in racecard order.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Any non-runners will be removed from the relevant markets in the order in which they are brought to Our's attention. If We becomes aware of more than one non-runner at the same time, it will remove the non-runners from the relevant markets in racecard order.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">If a runner is not included in a market because of an error or because of incorrect information regarding a runner’s participation, We reserve the right to introduce the missing runner into the market at any time prior to settlement (even after the race has been run), provided that We are determined that the missing runner is not a material runner (i.e. a selection with a reduction factor of approx. 2.5% or less in the win market). In such circumstances, all pre-play unmatched and matched bets will stand, however if the runner is not introduced before the start of the race, all in-play bets will be void. However, if the missing runner is deemed to be a material runner, then the malformed market will be void and a new market will be loaded where possible.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">3.How the Reductions are applied for Exchange markets</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">In the win market, reductions will be made on the traded price. For example: if the non-runner's final reduction factor is 25% the traded price on all previously matched bets on other horses will be reduced by 25% - traded price of 8.0 would become 6.0 etc. And these might be further reduced if another horse is subsequently declared a non-runner.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">In the EW Market, reductions will be made on the traded win price. The advertised place terms will then apply to the revised win prices. For example: if the non-runner's final reduction factor is 25% the traded price on all previously matched bets on other horses will be reduced by 25% - - traded price of 8.0 would become 6.0. If the each Way terms were 1/5th odds for 3 places, the corresponding price for the Place portion of the bet would reduce from 2.4 to 2.0.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">In the place market, reductions will be made to the potential winnings on the bet only, and not the traded price. For example: if the non-runner's final reduction factor is 25% the potential winnings on all previously matched bets on the other horses will be reduced by 25% - a traded price of 8.0 would become 6.25. For example a £10 bet on a horse to be placed at a traded price of 8.0 would provide winnings of £70. If there is a non-runner with a reduction factor of 25% in the race, that factor will be applied to the £70 of potential winnings leaving potential winnings of £52.50. Therefore the revised traded price will be 6.25.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">The traded price may be further reduced if any other horse(s) is subsequently declared a non-runner, however odds cannot be reduced below 1.01.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Reserves: A reserve runner may appear in the relevant markets but will have a non-applicable reduction factor until we are received confirmation that it is a confirmed runner, in which case an applicable reduction factor may apply to it.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">For the avoidance of doubt, any reduction factor applicable to a non-runner replaced by a reserve, will be applied to all bets struck on the relevant markets, prior to the removal from those markets of such non-runner by Us. Likewise, should a reserve runner become a confirmed runner but subsequently become a non-runner, any reduction factor applicable to such non-runner will be applied to all bets struck on the relevant markets, prior to the removal from those markets of such non-runner by Us.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">4.Additional rules</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Card numbers are posted as a guide only: bets are placed on a named horse.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Horses will not be coupled.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Where any horse(s) runs for purse money only it is deemed a non-runner for betting purposes. Should this result in the number of possible winners stated in the relevant Market Information being equal to or greater than the number of runners in the relevant Betfair market, all bets in the market will be void.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Company reserves the right to suspend/void any id/bets if the same is found to be illegitimate. For example incase of VPN/robot-use/multiple entry from same or different IP and others. Note : only winning bets will be voided.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">for live streaming and animation :- Although the current score, time elapsed, video and other data provided on this site is sourced from "live" feeds provided by third parties, you should be aware that this data may be subject to a time delay and/or be inaccurate. Please also be aware that other customers may have access to data that is faster and/or more accurate than the data shown on the site. If you rely on this data to place bets, you do so entirely at your own risk. provides this data AS IS with no warranty as to the accuracy, completeness or timeliness of such data and accepts no responsibility for any loss (direct or indirect) suffered by you as a result of your reliance on it.	</span></td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                  </div>
+                  <div role="tabpanel" id="tules-tabs-tabpane-2" aria-labelledby="tules-tabs-tab-2" class="fade tab-pane">
+                     <div class="rules-content-title">match</div>
+                     <div class="rules-content-desc">
+                        <div class="table-responsive">
+                           <table class="table table-bordered">
+                              <tbody>
+                                 <tr>
+                                    <td><span class="text-danger">In the event of a match starting but not being completed, then all bets will be void.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Company reserves the right to suspend/void any id/bets if the same is found to be illegitimate. For example incase of VPN/robot-use/multiple entry from same or different IP and others. Note : only winning bets will be voided.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">for live streaming and animation :- Although the current score, time elapsed, video and other data provided on this site is sourced from "live" feeds provided by third parties, you should be aware that this data may be subject to a time delay and/or be inaccurate. Please also be aware that other customers may have access to data that is faster and/or more accurate than the data shown on the site. If you rely on this data to place bets, you do so entirely at your own risk. provides this data AS IS with no warranty as to the accuracy, completeness or timeliness of such data and accepts no responsibility for any loss (direct or indirect) suffered by you as a result of your reliance on it.	</span></td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                  </div>
+                  <div role="tabpanel" id="tules-tabs-tabpane-3" aria-labelledby="tules-tabs-tab-3" class="fade tab-pane">
+                     <div class="rules-content-title">match</div>
+                     <div class="rules-content-desc">
+                        <div class="table-responsive">
+                           <table class="table table-bordered">
+                              <tbody>
+                                 <tr>
+                                    <td><span class="">Match Odds :-  
+                                       Predict which team will be the winner. There must be 5 minutes or less of scheduled game time
+                                       left for bets to have action.</span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Quarter Winner :-  
+                                       The quarter must be completed for bets to have action, unless settlement of bets is already
+                                       determined.</span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">1st Half Winner / 2nd Half Winner :- 
+                                       The first half must be completed for first half bets to stand. If a game is postponed or cancelled
+                                       after the start, for game and second half bets there must be 5 minutes or less remaining for
+                                       bets to have action, unless settlement of bets is already determined. (Including Overtime if
+                                       played.)
+                                       </span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Highest Scoring Half :- 
+                                       Predict in which half most points will be scored. OT is not included in 2nd Half.</span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Company reserves the right to suspend/void any id/bets if the same is found to be illegitimate. For example incase of VPN/robot-use/multiple entry from same or different IP and others. Note : only winning bets will be voided.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">for live streaming and animation :- Although the current score, time elapsed, video and other data provided on this site is sourced from "live" feeds provided by third parties, you should be aware that this data may be subject to a time delay and/or be inaccurate. Please also be aware that other customers may have access to data that is faster and/or more accurate than the data shown on the site. If you rely on this data to place bets, you do so entirely at your own risk. provides this data AS IS with no warranty as to the accuracy, completeness or timeliness of such data and accepts no responsibility for any loss (direct or indirect) suffered by you as a result of your reliance on it.	</span></td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                  </div>
+                  <div role="tabpanel" id="tules-tabs-tabpane-4" aria-labelledby="tules-tabs-tab-4" class="fade tab-pane">
+                     <div class="rules-content-title">match</div>
+                     <div class="rules-content-desc">
+                        <div class="table-responsive">
+                           <table class="table table-bordered">
+                              <tbody>
+                                 <tr>
+                                    <td><span class="text-danger">Company reserves the right to suspend/void any id/bets if the same is found to be illegitimate. For example incase of VPN/robot-use/multiple entry from same or different IP and others. Note : only winning bets will be voided.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">for live streaming and animation :- Although the current score, time elapsed, video and other data provided on this site is sourced from "live" feeds provided by third parties, you should be aware that this data may be subject to a time delay and/or be inaccurate. Please also be aware that other customers may have access to data that is faster and/or more accurate than the data shown on the site. If you rely on this data to place bets, you do so entirely at your own risk. provides this data AS IS with no warranty as to the accuracy, completeness or timeliness of such data and accepts no responsibility for any loss (direct or indirect) suffered by you as a result of your reliance on it.	</span></td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                  </div>
+                  <div role="tabpanel" id="tules-tabs-tabpane-5" aria-labelledby="tules-tabs-tab-5" class="fade tab-pane">
+                     <div class="rules-content-title">match</div>
+                     <div class="rules-content-desc">
+                        <div class="table-responsive">
+                           <table class="table table-bordered">
+                              <tbody>
+                                 <tr>
+                                    <td><span class="text-danger">Company reserves the right to suspend/void any id/bets if the same is found to be illegitimate. For example incase of VPN/robot-use/multiple entry from same or different IP and others. Note : only winning bets will be voided.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">for live streaming and animation :- Although the current score, time elapsed, video and other data provided on this site is sourced from "live" feeds provided by third parties, you should be aware that this data may be subject to a time delay and/or be inaccurate. Please also be aware that other customers may have access to data that is faster and/or more accurate than the data shown on the site. If you rely on this data to place bets, you do so entirely at your own risk. provides this data AS IS with no warranty as to the accuracy, completeness or timeliness of such data and accepts no responsibility for any loss (direct or indirect) suffered by you as a result of your reliance on it.	</span></td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                  </div>
+                  <div role="tabpanel" id="tules-tabs-tabpane-6" aria-labelledby="tules-tabs-tab-6" class="fade tab-pane">
+                     <div class="rules-content-title">match</div>
+                     <div class="rules-content-desc">
+                        <div class="table-responsive">
+                           <table class="table table-bordered">
+                              <tbody>
+                                 <tr>
+                                    <td><span class="">Match odds :- 
+                                       Predict which team will be the winner.
+                                       Bets will be void if the match is not completed.
+                                       </span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Set Winner:-  
+                                       In the event of the set not being completed bets will be void. Exceptions are made for bets on
+                                       sets which are already over, in this case the bets will be settled.</span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Company reserves the right to suspend/void any id/bets if the same is found to be illegitimate. For example incase of VPN/robot-use/multiple entry from same or different IP and others. Note : only winning bets will be voided.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">for live streaming and animation :- Although the current score, time elapsed, video and other data provided on this site is sourced from "live" feeds provided by third parties, you should be aware that this data may be subject to a time delay and/or be inaccurate. Please also be aware that other customers may have access to data that is faster and/or more accurate than the data shown on the site. If you rely on this data to place bets, you do so entirely at your own risk. provides this data AS IS with no warranty as to the accuracy, completeness or timeliness of such data and accepts no responsibility for any loss (direct or indirect) suffered by you as a result of your reliance on it.	</span></td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                  </div>
+                  <div role="tabpanel" id="tules-tabs-tabpane-7" aria-labelledby="tules-tabs-tab-7" class="fade tab-pane">
+                     <div class="rules-content-title">match</div>
+                     <div class="rules-content-desc">
+                        <div class="table-responsive">
+                           <table class="table table-bordered">
+                              <tbody>
+                                 <tr>
+                                    <td><span class="">Match Odds Including overtime/shootouts :-   
+                                       Predict the winner of the match including overtime and penalties. The game must be
+                                       completed for bets to have action.</span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Period Winner :-   
+                                       Predict the winner of the relevant period.
+                                       The relevant period must be completed for bets to have action, unless the specific market
+                                       outcome is already determined.</span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Highest Scoring Period:-   
+                                       If 2 or more periods have the same score Tie will be settled as the winner. (exclude
+                                       overtime/shootouts for settlement purposes)</span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Company reserves the right to suspend/void any id/bets if the same is found to be illegitimate. For example incase of VPN/robot-use/multiple entry from same or different IP and others. Note : only winning bets will be voided.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">for live streaming and animation :- Although the current score, time elapsed, video and other data provided on this site is sourced from "live" feeds provided by third parties, you should be aware that this data may be subject to a time delay and/or be inaccurate. Please also be aware that other customers may have access to data that is faster and/or more accurate than the data shown on the site. If you rely on this data to place bets, you do so entirely at your own risk. provides this data AS IS with no warranty as to the accuracy, completeness or timeliness of such data and accepts no responsibility for any loss (direct or indirect) suffered by you as a result of your reliance on it.	</span></td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                  </div>
+                  <div role="tabpanel" id="tules-tabs-tabpane-8" aria-labelledby="tules-tabs-tab-8" class="fade tab-pane">
+                     <div class="rules-content-title">match</div>
+                     <div class="rules-content-desc">
+                        <div class="table-responsive">
+                           <table class="table table-bordered">
+                              <tbody>
+                                 <tr>
+                                    <td><span class="">Match Odds :-If 1st set has been not completed at the time of the retirement or disqualification, then all bets relating to that individual match will be void.after completion of 1st set in case of retirement the opponent player will be given the winner for match winner bets.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Game Winner :-  
+                                       Predict which player will win the stated game. The nominated game will be featured in the name of the
+                                       bet type, for example: 2ndset – 7
+                                       th game – Winner. If a game is not completed for any reason, bets on it
+                                       will be void. Tie break points will not be counted for this bet type.
+                                       unless the specific market outcome is already determined.</span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Under / Over Games :-  
+                                       Finished set stand, the unfinished set can be played to its natural conclusion and settled as in
+                                       the example:
+                                       Example: A set is abandoned at 4-4
+                                       I win if I placed a bet on Over 9.5 (since any natural conclusion to the set would have at least 10
+                                       games);
+                                       I lost the bet if I placed a bet on Under 9.5 (since any natural conclusion to the set would have
+                                       at least 10 games); 
+                                       I get my stake back if I placed a bet on O/U 10.5 (it is undecided, the set could have ended 6-4).</span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Company reserves the right to suspend/void any id/bets if the same is found to be illegitimate. For example incase of VPN/robot-use/multiple entry from same or different IP and others. Note : only winning bets will be voided.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">for live streaming and animation :- Although the current score, time elapsed, video and other data provided on this site is sourced from "live" feeds provided by third parties, you should be aware that this data may be subject to a time delay and/or be inaccurate. Please also be aware that other customers may have access to data that is faster and/or more accurate than the data shown on the site. If you rely on this data to place bets, you do so entirely at your own risk. provides this data AS IS with no warranty as to the accuracy, completeness or timeliness of such data and accepts no responsibility for any loss (direct or indirect) suffered by you as a result of your reliance on it.	</span></td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                  </div>
+                  <div role="tabpanel" id="tules-tabs-tabpane-9" aria-labelledby="tules-tabs-tab-9" class="fade tab-pane">
+                     <div class="rules-content-title">match</div>
+                     <div class="rules-content-desc">
+                        <div class="table-responsive">
+                           <table class="table table-bordered">
+                              <tbody>
+                                 <tr>
+                                    <td><span class="">Match_Odds:-Predict which player will win the match. In the event of any of the named players in a match changing before the match starts then all bets are void. In the event of a match starting but not being completed, then all bets will be void.
+                                       </span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Set Winner:-The Set must be completed for bets to stand, unless the specific market outcome is already determined.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Company reserves the right to suspend/void any id/bets if the same is found to be illegitimate. For example incase of VPN/robot-use/multiple entry from same or different IP and others. Note : only winning bets will be voided.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">for live streaming and animation :- Although the current score, time elapsed, video and other data provided on this site is sourced from "live" feeds provided by third parties, you should be aware that this data may be subject to a time delay and/or be inaccurate. Please also be aware that other customers may have access to data that is faster and/or more accurate than the data shown on the site. If you rely on this data to place bets, you do so entirely at your own risk. provides this data AS IS with no warranty as to the accuracy, completeness or timeliness of such data and accepts no responsibility for any loss (direct or indirect) suffered by you as a result of your reliance on it.	</span></td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                  </div>
+                  <div role="tabpanel" id="tules-tabs-tabpane-10" aria-labelledby="tules-tabs-tab-10" class="fade tab-pane">
+                     <div class="rules-content-title">match</div>
+                     <div class="rules-content-desc">
+                        <div class="table-responsive">
+                           <table class="table table-bordered">
+                              <tbody>
+                                 <tr>
+                                    <td><span class="text-danger">Company reserves the right to suspend/void any id/bets if the same is found to be illegitimate. For example incase of VPN/robot-use/multiple entry from same or different IP and others. Note : only winning bets will be voided.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">for live streaming and animation :- Although the current score, time elapsed, video and other data provided on this site is sourced from "live" feeds provided by third parties, you should be aware that this data may be subject to a time delay and/or be inaccurate. Please also be aware that other customers may have access to data that is faster and/or more accurate than the data shown on the site. If you rely on this data to place bets, you do so entirely at your own risk. provides this data AS IS with no warranty as to the accuracy, completeness or timeliness of such data and accepts no responsibility for any loss (direct or indirect) suffered by you as a result of your reliance on it.	</span></td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                  </div>
+                  <div role="tabpanel" id="tules-tabs-tabpane-11" aria-labelledby="tules-tabs-tab-11" class="fade tab-pane">
+                     <div class="rules-content-title">match</div>
+                     <div class="rules-content-desc">
+                        <div class="table-responsive">
+                           <table class="table table-bordered">
+                              <tbody>
+                                 <tr>
+                                    <td><span class="text-danger">Company reserves the right to suspend/void any id/bets if the same is found to be illegitimate. For example incase of VPN/robot-use/multiple entry from same or different IP and others. Note : only winning bets will be voided.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">for live streaming and animation :- Although the current score, time elapsed, video and other data provided on this site is sourced from "live" feeds provided by third parties, you should be aware that this data may be subject to a time delay and/or be inaccurate. Please also be aware that other customers may have access to data that is faster and/or more accurate than the data shown on the site. If you rely on this data to place bets, you do so entirely at your own risk. provides this data AS IS with no warranty as to the accuracy, completeness or timeliness of such data and accepts no responsibility for any loss (direct or indirect) suffered by you as a result of your reliance on it.	</span></td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                  </div>
+                  <div role="tabpanel" id="tules-tabs-tabpane-12" aria-labelledby="tules-tabs-tab-12" class="fade tab-pane">
+                     <div class="rules-content-title">match</div>
+                     <div class="rules-content-desc">
+                        <div class="table-responsive">
+                           <table class="table table-bordered">
+                              <tbody>
+                                 <tr>
+                                    <td><span class="text-danger">Company reserves the right to suspend/void any id/bets if the same is found to be illegitimate. For example incase of VPN/robot-use/multiple entry from same or different IP and others. Note : only winning bets will be voided.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">for live streaming and animation :- Although the current score, time elapsed, video and other data provided on this site is sourced from "live" feeds provided by third parties, you should be aware that this data may be subject to a time delay and/or be inaccurate. Please also be aware that other customers may have access to data that is faster and/or more accurate than the data shown on the site. If you rely on this data to place bets, you do so entirely at your own risk. provides this data AS IS with no warranty as to the accuracy, completeness or timeliness of such data and accepts no responsibility for any loss (direct or indirect) suffered by you as a result of your reliance on it.	</span></td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                  </div>
+                  <div role="tabpanel" id="tules-tabs-tabpane-13" aria-labelledby="tules-tabs-tab-13" class="fade tab-pane">
+                     <div class="rules-content-title">match</div>
+                     <div class="rules-content-desc">
+                        <div class="table-responsive">
+                           <table class="table table-bordered">
+                              <tbody>
+                                 <tr>
+                                    <td><span class="text-danger">for live streaming and animation :- Although the current score, time elapsed, video and other data provided on this site is sourced from "live" feeds provided by third parties, you should be aware that this data may be subject to a time delay and/or be inaccurate. Please also be aware that other customers may have access to data that is faster and/or more accurate than the data shown on the site. If you rely on this data to place bets, you do so entirely at your own risk. provides this data AS IS with no warranty as to the accuracy, completeness or timeliness of such data and accepts no responsibility for any loss (direct or indirect) suffered by you as a result of your reliance on it.	</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Company reserves the right to suspend/void any id/bets if the same is found to be illegitimate. For example incase of VPN/robot-use/multiple entry from same or different IP and others. Note : only winning bets will be voided.</span></td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                  </div>
+                  <div role="tabpanel" id="tules-tabs-tabpane-14" aria-labelledby="tules-tabs-tab-14" class="fade tab-pane">
+                     <div class="rules-content-title">match</div>
+                     <div class="rules-content-desc">
+                        <div class="table-responsive">
+                           <table class="table table-bordered">
+                              <tbody>
+                                 <tr>
+                                    <td><span class="text-danger">Company reserves the right to suspend/void any id/bets if the same is found to be illegitimate. For example incase of VPN/robot-use/multiple entry from same or different IP and others. Note : only winning bets will be voided.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">for live streaming and animation :- Although the current score, time elapsed, video and other data provided on this site is sourced from "live" feeds provided by third parties, you should be aware that this data may be subject to a time delay and/or be inaccurate. Please also be aware that other customers may have access to data that is faster and/or more accurate than the data shown on the site. If you rely on this data to place bets, you do so entirely at your own risk. provides this data AS IS with no warranty as to the accuracy, completeness or timeliness of such data and accepts no responsibility for any loss (direct or indirect) suffered by you as a result of your reliance on it.	</span></td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                  </div>
+                  <div role="tabpanel" id="tules-tabs-tabpane-15" aria-labelledby="tules-tabs-tab-15" class="fade tab-pane">
+                     <div class="rules-content-title">match</div>
+                     <div class="rules-content-desc">
+                        <div class="table-responsive">
+                           <table class="table table-bordered">
+                              <tbody>
+                                 <tr>
+                                    <td><span class="text-danger">Company reserves the right to suspend/void any id/bets if the same is found to be illegitimate. For example incase of VPN/robot-use/multiple entry from same or different IP and others. Note : only winning bets will be voided.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">for live streaming and animation :- Although the current score, time elapsed, video and other data provided on this site is sourced from "live" feeds provided by third parties, you should be aware that this data may be subject to a time delay and/or be inaccurate. Please also be aware that other customers may have access to data that is faster and/or more accurate than the data shown on the site. If you rely on this data to place bets, you do so entirely at your own risk. provides this data AS IS with no warranty as to the accuracy, completeness or timeliness of such data and accepts no responsibility for any loss (direct or indirect) suffered by you as a result of your reliance on it.	</span></td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                  </div>
+                  <div role="tabpanel" id="tules-tabs-tabpane-16" aria-labelledby="tules-tabs-tab-16" class="fade tab-pane">
+                     <div class="rules-content-title">match</div>
+                     <div class="rules-content-desc">
+                        <div class="table-responsive">
+                           <table class="table table-bordered">
+                              <tbody>
+                                 <tr>
+                                    <td><span class="text-danger">Company reserves the right to suspend/void any id/bets if the same is found to be illegitimate. For example incase of VPN/robot-use/multiple entry from same or different IP and others. Note : only winning bets will be voided.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">for live streaming and animation :- Although the current score, time elapsed, video and other data provided on this site is sourced from "live" feeds provided by third parties, you should be aware that this data may be subject to a time delay and/or be inaccurate. Please also be aware that other customers may have access to data that is faster and/or more accurate than the data shown on the site. If you rely on this data to place bets, you do so entirely at your own risk. provides this data AS IS with no warranty as to the accuracy, completeness or timeliness of such data and accepts no responsibility for any loss (direct or indirect) suffered by you as a result of your reliance on it.	</span></td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                  </div>
+                  <div role="tabpanel" id="tules-tabs-tabpane-17" aria-labelledby="tules-tabs-tab-17" class="fade tab-pane">
+                     <div class="rules-content-title">match</div>
+                     <div class="rules-content-desc">
+                        <div class="table-responsive">
+                           <table class="table table-bordered">
+                              <tbody>
+                                 <tr>
+                                    <td><span class="">Match Odds:- 
+                                       Predict which team will be the winner.
+                                       Bets will be void if the match is not completed.
+                                       </span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Next Goal:-  
+                                       Predict which team will score the X-th goal.
+                                       </span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Highest Scoring Half:-  
+                                       Predict which half will have the most goals scored (1st, 2nd or Draw).     
+                                       Bet will be settled on regulation time only and exclude overtime if played:
+                                       </span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Halftime/Fulltime:-   
+                                       Predict the result of a match at halftime and at the end of regular time. If a game is abandoned,
+                                       bets will be void.        
+                                       Example: If you choose 1/X, you bet on the home team to lead in the first half and the match to
+                                       end in a draw. Extra time doesn’t count.</span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Company reserves the right to suspend/void any id/bets if the same is found to be illegitimate. For example incase of VPN/robot-use/multiple entry from same or different IP and others. Note : only winning bets will be voided.</span></td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                  </div>
+                  <div role="tabpanel" id="tules-tabs-tabpane-18" aria-labelledby="tules-tabs-tab-18" class="fade tab-pane">
+                     <div class="rules-content-title">bookmaker</div>
+                     <div class="rules-content-desc">
+                        <div class="table-responsive">
+                           <table class="table table-bordered">
+                              <tbody>
+                                 <tr>
+                                    <td><span class="text-danger">1. Due to any reason any team will be getting advantage or disadvantage we are not concerned.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">2. We will simply compare both teams 25 overs score higher score team will be declared winner in ODI (If both teams same score means, low wickets team will be declared winner. In case, both teams same score &amp; same wickets means highest boundaries team will be declared winner.If all same then will be declared No result)</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">3. We will simply compare both teams 10 overs higher score team will be declared winner in T20 matches (If both teams same score means, low wickets team will be declared winner. In case, both teams same score &amp; same wickets means highest boundaries team will be declared winner.If all same then will be declared No result)</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">4. Any query about the result or rates should be contacted within 7 days of the specific event, the same will not be considered valid post 7 days from the event.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">5. Company reserves the right to suspend/void any id/bets if the same is found to be illegitimate. For example incase of vpn/robot-use/multiple entry from same IP/ multiple bets at the same time (Punching) and others. Note : only winning bets will be voided.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">6. In case, company will find Ground bets, Group betting, Punching bets, Multiple entries with same IP or any fraud or unusual activities are detected then Company will be void winning bets and charge penalty of 2X (Two times) from winning amount.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">7. If two team ends up with equal points, then result will be given based on the official point table</span></td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                     <div class="rules-content-title">fancy</div>
+                     <div class="rules-content-desc">
+                        <div class="table-responsive">
+                           <table class="table table-bordered">
+                              <tbody>
+                                 <tr>
+                                    <td><span class="text-danger">1. All fancy bets will be validated when match has been tied.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">2. All advance fancy will be suspended before toss or weather condition. All advance fancy will be voided if over reduced before match start.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">3. In case technical error or any circumstances any fancy is suspended and does not resume result will be given all previous bets will be valid (based on haar/jeet).</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">4. If any case wrong rate has been given in fancy that particular bets will be cancelled.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">5. In any circumstances management decision will be final related to all exchange items. Our scorecard will be considered as valid if there is any mismatch in online portal.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">6. In case customer make bets in wrong fancy we are not liable to delete. No changes will be made and bets will be consider as confirm bet.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">7. Due to any technical error market is open and result has came all bets after result will be deleted.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">8. Manual bets are not accepted in our exchange.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">9.Our exchange will provide 5 second delay in our TV.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">10. Company reserves the right to suspend/void any id/bets if the same is found to be illegitimate. For example incase of VPN/robot-use/multiple entry from same IP and others. Note : only winning bets will be voided.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">11. Company reserves the right to void any bets (only winning bets) of any event at any point of the match if the company believes there is any cheating/wrong doing in that particular event by the players (either batsman/bowler)</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">12. Once our exchange give username and password it is your responsibility to change a password.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">13. Penalty runs will be counted in all fancy. (This rule applicable from 20th March 2024)</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">14. Warning:- live scores and other data on this site is sourced from third party feeds and may be subject to time delays and/or be inaccurate. If you rely on this data to place bets, you do so at your own risk. Our exchange does not accept responsibility for loss suffered as a result of reliance on this data.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">15. Traders will be block the user ID if find any misinterpret activities, No queries accept regarding.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">16.In case, company will find Ground bets, Group betting, Punching bets, Multiple entries with same IP or any fraud or unusual activities are detected then Company will be void winning bets and charge penalty of 2X (Two times) from winning amount.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">17. Our exchange is not responsible for misuse of client id.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">TEST</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">1 Session:-</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">1.1 Complete session valid in test.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">1.2 Middle session and Session is not completed due to Innings declared or all out so that particular over considered as completed and remaining over counted in next team Innings for ex:- In case of Innings declared or all out In 131.5th over Considered as 132 over completed remaining 1 over counted for 133 over middle session and 3 over counted for 135 over session from next team Innings and One over session and Only over session is not completed due to innings declared so that Particular over session bets will be deleted and all out considered as valid for ex:- In case of Innings declared In 131.5th over so 132 over will be deleted and if all out then 132 over and Only 132 over will be Valid.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">1.3 1st day 1st session run minimum 25 over will be played then result is given otherwise 1st day 1st session will be deleted.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">1.4 1st day 2nd session run minimum 25 over will be played then result is given otherwise 1st day 2nd session will be deleted.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">1.5 1st day total run minimum 80 over will be played then result is given otherwise 1st day total run will be deleted. If a team get All Out before the day stumps, the other team's 1st day score will be added to 1st day total run event. (i.e. AUSTRALIA got all out at 251 before the day stumps, then ENGLAND hit 100 runs in the remaining overs of 1st day, so the result of 1st day total run event will be 351)</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">1.6 Test match both advance session is valid.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">2 Test lambi/ Inning run:-</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">2.1 Mandatory 70 over played in test lambi paari/ Innings run. If any team all-out or declaration lambi paari/ innings run is valid.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">2.2 In case due to weather situation match has been stopped all lambi trades will be deleted.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">2.3 In test both lambi paari / inning run is valid in advance fancy.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">3 Test batsman:-</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">3.1 In case batsmen is injured he/she is made 34 runs the result will be given 34 runs.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">3.2 Batsman 50/100 run if batsman is injured or declaration the result will be given on particular run.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">3.3 In next men out fancy if player is injured particular fancy will be deleted.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">3.4 In advance fancy opening batsmen is only valid if same batsmen came in opening the fancy will be valid in case one batsmen is changed that particular player fancy will be deleted.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">3.5 Test match both advance fancy batsmen run is valid.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">4 Test partnership:-</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">4.1 In partnership one batsman is injured or Retired out means partnership will continued in next batsman.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">4.2 Partnership and player runs due to weather condition or match abandoned or match completed, then the result will be given as per score.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">4.3 Advance partnership is valid in case both players are different or same.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">4.4 Test match both advance fancy partnership is valid.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">5 Other fancy advance (test):-</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">5.1 Four, sixes, wide, wicket, extra run, total run, highest over and top batsmen is valid only if 300 overs has been played or the match has been won by any team otherwise all these fancy will be deleted. Additionally all events are valid only for 1st innings( this is applicable to all individual team events also)</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">2 Odi rule:-</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Session:-</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Match 1st over run advance fancy only 1st innings run will be counted.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Complete session is valid in case due to rain or match abandoned particular session will be deleted.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">For example:- 35 over run team a is playing any case team A is all-out in 33 over team a has made 150 run the session result is validated on particular run.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Advance session is valid in only 1st innings.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">50 over runs:-</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">In case 50 over is not completed all bet will be deleted due to weather or any condition.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Advance 50 over runs is valid in only 1st innings.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Odi batsman runs:-</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">In case batsman is injured he/she is made 34 runs the result will be given 34 runs.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">In next men out fancy if player is injured particular fancy will be deleted.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">In advance fancy opening batsmen is only valid if same batsmen came in opening the fancy will be valid in case one batsmen is changed that particular player fancy will be deleted.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Odi partnership runs:-</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">In partnership one batsman is injured or Retired out means partnership will continued in next batsman.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Advance partnership is valid in case both players are different or same.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Both team advance partnerships are valid in particular match.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Other fancy:-</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Four, sixes, wide, wicket, extra run, total run, highest over ,top batsman,maiden over,caught-out,no-ball,run-out,fifty and century are valid only match has been completed in case due to rain over has been reduced all other fancy will be deleted.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">T20:-</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Session:-</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Match 1st over run advance fancy only 1st innings run will be counted.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Complete session is valid in case due to rain or match abandoned particular session will be deleted.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">For example :- 15 over run team a is playing any case team a is all-out in 13 over team A has made 100 run the session result is validated on particular run.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Advance session is valid in only 1st innings.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">20 over runs:-</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Advance 20 over run is valid only in 1st innings. 20 over run will not be considered as valid if 20 overs is not completed due to any situation.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Badla Rule:</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">1.) Our session rate 45/46 means you can chances to bet 5 upper and down  badla rate (Ex: Badla Down rate 40,41,42,43,44 and Badla Upper rate  47,48,49,50,51).</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">If the result is your chosen badla rate, you will make a profit. If the result is our rate, you will make a loss. If any other results all badla bets will be voided.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">2.)	If session rate 45.110.90 then you can chances to bet only upper badla value. (Ex: Upper badla value is 46,47,48,49,50).</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">If the result is your chosen badla rate, you will get 90% profit. If the result is our rate, you will get 110% loss.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">3.) No ball free hit ball bets will be voided.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">T20 batsman runs:-</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">In case batsman is injured he/she is made 34 runs the result will be given 34 runs.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">In next men out fancy if player is injured particular fancy will be deleted.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">In advance fancy opening batsmen is only valid if same batsmen came in opening the fancy will be valid in case one batsmen is changed that particular player fancy will be deleted.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">T20 partnership runs:-</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">In partnership one batsman is injured or Retired out means partnership will continued in next batsman.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Advance partnership is valid in case both players are different or same.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Both team advance partnerships are valid in particular match.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">1st 2 &amp; 3 &amp; 4 Wickets runs:- T20/ODI</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Advance event is valid in only 1st Innings.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">If over reduced due to rain or weather condition or match abandoned or match completed, then the result will be given as per score.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Other fancy:-</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">T-20 ,one day and test match in case current innings player and partnership are running in between match has been called off or abandoned that situation all current player and partnership results are valid.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Four, sixes, wide, wicket, extra run, total run, highest over and top batsman,maiden over,caught-out,no-ball,run-out,fifty and century are valid only match has been completed in case due to rain over has been reduced all other fancy will be deleted. 1st 6 over dot ball and 20 over dot ball fancy only valid is 1st innings.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">1st wicket lost to any team balls meaning that any team 1st wicket fall down in how many balls that particular fancy at least minimum one ball have to be played otherwise bets will be deleted.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">1st wicket lost to any team fancy valid both innings.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">How many balls for 50 runs any team meaning that any team achieved 50 runs in how many balls that particular fancy at least one ball have to be played otherwise that fancy bets will be deleted.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">How many balls for 50 runs fancy any team only first inning valid.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">1st 6 inning boundaries runs any team fancy will be counting only according to run scored fours and sixes at least 6 over must be played otherwise that fancy will be deleted.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">1st inning 6 over boundaries runs any team run like wide ,no-ball ,leg-byes ,byes and over throw runs are not counted this fancy.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">How many balls face any batsman meaning that any batsman how many balls he/she played that particular fancy at least one ball have to be played otherwise that fancy bets will be deleted.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">How many balls face by any batsman both innings valid.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Lowest scoring over will be considered valid only if the over is completed fully (all six deliveries has to be bowled)</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Match 30s : How many batsman's scored 30 to 49 runs in full match. If a Player reached 50 means, Not considered in this Event.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Boundaries in 1st Power play : Number of Boundaries Scored in 1st Power play, 1st Innings only Valid In T20/ODI Both</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Dot balls in 1st Power play : Number of Dot balls coming in 1st Power play, 1st Innings only Valid In T20/ODI Both</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total match Wicket keeper's Dismissals: Wicket keepers Caught outs and Stumping Only Considered In T20/ODI Both</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">1st Inn Death Over Runs : Runs Scored, Last Over Only Considered, 1st Innings only Valid</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Match Single Digit Scores By Players : Duck outs Not Considered in this Event. If Not out Batsman/Injured Batsman facing One Legal Delivery and nothing scored ('0') means Considered as Single Digit</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Most Balls Faced By a Batsman : Maximum Balls Faced by an Individual Batsman in Match</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">High Pship Boundaries in the Match : Maximum Number of Boundaries Scored during any Partnership</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Impact over’s: Number of over’s scored 10 runs or above. Team wise only 1st inning are valid and Match wise both innings are valid.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Match Four Hitters : Number of Batsman hitting Fours in full match.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Match Six Hitters : Number of Batsman hitting Sixes in full match.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Match Wicket Takers : Number of bowlers taking wickets in full match.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">100 balls Event: The events for 1 to 100 balls will be considered valid only if the number of balls mentioned has been played completely. However if the balls got reduced before the particular event then the same will be voided, if the team batting first get all out prior to 100 balls the balance balls will be counted from second innings. For example if team batting first gets all out in 81 balls balance 19 balls will be counted from second innings and that 19 balls all events are counted. This same is valid for 1st Innings only.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Wickets: If a Batsman Retired hurt or Retired out means It will not be Counted in Total Wicket.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Most 4s in Single Over: Maximum number of 4s hit in a single over of the Match. No ball 4s will be counted. Byes &amp; Leg byes 4s will not be counted.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Most 6s in Single Over : Maximum number of 6s hit in a Single over of the Match. No ball 6s will be counted.
+                                       </span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Concussion in Test:-</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">All bets of one over session will be deleted in test scenario, in case session is incomplete. For example innings declared or match suspended to bad light or any other conditions.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">1. All bets will be considered as valid if a player has been replaced under concussion substitute, result will be given for the runs scored by the mentioned player. For example DM Bravo gets retired hurt at 23 runs, then result will be given for 23.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">2. Bets of both the player will be valid under concussion substitute.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Line Market :-</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">The result will be given of the particular Line Market only if the mentioned over is completed or the batting team is bowled out(All Out) or the target is chased down.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Note : Penalty runs will be included in all the&nbsp;Line&nbsp;Markets.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Total Match- Events (test):-</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Minimum of 300 overs to be bowled in the entire test match, otherwise all bets related to the particular event will get void. For example, Total match caught outs will be valid only if 300 overs been bowled in the particular test match</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Limited over events-Test:-</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">This event will be considered valid only if the number of overs defined on the particular event has been bowled, otherwise all bets related to this event will get void. For example 0-25 over events will be valid only if 25 overs has been bowled, else the same will not be considered as valid</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">If the team gets all out prior to any of the defined overs, then balance overs will be counted in next innings. For example if the team gets all out in 23.1 over the same will be considered as 24 overs and the balance overs will be counted from next innings.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Bowler Wicket event's- Test:-</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Minimum of one legal over (one complete over) has to be bowled by the bowler mentioned in the event, else the same will not be considered as valid.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Bowler over events- Test:-</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">The mentioned bowler has to complete the defined number of overs, else the bets related to that particular event will get void. For example if the mentioned bowler has bowled 8 overs, then 5 over run of that particular bowler will be considered as valid and the 10 over run will get void.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Player ball event's- Test:-</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">This event will be considered valid only if the defined number of runs made by the mentioned player, else the result will be considered as 0 (zero) balls.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">For example if Root makes 20 runs in 60 balls and gets out on 22 runs, result for 20 runs will be 60 balls and the result for balls required for 25 run Root will be considered as 0 (Zero) and the same will be given as result</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Limited over events-ODI:-</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">This event will be considered valid only if the number of overs defined on the particular event has been bowled, otherwise all bets related to this event will get void. 0-50 over events will be valid only if 50 over completed, if the team batting first get all out prior to 50 over the balance over will be counted from second innings. For example if team batting first gets all out in 35 over balance 15 over will be counted from second innings, the same applies for all events if team gets all out before the defined number of overs.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">The events which remains incomplete will be voided if over gets reduced in the match due to any situation, for example if match interrupted in 15 overs due to rain/badlight and post this over gets reduced. Events for 0-10 will be valid, all other events related to this type will get deleted.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">This events will be valid only if the defined number of over is completed. For example team batting first gets all out in 29.4 over then the same will be considered as 30 over, the team batting second must complete 20 overs only then 0-50 over events will be considered as valid. In case team batting second gets all out in 19.4 over then 0-50 over event will not be considered as valid, This same is valid for 1st Innings only.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Bowler event- ODI:-</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">The mentioned bowler has to complete the defined number of overs, else the bets related to that particular event will get void. For example if the mentioned bowler has bowled 8 overs, then 5 over run of that particular bowler will be considered as valid and the 10 over run will get void.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Both innings are valid</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Other event:- T20</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">The events for 1-10 over and 11-20 over will be considered valid only if the number of over mentioned has been played completely. However if the over got reduced before the particular event then the same will be voided, if the team batting first get all out prior to 20 over the balance over will be counted from second innings. For example if team batting first gets all out in 17 over balance 3 over will be counted from second innings and that 3 over all events are counted. This same is valid for 1st Innings only.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">If over got reduced in between any running event, then the same will be considered valid and the rest will be voided. For example.., match started and due to rain/bad light or any other situation match got interrupted at 4 over and later over got reduced. Then events for 1-10 is valid rest all will be voided</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Bowler Session: Bowler session advance events only valid for 1st inning. This event is valid only if the bowler has completed his maximum quota of overs, else the same will be voided. However if the match has resulted and the particular bowler has already started bowling his final over then result will be given even if he haven't completed the over. For example B Kumar is bowling his final over and at 3.4 the match has resulted then result will be given for B Kumar over runs</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Incase of DLS, the over got reduced then the bowler who has already bowled his maximum quota of over that result will be considered as valid and the rest will be voided</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Dot ball Event:</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Only No run will count as dot ball.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">If wicket means that will not count as dot ball.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Most Dot balls By a Bowler Event:
+                                       </span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Leg bye run and wickets considered as Dot&nbsp;ball&nbsp;in&nbsp;bowler</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Boundary on Match 1st Free hit</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Both innings are valid</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Boundary hit on Free hit only be considered as valid</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Bets will be deleted if there is no Free hit in the mentioned match</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Boundary by bat will be considered as valid</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Boundaries by Player</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Both Four and six are valid</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Bowler Session:</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">The mentioned bowler has to complete the defined number of overs, else the bets related to that particular event will get void. For example if the mentioned bowler has bowled 8 overs, then 5 over run of that particular bowler will be considered as valid and the 10 over run will get void.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Wide &amp; No ball runs will be counted in bowler Session.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Byes &amp; Leg byes runs will not be counted in bowler Session.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Inning Run Bhav Event :</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Inning run bhav bets are valid if over reduced due to rain or weather condition or match abandoned the result will be given as per official result.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Settlement occurs once the stipulated conditions are met, which involves either completion
+                                       of the allotted overs or the batting team's dismissal, including weather disturbances.</span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">In the event of a weather-shortened match, all Bhav Bets placed in the Inning Run Bhav
+                                       market will be settled according to the official result. For limited overs matches, this includes
+                                       results determined by the Duckworth Lewis method.</span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">In case of pitch vandalism, player safety concerns, stadium damage, acts of terrorism, or acts
+                                       of God, the company holds the authority to nullify all bets, with the exception of those related
+                                       to markets that have already been conclusively settled.</span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Bets made during instances of incorrect scorecard updates, inaccurate commentary, delays in
+                                       suspending the Bhav Bets of Total Innings Runs market, or erroneous updates of rates and
+                                       odds for Bhav Bets in Total Innings Runs will be removed and deleted from user accounts.</span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Ex: 1st inning run bhav(ENG v AUS),2nd Inning run bhav(ENG v AUS) - England vs Australia T20 Match</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">No Boundaries Event:</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Both Four and Six are valid</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Batsman bat boundaries only considered as valid </span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Free hit boundaries also valid</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Bets will be voided if that particular ball not completed</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Result will be given 0 or 4 (No or Yes). For Example batsman hit boundary in particular ball means Result is 0 otherwise Result is 4.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Power Surge Rule in Big Bash</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Power Play First Four Overs + Power Surge Two Overs-Batters Choice </span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">The batting side chooses when to take control with the addition of the Power Surge.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">There’s still a four-over power play at the start of the innings, but now the batting team can take the other two Power Surge overs any time from the 11th over onwards.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Total Runs in Match:</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">1. This market is based on how many runs will be scored in the match across both team’s innings combined.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">2. Penalty runs will be counted.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">3. Total Runs in Match, bets will be voided if over reduced in 1st inning or 2nd inning due to weather condition.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">4. The following number of over’s must be bowled otherwise all bets are void. T20-40 over’s / Odi-100 over’s, if team gets all out before the defined number of over’s then valid.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">5. In case match shortened due to weather condition, a new event will be start of the allotted over’s announced.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Total Match - Events (Test):-</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total runs: This market is based on how many runs will be scored in the match across both team's innings combined.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Over’s: This market is based on how many over’s will be played in the match across both team's innings combined. (If an Inning completed in 83.4 over’s then that calculated as 84 over)</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Bowlers Giving 100 runs: Number of Bowlers Giving 100 runs and above per innings. Both innings will be counted.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Any query regarding result or rate has to be contacted within 7 days from the event; query after 7 days from the event will not be considered as valid</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">World Cup:-</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">In case of any circumstances, management decision will be final for all the fancies under world cup.
+                                       </span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">WC:-WORLD CUP
+                                       </span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">MOM:-MAN OF THE MATCH.
+                                       </span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">If World Cup fixture of 48 matches gets reduced due to any reason, then all the special fancies will be voided (Match abandoned due to rain/bad light will not be considered in this)
+                                       </span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Super over will not be included
+                                       </span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">At any situation if result is given for any particular event based on the rates given for the same, then the particular result will be considered valid, similarly if the tournament gets canceled due to any reason the previously given result will be considered valid
+                                       </span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Match 1st over runs : Average 4 runs will be given in case match abandoned or over reduced (Only First Innings is Valid)
+                                       </span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Match 1st over Dot Ball : Average 4 runs will be given in case match abandoned or over reduced (Only First Innings is Valid)
+                                       </span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Match 1st 10 over run:- Average 50 runs will be given in case match abandoned or over reduced (Only First Innings is Valid)
+                                       </span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total fours: Average 45 fours will be given in case match abandoned or over reduced
+                                       </span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total sixes: Average 11 sixes will be given in case match abandoned or over reduced
+                                       </span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Wickets - Average 15 Wickets will be given in case match abandoned or over reduced
+                                       </span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Wides - Average 16 Wides will be given in case match abandoned or over reduced
+                                       </span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total No balls:- Average 2 No ball will be given in case match abandoned or over reduced
+                                       </span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Extras - Average 26 extras will be given in case match abandoned or over reduced
+                                       </span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Caught outs: Average 9 caught out will be given in case match abandoned or over reduced
+                                       </span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Bowled:- Average 3 Bowled out will be given in case match abandoned or over reduced
+                                       </span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total LBW:- Average 2 LBW will be given in case match abandoned or over reduced
+                                       </span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Run out:- Average 1 Run out will be given in case match abandoned or over reduced
+                                       </span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Fifties - Average 3 fifties will be given in case match abandoned or over reduced
+                                       </span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total 100s - Average 1 Hundred will be given in case match abandoned or over reduced
+                                       </span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Ducks - Average 1 Duck out will be given in case match abandoned or over reduced
+                                       </span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Maidens - Average 4 Maidens will be given in case match abandoned or over reduced
+                                       </span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total 50+ Partnerships - Average 3 Fifty plus Partnerships will be given in case match abandoned or over reduced. 50 and 50 Above Partnerships All Counted in this.
+                                       </span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Highest 1st over run in individual match: Only First Innings is Valid
+                                       </span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Highest 1st 10 over run in individual match: Only First Innings is Valid
+                                       </span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Highest Fours in individual match: Both innings are valid
+                                       </span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Highest Sixes in individual match: Both innings are valid
+                                       </span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Highest Wicket in individual match: Both innings are valid
+                                       </span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Highest Extras in individual match: Both innings are valid
+                                       </span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Highest Scoring runs in Over: Both innings are valid
+                                       </span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Highest Run Scorer : Total Runs Scored by An Individual Batsman in Full Tournament
+                                       </span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Highest Wicket Taker : Total Wickets Taken by a Bowler in Full Tournament
+                                       </span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Most Balls Faced By a Batsman in the Match : Maximum Balls Faced by an Individual Batsman in any Single Match
+                                       </span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Most 4s by a Batsman in the Match :  Maximum 4s Hitted by an Individual Batsman in any Single Match
+                                       </span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Most 6s by a Batsman in the Match :  Maximum 6s Hitted by an Individual Batsman in any Single Match
+                                       </span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Most Boundaries Given by a Bowler : Maximum Boundaries Given by an Individual Bowler in his Quota of any Single Match 
+                                       </span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Most Runs Given by a Bowler in the Match : Maximum Runs Given by an Individual Bowler in his Quota of any Single Match
+                                       </span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Most Dotballs By a Bowler  in the Match : Maximum Dotballs Bowled by an Individual Bowler in his Quota of any Single Match
+                                       </span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Most Wides Given by a Bowler in the Match : Maximum Wides Given by an Individual Bowler in his Quota of any Single Match
+                                       </span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Most Wickets by a Bowler in the Match : Maximum Wickets Given by an Individual Bowler in his Quota of any Single Match
+                                       </span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Special Events:
+                                       </span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Pakistan Super League (PSL)</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">If PSL fixture of 34 matches gets reduced due to any reason, then all the special fancies will be voided (Match abandoned due to rain/bad light will not be considered in this)</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Matches 1st over runs : Average 6 runs will be given in case match abandoned or over reduced (only 1st innings valid)</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Matches 1st 6 over runs : Average 50 runs will be given in case match abandoned or over reduced (Only 1st Innings valid)</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total fours: Average 32 fours will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total sixes: Average 13 sixes will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total 30's: Average 2 Thirties will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Fifties - Average 2 Fifties will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Wickets - Average 13 Wickets will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Wides - Average 11 Wides will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Extras - Average 18 Extras will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Caught outs: Average 8 Caught out will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Bowled:- Average 2 Bowled out will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total LBW:- Average 1 LBW will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Run out:- Average 1 Run out will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">At any situation if result is given for any particular event based on the rates given for the same, then the particular result will be considered valid, similarly if the tournament gets canceled due to any reason the previously given result will be considered valid
+                                       </span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Highest innings run - Both innings are valid</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Lowest innings run - Only first innings is valid</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Highest Match 1st over runs in the match: Only first innings is valid</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Highest 1st 6 over runs: - Only first innings is valid</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Highest 4's in individual match: Both innings are valid</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Highest 6's in individual match: Both innings are valid</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Highest Wickets in individual match: Both innings are valid</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Highest Extras in individual match: Both innings are valid</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Highest over runs: Both innings are valid</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Most Balls Faced By a Batsman : Maximum Balls Faced by a batsman in one Innings</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Most 4's by individual batsman in an Inning : Maximum Number of Fours Hit By A Batsman in one Innings</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Most 6's by individual batsman in an Inning : Maximum Number of Sixes Hit By A Batsman in one Innings</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Most Dot balls By a Bowler in an Inning : Maximum Dot balls Bowled by a Bowler in his Quota of Innings</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Most runs given by Bowler in an Inning : Maximum Runs conceded by a individual Bowler in an Innings</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Most wickets by Bowler in an inning : Maximum Wickets taken by a individual Bowler in an Innings</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total 50 Plus Partnership runs- 50 and above 50 runs partnership will be counted in this event.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">In fastest fifty always the first 50 runs will be considered, for example of R Sharma scores 1st fifty in 17 balls and scores 100 in next 14 balls, fastest 50 will be given based on the balls for the 1st fifty runs</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Super over will not be included</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Women's Premier League (WPL)</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">If WPL fixture of 22 matches gets reduced due to any reason, then all the special fancies will be voided (Match abandoned due to rain/bad light will not be considered in this)</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total matches 1st over runs : Average 5 runs will be given in case match abandoned or over reduced (only 1st innings valid)</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total matches 1st 6 over runs:- Average 40 runs will be given in case match abandoned or over reduced (Only 1st Innings valid)</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total 4's : Average 32 fours will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total 30's: Average 2 sixes will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total 50's - Average 1 fifties will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Wickets - Average will 12 Wickets be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">At any situation if result is given for any particular event based on the rates given for the same, then the particular result will be considered valid, similarly if the tournament gets canceled due to any reason the previously given result will be considered valid</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Highest innings run - Both innings are valid</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Lowest innings run - Only first innings is valid</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Highest Match 1st over runs in the match: Only first innings is valid</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Highest 1st 6 over runs: - Only first innings is valid</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Highest 4's in individual match: Both innings are valid</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Highest Wickets in individual match: Both innings are valid</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Highest over runs: Both innings are valid</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Most Balls Faced By a Batsman : Maximum Balls Faced by a batsman in one Innings</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Most 4's by individual batsman in an Inning : Maximum Number of Fours Hit By A Batsman in one Innings</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Most Dot balls By a Bowler in an Inning : Maximum Dot balls Bowled by a Bowler in his Quota of Innings</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Most runs given by Bowler in an Inning : Maximum Runs conceded by a individual Bowler in an Innings</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Most wickets by Bowler in an inning : Maximum Wickets taken by a individual Bowler in an Innings</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">In fastest fifty always the first 50 runs will be considered, for example of S Mandhana scores 1st fifty in 17 balls and scores 100 in next 14 balls, fastest 50 will be given based on the balls for the 1st fifty runs</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Super over will not be included</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Indoor Cricket T10 League</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">9 Players squad with 7 players a side Over Arm Box Cricket 
+                                       Championship</span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Scoring Rules :</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Hitting the ball in Zone A (the front net, i.e., the net behind the wicket keeper)
+                                       won't get you any bonus runs.</span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">If the ball hits the net in Zone B (side nets between the striker's end and
+                                       halfway down the pitch), you get 1 bonus run.</span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">If the ball hits the net in Zone C (side nets between the bowler's end and
+                                       halfway), you score 2 bonus runs.</span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Hitting the ball in Zone D (the back net, i.e., the net behind the bowler) allows
+                                       you to score 4 or 6 bonus runs depending on how the ball hits the back net.
+                                       If the ball hits the net after bouncing, you get 4 bonus runs. If the ball hits the net
+                                       without bouncing on the ground, you score 6 bonus runs.</span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">If the ball hits Zone B or C onto Zone D, you score 3 bonus runs.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Remember that at least one physical run must be taken for any bonus runs to
+                                       be scored. Whatever bonus runs you get will be added to the physical runs.
+                                       For example, if you strike the ball into the front net for 1 bonus run and take
+                                       2 physical runs, you score a total of 3 runs off the ball.</span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Game Format :</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">10 over a-side innings</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Power Play for the 1st 3 overs. Only 1 player allowed beyond the 
+                                       Inner box marking. After the end of power play over, only 2 
+                                       players can be outside the Inner Box.</span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">No Ball &amp; Wide balls as per normal cricketing rules.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">If the ball touches the upper net and if any player catches the 
+                                       ball, the batsman is considered out.</span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">If the Ball Touches the Upper Net and lands safely on the field, 
+                                       then the batsman have to take a physical run if they want, if no 
+                                       physical run is taken there will be no runs.</span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Zone A shall concede 0 runs.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">If the player hits the net after the middle line (Zone C) its 2 
+                                       bonus runs. (only taken into consideration if the players take a 
+                                       physical run)</span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">If the player hits the net before the middle line (Zone B) its 1 
+                                       bonus run. (only taken into consideration if the players take a 
+                                       physical run)</span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">If the ball goes straight to the boundary (Zone D) without a 
+                                       bounce, it’s a SIX.</span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">If the ball bounces and goes to the boundary (Zone D) it’s a 
+                                       FOUR</span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">If the ball hits the upper net and goes straight to the boundary 
+                                       (Zone D) it’s a 6.</span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">If the ball hits the upper net and bounces and goes straight to 
+                                       the boundary (Zone D) it’s a 4.</span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Note: Bonus Runs are only applied if the ball hits or touches the 
+                                       Side Nets of that particular zone (B&amp;C) and taken into
+                                       consideration if the players take a physical Run.</span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">The bowler is not allowed to touch the front line or the side line 
+                                       of the Crease, in case they do so it will be counted as a no ball 
+                                       and 2 runs will be given to the batting team and the ball will not 
+                                       be counted.</span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">If a bowler bowls a no or a wide ball, the delivery will not be 
+                                       counted and each wide or no ball will be given 2 runs to the 
+                                       batting team total.</span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">If the batsman is a right hander and if the ball goes out of the 
+                                       white wide line it will be given as a wide ball &amp; if the ball is 
+                                       going leg side and is inside the Leg Side line the ball is counted.</span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Dismissals in Indoor Cricket are as followed: Bowled, Run Out, 
+                                       Catch Out, Stumping and Handling the Ball.</span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">If the bowler is bowling directly above waist and one bounce 
+                                       above shoulder level it is counted as a no ball, but the batter 
+                                       has to play the ball from the crease, in case the batter is outside the crease and plays the ball it will be termed as a good 
+                                       ball.</span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Incomplete action or throwing the ball to the stump will be 
+                                       termed as a no ball and 2 runs will be given to the batting team.</span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">If the batsman does not hit the ball after it is bowled it is
+                                       considered as a Dot Ball, the batsman gets 0 runs.</span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">If the batsman hits the ball and the fielders or the wicket-keeper catch it without it touching the floor, the batsman 
+                                       will be dismissed as Catch Out.</span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">If the ball touches a fielder and then hits the nets (zones), the 
+                                       bonus runs will be counted, if the physical runs are taken by the 
+                                       batter.</span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">No runs for overthrow.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">If the ball is caught directly after touching the zones (B/C), it 
+                                       will be treated as NOT OUT and bonus runs are applicable if 
+                                       physical run is taken.</span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">If the ball touches the bonus run zones and the fielder accomplishes a run out, the batter will be OUT and no bonus runs will 
+                                       be counted. Physical run will be counted if 1 run is taken and run 
+                                       out happens during the second run.</span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">When a batter gets out, the next player coming in will take the 
+                                       strike. </span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Run out will ONLY be at the batter’s end.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">When 6 wickets of a team fall, the last batter will be allowed to 
+                                       bat. The team will send a runner at non-striker’s end. After 
+                                       every physical run taken, the last batsman will have to go back 
+                                       to strike to face the next ball. Run out for the runner will mean 
+                                       dismissal for the last batsman.</span>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                     <div class="rules-content-title">khado</div>
+                     <div class="rules-content-desc">
+                        <div class="table-responsive">
+                           <table class="table table-bordered">
+                              <tbody>
+                                 <tr>
+                                    <td><span class="">Only First inning valid for T20 and one day matches.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Same will be work like Lambi. If match abandoned or over reduced, all bets will be deleted.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">You can choose your own value in this event.</span></td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                     <div class="rules-content-title">fancy1</div>
+                     <div class="rules-content-desc">
+                        <div class="table-responsive">
+                           <table class="table table-bordered">
+                              <tbody>
+                                 <tr>
+                                    <td><span class="text-danger">1. Odd/Even Rules. (W.e.f 5th January 2024)</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">1.1 Advance events will be valid if over reduced before match start. For Ex: - In T20, If over reduced to 16 over so up to 16 over valid remaining over will be deleted.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">1.2 All bets regarding Odd/Even sessions will be deleted if the particular session is incomplete.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">1.3 In case of all out or the target chased down, particular session will be considered as a completed session.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">For Example : IN ODI - IND got all out at 12.3 over then 15 over session will be considered as a completed session or AUS get chase down the target in 12.3 over then 15 over session will be considered as a completed&nbsp;session.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">IN TEST - IND got all out at 12.3 over then 20 over session will be considered as a completed session or AUS get chase down the target in 12.3 over then 20 over session will be considered as a completed&nbsp;session.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">IN T10/T20 - IND got all out at 8.3 over then 9 over session will be considered as a completed session or AUS get chase down the target in 8.3 over then 9 over session will be considered as a completed&nbsp;session.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">1.4 All bets regarding to ODD/EVEN player/partnership are valid if one legal delivery is being played, else the bets will be deleted. Player odd/even all advance bets will be valid if one legal delivery is being played in match otherwise voided.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">1.5 Innings run Odd/Even session will be valid if over reduced due to weather condition.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">1.6 In any circumstances management decision will be final.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">1.7 Penalty runs will be counted in all Events. (This rule applicable from 20th March 2024)</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">2 Top batsman rules:-</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">2.1 If any player does not come as per playing eleven then all bets will be get deleted for the particular player.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">2.2 two players done the same run in a single match (M Agarwal 30 runs and A Rayudu 30 runs, whole inning top batsmen score also 30 run) then both player settlement to be get done 50 percent (50% , 50%)rate on their original value which given by our exchange.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Suppose we have opened value of M Agarwal 3.75 back and customer place bets on 10000 @ 3.75 rates and A Rayudu 3.0 back and customer place bets on 10000 @ 3.0 rates.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Whole inning result announces 30 run by both player then</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Rule of top batsman:-if you bet on M Agarwal you will be get half amount of this rate (10000*3.75/2=18750 you will get)</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Rule of top batsman:-if you bet on A Rayudu you will be get half amount of this rate (10000*3.00/2=15000 you will get)</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Top batsman only 1st inning valid.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">For one day 50 over and for t-20 match 20 over must be played for top batsmen otherwise all bets will be deleted.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Man of the Match Rules</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">1. All bets will be deleted in case the match is abandoned or over reduced.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">2. All bets will be deleted if the mentioned player is not included in playing 11.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">3. In case Man of the Match is shared between two players then Dead heat rule will be applicable, For example K Perera and T Iqbal shares the Man of the Match, then the settlement will be done 50% of the rates accordingly.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">4. Rules similar to our Top Batsman rules.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Maximum Sixes by Team</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">1. All bets will be deleted if match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">2. All bets will be deleted if both the teams hits same number of sixes.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">3. Super over will not be considered.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Maximum 6 or 10 over runs</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">1. All bets will be deleted if match abandoned or over reduced.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">2. All the bets will be deleted if both the teams score is same (Runs scored in 6 or 10 overs)</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">3. 6 overs for T20 and 10 overs for ODI</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">4. Both the innings are valid.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">5. This fancy will be valid for 1st 6 overs of both innings for T20 and 1st 10 overs of both innings for ODI</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Batsman Match</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Batsman Match:- Bets for Favourite batsman from the two batsman matched.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">All bets will be deleted if any one of the mentioned player is not included in playing 11.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">All bets will be deleted unless one ball being played by both the mentioned players.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">All bets will be deleted if over reduced or Match abandoned.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">All bets will be deleted if both the player scored same run. For example H Amla and J Bairstow are the batsman matched, H Amla and J Bairstow both scored 38 runs then all bets will be deleted.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Both innings will be valid</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Opening Pair</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">1. Bets for Favourite opening pair from the two mentioned opening pair.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">2. Runs made by both the opening player will be added. For example:- J Roy scored 20 runs and J Bairstow scored 30 runs result will be 50 runs.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">3. Highest run made by the pair will be declared as winner. For example: Opening pair ENG total is 70 runs and Opening pair SA is 90 runs, then SA 90 runs will be declared as winner.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Both innings will be valid</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Our exchange Special</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">All bets will be deleted if the mentioned player is not included in playing 11.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">All bets will be deleted if match abandoned or over reduced.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Both innings will be valid</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Direction of First Boundary</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">All bets will be deleted if the mentioned batsman is not included in playing 11.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">All bets will be deleted if match abandoned or over reduced.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">The boundary hit through off side of the stump will be considered as off side four.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">The boundary hit through leg side of the stump will be considered as leg side four.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Boundaries through extras (byes,leg byes,wide,overthrow) will not be considered as valid.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Only 1st Inning will be considered</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Fifty &amp; Century by Batsman</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">All bets will be deleted if match abandoned or over reduced.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">All bets will be deleted if the mentioned batsman is not included in playing 11.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">All bets will be deleted unless the batsman faces one legal ball.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Both Innings will be valid.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">1st over Fancy</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Boundaries through extras (byes,leg byes,wide,overthrow) will not be considered.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Only 1st inning will be valid</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Odd Even Fancy</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Incompleted games will be deleted. Over reduced or abandoned all bets will be deleted.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">For example:-275 run SL bhav must be played 50 over if rain comes or any condition otherwise 275 run SL bets will be deleted.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Next Man out</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Next man out fancy advance &amp; in regular. Both inning will be valid. If any player does not come in opening then all bets will be deleted. If over reduced or abandoned then all bets will be deleted.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Caught out</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Caught out fancy in advance &amp; in regular. Both inning will be valid. If over reduced or match abandoned then all bets will be deleted.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Wkt &amp; All out Fancy</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">5 wkt in 10 over &amp; All out in 20 over fancy is valid for both inning. If match abandoned or over reduced all bets will be deleted.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Test Match: Game Completed Fancy</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">1. This is the fancy for match to be won/ completed in which day &amp; session (Completed: Game has to be completed)</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">2. If match drawn then all the sessions will be considered as lost.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Meter Fancy</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">In case match abandoned or over reduced mid point rule will be applicable</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">For example: If Dhoni meter is 75 / 77 and the match abandoned or over reduced, then the result will be 76</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">In case of single difference result will be given for the higher rate of the final rate (eg 53/54) and match gets abandoned then the result will be given as 54</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Midpoint rule is applicable for test match also. However for lambi meter/ inning meter 70 overs has to be played only then the same will be considered as valid</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Maximum Boundaries:-</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">If the number of fours or sixes of both the team is equal, then all bets of the respective event will get voided</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Khado:- Test</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Minimum 70 over has to be played by the particular team only then the Khado of the team will be considered as valid, else the same will be voided</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Lunch Favourite</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">1. The team which is favourite at lunch will be considered as lunch favourite or the team which is favourite after first inning last ball will be considered as lunch favourite in our exchange.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">2. In any circumstances management decision will be final.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">3. In case of tie in T20 or one day in lunch favourite game , all bets will be deleted in our exchange.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">4. In case overs are reduced in a match, the team which favourite at lunch will be considered as lunch favourite.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">4.1 For example :- if match is reduced to 18 over per side in t20 or Oneday then after 18 over the team which is favourite at lunch will be considered as lunch favourite.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">5. In case of weather, 1st innings match overs are reduced and direct target is given to team which will bat in 2nd inning then lunch favourite will be considered after target is given at lunch.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">5.1 For example :- in T20 match rain comes at 14 over and match is interrupted due to rain and direct target is given to 2nd batting team, then team which is favourite in match odds after target is given in match, will be considered as lunch favourite.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Common Market:-</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">In future, if any circumstances happens like covid issue , natural disasters or any reasons series will postponed or cancelled then at that moment result will be given to difference of opening rate to present rate.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Due to any reasons company has rights to take final decisions.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Common Means Only 1 Win</span></td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                     <div class="rules-content-title">cricket casino</div>
+                     <div class="rules-content-desc">
+                        <div class="table-responsive">
+                           <table class="table table-bordered">
+                              <tbody>
+                                 <tr>
+                                    <td><span class="text-danger">1. Completed game is valid , In case match abandoned due to rain particular game will be deleted.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">1.1 If over are reduced to 17 over instead of 20 due to rain or weather conditions, Innings Lambi run valid. (w.e.f. 15th June 2024)</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">1.2 If a team got all out in 17 over although Innings Lambi run valid.  (w.e.f. 15th June 2024)</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">1.3 In case of all out or the target chased down, particular session will be considered as a completed session (For Example : IND got all out at 12.3 over then 15 over session will be considered as a completed session or AUS get chase down the target in 12.3 over then 15 over session will be considered as a completed&nbsp;session)</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">2. Penalty runs will be counted in our exchange. (This rule applicable from 15th June 2024)</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">3. In any circumstances management decision will be final.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">4. The last digit of run in all game will be valid in our exchange.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">5. Single last digit game :-</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">5.1 For example:- 6 over run Ind : 47 run , so the result will be given as 7 for single last digit game in our exchange.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">6. Double last digit game :-</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">6.1 For example:- 6 over run &amp; 10 over run Ind : 45 run &amp; 83 run respectively , so the result will be given as 53 for double last digit game in our exchange.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">7. Triple last digit game :-</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">7.1 For example:- 6 over run, 10 over run &amp; 15 over run Ind : 43 run ,80 run and 125 respectively so the result will be given as 305 for triple last digit game in our exchange.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">7.2 For example:- 6 over run, 10 over run &amp; Lambi run Ind : 43 run ,80 run and 187 respectively so the result will be given as 307 for triple last digit game in our exchange.</span></td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                     <div class="rules-content-title">match</div>
+                     <div class="rules-content-desc">
+                        <div class="table-responsive">
+                           <table class="table table-bordered">
+                              <tbody>
+                                 <tr>
+                                    <td><span class="text-danger">Indian Premier League (IPL)</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">If IPL fixture of 74 matches gets reduced due to any reason, then all the special fancies will be voided (Match abandoned due to rain/bad light will not be considered in this)</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">At any situation if result is given for any particular event based on the rates given for the same, then the particular result will be considered valid, similarly if the tournament gets canceled due to any reason the previously given result will be considered valid</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Management decision will be final</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Highest innings run - Only First innings is valid</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Lowest innings run - Only First innings is valid</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Highest Partnership Runs in IPL: Both Innings are valid</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Highest Run Scorer : Total Runs Scored by An Individual Batsman in Full Tournament</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Highest Wicket Taker : Total Wickets Taken by a Bowler in Full Tournament</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">How Many time 5 or More Wickets taken by Bowlers : Number of time 5 or More Wickets taken by Bowlers. In Case Same Bowler 2 time 5 or More Wickets taken means Result Counted as 2.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total 4's: Average 29 Fours will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total 6's: Average 16 Sixes will be given in case match abandoned or over reduced
+                                       </span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total 30's: Average 2 Thirties will be given in case match abandoned or over reduced
+                                       </span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total 50's: Average 2 Fifties will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total No balls:- Average 1 No ball will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Wickets - Average will 12 Wickets be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Wides - Average 11 Wides will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Extras - Average 18 Extras will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Caught outs: Average 9 Caught out will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Bowled:- Average 2 Bowled out will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total LBW:- Average 1 LBW will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Run out:- Average 1 Run out will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Duckouts in IPL : Average 1 Duckout will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total 50+ Partnerships - Average 2 Fifty plus Partnerships will be given in case match abandoned or over reduced. 50 and 50 Above Partnerships All Counted in this.
+                                       </span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Highest Scoring Over Runs in IPL: Total of Every Match Highest Scoring Over Runs. Average 20 Runs will be given in case match abandoned or over reduced.
+                                       </span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Runs Scored in IPL : Total Runs Scored in Full Tournament. Average 350 Runs will be Counted in case match abandoned or over reduced. Both Innings Counted.
+                                       </span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Highest Match 1st Over Run of IPL :Only First Innings is Valid.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Highest 1st 6 over run: Only First Innings is Valid. Will not consider if over reduce before completion&nbsp;6 over.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Highest 1st 10 over run : Only First Innings is Valid. Will not consider if over reduce before completion&nbsp;10 over.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Highest 4s,6s,30s,50s Single Digit Scorers, Double Digit Scorers,Wickets,Caught Outs,Bowled,Lbw, Runouts, Stumpings, Duckouts,Wides and Extras in individual match: All Both innings are Counted.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Highest Scoring Over Runs in IPL: Both innings are valid</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Single Digit Scorers : Duck outs Not Considered in this Event. If Not out Batsman/Injured Batsman facing One Legal Delivery and nothing scored ('0') means Considered as Single Digit</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Most 6's by individual batsman of IPL : Maximum Number of Sixes Hit By A Batsman in full Tournament. Ex. Last Season (2021) KL Rahul Hit 30 Sixes in 13 Matches. So, 30 was the Result for last season.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Most Balls Faced By a Batsman of IPL : Maximum balls Faced by an Individual Batsman in the Single Match.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Most runs given by Bowler in an Inning of IPL : Maximum Runs conceded by a individual Bowler in an Innings.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Most Wide, Noball,Extras,4s,6s,30s,50s,50+ Pships,Caught Outs,LBWs, Runouts and Duckouts in an Innings Of the Match : Considered For Any Innings.All Both Innings Considered as Valid</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">In fastest fifty always the first 50 runs will be considered, for example of R Sharma scores 1st fifty in 17 balls and scores 100 in next 14 balls, fastest 50 will be given based on the balls for the 1st fifty runs</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Super over will not be included</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Big Bash League</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total match 1st over run:- Average 6 runs will be given if total 20 overs is not played, only 1st innings will be considered as valid</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Highest innings run - Only first innings is valid</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Lowest innings run - Only first innings is valid</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total 1st 6 over run:- Average 46 runs will be given if total 20 overs is not played, This event is valid only for the 1st innings</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Fours - Average 25 fours will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Sixes - Average 10 sixes will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Wickets - Average will 12 Wickets be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Wides - Average 8 wides will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Extras - Average 14 extras will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Fifties - Average 2 fifties will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Caught out - Average 8 catch out will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Bowled out - Average 2 bowled out will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Highest 6 over run: Both innings are valid</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Highest run in individual match: Both innings are valid</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Highest Fours in individual match: Both innings are valid</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Highest Sixes in individual match: Both innings are valid</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total LBW:- Average 1 LBW will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Highest Wickets in individual match: Both innings are valid</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Highest extras in individual match: Both innings are valid</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Highest match 1st over run in individual match: Only 1st inning will be considered as valid valid</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">All events related to bowler are valid only for the league stages, both the innings will be considered as valid. A minimum of 32 overs has to be bowled else the same will be voided. If the mentioned bowler has bowled one legal delivery then it will be considered as 1 over even if the over is not completed</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">All events based on ground are decided based on the initial fixture, in case of any changes in the venue between the series. Then average will be given based on the initial fixture for the number of games reduced, Similarly if any match is added newly to the venue will not be considered</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Average for wickets taken will be given in case match abandoned or over reduced or the player has not bowled single legal delivery before the over got reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Fancy based on all individual teams/players/ground are valid only for league stage</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Management decision will be final</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Bellerive Oval:- Hobart</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total 1st over run:- Average 6 runs will be given if total 20 overs is not played, only 1st innings will be considered as valid</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total 6 over run:- Average 46 runs will be given if total 20 overs is not played, only 1st innings will be considered as valid</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Fours - Average 28 fours will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Sixes - Average 11 Sixes will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Wide – Average 8 Wide will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Extras - Average 14 Extras will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Run- Average 330 runs will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Manuka Oval:- Canberra</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total 1st over run:- Average 5 runs will be given if total 20 overs is not played, only 1st innings will be considered as valid</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total 6 over run:- Average 44 runs will be given if total 20 overs is not played, only 1st innings will be considered as valid</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Fours - Average 24 fours will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Sixes - Average 10 Sixes will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Wickets - Average 12 wickets will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Wide – Average 8 Wide will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Extras - Average 13 Extras will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Run- Average 318 runs will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Bellerive Oval:- Hobart</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Wickets - Average 12 wickets will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Aurora stadium:- Launceston</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total 1st over run:- Average 6 runs will be given if total 20 overs is not played, only 1st innings will be considered as valid</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total 6 over run:- Average 45 runs will be given if total 20 overs is not played, only 1st innings will be considered as valid</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Fours - Average 25 fours will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Sixes - Average 10 Sixes will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Wickets - Average 12 wickets will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Wide – Average 8 Wide will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Extras - Average 14 Extras will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Run- Average 320 runs will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">The Gabba:- Brisbane</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total 1st over run:- Average 6 runs will be given if total 20 overs is not played, only 1st innings will be considered as valid</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total 6 over run:- Average 44 runs will be given if total 20 overs is not played, only 1st innings will be considered as valid</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Fours - Average 24 fours will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Sixes - Average 9 Sixes will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Wickets - Average 12 wickets will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Wide – Average 8 Wide will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Extras - Average 13 Extras will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">QUEENSLAND</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Run- Average 310 runs will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total 1st over run:- Average 6 runs will be given if total 20 overs is not played, only 1st innings will be considered as valid</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total 6 over run:- Average 44 runs will be given if total 20 overs is not played, only 1st innings will be considered as valid</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Fours - Average 24 fours will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Sixes - Average 10 Sixes will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Wickets - Average 12 wickets will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Wide – Average 8 Wide will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Extras - Average 14 Extras will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Run- Average 315 runs will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Adelaide Oval</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total 1st over run:- Average 6 runs will be given if total 20 overs is not played, only 1st innings will be considered as valid</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total 6 over run:- Average 46 runs will be given if total 20 overs is not played, only 1st innings will be considered as valid</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Fours - Average 27 fours will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Sixes - Average 10 Sixes will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Wickets - Average 12 wickets will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Wide – Average 8 Wide will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Extras - Average 14 Extras will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Run- Average 320 runs will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Perth Stadium</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total 1st over run:- Average 6 runs will be given if total 20 overs is not played, only 1st innings will be considered as valid</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total 6 over run:- Average 46 runs will be given if total 20 overs is not played, only 1st innings will be considered as valid</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Fours - Average 26 fours will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Sixes - Average 12 Sixes will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Wickets - Average 12 wickets will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Wide – Average 9 Wide will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Extras - Average 16 Extras will be given in case match abandoned or over reducedTotal Extras - Average 16 Extras will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Run- Average 340 runs will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Showground Stadium</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total 1st over run:- Average 6 runs will be given if total 20 overs is not played, only 1st innings will be considered as valid</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total 6 over run:- Average 44 runs will be given if total 20 overs is not played, only 1st innings will be considered as valid</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Fours - Average 25 fours will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Sixes - Average 9 Sixes will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Wickets - Average 12 wickets will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Wide – Average 8 Wide will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Extras - Average 14 Extras will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Run- Average 315 runs will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Docklands Stadium</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total 1st over run:- Average 6 runs will be given if total 20 overs is not played, only 1st innings will be considered as valid</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total 6 over run:- Average 46 runs will be given if total 20 overs is not played, only 1st innings will be considered as valid</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Fours - Average 25 fours will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Sixes - Average 11 Sixes will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Wickets - Average 12 wickets will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Wide – Average 8 Wide will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Extras - Average 14 Extras will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Run- Average 320 runs will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Melbourne Ground</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total 1st over run:- Average 6 runs will be given if total 20 overs is not played, only 1st innings will be considered as valid</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total 6 over run:- Average 45 runs will be given if total 20 overs is not played, only 1st innings will be considered as valid</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Fours - Average 26 fours will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Sixes - Average 10 Sixes will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Wickets - Average 12 wickets will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Wide – Average 8 Wide will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Extras - Average 15 Extras will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Run- Average 330 runs will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Sydney Ground</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total 1st over run:- Average 6 runs will be given if total 20 overs is not played, only 1st innings will be considered as valid</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total 6 over run:- Average 46 runs will be given if total 20 overs is not played, only 1st innings will be considered as valid</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Fours - Average 26 fours will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Sixes - Average 12 Sixes will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Wickets - Average 12 wickets will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Wide – Average 8 Wide will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Extras - Average 15 Extras will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Run- Average 335 runs will be given in case match abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Average will be given for player if the mentioned player is not included in the playing 11</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">If the mentioned player is not included in playing 11 for 3 consecutive matches and the mentioned player will be deleted</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Super over will not be included</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">World Cup</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">In case of any circumstances, management decision will be final for all the fancies under world cup.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">WC:-WORLD CUP</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">MOM:-MAN OF THE MATCH.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Match 1st over run:- This fancy is valid only for first innings of the match, Average 4 runs will be given in case of match abandoned or the entire 50 over is not played.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Highest inning run:- This fancy is valid only for first innings of the match.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Lowest innings run:- This fancy is valid only for first innings of the match.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Fours:- Average 48 Fours will be given if the match is abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Sixes:- Average 10 Sixes will be given if the match is abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Wickets:- Average 15 Wickets will be given if the match is abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Wide:- Average 14 Wide will be given if the match is abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Extras:- Average 25 Extras will be given if the match is abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total No ball:- Average 2 No ball will be given if the match is abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Fifties:- Average 3 Fifties will be given if the match is abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Centuries:- Average 1 century will be given if the match is abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Run outs:- Average 1 Run out will be given if the match is abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Ducks:- Average 1 Duck out will be given if the match is abandoned or over reduced. If the player is not out in the score of zero the same will not be considered as Duck out.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Caught Out:- Average 10 Caught Out will be given if the match is abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">All fancy related to Individual teams are valid only for league matches (9 matches played by the teams in league stages)</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">In case any player mentioned in our world cup fancy doesn’t play for the first three consecutive matches all the bets will be deleted.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">1. In case any player mentioned in our world cup fancy got ruled out or doesn’t play post few matches the bets after the last match played by the above mentioned player will be deleted. For example: U Khawaja played for first three league matches and doesn’t play after that, then bets for the first three matches will be valid. Bets after third match will be deleted.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">2. First 10 over runs is valid for both innings for all the teams.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">3. Total runs by team:- Average will be given if the match is abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">4. First 10 over runs by team:- Average will be given if the match is abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">5. Fours by team:- Average will be given if the match is abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">6. Sixes by team:- Average will be given if the match is abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">7. Opening wicket partnership:- Average will be given if the match is abandoned or over reduced</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">8. Runs by player:- Average will be given if the match is abandoned or over reduced, Average will be given unless one ball is being played after the player enters the crease</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">9. Wickets by player:- Average will be given if the match is abandoned or over reduced, Average will be given unless one legal delivery has been bowled by the mentioned player.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">10. Sixes by player:- Average will be given if the match is abandoned or over reduced, Average will be given unless one ball is being played after the player enters the crease.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Average of every fancy follows:</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Total runs by ENG 295 runs per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">First 10 over runs of ENG 56 runs per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Fours by ENG 25 fours per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Sixes by ENG 7 sixes per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Opening wicket partnership runs of ENG 44 runs per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">J Roy runs 38 runs per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">J Bairstow runs 43 runs per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">J Root runs 43 runs per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">J Archer wickets 2 wickets per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">C Woakes wickets 2 wickets per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">A Rashid wickets 2 wickets per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">J Bairstow Sixes 2 sixes per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">J Buttler Sixes 2 sixes per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Total runs by IND 285 runs per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">First 10 over runs of IND 53 runs per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Four by IND 26 fours per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Sixes by IND 6 sixes per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Opening wicket partnership runs of IND 41 runs per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">S Dhawan runs 38 runs per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">R Sharma runs 43 runs per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">V Kohli runs 48 runs per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">J Bumrah wickets 2 wickets per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">M Shami wickets 2 wickets per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">K Yadav wickets 2 wickets per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">R Sharma Sixes 2 sixes per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">H Pandya Sixes 1 sixes per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Total runs by AUS 280 runs per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">First 10 over runs of AUS 52 runs per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Four by AUS 26 fours per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Sixes by AUS 6 sixes per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Opening wicket partnership runs of AUS 40 runs per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">D Warner runs 43 runs per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">A Finch runs 38 runs per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">S Smith runs 42 runs per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">M Starc wickets 2 wickets per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">P Cummins wickets 2 wickets per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">A Zampa wickets 2 wickets per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">D Warner Sixes 2 sixes per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Total runs by SA 270 runs per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">First 10 over runs of SA 51 runs per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Fours by SA 24 fours per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Sixes by SA 5 sixes per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Opening wicket partnership runs of SA 37 runs per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">H Amla runs 38 runs per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">F Du plessis runs 39 runs per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">V Der Dussen runs Runs per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Q De Kock runs 36 Runs per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">I Tahir wickets 2 wickets per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">K Rabada wickets 2 wickets per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">D Steyn wickets 2 wickets per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Q De Kock Sixes 1 sixes per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Total runs by NZ 275 runs per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">First 10 over runs of NZ 50 runs per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Fours by NZ 25 fours per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Sixes by NZ 5 sixes per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Opening wicket partnership runs of NZ 37 runs per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">C Munro runs 32 runs per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">M Guptill runs 38 runs per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">K Williamson runs 45 runs per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">H Nicholls runs Runs per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">T Boult wickets 2 wickets per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">T Southee wickets 1 wickets per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">M Santner wickets 1 wickets per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">M Guptill Sixes 2 Sixes per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Total runs by WI 270 runs per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">First 10 over runs of WI 49 runs per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Fours by WI 23 fours per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Sixes by WI 7 sixes per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Opening wicket partnership runs of WI 35 runs per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">C Gayle runs 37 runs per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">E Lewis runs 32 runs per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">DM Bravo runs 32 runs per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">S Hope runs 37 runs per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">K Roach wickets 1 wickets per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">S Cottrell wickets 1 wickets per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">J holder wickets 1 wicket per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">A Nurse wickets 1 wickets per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Total runs by PAK 270 runs per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">First 10 over runs of PAK 50 runs per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Fours by PAK 24 fours per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Sixes by PAK 5 sixes per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Opening wicket partnership runs of PAK 36 runs per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Imam Ul Haq runs 36 runs per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">B Azam runs 44 runs per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">F Zaman runs 34 runs per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">H Ali wickets 2 wickets per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Shadab Khan wickets 2 wickets per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Shaheen Afridi wickets 2 wickets per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">F Zaman Sixes 1 sixes per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">C Gayle Sixes 2 Sixes per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">A Russell Sixes 2 Sixes per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Total runs by SL 250 runs per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">First 10 over runs of SL 48 runs per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Fours by SL 22 fours per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Sixes by SL 4 sixes per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Opening wicket partnership runs of SL 32 runs per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">D Karunaratne runs 31 runs per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">L Thirimanne runs 29 runs per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">K Mendis runs 33 runs per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">L Malinga wickets 1 wickets per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">S Lakmal wickets 1 wickets per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">J Vandersay wickets 1 wickets per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">T Perera Sixes 1 sixes per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Total runs by BAN 245 runs per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">First 10 over runs of BAN 48 runs per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Fours by BAN 22 fours per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Sixes by BAN 4 sixes per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Opening wicket partnership runs of BAN 32 runs per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">T Iqbal runs 34 runs per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">S Sarkar runs 29 runs per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">M Rahim runs 31 runs per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">M Hasan wickets 1 wickets per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">M Rahman wickets 1 wickets per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">M Mortaza wickets 1 wickets per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">T Iqbal Sixes 1 sixes per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Total runs by AFG 235 runs per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">First 10 over runs of AFG 46 runs per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Fours by AFG 20 fours per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Total Sixes by AFG 4 sixes per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Opening wicket partnership runs of AFG 28 runs per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">R Shah runs 27 runs per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">H Zazai runs 26 runs per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">A Afghan runs Runs per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">M Shahzad runs 27 runs per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">D Zadran wickets 1 wickets per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Rashid khan wickets 2 wickets per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Mujeeb ur rahman wickets 1 wickets per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">H Zazai Sixes 1 sixes per game</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Company reserves the right to suspend/void any id/bets if the same is found to be illegitimate. For example incase of VPN/robot-use/multiple entry from same or different IP and others. Note : only winning bets will be voided.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">for live streaming and animation :- Although the current score, time elapsed, video and other data provided on this site is sourced from "live" feeds provided by third parties, you should be aware that this data may be subject to a time delay and/or be inaccurate. Please also be aware that other customers may have access to data that is faster and/or more accurate than the data shown on the site. If you rely on this data to place bets, you do so entirely at your own risk. provides this data AS IS with no warranty as to the accuracy, completeness or timeliness of such data and accepts no responsibility for any loss (direct or indirect) suffered by you as a result of your reliance on it.	</span></td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                  </div>
+                  <div role="tabpanel" id="tules-tabs-tabpane-19" aria-labelledby="tules-tabs-tab-19" class="fade tab-pane">
+                     <div class="rules-content-title">fancy</div>
+                     <div class="rules-content-desc">
+                        <div class="table-responsive">
+                           <table class="table table-bordered">
+                              <tbody>
+                                 <tr>
+                                    <td><span class="">1. This event is to decide the winner of various legislative assemblies of india.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">2. The final result declared by election commission of india for assembly elections of various states of india for a particular year will be valid in our exchange ,The customers are entirely responsible for their bets at all times.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">3. All bets will be voided if the election doesn't take place in given time by election commission or as per our exchange management decision.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">4. Company reserves the right to suspend/void any bets on this event at any time if we find the same not to be legitimate with the certainty of the outcome.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">5. Accidental issues during assembly elections will not be counted in our exchange If required Additional candidates may be added on request.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">6. Kindly be informed no candidates will be partially settled and will remain in the market until it is fully settled. This is to ensure that all customers can continue trading for the candidates that they have positions on, since each candidate is still a valid runner in this market.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">7. Please be informed that the transmissions described as "live" by few broadcasters may actually be delayed due to multiple scenarios.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">8. If any candidate withdraws for any reason, including death, all bets on the market will be valid and be settled as per the defined rules.</span></td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                  </div>
+                  <div role="tabpanel" id="tules-tabs-tabpane-20" aria-labelledby="tules-tabs-tab-20" class="fade tab-pane">
+                     <div class="rules-content-title">match</div>
+                     <div class="rules-content-desc">
+                        <div class="table-responsive">
+                           <table class="table table-bordered">
+                              <tbody>
+                                 <tr>
+                                    <td><span class="text-danger">Company reserves the right to suspend/void any id/bets if the same is found to be illegitimate. For example incase of VPN/robot-use/multiple entry from same or different IP and others. Note : only winning bets will be voided.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">for live streaming and animation :- Although the current score, time elapsed, video and other data provided on this site is sourced from "live" feeds provided by third parties, you should be aware that this data may be subject to a time delay and/or be inaccurate. Please also be aware that other customers may have access to data that is faster and/or more accurate than the data shown on the site. If you rely on this data to place bets, you do so entirely at your own risk. provides this data AS IS with no warranty as to the accuracy, completeness or timeliness of such data and accepts no responsibility for any loss (direct or indirect) suffered by you as a result of your reliance on it.	</span></td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                  </div>
+                  <div role="tabpanel" id="tules-tabs-tabpane-21" aria-labelledby="tules-tabs-tab-21" class="fade tab-pane">
+                     <div class="rules-content-title">match</div>
+                     <div class="rules-content-desc">
+                        <div class="table-responsive">
+                           <table class="table table-bordered">
+                              <tbody>
+                                 <tr>
+                                    <td><span class="text-danger">Company reserves the right to suspend/void any id/bets if the same is found to be illegitimate. For example incase of VPN/robot-use/multiple entry from same or different IP and others. Note : only winning bets will be voided.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">for live streaming and animation :- Although the current score, time elapsed, video and other data provided on this site is sourced from "live" feeds provided by third parties, you should be aware that this data may be subject to a time delay and/or be inaccurate. Please also be aware that other customers may have access to data that is faster and/or more accurate than the data shown on the site. If you rely on this data to place bets, you do so entirely at your own risk. provides this data AS IS with no warranty as to the accuracy, completeness or timeliness of such data and accepts no responsibility for any loss (direct or indirect) suffered by you as a result of your reliance on it.	</span></td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                     <div class="rules-content-title">bookmaker</div>
+                     <div class="rules-content-desc">
+                        <div class="table-responsive">
+                           <table class="table table-bordered">
+                              <tbody>
+                                 <tr>
+                                    <td><span class="">All race bets are settled on the official classification from the Federation Internationale de l’Automobile (FIA),the sport’s governing body, at the time of podium presentation.
+                                       </span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">If a race is postponed ( Either before the start or via an interruption mid-race) but is concluded within 72 hours of the original scheduled start time , then all bets will stand.
+                                       </span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Our exchange management decision will be the final decision.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Any query about the result should be contacted within 7 days of the specific event, the same will not be considered valid post 7 days from&nbsp;the&nbsp;event.</span></td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                  </div>
+                  <div role="tabpanel" id="tules-tabs-tabpane-22" aria-labelledby="tules-tabs-tab-22" class="fade tab-pane">
+                     <div class="rules-content-title">match</div>
+                     <div class="rules-content-desc">
+                        <div class="table-responsive">
+                           <table class="table table-bordered">
+                              <tbody>
+                                 <tr>
+                                    <td><span class="">for live streaming and animation :- Although the current score, time elapsed, video and other data provided on this site is sourced from "live" feeds provided by third parties, you should be aware that this data may be subject to a time delay and/or be inaccurate. Please also be aware that other customers may have access to data that is faster and/or more accurate than the data shown on the site. If you rely on this data to place bets, you do so entirely at your own risk. provides this data AS IS with no warranty as to the accuracy, completeness or timeliness of such data and accepts no responsibility for any loss (direct or indirect) suffered by you as a result of your reliance on it.	</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Company reserves the right to suspend/void any id/bets if the same is found to be illegitimate. For example incase of VPN/robot-use/multiple entry from same or different IP and others. Note : only winning bets will be voided.</span></td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                  </div>
+                  <div role="tabpanel" id="tules-tabs-tabpane-23" aria-labelledby="tules-tabs-tab-23" class="fade tab-pane">
+                     <div class="rules-content-title">match</div>
+                     <div class="rules-content-desc">
+                        <div class="table-responsive">
+                           <table class="table table-bordered">
+                              <tbody>
+                                 <tr>
+                                    <td><span class="text-danger">Company reserves the right to suspend/void any id/bets if the same is found to be illegitimate. For example incase of VPN/robot-use/multiple entry from same or different IP and others. Note : only winning bets will be voided.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">for live streaming and animation :- Although the current score, time elapsed, video and other data provided on this site is sourced from "live" feeds provided by third parties, you should be aware that this data may be subject to a time delay and/or be inaccurate. Please also be aware that other customers may have access to data that is faster and/or more accurate than the data shown on the site. If you rely on this data to place bets, you do so entirely at your own risk. provides this data AS IS with no warranty as to the accuracy, completeness or timeliness of such data and accepts no responsibility for any loss (direct or indirect) suffered by you as a result of your reliance on it.	</span></td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                  </div>
+                  <div role="tabpanel" id="tules-tabs-tabpane-24" aria-labelledby="tules-tabs-tab-24" class="fade tab-pane">
+                     <div class="rules-content-title">match</div>
+                     <div class="rules-content-desc">
+                        <div class="table-responsive">
+                           <table class="table table-bordered">
+                              <tbody>
+                                 <tr>
+                                    <td><span class="text-danger">Company reserves the right to suspend/void any id/bets if the same is found to be illegitimate. For example incase of VPN/robot-use/multiple entry from same or different IP and others. Note : only winning bets will be voided.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">for live streaming and animation :- Although the current score, time elapsed, video and other data provided on this site is sourced from "live" feeds provided by third parties, you should be aware that this data may be subject to a time delay and/or be inaccurate. Please also be aware that other customers may have access to data that is faster and/or more accurate than the data shown on the site. If you rely on this data to place bets, you do so entirely at your own risk. provides this data AS IS with no warranty as to the accuracy, completeness or timeliness of such data and accepts no responsibility for any loss (direct or indirect) suffered by you as a result of your reliance on it.	</span></td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                  </div>
+                  <div role="tabpanel" id="tules-tabs-tabpane-25" aria-labelledby="tules-tabs-tab-25" class="fade tab-pane">
+                     <div class="rules-content-title">match</div>
+                     <div class="rules-content-desc">
+                        <div class="table-responsive">
+                           <table class="table table-bordered">
+                              <tbody>
+                                 <tr>
+                                    <td><span class="text-danger">Company reserves the right to suspend/void any id/bets if the same is found to be illegitimate. For example incase of VPN/robot-use/multiple entry from same or different IP and others. Note : only winning bets will be voided.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">for live streaming and animation :- Although the current score, time elapsed, video and other data provided on this site is sourced from "live" feeds provided by third parties, you should be aware that this data may be subject to a time delay and/or be inaccurate. Please also be aware that other customers may have access to data that is faster and/or more accurate than the data shown on the site. If you rely on this data to place bets, you do so entirely at your own risk. provides this data AS IS with no warranty as to the accuracy, completeness or timeliness of such data and accepts no responsibility for any loss (direct or indirect) suffered by you as a result of your reliance on it.	</span></td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                  </div>
+                  <div role="tabpanel" id="tules-tabs-tabpane-26" aria-labelledby="tules-tabs-tab-26" class="fade tab-pane">
+                     <div class="rules-content-title">match</div>
+                     <div class="rules-content-desc">
+                        <div class="table-responsive">
+                           <table class="table table-bordered">
+                              <tbody>
+                                 <tr>
+                                    <td><span class="text-danger">for live streaming and animation :-   
+                                       Although the current score, time elapsed, video and other data provided on this site is sourced from "live" feeds provided by third parties, you should be aware that this data may be subject to a time delay and/or be inaccurate.  
+                                       Please also be aware that other customers may have access to data that is faster and/or more accurate than the data shown on the site. If you rely on this data to place bets, you do so entirely at your own risk. 
+                                       provides this data AS IS with no warranty as to the accuracy, completeness or timeliness of such data and accepts no responsibility for any loss (direct or indirect) suffered by you as a result of your reliance on it.</span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Company reserves the right to suspend/void any id/bets if the same is found to be illegitimate. For example incase of VPN/robot-use/multiple entry from same or different IP and others. Note : only winning bets will be voided.</span></td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                  </div>
+                  <div role="tabpanel" id="tules-tabs-tabpane-27" aria-labelledby="tules-tabs-tab-27" class="fade tab-pane">
+                     <div class="rules-content-title">match</div>
+                     <div class="rules-content-desc">
+                        <div class="table-responsive">
+                           <table class="table table-bordered">
+                              <tbody>
+                                 <tr>
+                                    <td><span class="">Match Odds:-  
+                                       Predict which player will win the match.
+                                       In the event of a match starting but not being completed the player progressing to the next
+                                       round or being awarded the victory will be deemed the winner for settlement purposes.
+                                       In the event of a match not starting at all, all bets are refunded.</span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Frame Winner :-  If the nominated frame is not played bets will be void. Similarly, if the nominated frame is
+                                       awarded to a player without a shot being played, then all bets will be void.</span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Company reserves the right to suspend/void any id/bets if the same is found to be illegitimate. For example incase of VPN/robot-use/multiple entry from same or different IP and others. Note : only winning bets will be voided.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">for live streaming and animation :- Although the current score, time elapsed, video and other data provided on this site is sourced from "live" feeds provided by third parties, you should be aware that this data may be subject to a time delay and/or be inaccurate. Please also be aware that other customers may have access to data that is faster and/or more accurate than the data shown on the site. If you rely on this data to place bets, you do so entirely at your own risk. provides this data AS IS with no warranty as to the accuracy, completeness or timeliness of such data and accepts no responsibility for any loss (direct or indirect) suffered by you as a result of your reliance on it.	</span></td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                  </div>
+                  <div role="tabpanel" id="tules-tabs-tabpane-28" aria-labelledby="tules-tabs-tab-28" class="fade tab-pane">
+                     <div class="rules-content-title">match</div>
+                     <div class="rules-content-desc">
+                        <div class="table-responsive">
+                           <table class="table table-bordered">
+                              <tbody>
+                                 <tr>
+                                    <td><span class="text-danger">Company reserves the right to suspend/void any id/bets if the same is found to be illegitimate. For example incase of VPN/robot-use/multiple entry from same or different IP and others. Note : only winning bets will be voided.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">for live streaming and animation :- Although the current score, time elapsed, video and other data provided on this site is sourced from "live" feeds provided by third parties, you should be aware that this data may be subject to a time delay and/or be inaccurate. Please also be aware that other customers may have access to data that is faster and/or more accurate than the data shown on the site. If you rely on this data to place bets, you do so entirely at your own risk. provides this data AS IS with no warranty as to the accuracy, completeness or timeliness of such data and accepts no responsibility for any loss (direct or indirect) suffered by you as a result of your reliance on it.	</span></td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                  </div>
+                  <div role="tabpanel" id="tules-tabs-tabpane-29" aria-labelledby="tules-tabs-tab-29" class="fade tab-pane">
+                     <div class="rules-content-title">match</div>
+                     <div class="rules-content-desc">
+                        <div class="table-responsive">
+                           <table class="table table-bordered">
+                              <tbody>
+                                 <tr>
+                                    <td><span class="text-danger">Company reserves the right to suspend/void any id/bets if the same is found to be illegitimate. For example incase of VPN/robot-use/multiple entry from same or different IP and others. Note : only winning bets will be voided.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">for live streaming and animation :- Although the current score, time elapsed, video and other data provided on this site is sourced from "live" feeds provided by third parties, you should be aware that this data may be subject to a time delay and/or be inaccurate. Please also be aware that other customers may have access to data that is faster and/or more accurate than the data shown on the site. If you rely on this data to place bets, you do so entirely at your own risk. provides this data AS IS with no warranty as to the accuracy, completeness or timeliness of such data and accepts no responsibility for any loss (direct or indirect) suffered by you as a result of your reliance on it.	</span></td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                  </div>
+                  <div role="tabpanel" id="tules-tabs-tabpane-30" aria-labelledby="tules-tabs-tab-30" class="fade tab-pane">
+                     <div class="rules-content-title">match</div>
+                     <div class="rules-content-desc">
+                        <div class="table-responsive">
+                           <table class="table table-bordered">
+                              <tbody>
+                                 <tr>
+                                    <td><span class="text-danger">Company reserves the right to suspend/void any id/bets if the same is found to be illegitimate. For example incase of VPN/robot-use/multiple entry from same or different IP and others. Note : only winning bets will be voided.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">for live streaming and animation :- Although the current score, time elapsed, video and other data provided on this site is sourced from "live" feeds provided by third parties, you should be aware that this data may be subject to a time delay and/or be inaccurate. Please also be aware that other customers may have access to data that is faster and/or more accurate than the data shown on the site. If you rely on this data to place bets, you do so entirely at your own risk. provides this data AS IS with no warranty as to the accuracy, completeness or timeliness of such data and accepts no responsibility for any loss (direct or indirect) suffered by you as a result of your reliance on it.	</span></td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                  </div>
+                  <div role="tabpanel" id="tules-tabs-tabpane-31" aria-labelledby="tules-tabs-tab-31" class="fade tab-pane">
+                     <div class="rules-content-title">match</div>
+                     <div class="rules-content-desc">
+                        <div class="table-responsive">
+                           <table class="table table-bordered">
+                              <tbody>
+                                 <tr>
+                                    <td><span class="">for live streaming and animation :- Although the current score, time elapsed, video and other data provided on this site is sourced from "live" feeds provided by third parties, you should be aware that this data may be subject to a time delay and/or be inaccurate. Please also be aware that other customers may have access to data that is faster and/or more accurate than the data shown on the site. If you rely on this data to place bets, you do so entirely at your own risk. provides this data AS IS with no warranty as to the accuracy, completeness or timeliness of such data and accepts no responsibility for any loss (direct or indirect) suffered by you as a result of your reliance on it.	</span></td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                  </div>
+                  <div role="tabpanel" id="tules-tabs-tabpane-32" aria-labelledby="tules-tabs-tab-32" class="fade tab-pane">
+                     <div class="rules-content-title">fancy</div>
+                     <div class="rules-content-desc">
+                        <div class="table-responsive">
+                           <table class="table table-bordered">
+                              <tbody>
+                                 <tr>
+                                    <td><span class="">1. In any circumstances management decision will be final related to all Fancy of kabaddi of our exchange.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">2. All fancy bets will be validated when match has been tied.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">3. Result of individual player of fancy will be validated only when player play that match.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">4. In any case wrong rate has been given in fancy that particular bets will be deleted.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">5. For Playoffs Final Result Of 40 Minutes Of Two Halves Will Be Valid In Our Exchange</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">6. In case, company will find Ground bets, Group betting, Punching bets, Multiple entries with same IP or any fraud or unusual activities are detected then Company will be void winning bets and charge penalty of 2X (Two times) from winning amount.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">7. If any player will get injured during the match, then all the bets will be valid of that individual player</span></td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                     <div class="rules-content-title">match</div>
+                     <div class="rules-content-desc">
+                        <div class="table-responsive">
+                           <table class="table table-bordered">
+                              <tbody>
+                                 <tr>
+                                    <td><span class="text-danger">Company reserves the right to suspend/void any id/bets if the same is found to be illegitimate. For example incase of VPN/robot-use/multiple entry from same or different IP and others. Note : only winning bets will be voided.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">for live streaming and animation :- Although the current score, time elapsed, video and other data provided on this site is sourced from "live" feeds provided by third parties, you should be aware that this data may be subject to a time delay and/or be inaccurate. Please also be aware that other customers may have access to data that is faster and/or more accurate than the data shown on the site. If you rely on this data to place bets, you do so entirely at your own risk. provides this data AS IS with no warranty as to the accuracy, completeness or timeliness of such data and accepts no responsibility for any loss (direct or indirect) suffered by you as a result of your reliance on it.	</span></td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                     <div class="rules-content-title">bookmaker</div>
+                     <div class="rules-content-desc">
+                        <div class="table-responsive">
+                           <table class="table table-bordered">
+                              <tbody>
+                                 <tr>
+                                    <td><span class="">In case, company will find Ground bets, Group betting, Punching bets, Multiple entries with same IP or any fraud or unusual activities are detected then Company will be void winning bets and charge penalty of 2X (Two times) from winning amount.</span></td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                  </div>
+                  <div role="tabpanel" id="tules-tabs-tabpane-33" aria-labelledby="tules-tabs-tab-33" class="fade tab-pane">
+                     <div class="rules-content-title">match</div>
+                     <div class="rules-content-desc">
+                        <div class="table-responsive">
+                           <table class="table table-bordered">
+                              <tbody>
+                                 <tr>
+                                    <td><span class="">for live streaming and animation :- Although the current score, time elapsed, video and other data provided on this site is sourced from "live" feeds provided by third parties, you should be aware that this data may be subject to a time delay and/or be inaccurate. Please also be aware that other customers may have access to data that is faster and/or more accurate than the data shown on the site. If you rely on this data to place bets, you do so entirely at your own risk. provides this data AS IS with no warranty as to the accuracy, completeness or timeliness of such data and accepts no responsibility for any loss (direct or indirect) suffered by you as a result of your reliance on it.	</span></td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                  </div>
+                  <div role="tabpanel" id="tules-tabs-tabpane-34" aria-labelledby="tules-tabs-tab-34" class="fade tab-pane">
+                     <div class="rules-content-title">match</div>
+                     <div class="rules-content-desc">
+                        <div class="table-responsive">
+                           <table class="table table-bordered">
+                              <tbody>
+                                 <tr>
+                                    <td><span class="">for live streaming and animation :- Although the current score, time elapsed, video and other data provided on this site is sourced from "live" feeds provided by third parties, you should be aware that this data may be subject to a time delay and/or be inaccurate. Please also be aware that other customers may have access to data that is faster and/or more accurate than the data shown on the site. If you rely on this data to place bets, you do so entirely at your own risk. provides this data AS IS with no warranty as to the accuracy, completeness or timeliness of such data and accepts no responsibility for any loss (direct or indirect) suffered by you as a result of your reliance on it.	</span></td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                  </div>
+                  <div role="tabpanel" id="tules-tabs-tabpane-35" aria-labelledby="tules-tabs-tab-35" class="fade tab-pane">
+                     <div class="rules-content-title">match</div>
+                     <div class="rules-content-desc">
+                        <div class="table-responsive">
+                           <table class="table table-bordered">
+                              <tbody>
+                                 <tr>
+                                    <td><span class="text-danger">Company reserves the right to suspend/void any id/bets if the same is found to be illegitimate. For example incase of VPN/robot-use/multiple entry from same or different IP and others. Note : only winning bets will be voided.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">for live streaming and animation :- Although the current score, time elapsed, video and other data provided on this site is sourced from "live" feeds provided by third parties, you should be aware that this data may be subject to a time delay and/or be inaccurate. Please also be aware that other customers may have access to data that is faster and/or more accurate than the data shown on the site. If you rely on this data to place bets, you do so entirely at your own risk. provides this data AS IS with no warranty as to the accuracy, completeness or timeliness of such data and accepts no responsibility for any loss (direct or indirect) suffered by you as a result of your reliance on it.	</span></td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                  </div>
+                  <div role="tabpanel" id="tules-tabs-tabpane-36" aria-labelledby="tules-tabs-tab-36" class="fade tab-pane">
+                     <div class="rules-content-title">match</div>
+                     <div class="rules-content-desc">
+                        <div class="table-responsive">
+                           <table class="table table-bordered">
+                              <tbody>
+                                 <tr>
+                                    <td><span class="">Match odds :-  
+                                       Predict which player will win the match.
+                                       In the event of any of the named players in a match changing before the match starts then all
+                                       bets are void. In the event of a match starting but not being completed, all bets will be void.</span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Set Winner :-  
+                                       The specified set must be completed for bets to stand, unless the specific market outcome is
+                                       already determined.</span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Under / Over Points :-  
+                                       For example, a game is abandoned at 9-7: bets on Over/Under 16.5 Game - Total Points are
+                                       settled as winners/losers respectively, since any natural conclusion to the game would have
+                                       yielded at least 18 points.</span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Company reserves the right to suspend/void any id/bets if the same is found to be illegitimate. For example incase of VPN/robot-use/multiple entry from same or different IP and others. Note : only winning bets will be voided.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">for live streaming and animation :- Although the current score, time elapsed, video and other data provided on this site is sourced from "live" feeds provided by third parties, you should be aware that this data may be subject to a time delay and/or be inaccurate. Please also be aware that other customers may have access to data that is faster and/or more accurate than the data shown on the site. If you rely on this data to place bets, you do so entirely at your own risk. provides this data AS IS with no warranty as to the accuracy, completeness or timeliness of such data and accepts no responsibility for any loss (direct or indirect) suffered by you as a result of your reliance on it.	</span></td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                  </div>
+                  <div role="tabpanel" id="tules-tabs-tabpane-37" aria-labelledby="tules-tabs-tab-37" class="fade tab-pane">
+                     <div class="rules-content-title">match</div>
+                     <div class="rules-content-desc">
+                        <div class="table-responsive">
+                           <table class="table table-bordered">
+                              <tbody>
+                                 <tr>
+                                    <td><span class="text-danger">Match Odds:-  
+                                       Bets will be void if the match is not completed.</span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Next Goal :-  
+                                       Predict which team will score the X-th goal. </span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">1st Half Winner:-  
+                                       Half bets will be settled at the end of the 1
+                                       st half. In the event of a 1
+                                       st half not being completed
+                                       bets will be void.</span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">Highest Scoring Half:-  
+                                       Predict in which Event Part will be scored most.</span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="text-danger">Company reserves the right to suspend/void any id/bets if the same is found to be illegitimate. For example incase of VPN/robot-use/multiple entry from same or different IP and others. Note : only winning bets will be voided.</span></td>
+                                 </tr>
+                                 <tr>
+                                    <td><span class="">for live streaming and animation :- Although the current score, time elapsed, video and other data provided on this site is sourced from "live" feeds provided by third parties, you should be aware that this data may be subject to a time delay and/or be inaccurate. Please also be aware that other customers may have access to data that is faster and/or more accurate than the data shown on the site. If you rely on this data to place bets, you do so entirely at your own risk. provides this data AS IS with no warranty as to the accuracy, completeness or timeliness of such data and accepts no responsibility for any loss (direct or indirect) suffered by you as a result of your reliance on it.	</span></td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+			</div>
+         <div class="modal-footer"><button class="btn btn-danger" data-dismiss="modal">Close</button></div>
+			<!---->
+		</div><span tabindex="0"></span></div>
+</div>
+
+<div id="set_btn_value" class="modal fade custom-position-modal" role="dialog">
+   <div class="modal-dialog" style="max-width: 100% !important;margin:unset;">
+      <div class="modal-dialog modal-lg">
+         <div role="document" id="__BVID__51___BV_modal_content_" tabindex="-1" class="modal-content">
+            <header id="__BVID__51___BV_modal_header_" class="modal-header">
+               <h5 class="modal-title" id="Rules">Set Button Value</h5>
+               <button type="button" aria-label="Close" data-dismiss="modal" class="close">&times;</button>
+            </header>
+            <div id="" class="modal-body p-2">
+
+               <div class="card-body container-fluid container-fluid-5 button-value">
+                  <ul class="nav nav-pills mb-1">
+                     <li class="nav-item">
+                        <button type="button" class="nav-link1 active tabsbox gamesbtn_tab_btn" onclick="tab_view_btn('gamesbtn')">Games Button</button>
+                     </li>
+                     <li class="nav-item">
+                        <button type="button" class="nav-link1 tabsbox casinobtn_tab_btn" onclick="tab_view_btn('casinobtn')">Casino Buttons</button>
+                     </li>
+
+                  </ul>
+                  <div class="tab-content">
+                     <div role="tabpanel" id="gamesbtn" aria-labelledby="uncontrolled-tab-example-tab-hands" class="hands tab-pane active show">
+                        <div class="row row5 mb-1">
+                           <div class="col-6">
+                              <div class="button-title"><span><b>Price Label</b></span></div>
+                           </div>
+                           <div class="col-6">
+                              <div class="button-title"><span><b>Price Value</b></span></div>
+                           </div>
+                        </div>
+                        <?php
+                        $get_button_value = $conn->query("select * from user_master where id=$user_id and (button_value <> '' and button_value IS NOT NULL)");
+                        $num_rows = $get_button_value->num_rows;
+                        $button_array = array();
+                        if ($num_rows <= 0) {
+                           $button_array[] = 1000;
+                           $button_array[] = 5000;
+                           $button_array[] = 10000;
+                           $button_array[] = 25000;
+                           $button_array[] = 50000;
+                           $button_array[] = 100000;
+                           $button_array[] = 200000;
+                           $button_array[] = 500000;
+                           $button_array[] = 1000000;
+                           $button_array[] = 2500000;
+                        } else {
+                           $fetch_button_value_data = mysqli_fetch_assoc($get_button_value);
+                           $fetch_button_value = $fetch_button_value_data['button_value'];
+                           $default_stake = $fetch_button_value_data['default_stake'];
+                           $one_bet_default_stake = $fetch_button_value_data['one_bet_default_stake'];
+                           $button_array = explode(",", $fetch_button_value);
+                        }
+                        $j = 1;
+                        foreach ($button_array as $button_value) {
+                           $labelprint = $button_value / 1000;
+                        ?>
+                           <div class="row row10 mb-3">
+                              <div class="col-6">
+                                 <div class="form-group mb-0">
+                                    <input placeholder="Button Name" type="text" maxlength="7" value="<?php echo $labelprint . "k"; ?>" class="form-control">
+                                 </div>
+                              </div>
+                              <div class="col-6">
+                                 <div class="form-group mb-0">
+                                    <input placeholder="Button Value" id="stakeEdit_<?php echo $j; ?>" button_position="<?php echo $j; ?>" type="number" min="1" max="99999999" value="<?php echo $button_value; ?>" maxlength="9" class="form-control">
+                                 </div>
+                              </div>
+                           </div>
+                        <?php
+                           $j++;
+                        }
+                        ?>
+                        <div class="row row10 mt-2">
+                           <div class="col-12">
+                              <button class="btn btn-primary btn-block btn-sm" id="edit_stake_save">Update</button>
+                           </div>
+                        </div>
+                     </div>
+                     <div role="tabpanel" id="casinobtn" aria-labelledby="uncontrolled-tab-example-tab-hands" class="hands tab-pane">
+                        <div class="row row10 mb-1">
+                           <div class="col-6">
+                              <div class="button-title"><span><b>Price Label</b></span></div>
+                           </div>
+                           <div class="col-6">
+                              <div class="button-title"><span><b>Price Value</b></span></div>
+                           </div>
+                        </div>
+                        <?php
+                        $get_button_value = $conn->query("select * from user_master where id=$user_id and (casino_button_value <> '' and casino_button_value IS NOT NULL)");
+                        $num_rows = $get_button_value->num_rows;
+                        $button_array = array();
+                        if ($num_rows <= 0) {
+                           $button_array[] = 1000;
+                           $button_array[] = 5000;
+                           $button_array[] = 10000;
+                           $button_array[] = 25000;
+                           $button_array[] = 50000;
+                           $button_array[] = 100000;
+                           $button_array[] = 200000;
+                           $button_array[] = 500000;
+                           $button_array[] = 1000000;
+                           $button_array[] = 2500000;
+                        } else {
+                           $fetch_button_value_data = mysqli_fetch_assoc($get_button_value);
+                           $fetch_button_value = $fetch_button_value_data['casino_button_value'];
+                           $default_stake = $fetch_button_value_data['default_stake'];
+                           $one_bet_default_stake = $fetch_button_value_data['one_bet_default_stake'];
+                           $button_array = explode(",", $fetch_button_value);
+                        }
+                        $j = 1;
+                        foreach ($button_array as $button_value) {
+                           $labelprint = $button_value / 1000;
+                        ?>
+                           <div class="row row10 mb-3">
+                              <div class="col-6">
+                                 <div class="form-group mb-0">
+                                    <input placeholder="Button Name" type="text" maxlength="7" value="<?php echo $labelprint . "k"; ?>" class="form-control">
+                                 </div>
+                              </div>
+                              <div class="col-6">
+                                 <div class="form-group mb-0">
+                                    <input placeholder="Button Value" id="casino_stakeEdit_<?php echo $j; ?>" button_position="<?php echo $j; ?>" type="number" min="1" max="99999999" value="<?php echo $button_value; ?>" maxlength="9" class="form-control">
+                                 </div>
+                              </div>
+                           </div>
+                        <?php
+                           $j++;
+                        }
+                        ?>
+                        <div class="row row5 mt-2">
+                           <div class="col-12">
+                              <button class="btn btn-primary btn-block btn-sm" id="edit_stake_save_casino">Update</button>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+
+
+
+               </div>
+
+            </div>
+            <!---->
+         </div>
+      </div>
+   </div>
+
+</div>
+
+<div id="rulesmenu" class="modal" role="dialog">
+   
+      <div class="modal-dialog modal-lg" style="margin:unset;">
+         <div role="document" id="__BVID__51___BV_modal_content_" tabindex="-1" class="modal-content">
+            <header id="__BVID__51___BV_modal_header_" class="modal-header">
+               <h5 class="modal-title" id="Rules">Rules</h5>
+               <div class="rules-langualge">
+                  <div class="dropdown">
+                     <button type="button" id="lang-dropdown" aria-expanded="false" class="dropdown-toggle btn">
+                        <img src="storage/front/img/flag_english.png">English
+                     </button>
+                     <div x-placement="bottom-start" aria-labelledby="lang-dropdown" class="dropdown-menu" data-popper-reference-hidden="false" data-popper-escaped="false" data-popper-placement="bottom-start" style="position: absolute; inset: 0px auto auto 0px; transform: translate3d(197.333px, 40px, 0px);"><a data-rr-ui-dropdown-item="" class="dropdown-item" role="button" tabindex="0" href="#"><img src="storage/front/img/flag_english.png">English</a></div>
+                  </div>
+               </div>
+               <button type="button" aria-label="Close" data-dismiss="modal" class="close">&times;</button>
+            </header>
+            <div id="" class="modal-body" style="padding:unset">
+               <div class="card rules-container rulespage" style="margin-top: 5px;">
+                  <ul class="nav nav-tabs game-nav-bar">
+
+                     <li class="nav-item text-center">
+                        <a data-toggle="tab" href="#rulegame1" class="sports nav-link active">
+                           <div>
+                              Football
+                           </div>
+                        </a>
+                     </li>
+                     <li class="nav-item text-center">
+                        <a data-toggle="tab" href="#rulegame2" class="sports nav-link">
+                           <div>
+                              Horse Racing
+                           </div>
+                        </a>
+                     </li>
+                     <li class="nav-item text-center">
+                        <a data-toggle="tab" href="#rulegame3" class="sports nav-link">
+                           <div>
+                              E Games
+                           </div>
+                        </a>
+                     </li>
+                     <li class="nav-item text-center">
+                        <a data-toggle="tab" href="#rulegame4" class="sports nav-link">
+                           <div>
+                              Basketball
+                           </div>
+                        </a>
+                     </li>
+                     <li class="nav-item text-center">
+                        <a data-toggle="tab" href="#rulegame5" class="sports nav-link">
+                           <div>
+                              MotoGP
+                           </div>
+                        </a>
+                     </li>
+                     <li class="nav-item text-center">
+                        <a data-toggle="tab" href="#rulegame6" class="sports nav-link">
+                           <div>
+                              Chess
+                           </div>
+                        </a>
+                     </li>
+                     <li class="nav-item text-center">
+                        <a data-toggle="tab" href="#rulegame7" class="sports nav-link">
+                           <div>
+                              Volleyball
+                           </div>
+                        </a>
+                     </li>
+                     <li class="nav-item text-center">
+                        <a data-toggle="tab" href="#rulegame8" class="sports nav-link">
+                           <div>
+                              Ice Hockey
+                           </div>
+                        </a>
+                     </li>
+                     <li class="nav-item text-center">
+                        <a data-toggle="tab" href="#rulegame9" class="sports nav-link">
+                           <div>
+                              Tennis
+                           </div>
+                        </a>
+                     </li>
+                     <li class="nav-item text-center">
+                        <a data-toggle="tab" href="#rulegame10" class="sports nav-link">
+                           <div>
+                              Badminton
+                           </div>
+                        </a>
+                     </li>
+                     <li class="nav-item text-center">
+                        <a data-toggle="tab" href="#rulegame11" class="sports nav-link">
+                           <div>
+                              Cycling
+                           </div>
+                        </a>
+                     </li>
+                     <li class="nav-item text-center">
+                        <a data-toggle="tab" href="#rulegame12" class="sports nav-link">
+                           <div>
+                              Mixed Martial Arts
+                           </div>
+                        </a>
+                     </li>
+                     <li class="nav-item text-center">
+                        <a data-toggle="tab" href="#rulegame13" class="sports nav-link">
+                           <div>
+                              Motorbikes
+                           </div>
+                        </a>
+                     </li>
+                     <li class="nav-item text-center">
+                        <a data-toggle="tab" href="#rulegame14" class="sports nav-link">
+                           <div>
+                              Athletics
+                           </div>
+                        </a>
+                     </li>
+                     <li class="nav-item text-center">
+                        <a data-toggle="tab" href="#rulegame15" class="sports nav-link">
+                           <div>
+                              Basketball 3X3
+                           </div>
+                        </a>
+                     </li>
+                     <li class="nav-item text-center">
+                        <a data-toggle="tab" href="#rulegame16" class="sports nav-link">
+                           <div>
+                              Sumo
+                           </div>
+                        </a>
+                     </li>
+                     <li class="nav-item text-center">
+                        <a data-toggle="tab" href="#rulegame17" class="sports nav-link">
+                           <div>
+                              Virtual sports
+                           </div>
+                        </a>
+                     </li>
+                     <li class="nav-item text-center">
+                        <a data-toggle="tab" href="#rulegame18" class="sports nav-link">
+                           <div>
+                              Handball
+                           </div>
+                        </a>
+                     </li>
+                     <li class="nav-item text-center">
+                        <a data-toggle="tab" href="#rulegame19" class="sports nav-link">
+                           <div>
+                              Cricket
+                           </div>
+                        </a>
+                     </li>
+                     <li class="nav-item text-center">
+                        <a data-toggle="tab" href="#rulegame20" class="sports nav-link">
+                           <div>
+                              Politics
+                           </div>
+                        </a>
+                     </li>
+                     <li class="nav-item text-center">
+                        <a data-toggle="tab" href="#rulegame21" class="sports nav-link">
+                           <div>
+                              Golf
+                           </div>
+                        </a>
+                     </li>
+                     <li class="nav-item text-center">
+                        <a data-toggle="tab" href="#rulegame22" class="sports nav-link">
+                           <div>
+                              Motor Sports
+                           </div>
+                        </a>
+                     </li>
+                     <li class="nav-item text-center">
+                        <a data-toggle="tab" href="#rulegame23" class="sports nav-link">
+                           <div>
+                              Baseball
+                           </div>
+                        </a>
+                     </li>
+                     <li class="nav-item text-center">
+                        <a data-toggle="tab" href="#rulegame24" class="sports nav-link">
+                           <div>
+                              Rugby Union
+                           </div>
+                        </a>
+                     </li>
+                     <li class="nav-item text-center">
+                        <a data-toggle="tab" href="#rulegame25" class="sports nav-link">
+                           <div>
+                              Rugby League
+                           </div>
+                        </a>
+                     </li>
+                     <li class="nav-item text-center">
+                        <a data-toggle="tab" href="#rulegame26" class="sports nav-link">
+                           <div>
+                              Darts
+                           </div>
+                        </a>
+                     </li>
+                     <li class="nav-item text-center">
+                        <a data-toggle="tab" href="#rulegame27" class="sports nav-link">
+                           <div>
+                              American Football
+                           </div>
+                        </a>
+                     </li>
+                     <li class="nav-item text-center">
+                        <a data-toggle="tab" href="#rulegame28" class="sports nav-link">
+                           <div>
+                              Snooker
+                           </div>
+                        </a>
+                     </li>
+                     <li class="nav-item text-center">
+                        <a data-toggle="tab" href="#rulegame29" class="sports nav-link">
+
+                           <div>
+                              Boxing
+                           </div>
+                        </a>
+                     </li>
+                     <li class="nav-item text-center">
+                        <a data-toggle="tab" href="#rulegame30" class="sports nav-link">
+
+                           <div>
+                              Soccer
+                           </div>
+                        </a>
+                     </li>
+                     <li class="nav-item text-center">
+                        <a data-toggle="tab" href="#rulegame31" class="sports nav-link">
+
+                           <div>
+                              Esports
+                           </div>
+                        </a>
+                     </li>
+                     <li class="nav-item text-center">
+                        <a data-toggle="tab" href="#rulegame32" class="sports nav-link">
+                           <div>
+                              Greyhound Racing
+                           </div>
+                        </a>
+                     </li>
+                     <li class="nav-item text-center">
+                        <a data-toggle="tab" href="#rulegame33" class="sports nav-link">
+                           <div>
+                              Kabaddi
+                           </div>
+                        </a>
+                     </li>
+                     <li class="nav-item text-center">
+                        <a data-toggle="tab" href="#rulegame34" class="sports nav-link">
+                           <div>
+                              Boat Racing
+                           </div>
+                        </a>
+                     </li>
+                     <li class="nav-item text-center">
+                        <a data-toggle="tab" href="#rulegame35" class="sports nav-link">
+                           <div>
+                              Esoccer
+                           </div>
+                        </a>
+                     </li>
+                     <li class="nav-item text-center">
+                        <a data-toggle="tab" href="#rulegame36" class="sports nav-link">
+                           <div>
+                              Beach Volleyball
+                           </div>
+                        </a>
+                     </li>
+                     <li class="nav-item text-center">
+                        <a data-toggle="tab" href="#rulegame37" class="sports nav-link">
+                           <div>
+                              Table Tennis
+                           </div>
+                        </a>
+                     </li>
+                     <li class="nav-item text-center">
+                        <a data-toggle="tab" href="#rulegame38" class="sports nav-link">
+                           <div>
+                              Futsal
+                           </div>
+                        </a>
+                     </li>
+                  </ul>
+                  <div class="card-body container-fluid container-fluid-5">
+
+                     <div class="row row5 mt-2">
+                        <div class="col-12">
+                           <div role="tablist">
+
+                              <div class="tab-content">
+                                 <div id="rulegame1" class="tab-pane container pl-0 pr-0 active">
+                                    <div class="game-listing-container" id="football_event"
+                                       style=" overflow-x: auto;">
+                                       <div class="game-list pt-1 pb-1 container-fluid">
+                                          <div class="row row5">
+                                             <div class="col-12">
+                                                <div class="rules-content-title">bookmaker</div>
+                                                <div class="rules-content-desc">
+                                                   <div class="table-responsive">
+                                                      <table class="table table-bordered">
+                                                         <tbody>
+                                                            <tr>
+                                                               <td><span class="">If the match will not take place within 48 hours of the original kick-off time bets will be void.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">If the selection is in a multiple bet or accumulator any refund must be requested before kick-off of the first leg of the multiple bet.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Please note that games which have their kick-off altered well in advance to accommodate live TV, or to ease fixture congestion will not be classed as postponed.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">If a match is forfeited or a team is given a walkover victory without the match having kicked off, then all bets will be void. Any subsequently awarded scoreline will not count for settlement purposes.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Where a confirmed postponed match features as part of a multiple bet, the bet will stand on the remaining selections in the multiple.</span></td>
+                                                            </tr>
+                                                         </tbody>
+                                                      </table>
+                                                   </div>
+                                                </div>
+                                                <div class="rules-content-title">fancy</div>
+                                                <div class="rules-content-desc">
+                                                   <div class="table-responsive">
+                                                      <table class="table table-bordered">
+                                                         <tbody>
+                                                            <tr>
+                                                               <td><span class="text-danger">Tournament Total Goals, Team Total Goals goals. scored in 90 minutes or in extra-time will count.Goals scored in penalty shootouts do not count.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Tournament Corners - Only corners taken in 90 minutes count.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Tournament Penalties Missed/Converted - Penalties taken in 90 minutes, extra-time and penalty shootouts all count. If a penalty has to be re-taken the previous disallowed penalty(ies) do not count.</span></td>
+                                                            </tr>
+                                                         </tbody>
+                                                      </table>
+                                                   </div>
+                                                </div>
+                                                <div class="rules-content-title">match</div>
+                                                <div class="rules-content-desc">
+                                                   <div class="table-responsive">
+                                                      <table class="table table-bordered">
+                                                         <tbody>
+                                                            <tr>
+                                                               <td><span class="">Match Odds :-
+                                                                     All bets apply to the relevant full 'regular time' period including stoppage time. Any extra-time
+                                                                     and/or penalty shoot-out is not included.
+                                                                     For the cancellation of a goal, due to VAR, bets matched between the time of the goal being
+                                                                     scored and the time at which the video assistant referee finishes the review will be voided.
+                                                                     For the cancellation of a red card, due to VAR, bets matched after the time at which the video
+                                                                     assistant referee commences the review will be voided.
+                                                                  </span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Under_Over Goals :-
+                                                                     In the event of a match starting but not being completed, all bets will be void, unless the
+                                                                     specific market outcome is already determined,</span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">1st Period Winner :-
+                                                                     Bets will be void if the match is abandoned before half-time.</span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Next Goal :-
+                                                                     Own goals count to the side credited with the goal.</span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Draw No Bet :-
+                                                                     Predict which team will be the winner. In case of a draw, all bets will be void. If a game is
+                                                                     abandoned, bets will be void.</span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Both Teams to Score :-
+                                                                     Predict whether both teams will score at least one goal in the game. Own goals count towards
+                                                                     the team credited with the goal. If a game is abandoned, bets will be void, unless the outcome
+                                                                     of these bets is already determined.
+                                                                     Yes” – meaning that both teams will score.
+                                                                     “No” – meaning that either team will not score.</span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Corners :-
+                                                                     Predict which team will take the named corner in the game. If this specific corner is not taken in
+                                                                     the game, bets will be void. For example, game finishes or is abandoned with 8 corners taken –
+                                                                     all bets on any corner after the 8th will be void (9th, 10th, etc.).</span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Goals Odd/Even :-
+                                                                     Any match resulting in 0-0 will be settled on an even number of goals. For Team Odd/Even
+                                                                     markets, if the specified team does not score then we will settle on an even number of goals. In
+                                                                     the event of an abandoned match then bets for that match will be void.</span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">1X2 Corners :-
+                                                                     Predict which team will get more corners in a match. Awarded, but not taken corners (there is a
+                                                                     corner, but before it is taken the referee signals for the end of the first half or the match) will
+                                                                     not count for settlement purposes. Also if a corner needs to be re-taken for any reason, it will
+                                                                     be counted as 1 corner.</span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Under/Over Card in Match (Number of cards) :-
+                                                                     Predict the number of the cards which will be shown in a match. If a player is sent off for 2
+                                                                     yellow cards, this counts as 2 yellow cards and 1 red card for betting purpose es. If the match is
+                                                                     abandoned for any reason, all bets will be void unless market is already determined, e.g. Team
+                                                                     1 over 2,5 yellow cards - 3 yellow cards awarded to Team 1 before abandonment is settled as a
+                                                                     winner. Cards for non-players (already substituted players, managers, players on bench which
+                                                                     are not substituted in) are not considered.
+                                                                     Settlement will be made with reference to all available evidence to cards shown during the
+                                                                     scheduled 90 minutes play. Any card shown after the full-time whistle blow will be disregarded.</span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">HT/FT :-
+                                                                     Bets will be void if the match is abandoned. Extra-time and penalty shootouts do not count.</span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">First Half Under/Over Goals :- How many goals will be scored in this first half of this match?
+                                                                     All bets apply to Full Time according to the match officials, plus any stoppage time. Extra-time/penalty shoot-outs are not included.
+                                                                  </span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Penalty Taken? :- Will a penalty be awarded and taken during this match?
+                                                                     All bets apply to Full Time according to the match officials, plus any stoppage time. Extra-time/penalty shoot-outs are not included.
+                                                                  </span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Correct Score :- Predict the score of this match.
+                                                                     This market will not be partially settled during the fixture and will be fully settled at full time.
+                                                                     All bets apply to Full Time according to the match officials, plus any stoppage time. Extra-time/penalty shoot-outs are not included.
+                                                                  </span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Corners Number/Odds : - How many corners will be taken in the match? Only corners that are taken will be counted.
+                                                                     All bets apply to Full Time according to the match officials, plus any stoppage time. Extra-time/penalty shoot-outs are not included.
+                                                                  </span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Team_A/B +1/2/3 : - Who will win this match with the stated handicap applied?
+                                                                     All bets apply to Full Time according to the match officials, plus any stoppage time. Extra-time/penalty shoot-outs are&nbsp;not&nbsp;included.</span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Company reserves the right to suspend/void any id/bets if the same is found to be illegitimate. For example incase of VPN/robot-use/multiple entry from same or different IP and others. Note : only winning bets will be voided.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">for live streaming and animation :- Although the current score, time elapsed, video and other data provided on this site is sourced from "live" feeds provided by third parties, you should be aware that this data may be subject to a time delay and/or be inaccurate. Please also be aware that other customers may have access to data that is faster and/or more accurate than the data shown on the site. If you rely on this data to place bets, you do so entirely at your own risk. provides this data AS IS with no warranty as to the accuracy, completeness or timeliness of such data and accepts no responsibility for any loss (direct or indirect) suffered by you as a result of your reliance on it. </span></td>
+                                                            </tr>
+                                                         </tbody>
+                                                      </table>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div id="rulegame2" class="tab-pane container pl-0 pr-0">
+                                    <div class="game-listing-container" id="football_event"
+                                       style=" overflow-x: auto;">
+                                       <div class="game-list pt-1 pb-1 container-fluid">
+                                          <div class="row row5">
+                                             <div class="col-12">
+                                                <div class="rules-content-title">match</div>
+                                                <div class="rules-content-desc">
+                                                   <div class="table-responsive">
+                                                      <table class="table table-bordered">
+                                                         <tbody>
+                                                            <tr>
+                                                               <td><span class="text-danger">1.General</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">All individual race markets will be determined according to the official result at the time of the 'weigh-in' announcement (or equivalent). Subsequent disqualifications, appeals or amendments to the result will be disregarded.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">If a race is abandoned or otherwise declared void, or in the event of a walkover, all bets on that race will be void.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">If the scheduled venue is changed after the market has been loaded by us, all bets will be void.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Where a race does not take part on its scheduled day, all bets will be void.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">If a scheduled surface type is changed (e.g. turf to dirt) all bets will stand.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">2.Non-Runner Rule</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Our's non-runner rule relates to the adjustment of odds on bets already matched when a horse in a race is declared a non-runner. In order to make the adjustment We applies a reduction factor to the remaining runners. The reduction factor allocated to a non-runner is a calculation (the details of which are described below) of that horse's chances of winning (or being placed, etc as appropriate) and is applied to bets already matched on the other runners in the relevant market or markets.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Any horse listed when the relevant market is loaded which does not subsequently come under starter's orders is deemed to be a non-runner.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">When the market is loaded each horse is given a 'reduction factor', based on a forecast price, which is expressed as a percentage. These reduction factors may be updated periodically at the discretion of Us based on trading in the market, but after approximately 15 minutes (approximately 5 minutes for Australian and US markets) from the scheduled 'off' time of a given race, they will be updated only in exceptional circumstances. The current reduction factor percentage for each horse can be viewed on the 'info' page on Our website or by asking the Helpdesk.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Accurate reduction factors will only be applied to selections in the event of a non-runner. Once a non-runner is declared each selection in the market will be given an appropriate reduction factor. Reduction factors can be amended at Our’s discretion at any time throughout the market life cycle (including post-race).</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">For Australian racing, reduction factors may be updated periodically at the discretion of Us based on trading in the market, but after approximately five minutes from the scheduled off time of a given race they will be updated only in exceptional circumstances.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">For Australian racing, reduction factors may be updated periodically at the discretion of Us based on trading in the market, but after approximately five minutes from the scheduled off time of a given race they will be updated only in exceptional circumstances.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Reductions will be made to both win and place markets but applied differently (as described below), and horses will have a different reduction factor for each market.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">As soon as We becomes aware that a horse is an official non-runner or a highly likely non-runner, following a statement to the press from connections, the following will happen:</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">All matched bets on that horse will be void and the horse will be removed from the market.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">In the win market: if the reduction factor of the non-runner is 2.5% or greater, the traded price of all the matched bets on the remaining horses will be reduced by an amount equal to the non-runner's final reduction factor and all the unmatched offers to lay will be cancelled. If the non-runner's reduction factor is less than 2.5%, reductions will not be applied and unmatched bets will not be cancelled.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">In the place market the reduction factor of all non-runners will be applied (even if less than 2.5%) and the potential winnings in relation to matched bets on the remaining horses will be reduced by an amount equal to the non-runner's final reduction factor. Only if the non-runner's reduction factor is 4.0% or greater will all the unmatched offers to lay be cancelled.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">All the reduction factors on the remaining horses will be adjusted to reflect their improved chance of winning.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Reduction factors are not applied to bets which are struck in-play. However, if a market is turned in-play prematurely by error (or, for example, there is a false start), all bets matched during this time will be subject to any later reduction factor, provided the market is turned out of play before the race commences. In the event of a late withdrawal, We reserves the right to remove the runner after completion of the race. In this case only those bets matched prior to the off will be affected by a reduction factor.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">In the event of a non-runner being removed from a race in error or following incorrect information regarding a runner’s participation, we will reinstate both the runner and all previously matched bets associated with that runner. All bets made between the time of withdrawal and reinstatement will be void in both the place market and the win market. The reduction factor applied to matched bets at the time of withdrawal will be reversed and the original prices will become valid.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Any non-runners will be removed from the relevant markets in the order in which they are brought to Our's attention. If We becomes aware of more than one non-runner at the same time, it will remove the non-runners from the relevant markets in racecard order.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Any non-runners will be removed from the relevant markets in the order in which they are brought to Our's attention. If We becomes aware of more than one non-runner at the same time, it will remove the non-runners from the relevant markets in racecard order.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">If a runner is not included in a market because of an error or because of incorrect information regarding a runner’s participation, We reserve the right to introduce the missing runner into the market at any time prior to settlement (even after the race has been run), provided that We are determined that the missing runner is not a material runner (i.e. a selection with a reduction factor of approx. 2.5% or less in the win market). In such circumstances, all pre-play unmatched and matched bets will stand, however if the runner is not introduced before the start of the race, all in-play bets will be void. However, if the missing runner is deemed to be a material runner, then the malformed market will be void and a new market will be loaded where possible.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">3.How the Reductions are applied for Exchange markets</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">In the win market, reductions will be made on the traded price. For example: if the non-runner's final reduction factor is 25% the traded price on all previously matched bets on other horses will be reduced by 25% - traded price of 8.0 would become 6.0 etc. And these might be further reduced if another horse is subsequently declared a non-runner.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">In the EW Market, reductions will be made on the traded win price. The advertised place terms will then apply to the revised win prices. For example: if the non-runner's final reduction factor is 25% the traded price on all previously matched bets on other horses will be reduced by 25% - - traded price of 8.0 would become 6.0. If the each Way terms were 1/5th odds for 3 places, the corresponding price for the Place portion of the bet would reduce from 2.4 to 2.0.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">In the place market, reductions will be made to the potential winnings on the bet only, and not the traded price. For example: if the non-runner's final reduction factor is 25% the potential winnings on all previously matched bets on the other horses will be reduced by 25% - a traded price of 8.0 would become 6.25. For example a £10 bet on a horse to be placed at a traded price of 8.0 would provide winnings of £70. If there is a non-runner with a reduction factor of 25% in the race, that factor will be applied to the £70 of potential winnings leaving potential winnings of £52.50. Therefore the revised traded price will be 6.25.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">The traded price may be further reduced if any other horse(s) is subsequently declared a non-runner, however odds cannot be reduced below 1.01.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Reserves: A reserve runner may appear in the relevant markets but will have a non-applicable reduction factor until we are received confirmation that it is a confirmed runner, in which case an applicable reduction factor may apply to it.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">For the avoidance of doubt, any reduction factor applicable to a non-runner replaced by a reserve, will be applied to all bets struck on the relevant markets, prior to the removal from those markets of such non-runner by Us. Likewise, should a reserve runner become a confirmed runner but subsequently become a non-runner, any reduction factor applicable to such non-runner will be applied to all bets struck on the relevant markets, prior to the removal from those markets of such non-runner by Us.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">4.Additional rules</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Card numbers are posted as a guide only: bets are placed on a named horse.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Horses will not be coupled.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Where any horse(s) runs for purse money only it is deemed a non-runner for betting purposes. Should this result in the number of possible winners stated in the relevant Market Information being equal to or greater than the number of runners in the relevant Betfair market, all bets in the market will be void.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Company reserves the right to suspend/void any id/bets if the same is found to be illegitimate. For example incase of VPN/robot-use/multiple entry from same or different IP and others. Note : only winning bets will be voided.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">for live streaming and animation :- Although the current score, time elapsed, video and other data provided on this site is sourced from "live" feeds provided by third parties, you should be aware that this data may be subject to a time delay and/or be inaccurate. Please also be aware that other customers may have access to data that is faster and/or more accurate than the data shown on the site. If you rely on this data to place bets, you do so entirely at your own risk. provides this data AS IS with no warranty as to the accuracy, completeness or timeliness of such data and accepts no responsibility for any loss (direct or indirect) suffered by you as a result of your reliance on it. </span></td>
+                                                            </tr>
+                                                         </tbody>
+                                                      </table>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div id="rulegame3" class="tab-pane container pl-0 pr-0">
+                                    <div class="game-listing-container" id="football_event"
+                                       style=" overflow-x: auto;">
+                                       <div class="game-list pt-1 pb-1 container-fluid">
+                                          <div class="row row5">
+                                             <div class="col-12">
+                                                <div class="rules-content-title">match</div>
+                                                <div class="rules-content-desc">
+                                                   <div class="table-responsive">
+                                                      <table class="table table-bordered">
+                                                         <tbody>
+                                                            <tr>
+                                                               <td><span class="text-danger">In the event of a match starting but not being completed, then all bets will be void.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Company reserves the right to suspend/void any id/bets if the same is found to be illegitimate. For example incase of VPN/robot-use/multiple entry from same or different IP and others. Note : only winning bets will be voided.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">for live streaming and animation :- Although the current score, time elapsed, video and other data provided on this site is sourced from "live" feeds provided by third parties, you should be aware that this data may be subject to a time delay and/or be inaccurate. Please also be aware that other customers may have access to data that is faster and/or more accurate than the data shown on the site. If you rely on this data to place bets, you do so entirely at your own risk. provides this data AS IS with no warranty as to the accuracy, completeness or timeliness of such data and accepts no responsibility for any loss (direct or indirect) suffered by you as a result of your reliance on it. </span></td>
+                                                            </tr>
+                                                         </tbody>
+                                                      </table>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div id="rulegame4" class="tab-pane container pl-0 pr-0">
+                                    <div class="game-listing-container" id="football_event"
+                                       style=" overflow-x: auto;">
+                                       <div class="game-list pt-1 pb-1 container-fluid">
+                                          <div class="row row5">
+                                             <div class="col-12">
+                                                <div class="rules-content-title">match</div>
+                                                <div class="rules-content-desc">
+                                                   <div class="table-responsive">
+                                                      <table class="table table-bordered">
+                                                         <tbody>
+                                                            <tr>
+                                                               <td><span class="">Match Odds :-
+                                                                     Predict which team will be the winner. There must be 5 minutes or less of scheduled game time
+                                                                     left for bets to have action.</span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Quarter Winner :-
+                                                                     The quarter must be completed for bets to have action, unless settlement of bets is already
+                                                                     determined.</span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">1st Half Winner / 2nd Half Winner :-
+                                                                     The first half must be completed for first half bets to stand. If a game is postponed or cancelled
+                                                                     after the start, for game and second half bets there must be 5 minutes or less remaining for
+                                                                     bets to have action, unless settlement of bets is already determined. (Including Overtime if
+                                                                     played.)
+                                                                  </span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Highest Scoring Half :-
+                                                                     Predict in which half most points will be scored. OT is not included in 2nd Half.</span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Company reserves the right to suspend/void any id/bets if the same is found to be illegitimate. For example incase of VPN/robot-use/multiple entry from same or different IP and others. Note : only winning bets will be voided.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">for live streaming and animation :- Although the current score, time elapsed, video and other data provided on this site is sourced from "live" feeds provided by third parties, you should be aware that this data may be subject to a time delay and/or be inaccurate. Please also be aware that other customers may have access to data that is faster and/or more accurate than the data shown on the site. If you rely on this data to place bets, you do so entirely at your own risk. provides this data AS IS with no warranty as to the accuracy, completeness or timeliness of such data and accepts no responsibility for any loss (direct or indirect) suffered by you as a result of your reliance on it. </span></td>
+                                                            </tr>
+                                                         </tbody>
+                                                      </table>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div id="rulegame5" class="tab-pane container pl-0 pr-0">
+                                    <div class="game-listing-container" id="football_event"
+                                       style=" overflow-x: auto;">
+                                       <div class="game-list pt-1 pb-1 container-fluid">
+                                          <div class="row row5">
+                                             <div class="col-12">
+                                                <div class="rules-content-title">match</div>
+                                                <div class="rules-content-desc">
+                                                   <div class="table-responsive">
+                                                      <table class="table table-bordered">
+                                                         <tbody>
+                                                            <tr>
+                                                               <td><span class="text-danger">Company reserves the right to suspend/void any id/bets if the same is found to be illegitimate. For example incase of VPN/robot-use/multiple entry from same or different IP and others. Note : only winning bets will be voided.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">for live streaming and animation :- Although the current score, time elapsed, video and other data provided on this site is sourced from "live" feeds provided by third parties, you should be aware that this data may be subject to a time delay and/or be inaccurate. Please also be aware that other customers may have access to data that is faster and/or more accurate than the data shown on the site. If you rely on this data to place bets, you do so entirely at your own risk. provides this data AS IS with no warranty as to the accuracy, completeness or timeliness of such data and accepts no responsibility for any loss (direct or indirect) suffered by you as a result of your reliance on it. </span></td>
+                                                            </tr>
+                                                         </tbody>
+                                                      </table>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div id="rulegame6" class="tab-pane container pl-0 pr-0">
+                                    <div class="game-listing-container" id="football_event"
+                                       style=" overflow-x: auto;">
+                                       <div class="game-list pt-1 pb-1 container-fluid">
+                                          <div class="row row5">
+                                             <div class="col-12">
+                                                <div class="rules-content-title">match</div>
+                                                <div class="rules-content-desc">
+                                                   <div class="table-responsive">
+                                                      <table class="table table-bordered">
+                                                         <tbody>
+                                                            <tr>
+                                                               <td><span class="text-danger">Company reserves the right to suspend/void any id/bets if the same is found to be illegitimate. For example incase of VPN/robot-use/multiple entry from same or different IP and others. Note : only winning bets will be voided.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">for live streaming and animation :- Although the current score, time elapsed, video and other data provided on this site is sourced from "live" feeds provided by third parties, you should be aware that this data may be subject to a time delay and/or be inaccurate. Please also be aware that other customers may have access to data that is faster and/or more accurate than the data shown on the site. If you rely on this data to place bets, you do so entirely at your own risk. provides this data AS IS with no warranty as to the accuracy, completeness or timeliness of such data and accepts no responsibility for any loss (direct or indirect) suffered by you as a result of your reliance on it. </span></td>
+                                                            </tr>
+                                                         </tbody>
+                                                      </table>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div id="rulegame7" class="tab-pane container pl-0 pr-0">
+                                    <div class="game-listing-container" id="football_event"
+                                       style=" overflow-x: auto;">
+                                       <div class="game-list pt-1 pb-1 container-fluid">
+                                          <div class="row row5">
+                                             <div class="col-12">
+                                                <div class="rules-content-title">match</div>
+                                                <div class="rules-content-desc">
+                                                   <div class="table-responsive">
+                                                      <table class="table table-bordered">
+                                                         <tbody>
+                                                            <tr>
+                                                               <td><span class="">Match odds :-
+                                                                     Predict which team will be the winner.
+                                                                     Bets will be void if the match is not completed.
+                                                                  </span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Set Winner:-
+                                                                     In the event of the set not being completed bets will be void. Exceptions are made for bets on
+                                                                     sets which are already over, in this case the bets will be settled.</span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Company reserves the right to suspend/void any id/bets if the same is found to be illegitimate. For example incase of VPN/robot-use/multiple entry from same or different IP and others. Note : only winning bets will be voided.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">for live streaming and animation :- Although the current score, time elapsed, video and other data provided on this site is sourced from "live" feeds provided by third parties, you should be aware that this data may be subject to a time delay and/or be inaccurate. Please also be aware that other customers may have access to data that is faster and/or more accurate than the data shown on the site. If you rely on this data to place bets, you do so entirely at your own risk. provides this data AS IS with no warranty as to the accuracy, completeness or timeliness of such data and accepts no responsibility for any loss (direct or indirect) suffered by you as a result of your reliance on it. </span></td>
+                                                            </tr>
+                                                         </tbody>
+                                                      </table>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div id="rulegame8" class="tab-pane container pl-0 pr-0">
+                                    <div class="game-listing-container" id="football_event"
+                                       style=" overflow-x: auto;">
+                                       <div class="game-list pt-1 pb-1 container-fluid">
+                                          <div class="row row5">
+                                             <div class="col-12">
+                                                <div class="rules-content-title">match</div>
+                                                <div class="rules-content-desc">
+                                                   <div class="table-responsive">
+                                                      <table class="table table-bordered">
+                                                         <tbody>
+                                                            <tr>
+                                                               <td><span class="">Match Odds Including overtime/shootouts :-
+                                                                     Predict the winner of the match including overtime and penalties. The game must be
+                                                                     completed for bets to have action.</span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Period Winner :-
+                                                                     Predict the winner of the relevant period.
+                                                                     The relevant period must be completed for bets to have action, unless the specific market
+                                                                     outcome is already determined.</span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Highest Scoring Period:-
+                                                                     If 2 or more periods have the same score Tie will be settled as the winner. (exclude
+                                                                     overtime/shootouts for settlement purposes)</span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Company reserves the right to suspend/void any id/bets if the same is found to be illegitimate. For example incase of VPN/robot-use/multiple entry from same or different IP and others. Note : only winning bets will be voided.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">for live streaming and animation :- Although the current score, time elapsed, video and other data provided on this site is sourced from "live" feeds provided by third parties, you should be aware that this data may be subject to a time delay and/or be inaccurate. Please also be aware that other customers may have access to data that is faster and/or more accurate than the data shown on the site. If you rely on this data to place bets, you do so entirely at your own risk. provides this data AS IS with no warranty as to the accuracy, completeness or timeliness of such data and accepts no responsibility for any loss (direct or indirect) suffered by you as a result of your reliance on it. </span></td>
+                                                            </tr>
+                                                         </tbody>
+                                                      </table>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div id="rulegame9" class="tab-pane container pl-0 pr-0">
+                                    <div class="game-listing-container" id="football_event"
+                                       style=" overflow-x: auto;">
+                                       <div class="game-list pt-1 pb-1 container-fluid">
+                                          <div class="row row5">
+                                             <div class="col-12">
+                                                <div class="rules-content-title">match</div>
+                                                <div class="rules-content-desc">
+                                                   <div class="table-responsive">
+                                                      <table class="table table-bordered">
+                                                         <tbody>
+                                                            <tr>
+                                                               <td><span class="">Match Odds :-If 1st set has been not completed at the time of the retirement or disqualification, then all bets relating to that individual match will be void.after completion of 1st set in case of retirement the opponent player will be given the winner for match winner bets.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Game Winner :-
+                                                                     Predict which player will win the stated game. The nominated game will be featured in the name of the
+                                                                     bet type, for example: 2ndset – 7
+                                                                     th game – Winner. If a game is not completed for any reason, bets on it
+                                                                     will be void. Tie break points will not be counted for this bet type.
+                                                                     unless the specific market outcome is already determined.</span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Under / Over Games :-
+                                                                     Finished set stand, the unfinished set can be played to its natural conclusion and settled as in
+                                                                     the example:
+                                                                     Example: A set is abandoned at 4-4
+                                                                     I win if I placed a bet on Over 9.5 (since any natural conclusion to the set would have at least 10
+                                                                     games);
+                                                                     I lost the bet if I placed a bet on Under 9.5 (since any natural conclusion to the set would have
+                                                                     at least 10 games);
+                                                                     I get my stake back if I placed a bet on O/U 10.5 (it is undecided, the set could have ended 6-4).</span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Company reserves the right to suspend/void any id/bets if the same is found to be illegitimate. For example incase of VPN/robot-use/multiple entry from same or different IP and others. Note : only winning bets will be voided.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">for live streaming and animation :- Although the current score, time elapsed, video and other data provided on this site is sourced from "live" feeds provided by third parties, you should be aware that this data may be subject to a time delay and/or be inaccurate. Please also be aware that other customers may have access to data that is faster and/or more accurate than the data shown on the site. If you rely on this data to place bets, you do so entirely at your own risk. provides this data AS IS with no warranty as to the accuracy, completeness or timeliness of such data and accepts no responsibility for any loss (direct or indirect) suffered by you as a result of your reliance on it. </span></td>
+                                                            </tr>
+                                                         </tbody>
+                                                      </table>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div id="rulegame10" class="tab-pane container pl-0 pr-0">
+                                    <div class="game-listing-container" id="football_event"
+                                       style=" overflow-x: auto;">
+                                       <div class="game-list pt-1 pb-1 container-fluid">
+                                          <div class="row row5">
+                                             <div class="col-12">
+                                                <div class="rules-content-title">match</div>
+                                                <div class="rules-content-desc">
+                                                   <div class="table-responsive">
+                                                      <table class="table table-bordered">
+                                                         <tbody>
+                                                            <tr>
+                                                               <td><span class="text-danger">Company reserves the right to suspend/void any id/bets if the same is found to be illegitimate. For example incase of VPN/robot-use/multiple entry from same or different IP and others. Note : only winning bets will be voided.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Match_Odds:-Predict which player will win the match. In the event of any of the named players in a match changing before the match starts then all bets are void. In the event of a match starting but not being completed, then all bets will be void.
+                                                                  </span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Set Winner:-The Set must be completed for bets to stand, unless the specific market outcome is already determined.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">for live streaming and animation :- Although the current score, time elapsed, video and other data provided on this site is sourced from "live" feeds provided by third parties, you should be aware that this data may be subject to a time delay and/or be inaccurate. Please also be aware that other customers may have access to data that is faster and/or more accurate than the data shown on the site. If you rely on this data to place bets, you do so entirely at your own risk. provides this data AS IS with no warranty as to the accuracy, completeness or timeliness of such data and accepts no responsibility for any loss (direct or indirect) suffered by you as a result of your reliance on it. </span></td>
+                                                            </tr>
+                                                         </tbody>
+                                                      </table>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div id="rulegame11" class="tab-pane container pl-0 pr-0">
+                                    <div class="game-listing-container" id="football_event"
+                                       style=" overflow-x: auto;">
+                                       <div class="game-list pt-1 pb-1 container-fluid">
+                                          <div class="row row5">
+                                             <div class="col-12">
+                                                <div class="rules-content-title">match</div>
+                                                <div class="rules-content-desc">
+                                                   <div class="table-responsive">
+                                                      <table class="table table-bordered">
+                                                         <tbody>
+                                                            <tr>
+                                                               <td><span class="text-danger">Company reserves the right to suspend/void any id/bets if the same is found to be illegitimate. For example incase of VPN/robot-use/multiple entry from same or different IP and others. Note : only winning bets will be voided.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">for live streaming and animation :- Although the current score, time elapsed, video and other data provided on this site is sourced from "live" feeds provided by third parties, you should be aware that this data may be subject to a time delay and/or be inaccurate. Please also be aware that other customers may have access to data that is faster and/or more accurate than the data shown on the site. If you rely on this data to place bets, you do so entirely at your own risk. provides this data AS IS with no warranty as to the accuracy, completeness or timeliness of such data and accepts no responsibility for any loss (direct or indirect) suffered by you as a result of your reliance on it. </span></td>
+                                                            </tr>
+                                                         </tbody>
+                                                      </table>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div id="rulegame12" class="tab-pane container pl-0 pr-0">
+                                    <div class="game-listing-container" id="football_event"
+                                       style=" overflow-x: auto;">
+                                       <div class="game-list pt-1 pb-1 container-fluid">
+                                          <div class="row row5">
+                                             <div class="col-12">
+                                                <div class="rules-content-title">match</div>
+                                                <div class="rules-content-desc">
+                                                   <div class="table-responsive">
+                                                      <table class="table table-bordered">
+                                                         <tbody>
+                                                            <tr>
+                                                               <td><span class="text-danger">Company reserves the right to suspend/void any id/bets if the same is found to be illegitimate. For example incase of VPN/robot-use/multiple entry from same or different IP and others. Note : only winning bets will be voided.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">for live streaming and animation :- Although the current score, time elapsed, video and other data provided on this site is sourced from "live" feeds provided by third parties, you should be aware that this data may be subject to a time delay and/or be inaccurate. Please also be aware that other customers may have access to data that is faster and/or more accurate than the data shown on the site. If you rely on this data to place bets, you do so entirely at your own risk. provides this data AS IS with no warranty as to the accuracy, completeness or timeliness of such data and accepts no responsibility for any loss (direct or indirect) suffered by you as a result of your reliance on it. </span></td>
+                                                            </tr>
+                                                         </tbody>
+                                                      </table>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div id="rulegame13" class="tab-pane container pl-0 pr-0">
+                                    <div class="game-listing-container" id="football_event"
+                                       style=" overflow-x: auto;">
+                                       <div class="game-list pt-1 pb-1 container-fluid">
+                                          <div class="row row5">
+                                             <div class="col-12">
+                                                <div class="rules-content-title">match</div>
+                                                <div class="rules-content-desc">
+                                                   <div class="table-responsive">
+                                                      <table class="table table-bordered">
+                                                         <tbody>
+                                                            <tr>
+                                                               <td><span class="text-danger">Company reserves the right to suspend/void any id/bets if the same is found to be illegitimate. For example incase of VPN/robot-use/multiple entry from same or different IP and others. Note : only winning bets will be voided.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">for live streaming and animation :- Although the current score, time elapsed, video and other data provided on this site is sourced from "live" feeds provided by third parties, you should be aware that this data may be subject to a time delay and/or be inaccurate. Please also be aware that other customers may have access to data that is faster and/or more accurate than the data shown on the site. If you rely on this data to place bets, you do so entirely at your own risk. provides this data AS IS with no warranty as to the accuracy, completeness or timeliness of such data and accepts no responsibility for any loss (direct or indirect) suffered by you as a result of your reliance on it. </span></td>
+                                                            </tr>
+                                                         </tbody>
+                                                      </table>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div id="rulegame14" class="tab-pane container pl-0 pr-0">
+                                    <div class="game-listing-container" id="football_event"
+                                       style=" overflow-x: auto;">
+                                       <div class="game-list pt-1 pb-1 container-fluid">
+                                          <div class="row row5">
+                                             <div class="col-12">
+                                                <div class="rules-content-title">match</div>
+                                                <div class="rules-content-desc">
+                                                   <div class="table-responsive">
+                                                      <table class="table table-bordered">
+                                                         <tbody>
+                                                            <tr>
+                                                               <td><span class="text-danger">Company reserves the right to suspend/void any id/bets if the same is found to be illegitimate. For example incase of VPN/robot-use/multiple entry from same or different IP and others. Note : only winning bets will be voided.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">for live streaming and animation :- Although the current score, time elapsed, video and other data provided on this site is sourced from "live" feeds provided by third parties, you should be aware that this data may be subject to a time delay and/or be inaccurate. Please also be aware that other customers may have access to data that is faster and/or more accurate than the data shown on the site. If you rely on this data to place bets, you do so entirely at your own risk. provides this data AS IS with no warranty as to the accuracy, completeness or timeliness of such data and accepts no responsibility for any loss (direct or indirect) suffered by you as a result of your reliance on it. </span></td>
+                                                            </tr>
+                                                         </tbody>
+                                                      </table>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div id="rulegame15" class="tab-pane container pl-0 pr-0">
+                                    <div class="game-listing-container" id="football_event"
+                                       style=" overflow-x: auto;">
+                                       <div class="game-list pt-1 pb-1 container-fluid">
+                                          <div class="row row5">
+                                             <div class="col-12">
+                                                <div class="rules-content-title">match</div>
+                                                <div class="rules-content-desc">
+                                                   <div class="table-responsive">
+                                                      <table class="table table-bordered">
+                                                         <tbody>
+                                                            <tr>
+                                                               <td><span class="text-danger">Company reserves the right to suspend/void any id/bets if the same is found to be illegitimate. For example incase of VPN/robot-use/multiple entry from same or different IP and others. Note : only winning bets will be voided.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">for live streaming and animation :- Although the current score, time elapsed, video and other data provided on this site is sourced from "live" feeds provided by third parties, you should be aware that this data may be subject to a time delay and/or be inaccurate. Please also be aware that other customers may have access to data that is faster and/or more accurate than the data shown on the site. If you rely on this data to place bets, you do so entirely at your own risk. provides this data AS IS with no warranty as to the accuracy, completeness or timeliness of such data and accepts no responsibility for any loss (direct or indirect) suffered by you as a result of your reliance on it. </span></td>
+                                                            </tr>
+                                                         </tbody>
+                                                      </table>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div id="rulegame16" class="tab-pane container pl-0 pr-0">
+                                    <div class="game-listing-container" id="football_event"
+                                       style=" overflow-x: auto;">
+                                       <div class="game-list pt-1 pb-1 container-fluid">
+                                          <div class="row row5">
+                                             <div class="col-12">
+                                                <div class="rules-content-title">match</div>
+                                                <div class="rules-content-desc">
+                                                   <div class="table-responsive">
+                                                      <table class="table table-bordered">
+                                                         <tbody>
+                                                            <tr>
+                                                               <td><span class="text-danger">Company reserves the right to suspend/void any id/bets if the same is found to be illegitimate. For example incase of VPN/robot-use/multiple entry from same or different IP and others. Note : only winning bets will be voided.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">for live streaming and animation :- Although the current score, time elapsed, video and other data provided on this site is sourced from "live" feeds provided by third parties, you should be aware that this data may be subject to a time delay and/or be inaccurate. Please also be aware that other customers may have access to data that is faster and/or more accurate than the data shown on the site. If you rely on this data to place bets, you do so entirely at your own risk. provides this data AS IS with no warranty as to the accuracy, completeness or timeliness of such data and accepts no responsibility for any loss (direct or indirect) suffered by you as a result of your reliance on it. </span></td>
+                                                            </tr>
+                                                         </tbody>
+                                                      </table>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div id="rulegame17" class="tab-pane container pl-0 pr-0">
+                                    <div class="game-listing-container" id="football_event"
+                                       style=" overflow-x: auto;">
+                                       <div class="game-list pt-1 pb-1 container-fluid">
+                                          <div class="row row5">
+                                             <div class="col-12">
+                                                <div class="rules-content-title">match</div>
+                                                <div class="rules-content-desc">
+                                                   <div class="table-responsive">
+                                                      <table class="table table-bordered">
+                                                         <tbody>
+                                                            <tr>
+                                                               <td><span class="text-danger">Company reserves the right to suspend/void any id/bets if the same is found to be illegitimate. For example incase of VPN/robot-use/multiple entry from same or different IP and others. Note : only winning bets will be voided.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">for live streaming and animation :- Although the current score, time elapsed, video and other data provided on this site is sourced from "live" feeds provided by third parties, you should be aware that this data may be subject to a time delay and/or be inaccurate. Please also be aware that other customers may have access to data that is faster and/or more accurate than the data shown on the site. If you rely on this data to place bets, you do so entirely at your own risk. provides this data AS IS with no warranty as to the accuracy, completeness or timeliness of such data and accepts no responsibility for any loss (direct or indirect) suffered by you as a result of your reliance on it. </span></td>
+                                                            </tr>
+                                                         </tbody>
+                                                      </table>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div id="rulegame18" class="tab-pane container pl-0 pr-0">
+                                    <div class="game-listing-container" id="football_event"
+                                       style=" overflow-x: auto;">
+                                       <div class="game-list pt-1 pb-1 container-fluid">
+                                          <div class="row row5">
+                                             <div class="col-12">
+                                                <div class="rules-content-title">match</div>
+                                                <div class="rules-content-desc">
+                                                   <div class="table-responsive">
+                                                      <table class="table table-bordered">
+                                                         <tbody>
+                                                            <tr>
+                                                               <td><span class="">Match Odds:-
+                                                                     Predict which team will be the winner.
+                                                                     Bets will be void if the match is not completed.
+                                                                  </span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Next Goal:-
+                                                                     Predict which team will score the X-th goal.
+                                                                  </span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Highest Scoring Half:-
+                                                                     Predict which half will have the most goals scored (1st, 2nd or Draw).
+                                                                     Bet will be settled on regulation time only and exclude overtime if played:
+                                                                  </span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Halftime/Fulltime:-
+                                                                     Predict the result of a match at halftime and at the end of regular time. If a game is abandoned,
+                                                                     bets will be void.
+                                                                     Example: If you choose 1/X, you bet on the home team to lead in the first half and the match to
+                                                                     end in a draw. Extra time doesn’t count.</span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Company reserves the right to suspend/void any id/bets if the same is found to be illegitimate. For example incase of VPN/robot-use/multiple entry from same or different IP and others. Note : only winning bets will be voided.</span></td>
+                                                            </tr>
+                                                         </tbody>
+                                                      </table>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div id="rulegame19" class="tab-pane container pl-0 pr-0">
+                                    <div class="game-listing-container" id="football_event"
+                                       style=" overflow-x: auto;">
+                                       <div class="game-list pt-1 pb-1 container-fluid">
+                                          <div class="row row5">
+                                             <div class="col-12">
+                                                <div class="rules-content-title">bookmaker</div>
+                                                <div class="rules-content-desc">
+                                                   <div class="table-responsive">
+                                                      <table class="table table-bordered">
+                                                         <tbody>
+                                                            <tr>
+                                                               <td><span class="text-danger">1. Due to any reason any team will be getting advantage or disadvantage we are not concerned.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">2. We will simply compare both teams 25 overs score higher score team will be declared winner in ODI (If both teams same score means, low wickets team will be declared winner. In case, both teams same score &amp; same wickets means highest boundaries team will be declared winner.If all same then will be declared No result)</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">3. We will simply compare both teams 10 overs higher score team will be declared winner in T20 matches (If both teams same score means, low wickets team will be declared winner. In case, both teams same score &amp; same wickets means highest boundaries team will be declared winner.If all same then will be declared No result)</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">4. Any query about the result or rates should be contacted within 7 days of the specific event, the same will not be considered valid post 7 days from the event.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">5. Company reserves the right to suspend/void any id/bets if the same is found to be illegitimate. For example incase of vpn/robot-use/multiple entry from same IP/ multiple bets at the same time (Punching) and others. Note : only winning bets will be voided.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">6. In case, company will find Ground bets, Group betting, Punching bets, Multiple entries with same IP or any fraud or unusual activities are detected then Company will be void winning bets and charge penalty of 2X (Two times) from winning amount.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">7. If two team ends up with equal points, then result will be given based on the official point table</span></td>
+                                                            </tr>
+                                                         </tbody>
+                                                      </table>
+                                                   </div>
+                                                </div>
+                                                <div class="rules-content-title">fancy</div>
+                                                <div class="rules-content-desc">
+                                                   <div class="table-responsive">
+                                                      <table class="table table-bordered">
+                                                         <tbody>
+                                                            <tr>
+                                                               <td><span class="text-danger">1. All fancy bets will be validated when match has been tied.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">2. All advance fancy will be suspended before toss or weather condition. All advance fancy will be voided if over reduced before match start.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">3. In case technical error or any circumstances any fancy is suspended and does not resume result will be given all previous bets will be valid (based on haar/jeet).</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">4. If any case wrong rate has been given in fancy that particular bets will be cancelled.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">5. In any circumstances management decision will be final related to all exchange items. Our scorecard will be considered as valid if there is any mismatch in online portal.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">6. In case customer make bets in wrong fancy we are not liable to delete. No changes will be made and bets will be consider as confirm bet.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">7. Due to any technical error market is open and result has came all bets after result will be deleted.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">8. Manual bets are not accepted in our exchange.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">9.Our exchange will provide 5 second delay in our TV.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">10. Company reserves the right to suspend/void any id/bets if the same is found to be illegitimate. For example incase of VPN/robot-use/multiple entry from same IP and others. Note : only winning bets will be voided.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">12. Once our exchange give username and password it is your responsibility to change a password.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">13. Penalty runs will be counted in all fancy. (This rule applicable from 20th March 2024)</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">14. Warning:- live scores and other data on this site is sourced from third party feeds and may be subject to time delays and/or be inaccurate. If you rely on this data to place bets, you do so at your own risk. Our exchange does not accept responsibility for loss suffered as a result of reliance on this data.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">15. Traders will be block the user ID if find any misinterpret activities, No queries accept regarding.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">TEST</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">1 Session:-</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">1.1 Complete session valid in test.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">1.2 Middle session and Session is not completed due to Innings declared or all out so that particular over considered as completed and remaining over counted in next team Innings for ex:- In case of Innings declared or all out In 131.5th over Considered as 132 over completed remaining 1 over counted for 133 over middle session and 3 over counted for 135 over session from next team Innings and One over session and Only over session is not completed due to innings declared so that Particular over session bets will be deleted and all out considered as valid for ex:- In case of Innings declared In 131.5th over so 132 over will be deleted and if all out then 132 over and Only 132 over will be Valid.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">1.3 1st day 1st session run minimum 25 over will be played then result is given otherwise 1st day 1st session will be deleted.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">1.4 1st day 2nd session run minimum 25 over will be played then result is given otherwise 1st day 2nd session will be deleted.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">1.5 1st day total run minimum 80 over will be played then result is given otherwise 1st day total run will be deleted. If a team get All Out before the day stumps, the other team's 1st day score will be added to 1st day total run event. (i.e. AUSTRALIA got all out at 251 before the day stumps, then ENGLAND hit 100 runs in the remaining overs of 1st day, so the result of 1st day total run event will be 351)</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">1.6 Test match both advance session is valid.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">2 Test lambi/ Inning run:-</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">2.1 Mandatory 70 over played in test lambi paari/ Innings run. If any team all-out or declaration lambi paari/ innings run is valid.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">2.2 In case due to weather situation match has been stopped all lambi trades will be deleted.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">2.3 In test both lambi paari / inning run is valid in advance fancy.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">3 Test batsman:-</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">3.1 In case batsmen is injured he/she is made 34 runs the result will be given 34 runs.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">3.2 Batsman 50/100 run if batsman is injured or declaration the result will be given on particular run.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">3.3 In next men out fancy if player is injured particular fancy will be deleted.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">3.4 In advance fancy opening batsmen is only valid if same batsmen came in opening the fancy will be valid in case one batsmen is changed that particular player fancy will be deleted.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">3.5 Test match both advance fancy batsmen run is valid.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">4 Test partnership:-</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">4.1 In partnership one batsman is injured or Retired out means partnership will continued in next batsman.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">4.2 Partnership and player runs due to weather condition or match abandoned or match completed, then the result will be given as per score.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">4.3 Advance partnership is valid in case both players are different or same.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">4.4 Test match both advance fancy partnership is valid.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">5 Other fancy advance (test):-</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">5.1 Four, sixes, wide, wicket, extra run, total run, highest over and top batsmen is valid only if 300 overs has been played or the match has been won by any team otherwise all these fancy will be deleted. Additionally all events are valid only for 1st innings( this is applicable to all individual team events also)</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">2 Odi rule:-</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Session:-</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Match 1st over run advance fancy only 1st innings run will be counted.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Complete session is valid in case due to rain or match abandoned particular session will be deleted.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">For example:- 35 over run team a is playing any case team A is all-out in 33 over team a has made 150 run the session result is validated on particular run.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Advance session is valid in only 1st innings.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">50 over runs:-</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">In case 50 over is not completed all bet will be deleted due to weather or any condition.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Advance 50 over runs is valid in only 1st innings.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Odi batsman runs:-</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">In case batsman is injured he/she is made 34 runs the result will be given 34 runs.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">In next men out fancy if player is injured particular fancy will be deleted.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">In advance fancy opening batsmen is only valid if same batsmen came in opening the fancy will be valid in case one batsmen is changed that particular player fancy will be deleted.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Odi partnership runs:-</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">In partnership one batsman is injured or Retired out means partnership will continued in next batsman.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Advance partnership is valid in case both players are different or same.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Both team advance partnerships are valid in particular match.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Other fancy:-</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Four, sixes, wide, wicket, extra run, total run, highest over ,top batsman,maiden over,caught-out,no-ball,run-out,fifty and century are valid only match has been completed in case due to rain over has been reduced all other fancy will be deleted.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">T20:-</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Session:-</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Match 1st over run advance fancy only 1st innings run will be counted.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Complete session is valid in case due to rain or match abandoned particular session will be deleted.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">For example :- 15 over run team a is playing any case team a is all-out in 13 over team A has made 100 run the session result is validated on particular run.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Advance session is valid in only 1st innings.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">20 over runs:-</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Advance 20 over run is valid only in 1st innings. 20 over run will not be considered as valid if 20 overs is not completed due to any situation.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">T20 batsman runs:-</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">In case batsman is injured he/she is made 34 runs the result will be given 34 runs.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">In next men out fancy if player is injured particular fancy will be deleted.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">In advance fancy opening batsmen is only valid if same batsmen came in opening the fancy will be valid in case one batsmen is changed that particular player fancy will be deleted.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">T20 partnership runs:-</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">In partnership one batsman is injured or Retired out means partnership will continued in next batsman.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Advance partnership is valid in case both players are different or same.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Both team advance partnerships are valid in particular match.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">1st 2 &amp; 3 &amp; 4 Wickets runs:- T20/ODI</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Advance event is valid in only 1st Innings.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">If over reduced due to rain or weather condition or match abandoned or match completed, then the result will be given as per score.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Other fancy:-</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">T-20 ,one day and test match in case current innings player and partnership are running in between match has been called off or abandoned that situation all current player and partnership results are valid.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Four, sixes, wide, wicket, extra run, total run, highest over and top batsman,maiden over,caught-out,no-ball,run-out,fifty and century are valid only match has been completed in case due to rain over has been reduced all other fancy will be deleted. 1st 6 over dot ball and 20 over dot ball fancy only valid is 1st innings.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">1st wicket lost to any team balls meaning that any team 1st wicket fall down in how many balls that particular fancy at least minimum one ball have to be played otherwise bets will be deleted.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">1st wicket lost to any team fancy valid both innings.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">How many balls for 50 runs any team meaning that any team achieved 50 runs in how many balls that particular fancy at least one ball have to be played otherwise that fancy bets will be deleted.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">How many balls for 50 runs fancy any team only first inning valid.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">1st 6 inning boundaries runs any team fancy will be counting only according to run scored fours and sixes at least 6 over must be played otherwise that fancy will be deleted.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">1st inning 6 over boundaries runs any team run like wide ,no-ball ,leg-byes ,byes and over throw runs are not counted this fancy.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">How many balls face any batsman meaning that any batsman how many balls he/she played that particular fancy at least one ball have to be played otherwise that fancy bets will be deleted.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">How many balls face by any batsman both innings valid.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Lowest scoring over will be considered valid only if the over is completed fully (all six deliveries has to be bowled)</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Concussion in Test:-</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">All bets of one over session will be deleted in test scenario, in case session is incomplete. For example innings declared or match suspended to bad light or any other conditions.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">1. All bets will be considered as valid if a player has been replaced under concussion substitute, result will be given for the runs scored by the mentioned player. For example DM Bravo gets retired hurt at 23 runs, then result will be given for 23.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">2. Bets of both the player will be valid under concussion substitute.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Total Match- Events (test):-</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Minimum of 300 overs to be bowled in the entire test match, otherwise all bets related to the particular event will get void. For example, Total match caught outs will be valid only if 300 overs been bowled in the particular test match</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Limited over events-Test:-</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">This event will be considered valid only if the number of overs defined on the particular event has been bowled, otherwise all bets related to this event will get void. For example 0-25 over events will be valid only if 25 overs has been bowled, else the same will not be considered as valid</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">If the team gets all out prior to any of the defined overs, then balance overs will be counted in next innings. For example if the team gets all out in 23.1 over the same will be considered as 24 overs and the balance overs will be counted from next innings.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Bowler Wicket event's- Test:-</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Minimum of one legal over (one complete over) has to be bowled by the bowler mentioned in the event, else the same will not be considered as valid.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Bowler over events- Test:-</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">The mentioned bowler has to complete the defined number of overs, else the bets related to that particular event will get void. For example if the mentioned bowler has bowled 8 overs, then 5 over run of that particular bowler will be considered as valid and the 10 over run will get void.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Player ball event's- Test:-</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">This event will be considered valid only if the defined number of runs made by the mentioned player, else the result will be considered as 0 (zero) balls.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">For example if Root makes 20 runs in 60 balls and gets out on 22 runs, result for 20 runs will be 60 balls and the result for balls required for 25 run Root will be considered as 0 (Zero) and the same will be given as result</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Limited over events-ODI:-</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">This event will be considered valid only if the number of overs defined on the particular event has been bowled, otherwise all bets related to this event will get void. 0-50 over events will be valid only if 50 over completed, if the team batting first get all out prior to 50 over the balance over will be counted from second innings. For example if team batting first gets all out in 35 over balance 15 over will be counted from second innings, the same applies for all events if team gets all out before the defined number of overs.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">The events which remains incomplete will be voided if over gets reduced in the match due to any situation, for example if match interrupted in 15 overs due to rain/badlight and post this over gets reduced. Events for 0-10 will be valid, all other events related to this type will get deleted.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">This events will be valid only if the defined number of over is completed. For example team batting first gets all out in 29.4 over then the same will be considered as 30 over, the team batting second must complete 20 overs only then 0-50 over events will be considered as valid. In case team batting second gets all out in 19.4 over then 0-50 over event will not be considered as valid, This same is valid for 1st Innings only.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Bowler event- ODI:-</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">The mentioned bowler has to complete the defined number of overs, else the bets related to that particular event will get void. For example if the mentioned bowler has bowled 8 overs, then 5 over run of that particular bowler will be considered as valid and the 10 over run will get void.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Both innings are valid</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Other event:- T20</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">The events for 1-10 over and 11-20 over will be considered valid only if the number of over mentioned has been played completely. However if the over got reduced before the particular event then the same will be voided, if the team batting first get all out prior to 20 over the balance over will be counted from second innings. For example if team batting first gets all out in 17 over balance 3 over will be counted from second innings and that 3 over all events are counted. This same is valid for 1st Innings only.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">If over got reduced in between any running event, then the same will be considered valid and the rest will be voided. For example.., match started and due to rain/bad light or any other situation match got interrupted at 4 over and later over got reduced. Then events for 1-10 is valid rest all will be voided</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Bowler Session: Bowler session advance events only valid for 1st inning. This event is valid only if the bowler has completed his maximum quota of overs, else the same will be voided. However if the match has resulted and the particular bowler has already started bowling his final over then result will be given even if he haven't completed the over. For example B Kumar is bowling his final over and at 3.4 the match has resulted then result will be given for B Kumar over runs</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Incase of DLS, the over got reduced then the bowler who has already bowled his maximum quota of over that result will be considered as valid and the rest will be voided</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Boundary on Match 1st Free hit</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Both innings are valid</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Boundary hit on Free hit only be considered as valid</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Bets will be deleted if there is no Free hit in the mentioned match</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Boundary by bat will be considered as valid</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Boundaries by Player</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Both Four and six are valid</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Total Match - Events (Test):-</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">World Cup:-</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">11. Company reserves the right to void any bets (only winning bets) of any event at any point of the match if the company believes there is any cheating/wrong doing in that particular event by the players (either batsman/bowler)</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">16.In case, company will find Ground bets, Group betting, Punching bets, Multiple entries with same IP or any fraud or unusual activities are detected then Company will be void winning bets and charge penalty of 2X (Two times) from winning amount.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Special Events:
+                                                                  </span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Pakistan Super League (PSL)</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">At any situation if result is given for any particular event based on the rates given for the same, then the particular result will be considered valid, similarly if the tournament gets canceled due to any reason the previously given result will be considered valid
+                                                                  </span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">No Boundaries Event:</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Both Four and Six are valid</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Batsman bat boundaries only considered as valid </span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Free hit boundaries also valid</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Bets will be voided if that particular ball not completed</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Result will be given 0 or 4 (No or Yes). For Example batsman hit boundary in particular ball means Result is 0 otherwise Result is 4.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Dot ball Event:</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Only No run will count as dot ball.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">If wicket means that will not count as dot ball.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Power Surge Rule in Big Bash</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Power Play First Four Overs + Power Surge Two Overs-Batters Choice </span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">The batting side chooses when to take control with the addition of the Power Surge.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">There’s still a four-over power play at the start of the innings, but now the batting team can take the other two Power Surge overs any time from the 11th over onwards.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Bowler Session:</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">The mentioned bowler has to complete the defined number of overs, else the bets related to that particular event will get void. For example if the mentioned bowler has bowled 8 overs, then 5 over run of that particular bowler will be considered as valid and the 10 over run will get void.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Wide &amp; No ball runs will be counted in bowler Session.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Byes &amp; Leg byes runs will not be counted in bowler Session.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Indoor Cricket T10 League</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">9 Players squad with 7 players a side Over Arm Box Cricket
+                                                                     Championship</span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Scoring Rules :</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Hitting the ball in Zone A (the front net, i.e., the net behind the wicket keeper)
+                                                                     won't get you any bonus runs.</span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">If the ball hits the net in Zone B (side nets between the striker's end and
+                                                                     halfway down the pitch), you get 1 bonus run.</span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">If the ball hits the net in Zone C (side nets between the bowler's end and
+                                                                     halfway), you score 2 bonus runs.</span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Hitting the ball in Zone D (the back net, i.e., the net behind the bowler) allows
+                                                                     you to score 4 or 6 bonus runs depending on how the ball hits the back net.
+                                                                     If the ball hits the net after bouncing, you get 4 bonus runs. If the ball hits the net
+                                                                     without bouncing on the ground, you score 6 bonus runs.</span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">If the ball hits Zone B or C onto Zone D, you score 3 bonus runs.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Remember that at least one physical run must be taken for any bonus runs to
+                                                                     be scored. Whatever bonus runs you get will be added to the physical runs.
+                                                                     For example, if you strike the ball into the front net for 1 bonus run and take
+                                                                     2 physical runs, you score a total of 3 runs off the ball.</span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Game Format :</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">10 over a-side innings</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Power Play for the 1st 3 overs. Only 1 player allowed beyond the
+                                                                     Inner box marking. After the end of power play over, only 2
+                                                                     players can be outside the Inner Box.</span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">No Ball &amp; Wide balls as per normal cricketing rules.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">If the ball touches the upper net and if any player catches the
+                                                                     ball, the batsman is considered out.</span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">If the Ball Touches the Upper Net and lands safely on the field,
+                                                                     then the batsman have to take a physical run if they want, if no
+                                                                     physical run is taken there will be no runs.</span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Zone A shall concede 0 runs.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">If the player hits the net after the middle line (Zone C) its 2
+                                                                     bonus runs. (only taken into consideration if the players take a
+                                                                     physical run)</span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">If the player hits the net before the middle line (Zone B) its 1
+                                                                     bonus run. (only taken into consideration if the players take a
+                                                                     physical run)</span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">If the ball goes straight to the boundary (Zone D) without a
+                                                                     bounce, it’s a SIX.</span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">If the ball bounces and goes to the boundary (Zone D) it’s a
+                                                                     FOUR</span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">If the ball hits the upper net and goes straight to the boundary
+                                                                     (Zone D) it’s a 6.</span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">If the ball hits the upper net and bounces and goes straight to
+                                                                     the boundary (Zone D) it’s a 4.</span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Note: Bonus Runs are only applied if the ball hits or touches the
+                                                                     Side Nets of that particular zone (B&amp;C) and taken into
+                                                                     consideration if the players take a physical Run.</span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">The bowler is not allowed to touch the front line or the side line
+                                                                     of the Crease, in case they do so it will be counted as a no ball
+                                                                     and 2 runs will be given to the batting team and the ball will not
+                                                                     be counted.</span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">If a bowler bowls a no or a wide ball, the delivery will not be
+                                                                     counted and each wide or no ball will be given 2 runs to the
+                                                                     batting team total.</span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">If the batsman is a right hander and if the ball goes out of the
+                                                                     white wide line it will be given as a wide ball &amp; if the ball is
+                                                                     going leg side and is inside the Leg Side line the ball is counted.</span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Dismissals in Indoor Cricket are as followed: Bowled, Run Out,
+                                                                     Catch Out, Stumping and Handling the Ball.</span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">If the bowler is bowling directly above waist and one bounce
+                                                                     above shoulder level it is counted as a no ball, but the batter
+                                                                     has to play the ball from the crease, in case the batter is outside the crease and plays the ball it will be termed as a good
+                                                                     ball.</span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Incomplete action or throwing the ball to the stump will be
+                                                                     termed as a no ball and 2 runs will be given to the batting team.</span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">If the batsman does not hit the ball after it is bowled it is
+                                                                     considered as a Dot Ball, the batsman gets 0 runs.</span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">If the batsman hits the ball and the fielders or the wicket-keeper catch it without it touching the floor, the batsman
+                                                                     will be dismissed as Catch Out.</span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">If the ball touches a fielder and then hits the nets (zones), the
+                                                                     bonus runs will be counted, if the physical runs are taken by the
+                                                                     batter.</span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">No runs for overthrow.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">If the ball is caught directly after touching the zones (B/C), it
+                                                                     will be treated as NOT OUT and bonus runs are applicable if
+                                                                     physical run is taken.</span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">If the ball touches the bonus run zones and the fielder accomplishes a run out, the batter will be OUT and no bonus runs will
+                                                                     be counted. Physical run will be counted if 1 run is taken and run
+                                                                     out happens during the second run.</span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">When a batter gets out, the next player coming in will take the
+                                                                     strike. </span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Run out will ONLY be at the batter’s end.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">When 6 wickets of a team fall, the last batter will be allowed to
+                                                                     bat. The team will send a runner at non-striker’s end. After
+                                                                     every physical run taken, the last batsman will have to go back
+                                                                     to strike to face the next ball. Run out for the runner will mean
+                                                                     dismissal for the last batsman.</span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Inning Run Bhav Event :</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Inning run bhav bets are valid if over reduced due to rain or weather condition or match abandoned the result will be given as per official result.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Settlement occurs once the stipulated conditions are met, which involves either completion
+                                                                     of the allotted overs or the batting team's dismissal, including weather disturbances.</span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">In the event of a weather-shortened match, all Bhav Bets placed in the Inning Run Bhav
+                                                                     market will be settled according to the official result. For limited overs matches, this includes
+                                                                     results determined by the Duckworth Lewis method.</span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">In case of pitch vandalism, player safety concerns, stadium damage, acts of terrorism, or acts
+                                                                     of God, the company holds the authority to nullify all bets, with the exception of those related
+                                                                     to markets that have already been conclusively settled.</span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Bets made during instances of incorrect scorecard updates, inaccurate commentary, delays in
+                                                                     suspending the Bhav Bets of Total Innings Runs market, or erroneous updates of rates and
+                                                                     odds for Bhav Bets in Total Innings Runs will be removed and deleted from user accounts.</span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Ex: 1st inning run bhav(ENG v AUS),2nd Inning run bhav(ENG v AUS) - England vs Australia T20 Match</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Match 30s : How many batsman's scored 30 to 49 runs in full match. If a Player reached 50 means, Not considered in this Event.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Boundaries in 1st Power play : Number of Boundaries Scored in 1st Power play, 1st Innings only Valid In T20/ODI Both</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Dot balls in 1st Power play : Number of Dot balls coming in 1st Power play, 1st Innings only Valid In T20/ODI Both</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total match Wicket keeper's Dismissals: Wicket keepers Caught outs and Stumping Only Considered In T20/ODI Both</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">1st Inn Death Over Runs : Runs Scored, Last Over Only Considered, 1st Innings only Valid</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Match Single Digit Scores By Players : Duck outs Not Considered in this Event. If Not out Batsman/Injured Batsman facing One Legal Delivery and nothing scored ('0') means Considered as Single Digit</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Most Balls Faced By a Batsman : Maximum Balls Faced by an Individual Batsman in Match</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">High Pship Boundaries in the Match : Maximum Number of Boundaries Scored during any Partnership</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">In case of any circumstances, management decision will be final for all the fancies under world cup.
+                                                                  </span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">WC:-WORLD CUP
+                                                                  </span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">MOM:-MAN OF THE MATCH.
+                                                                  </span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">If World Cup fixture of 48 matches gets reduced due to any reason, then all the special fancies will be voided (Match abandoned due to rain/bad light will not be considered in this)
+                                                                  </span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Super over will not be included
+                                                                  </span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">At any situation if result is given for any particular event based on the rates given for the same, then the particular result will be considered valid, similarly if the tournament gets canceled due to any reason the previously given result will be considered valid
+                                                                  </span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Match 1st over runs : Average 4 runs will be given in case match abandoned or over reduced (Only First Innings is Valid)
+                                                                  </span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Match 1st over Dot Ball : Average 4 runs will be given in case match abandoned or over reduced (Only First Innings is Valid)
+                                                                  </span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Match 1st 10 over run:- Average 50 runs will be given in case match abandoned or over reduced (Only First Innings is Valid)
+                                                                  </span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total fours: Average 45 fours will be given in case match abandoned or over reduced
+                                                                  </span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total sixes: Average 11 sixes will be given in case match abandoned or over reduced
+                                                                  </span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Wickets - Average 15 Wickets will be given in case match abandoned or over reduced
+                                                                  </span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Wides - Average 16 Wides will be given in case match abandoned or over reduced
+                                                                  </span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total No balls:- Average 2 No ball will be given in case match abandoned or over reduced
+                                                                  </span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Extras - Average 26 extras will be given in case match abandoned or over reduced
+                                                                  </span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Caught outs: Average 9 caught out will be given in case match abandoned or over reduced
+                                                                  </span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Bowled:- Average 3 Bowled out will be given in case match abandoned or over reduced
+                                                                  </span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total LBW:- Average 2 LBW will be given in case match abandoned or over reduced
+                                                                  </span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Run out:- Average 1 Run out will be given in case match abandoned or over reduced
+                                                                  </span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Fifties - Average 3 fifties will be given in case match abandoned or over reduced
+                                                                  </span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total 100s - Average 1 Hundred will be given in case match abandoned or over reduced
+                                                                  </span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Ducks - Average 1 Duck out will be given in case match abandoned or over reduced
+                                                                  </span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Maidens - Average 4 Maidens will be given in case match abandoned or over reduced
+                                                                  </span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total 50+ Partnerships - Average 3 Fifty plus Partnerships will be given in case match abandoned or over reduced. 50 and 50 Above Partnerships All Counted in this.
+                                                                  </span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Highest 1st over run in individual match: Only First Innings is Valid
+                                                                  </span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Highest 1st 10 over run in individual match: Only First Innings is Valid
+                                                                  </span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Highest Fours in individual match: Both innings are valid
+                                                                  </span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Highest Sixes in individual match: Both innings are valid
+                                                                  </span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Highest Wicket in individual match: Both innings are valid
+                                                                  </span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Highest Extras in individual match: Both innings are valid
+                                                                  </span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Highest Scoring runs in Over: Both innings are valid
+                                                                  </span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Highest Run Scorer : Total Runs Scored by An Individual Batsman in Full Tournament
+                                                                  </span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Highest Wicket Taker : Total Wickets Taken by a Bowler in Full Tournament
+                                                                  </span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Most Balls Faced By a Batsman in the Match : Maximum Balls Faced by an Individual Batsman in any Single Match
+                                                                  </span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Most 4s by a Batsman in the Match : Maximum 4s Hitted by an Individual Batsman in any Single Match
+                                                                  </span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Most 6s by a Batsman in the Match : Maximum 6s Hitted by an Individual Batsman in any Single Match
+                                                                  </span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Most Boundaries Given by a Bowler : Maximum Boundaries Given by an Individual Bowler in his Quota of any Single Match
+                                                                  </span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Most Runs Given by a Bowler in the Match : Maximum Runs Given by an Individual Bowler in his Quota of any Single Match
+                                                                  </span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Most Dotballs By a Bowler in the Match : Maximum Dotballs Bowled by an Individual Bowler in his Quota of any Single Match
+                                                                  </span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Most Wides Given by a Bowler in the Match : Maximum Wides Given by an Individual Bowler in his Quota of any Single Match
+                                                                  </span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Most Wickets by a Bowler in the Match : Maximum Wickets Given by an Individual Bowler in his Quota of any Single Match
+                                                                  </span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Most Dot balls By a Bowler Event:
+                                                                  </span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Leg bye run and wickets considered as Dot&nbsp;ball&nbsp;in&nbsp;bowler</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Line Market :-</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">The result will be given of the particular Line Market only if the mentioned over is completed or the batting team is bowled out(All Out) or the target is chased down.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Note : Penalty runs will be included in all the&nbsp;Line&nbsp;Markets.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">17. Our exchange is not responsible for misuse of client id.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Total Runs in Match:</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">1. This market is based on how many runs will be scored in the match across both team’s innings combined.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">2. Penalty runs will be counted.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">3. Total Runs in Match, bets will be voided if over reduced in 1st inning or 2nd inning due to weather condition.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">4. The following number of over’s must be bowled otherwise all bets are void. T20-40 over’s / Odi-100 over’s, if team gets all out before the defined number of over’s then valid.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">5. In case match shortened due to weather condition, a new event will be start of the allotted over’s announced.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">If PSL fixture of 34 matches gets reduced due to any reason, then all the special fancies will be voided (Match abandoned due to rain/bad light will not be considered in this)</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Matches 1st over runs : Average 6 runs will be given in case match abandoned or over reduced (only 1st innings valid)</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Matches 1st 6 over runs : Average 50 runs will be given in case match abandoned or over reduced (Only 1st Innings valid)</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total fours: Average 32 fours will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total sixes: Average 13 sixes will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total 30's: Average 2 Thirties will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Fifties - Average 2 Fifties will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Wickets - Average 13 Wickets will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Wides - Average 11 Wides will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Extras - Average 18 Extras will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Caught outs: Average 8 Caught out will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Bowled:- Average 2 Bowled out will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total LBW:- Average 1 LBW will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Run out:- Average 1 Run out will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Highest innings run - Both innings are valid</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Lowest innings run - Only first innings is valid</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Highest Match 1st over runs in the match: Only first innings is valid</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Highest 1st 6 over runs: - Only first innings is valid</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Highest 4's in individual match: Both innings are valid</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Highest 6's in individual match: Both innings are valid</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Highest Wickets in individual match: Both innings are valid</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Highest Extras in individual match: Both innings are valid</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Highest over runs: Both innings are valid</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Most Balls Faced By a Batsman : Maximum Balls Faced by a batsman in one Innings</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Most 4's by individual batsman in an Inning : Maximum Number of Fours Hit By A Batsman in one Innings</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Most 6's by individual batsman in an Inning : Maximum Number of Sixes Hit By A Batsman in one Innings</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Most Dot balls By a Bowler in an Inning : Maximum Dot balls Bowled by a Bowler in his Quota of Innings</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Most runs given by Bowler in an Inning : Maximum Runs conceded by a individual Bowler in an Innings</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Most wickets by Bowler in an inning : Maximum Wickets taken by a individual Bowler in an Innings</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total 50 Plus Partnership runs- 50 and above 50 runs partnership will be counted in this event.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">In fastest fifty always the first 50 runs will be considered, for example of R Sharma scores 1st fifty in 17 balls and scores 100 in next 14 balls, fastest 50 will be given based on the balls for the 1st fifty runs</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Super over will not be included</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Women's Premier League (WPL)</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">If WPL fixture of 22 matches gets reduced due to any reason, then all the special fancies will be voided (Match abandoned due to rain/bad light will not be considered in this)</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total matches 1st over runs : Average 5 runs will be given in case match abandoned or over reduced (only 1st innings valid)</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total matches 1st 6 over runs:- Average 40 runs will be given in case match abandoned or over reduced (Only 1st Innings valid)</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total 4's : Average 32 fours will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total 30's: Average 2 sixes will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total 50's - Average 1 fifties will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Wickets - Average will 12 Wickets be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">At any situation if result is given for any particular event based on the rates given for the same, then the particular result will be considered valid, similarly if the tournament gets canceled due to any reason the previously given result will be considered valid</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Highest innings run - Both innings are valid</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Lowest innings run - Only first innings is valid</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Highest Match 1st over runs in the match: Only first innings is valid</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Highest 1st 6 over runs: - Only first innings is valid</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Highest 4's in individual match: Both innings are valid</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Highest Wickets in individual match: Both innings are valid</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Highest over runs: Both innings are valid</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Most Balls Faced By a Batsman : Maximum Balls Faced by a batsman in one Innings</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Most 4's by individual batsman in an Inning : Maximum Number of Fours Hit By A Batsman in one Innings</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Most Dot balls By a Bowler in an Inning : Maximum Dot balls Bowled by a Bowler in his Quota of Innings</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Most runs given by Bowler in an Inning : Maximum Runs conceded by a individual Bowler in an Innings</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Most wickets by Bowler in an inning : Maximum Wickets taken by a individual Bowler in an Innings</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">In fastest fifty always the first 50 runs will be considered, for example of S Mandhana scores 1st fifty in 17 balls and scores 100 in next 14 balls, fastest 50 will be given based on the balls for the 1st fifty runs</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Super over will not be included</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total runs: This market is based on how many runs will be scored in the match across both team's innings combined.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Over’s: This market is based on how many over’s will be played in the match across both team's innings combined. (If an Inning completed in 83.4 over’s then that calculated as 84 over)</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Bowlers Giving 100 runs: Number of Bowlers Giving 100 runs and above per innings. Both innings will be counted.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Any query regarding result or rate has to be contacted within 7 days from the event; query after 7 days from the event will not be considered as valid</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Impact over’s: Number of over’s scored 10 runs or above. Team wise only 1st inning are valid and Match wise both innings are valid.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Match Four Hitters : Number of Batsman hitting Fours in full match.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Match Six Hitters : Number of Batsman hitting Sixes in full match.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Match Wicket Takers : Number of bowlers taking wickets in full match.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">100 balls Event: The events for 1 to 100 balls will be considered valid only if the number of balls mentioned has been played completely. However if the balls got reduced before the particular event then the same will be voided, if the team batting first get all out prior to 100 balls the balance balls will be counted from second innings. For example if team batting first gets all out in 81 balls balance 19 balls will be counted from second innings and that 19 balls all events are counted. This same is valid for 1st Innings only.</span></td>
+                                                            </tr>
+                                                         </tbody>
+                                                      </table>
+                                                   </div>
+                                                </div>
+                                                <div class="rules-content-title">khado</div>
+                                                <div class="rules-content-desc">
+                                                   <div class="table-responsive">
+                                                      <table class="table table-bordered">
+                                                         <tbody>
+                                                            <tr>
+                                                               <td><span class="">Only First inning valid for T20 and one day matches.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Same will be work like Lambi. If match abandoned or over reduced, all bets will be deleted.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">You can choose your own value in this event.</span></td>
+                                                            </tr>
+                                                         </tbody>
+                                                      </table>
+                                                   </div>
+                                                </div>
+                                                <div class="rules-content-title">fancy1</div>
+                                                <div class="rules-content-desc">
+                                                   <div class="table-responsive">
+                                                      <table class="table table-bordered">
+                                                         <tbody>
+                                                            <tr>
+                                                               <td><span class="text-danger">1. Odd/Even Rules. (W.e.f 5th January 2024)</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">1.1 Advance events will be valid if over reduced before match start. For Ex: - In T20, If over reduced to 16 over so up to 16 over valid remaining over will be deleted.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">1.4 All bets regarding to ODD/EVEN player/partnership are valid if one legal delivery is being played, else the bets will be deleted. Player odd/even all advance bets will be valid if one legal delivery is being played in match otherwise voided.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">1.6 In any circumstances management decision will be final.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">2 Top batsman rules:-</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">2.1 If any player does not come as per playing eleven then all bets will be get deleted for the particular player.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">2.2 two players done the same run in a single match (M Agarwal 30 runs and A Rayudu 30 runs, whole inning top batsmen score also 30 run) then both player settlement to be get done 50 percent (50% , 50%)rate on their original value which given by our exchange.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Suppose we have opened value of M Agarwal 3.75 back and customer place bets on 10000 @ 3.75 rates and A Rayudu 3.0 back and customer place bets on 10000 @ 3.0 rates.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Whole inning result announces 30 run by both player then</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Rule of top batsman:-if you bet on M Agarwal you will be get half amount of this rate (10000*3.75/2=18750 you will get)</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Rule of top batsman:-if you bet on A Rayudu you will be get half amount of this rate (10000*3.00/2=15000 you will get)</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Top batsman only 1st inning valid.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">For one day 50 over and for t-20 match 20 over must be played for top batsmen otherwise all bets will be deleted.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Man of the Match Rules</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">1. All bets will be deleted in case the match is abandoned or over reduced.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">2. All bets will be deleted if the mentioned player is not included in playing 11.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">3. In case Man of the Match is shared between two players then Dead heat rule will be applicable, For example K Perera and T Iqbal shares the Man of the Match, then the settlement will be done 50% of the rates accordingly.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">4. Rules similar to our Top Batsman rules.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Maximum Sixes by Team</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">1. All bets will be deleted if match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">2. All bets will be deleted if both the teams hits same number of sixes.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">3. Super over will not be considered.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Maximum 6 or 10 over runs</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">1. All bets will be deleted if match abandoned or over reduced.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">2. All the bets will be deleted if both the teams score is same (Runs scored in 6 or 10 overs)</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">3. 6 overs for T20 and 10 overs for ODI</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">4. Both the innings are valid.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">5. This fancy will be valid for 1st 6 overs of both innings for T20 and 1st 10 overs of both innings for ODI</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Batsman Match</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Batsman Match:- Bets for Favourite batsman from the two batsman matched.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">All bets will be deleted if any one of the mentioned player is not included in playing 11.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">All bets will be deleted unless one ball being played by both the mentioned players.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">All bets will be deleted if over reduced or Match abandoned.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">All bets will be deleted if both the player scored same run. For example H Amla and J Bairstow are the batsman matched, H Amla and J Bairstow both scored 38 runs then all bets will be deleted.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Both innings will be valid</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Opening Pair</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">1. Bets for Favourite opening pair from the two mentioned opening pair.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">2. Runs made by both the opening player will be added. For example:- J Roy scored 20 runs and J Bairstow scored 30 runs result will be 50 runs.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">3. Highest run made by the pair will be declared as winner. For example: Opening pair ENG total is 70 runs and Opening pair SA is 90 runs, then SA 90 runs will be declared as winner.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Both innings will be valid</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Our exchange Special</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">All bets will be deleted if the mentioned player is not included in playing 11.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">All bets will be deleted if match abandoned or over reduced.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Both innings will be valid</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Direction of First Boundary</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">All bets will be deleted if the mentioned batsman is not included in playing 11.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">All bets will be deleted if match abandoned or over reduced.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">The boundary hit through off side of the stump will be considered as off side four.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">The boundary hit through leg side of the stump will be considered as leg side four.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Boundaries through extras (byes,leg byes,wide,overthrow) will not be considered as valid.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Only 1st Inning will be considered</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Fifty &amp; Century by Batsman</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">All bets will be deleted if match abandoned or over reduced.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">All bets will be deleted if the mentioned batsman is not included in playing 11.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">All bets will be deleted unless the batsman faces one legal ball.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Both Innings will be valid.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">1st over Fancy</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Boundaries through extras (byes,leg byes,wide,overthrow) will not be considered.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Only 1st inning will be valid</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Odd Even Fancy</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Incompleted games will be deleted. Over reduced or abandoned all bets will be deleted.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">For example:-275 run SL bhav must be played 50 over if rain comes or any condition otherwise 275 run SL bets will be deleted.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Next Man out</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Next man out fancy advance &amp; in regular. Both inning will be valid. If any player does not come in opening then all bets will be deleted. If over reduced or abandoned then all bets will be deleted.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Caught out</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Caught out fancy in advance &amp; in regular. Both inning will be valid. If over reduced or match abandoned then all bets will be deleted.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Wkt &amp; All out Fancy</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">5 wkt in 10 over &amp; All out in 20 over fancy is valid for both inning. If match abandoned or over reduced all bets will be deleted.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Test Match: Game Completed Fancy</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">1. This is the fancy for match to be won/ completed in which day &amp; session (Completed: Game has to be completed)</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">2. If match drawn then all the sessions will be considered as lost.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Meter Fancy</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">In case match abandoned or over reduced mid point rule will be applicable</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">For example: If Dhoni meter is 75 / 77 and the match abandoned or over reduced, then the result will be 76</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">In case of single difference result will be given for the higher rate of the final rate (eg 53/54) and match gets abandoned then the result will be given as 54</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Midpoint rule is applicable for test match also. However for lambi meter/ inning meter 70 overs has to be played only then the same will be considered as valid</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Maximum Boundaries:-</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">If the number of fours or sixes of both the team is equal, then all bets of the respective event will get voided</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Khado:- Test</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Minimum 70 over has to be played by the particular team only then the Khado of the team will be considered as valid, else the same will be voided</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Lunch Favourite</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">1. The team which is favourite at lunch will be considered as lunch favourite or the team which is favourite after first inning last ball will be considered as lunch favourite in our exchange.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">2. In any circumstances management decision will be final.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">3. In case of tie in T20 or one day in lunch favourite game , all bets will be deleted in our exchange.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">4. In case overs are reduced in a match, the team which favourite at lunch will be considered as lunch favourite.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">4.1 For example :- if match is reduced to 18 over per side in t20 or Oneday then after 18 over the team which is favourite at lunch will be considered as lunch favourite.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">5. In case of weather, 1st innings match overs are reduced and direct target is given to team which will bat in 2nd inning then lunch favourite will be considered after target is given at lunch.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">5.1 For example :- in T20 match rain comes at 14 over and match is interrupted due to rain and direct target is given to 2nd batting team, then team which is favourite in match odds after target is given in match, will be considered as lunch favourite.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Common Market:-</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">In future, if any circumstances happens like covid issue , natural disasters or any reasons series will postponed or cancelled then at that moment result will be given to difference of opening rate to present rate.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Due to any reasons company has rights to take final decisions.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Common Means Only 1 Win</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">1.2 All bets regarding Odd/Even sessions will be deleted if the particular session is incomplete.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">1.5 Innings run Odd/Even session will be valid if over reduced due to weather condition.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">1.7 Penalty runs will be counted in all Events. (This rule applicable from 20th March 2024)</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">1.3 In case of all out or the target chased down, particular session will be considered as a completed session.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">For Example : IN ODI - IND got all out at 12.3 over then 15 over session will be considered as a completed session or AUS get chase down the target in 12.3 over then 15 over session will be considered as a completed&nbsp;session.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">IN TEST - IND got all out at 12.3 over then 20 over session will be considered as a completed session or AUS get chase down the target in 12.3 over then 20 over session will be considered as a completed&nbsp;session.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">IN T10/T20 - IND got all out at 8.3 over then 9 over session will be considered as a completed session or AUS get chase down the target in 8.3 over then 9 over session will be considered as a completed&nbsp;session.</span></td>
+                                                            </tr>
+                                                         </tbody>
+                                                      </table>
+                                                   </div>
+                                                </div>
+                                                <div class="rules-content-title">cricket casino</div>
+                                                <div class="rules-content-desc">
+                                                   <div class="table-responsive">
+                                                      <table class="table table-bordered">
+                                                         <tbody>
+                                                            <tr>
+                                                               <td><span class="text-danger">1. Completed game is valid , In case match abandoned due to rain particular game will be deleted.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">2. Penalty runs will be counted in our exchange. (This rule applicable from 15th June 2024)</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">3. In any circumstances management decision will be final.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">4. The last digit of run in all game will be valid in our exchange.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">5. Single last digit game :-</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">5.1 For example:- 6 over run Ind : 47 run , so the result will be given as 7 for single last digit game in our exchange.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">6. Double last digit game :-</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">6.1 For example:- 6 over run &amp; 10 over run Ind : 45 run &amp; 83 run respectively , so the result will be given as 53 for double last digit game in our exchange.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">7. Triple last digit game :-</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">7.1 For example:- 6 over run, 10 over run &amp; 15 over run Ind : 43 run ,80 run and 125 respectively so the result will be given as 305 for triple last digit game in our exchange.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">7.2 For example:- 6 over run, 10 over run &amp; Lambi run Ind : 43 run ,80 run and 187 respectively so the result will be given as 307 for triple last digit game in our exchange.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">1.1 If over are reduced to 17 over instead of 20 due to rain or weather conditions, Innings Lambi run valid. (w.e.f. 15th June 2024)</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">1.2 If a team got all out in 17 over although Innings Lambi run valid. (w.e.f. 15th June 2024)</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">1.3 In case of all out or the target chased down, particular session will be considered as a completed session (For Example : IND got all out at 12.3 over then 15 over session will be considered as a completed session or AUS get chase down the target in 12.3 over then 15 over session will be considered as a completed&nbsp;session)</span></td>
+                                                            </tr>
+                                                         </tbody>
+                                                      </table>
+                                                   </div>
+                                                </div>
+                                                <div class="rules-content-title">match</div>
+                                                <div class="rules-content-desc">
+                                                   <div class="table-responsive">
+                                                      <table class="table table-bordered">
+                                                         <tbody>
+                                                            <tr>
+                                                               <td><span class="text-danger">IPL</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">If IPL fixture of 21 matches gets reduced due to any reason, then all the special fancies will be voided (Match abandoned due to rain/bad light will not be considered in this)</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">At any situation if result is given for any particular event based on the rates given for the same, then the particular result will be considered valid, similarly if the tournament gets canceled due to any reason the previously given result will be considered valid</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total 1st over runs: Average 6 runs will be given in case match abandoned or over reduced (only 1st innings valid)</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total 1st 6 over run:- Average 48 runs will be given in case match abandoned or over reduced (Only 1st Innings valid)</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total fours: Average 28 fours will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total sixes: Average 14 sixes will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Wickets - Average will 12 Wickets be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Wides - Average 10 wides will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Extras - Average 17 extras will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Fifties - Average 2 fifties will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Caught outs: Average 8 caught out will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Bowled:- Average 2 Bowled out will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total LBW:- Average 1 LBW will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Run out:- Average 1 Run out will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Highest Innings run - Only first Innings is valid</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Lowest innings run - Only first innings is valid</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Highest Match 1st over run: Only first Innings is valid
+                                                                  </span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Highest Match 1st 6 over run: Only first Innings is valid</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Highest Fours in individual match: Both innings are valid</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Highest Sixes in individual match: Both innings are valid</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Highest Extras in individual match: Both innings are valid</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Highest Wicket in individual match: Both innings are valid</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Highest over Runs: Both Innings are valid</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Highest Partnership Runs in IPL: Both Innings are valid</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">In fastest fifty always the first 50 runs will be considered, for example of R Sharma scores 1st fifty in 17 balls and scores 100 in next 14 balls, fastest 50 will be given based on the balls for the 1st fifty runs</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Big Bash League</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total match 1st over run:- Average 6 runs will be given if total 20 overs is not played, only 1st innings will be considered as valid</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Highest innings run - Only first innings is valid</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Lowest innings run - Only first innings is valid</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total 1st 6 over run:- Average 46 runs will be given if total 20 overs is not played, This event is valid only for the 1st innings</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Fours - Average 25 fours will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Sixes - Average 10 sixes will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Wickets - Average will 12 Wickets be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Wides - Average 8 wides will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Extras - Average 14 extras will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Fifties - Average 2 fifties will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Caught out - Average 8 catch out will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Bowled out - Average 2 bowled out will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Highest 6 over run: Both innings are valid</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Highest run in individual match: Both innings are valid</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Highest Fours in individual match: Both innings are valid</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Highest Sixes in individual match: Both innings are valid</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total LBW:- Average 1 LBW will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Highest Wickets in individual match: Both innings are valid</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Highest extras in individual match: Both innings are valid</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Highest match 1st over run in individual match: Only 1st inning will be considered as valid valid</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">All events related to bowler are valid only for the league stages, both the innings will be considered as valid. A minimum of 32 overs has to be bowled else the same will be voided. If the mentioned bowler has bowled one legal delivery then it will be considered as 1 over even if the over is not completed</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">All events based on ground are decided based on the initial fixture, in case of any changes in the venue between the series. Then average will be given based on the initial fixture for the number of games reduced, Similarly if any match is added newly to the venue will not be considered</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Average for wickets taken will be given in case match abandoned or over reduced or the player has not bowled single legal delivery before the over got reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Fancy based on all individual teams/players/ground are valid only for league stage</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Management decision will be final</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Bellerive Oval:- Hobart</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total 1st over run:- Average 6 runs will be given if total 20 overs is not played, only 1st innings will be considered as valid</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total 6 over run:- Average 46 runs will be given if total 20 overs is not played, only 1st innings will be considered as valid</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Fours - Average 28 fours will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Sixes - Average 11 Sixes will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Wide – Average 8 Wide will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Extras - Average 14 Extras will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Run- Average 330 runs will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Manuka Oval:- Canberra</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total 1st over run:- Average 5 runs will be given if total 20 overs is not played, only 1st innings will be considered as valid</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total 6 over run:- Average 44 runs will be given if total 20 overs is not played, only 1st innings will be considered as valid</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Fours - Average 24 fours will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Sixes - Average 10 Sixes will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Wickets - Average 12 wickets will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Wide – Average 8 Wide will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Extras - Average 13 Extras will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Run- Average 318 runs will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Bellerive Oval:- Hobart</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Wickets - Average 12 wickets will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Aurora stadium:- Launceston</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total 1st over run:- Average 6 runs will be given if total 20 overs is not played, only 1st innings will be considered as valid</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total 6 over run:- Average 45 runs will be given if total 20 overs is not played, only 1st innings will be considered as valid</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Fours - Average 25 fours will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Sixes - Average 10 Sixes will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Wickets - Average 12 wickets will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Wide – Average 8 Wide will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Extras - Average 14 Extras will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Run- Average 320 runs will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">The Gabba:- Brisbane</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total 1st over run:- Average 6 runs will be given if total 20 overs is not played, only 1st innings will be considered as valid</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total 6 over run:- Average 44 runs will be given if total 20 overs is not played, only 1st innings will be considered as valid</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Fours - Average 24 fours will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Sixes - Average 9 Sixes will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Wickets - Average 12 wickets will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Wide – Average 8 Wide will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Extras - Average 13 Extras will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Run- Average 310 runs will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">QUEENSLAND</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total 1st over run:- Average 6 runs will be given if total 20 overs is not played, only 1st innings will be considered as valid</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total 6 over run:- Average 44 runs will be given if total 20 overs is not played, only 1st innings will be considered as valid</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Fours - Average 24 fours will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Sixes - Average 10 Sixes will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Wickets - Average 12 wickets will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Wide – Average 8 Wide will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Extras - Average 14 Extras will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Run- Average 315 runs will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Adelaide Oval</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total 1st over run:- Average 6 runs will be given if total 20 overs is not played, only 1st innings will be considered as valid</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total 6 over run:- Average 46 runs will be given if total 20 overs is not played, only 1st innings will be considered as valid</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Fours - Average 27 fours will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Sixes - Average 10 Sixes will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Wickets - Average 12 wickets will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Wide – Average 8 Wide will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Extras - Average 14 Extras will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Run- Average 320 runs will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Perth Stadium</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total 1st over run:- Average 6 runs will be given if total 20 overs is not played, only 1st innings will be considered as valid</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total 6 over run:- Average 46 runs will be given if total 20 overs is not played, only 1st innings will be considered as valid</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Fours - Average 26 fours will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Sixes - Average 12 Sixes will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Wickets - Average 12 wickets will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Wide – Average 9 Wide will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Extras - Average 16 Extras will be given in case match abandoned or over reducedTotal Extras - Average 16 Extras will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Run- Average 340 runs will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Showground Stadium</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total 1st over run:- Average 6 runs will be given if total 20 overs is not played, only 1st innings will be considered as valid</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total 6 over run:- Average 44 runs will be given if total 20 overs is not played, only 1st innings will be considered as valid</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Fours - Average 25 fours will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Sixes - Average 9 Sixes will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Wickets - Average 12 wickets will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Wide – Average 8 Wide will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Extras - Average 14 Extras will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Run- Average 315 runs will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Docklands Stadium</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total 1st over run:- Average 6 runs will be given if total 20 overs is not played, only 1st innings will be considered as valid</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total 6 over run:- Average 46 runs will be given if total 20 overs is not played, only 1st innings will be considered as valid</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Fours - Average 25 fours will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Sixes - Average 11 Sixes will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Wickets - Average 12 wickets will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Wide – Average 8 Wide will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Extras - Average 14 Extras will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Run- Average 320 runs will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Melbourne Ground</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total 1st over run:- Average 6 runs will be given if total 20 overs is not played, only 1st innings will be considered as valid</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total 6 over run:- Average 45 runs will be given if total 20 overs is not played, only 1st innings will be considered as valid</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Fours - Average 26 fours will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Sixes - Average 10 Sixes will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Wickets - Average 12 wickets will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Wide – Average 8 Wide will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Extras - Average 15 Extras will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Run- Average 330 runs will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Sydney Ground</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total 1st over run:- Average 6 runs will be given if total 20 overs is not played, only 1st innings will be considered as valid</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total 6 over run:- Average 46 runs will be given if total 20 overs is not played, only 1st innings will be considered as valid</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Fours - Average 26 fours will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Sixes - Average 12 Sixes will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Wickets - Average 12 wickets will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Wide – Average 8 Wide will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Extras - Average 15 Extras will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Run- Average 335 runs will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Average will be given for player if the mentioned player is not included in the playing 11</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">If the mentioned player is not included in playing 11 for 3 consecutive matches and the mentioned player will be deleted</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Super over will not be included</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">World Cup</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">In case of any circumstances, management decision will be final for all the fancies under world cup.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">WC:-WORLD CUP</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">MOM:-MAN OF THE MATCH.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Match 1st over run:- This fancy is valid only for first innings of the match, Average 4 runs will be given in case of match abandoned or the entire 50 over is not played.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Highest inning run:- This fancy is valid only for first innings of the match.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Lowest innings run:- This fancy is valid only for first innings of the match.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Fours:- Average 48 Fours will be given if the match is abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Sixes:- Average 10 Sixes will be given if the match is abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Wickets:- Average 15 Wickets will be given if the match is abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Wide:- Average 14 Wide will be given if the match is abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Extras:- Average 25 Extras will be given if the match is abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total No ball:- Average 2 No ball will be given if the match is abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Fifties:- Average 3 Fifties will be given if the match is abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Centuries:- Average 1 century will be given if the match is abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Run outs:- Average 1 Run out will be given if the match is abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Ducks:- Average 1 Duck out will be given if the match is abandoned or over reduced. If the player is not out in the score of zero the same will not be considered as Duck out.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Caught Out:- Average 10 Caught Out will be given if the match is abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">All fancy related to Individual teams are valid only for league matches (9 matches played by the teams in league stages)</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">In case any player mentioned in our world cup fancy doesn’t play for the first three consecutive matches all the bets will be deleted.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">1. In case any player mentioned in our world cup fancy got ruled out or doesn’t play post few matches the bets after the last match played by the above mentioned player will be deleted. For example: U Khawaja played for first three league matches and doesn’t play after that, then bets for the first three matches will be valid. Bets after third match will be deleted.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">2. First 10 over runs is valid for both innings for all the teams.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">3. Total runs by team:- Average will be given if the match is abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">4. First 10 over runs by team:- Average will be given if the match is abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">5. Fours by team:- Average will be given if the match is abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">6. Sixes by team:- Average will be given if the match is abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">7. Opening wicket partnership:- Average will be given if the match is abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">8. Runs by player:- Average will be given if the match is abandoned or over reduced, Average will be given unless one ball is being played after the player enters the crease</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">9. Wickets by player:- Average will be given if the match is abandoned or over reduced, Average will be given unless one legal delivery has been bowled by the mentioned player.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">10. Sixes by player:- Average will be given if the match is abandoned or over reduced, Average will be given unless one ball is being played after the player enters the crease.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Average of every fancy follows:</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Total runs by ENG 295 runs per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">First 10 over runs of ENG 56 runs per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Fours by ENG 25 fours per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Sixes by ENG 7 sixes per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Opening wicket partnership runs of ENG 44 runs per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">J Roy runs 38 runs per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">J Bairstow runs 43 runs per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">J Root runs 43 runs per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">J Archer wickets 2 wickets per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">C Woakes wickets 2 wickets per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">A Rashid wickets 2 wickets per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">J Bairstow Sixes 2 sixes per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">J Buttler Sixes 2 sixes per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Total runs by IND 285 runs per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">First 10 over runs of IND 53 runs per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Four by IND 26 fours per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Sixes by IND 6 sixes per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Opening wicket partnership runs of IND 41 runs per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">S Dhawan runs 38 runs per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">R Sharma runs 43 runs per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">V Kohli runs 48 runs per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">J Bumrah wickets 2 wickets per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">M Shami wickets 2 wickets per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">K Yadav wickets 2 wickets per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">R Sharma Sixes 2 sixes per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">H Pandya Sixes 1 sixes per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Total runs by AUS 280 runs per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">First 10 over runs of AUS 52 runs per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Four by AUS 26 fours per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Sixes by AUS 6 sixes per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Opening wicket partnership runs of AUS 40 runs per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">D Warner runs 43 runs per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">A Finch runs 38 runs per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">S Smith runs 42 runs per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">M Starc wickets 2 wickets per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">P Cummins wickets 2 wickets per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">A Zampa wickets 2 wickets per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">D Warner Sixes 2 sixes per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Total runs by SA 270 runs per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">First 10 over runs of SA 51 runs per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Fours by SA 24 fours per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Sixes by SA 5 sixes per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Opening wicket partnership runs of SA 37 runs per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">H Amla runs 38 runs per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">F Du plessis runs 39 runs per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">V Der Dussen runs Runs per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Q De Kock runs 36 Runs per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">I Tahir wickets 2 wickets per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">K Rabada wickets 2 wickets per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">D Steyn wickets 2 wickets per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Q De Kock Sixes 1 sixes per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Total runs by NZ 275 runs per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">First 10 over runs of NZ 50 runs per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Fours by NZ 25 fours per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Sixes by NZ 5 sixes per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Opening wicket partnership runs of NZ 37 runs per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">C Munro runs 32 runs per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">M Guptill runs 38 runs per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">K Williamson runs 45 runs per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">H Nicholls runs Runs per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">T Boult wickets 2 wickets per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">T Southee wickets 1 wickets per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">M Santner wickets 1 wickets per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">M Guptill Sixes 2 Sixes per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Total runs by WI 270 runs per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">First 10 over runs of WI 49 runs per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Fours by WI 23 fours per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Sixes by WI 7 sixes per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Opening wicket partnership runs of WI 35 runs per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">C Gayle runs 37 runs per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">E Lewis runs 32 runs per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">DM Bravo runs 32 runs per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">S Hope runs 37 runs per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">K Roach wickets 1 wickets per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">S Cottrell wickets 1 wickets per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">J holder wickets 1 wicket per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">A Nurse wickets 1 wickets per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Total runs by PAK 270 runs per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">First 10 over runs of PAK 50 runs per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Fours by PAK 24 fours per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Sixes by PAK 5 sixes per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Opening wicket partnership runs of PAK 36 runs per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Imam Ul Haq runs 36 runs per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">B Azam runs 44 runs per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">F Zaman runs 34 runs per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">H Ali wickets 2 wickets per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Shadab Khan wickets 2 wickets per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Shaheen Afridi wickets 2 wickets per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">F Zaman Sixes 1 sixes per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">C Gayle Sixes 2 Sixes per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">A Russell Sixes 2 Sixes per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Total runs by SL 250 runs per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">First 10 over runs of SL 48 runs per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Fours by SL 22 fours per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Sixes by SL 4 sixes per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Opening wicket partnership runs of SL 32 runs per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">D Karunaratne runs 31 runs per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">L Thirimanne runs 29 runs per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">K Mendis runs 33 runs per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">L Malinga wickets 1 wickets per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">S Lakmal wickets 1 wickets per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">J Vandersay wickets 1 wickets per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">T Perera Sixes 1 sixes per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Total runs by BAN 245 runs per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">First 10 over runs of BAN 48 runs per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Fours by BAN 22 fours per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Sixes by BAN 4 sixes per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Opening wicket partnership runs of BAN 32 runs per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">T Iqbal runs 34 runs per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">S Sarkar runs 29 runs per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">M Rahim runs 31 runs per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">M Hasan wickets 1 wickets per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">M Rahman wickets 1 wickets per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">M Mortaza wickets 1 wickets per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">T Iqbal Sixes 1 sixes per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Total runs by AFG 235 runs per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">First 10 over runs of AFG 46 runs per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Fours by AFG 20 fours per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total Sixes by AFG 4 sixes per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Opening wicket partnership runs of AFG 28 runs per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">R Shah runs 27 runs per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">H Zazai runs 26 runs per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">A Afghan runs Runs per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">M Shahzad runs 27 runs per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">D Zadran wickets 1 wickets per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Rashid khan wickets 2 wickets per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Mujeeb ur rahman wickets 1 wickets per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">H Zazai Sixes 1 sixes per game</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Management decision will be final</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">How many matches win by a team : Only valid for league stage matches. Ex. For CSK, How many matches CSK win during league stages only considered. Playoffs matches not considered in this.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Most 4's by individual batsman of IPL : Maximum Number of Fours Hit By A Batsman in full Tournament. Ex. Last Season (2021) R Gaikwad Hit 64 Fours in 16 Matches. So, 64 was the Result for last season.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Most 4's by an individual batsman in an Inning of IPL : Maximum Number of Fours Hit By A Batsman in one Innings. Ex. Last Season (2021) S Yadav Hit 13 Fours in 55th league Match. So, 13 was the Result for last season.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Most 6's by individual batsman of IPL : Maximum Number of Sixes Hit By A Batsman in full Tournament. Ex. Last Season (2021) KL Rahul Hit 30 Sixes in 13 Matches. So, 30 was the Result for last season.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Most 6's by individual batsman in an Inning of IPL : Maximum Number of Sixes Hit By A Batsman in one Innings. Ex. Last Season (2021) K Pollard Hit 8 Sixes in 27th league Match. So, 8 was the Result for last season.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Most runs given by Bowler in an Inning of IPL : Maximum How much Runs conceded by a individual Bowler in an Innings. Ex : Last Season (2021) L Ngidi concede 62 runs in 4 overs of 27th Match. So, 62 was the Result for last season.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Most wickets by Bowler in an inning of IPL : Maximum How much Wickets taken by a individual Bowler in an Innings. Ex : Last Season (2021) H Patel taken 5 wickets in 1st Match. So, 5 was the Result for last season.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Most 50's by individual batsman of IPL : Maximum Number of Fifties Hit By A Batsman in full Tournament. Ex. Last Season (2021) Faf duPlessis Hit 6 fifties in 16 Matches. So, 6 was the Result for last season.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Highest total runs in individual match of IPL : Maximum total runs of both Teams in individual match. Ex . Last Season (2021) RR vs PBKS match both teams Total runs 438 (4th League Match) . So, 438 was the Result for Last Season.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total No ball:- Average 1 No ball will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Company reserves the right to suspend/void any id/bets if the same is found to be illegitimate. For example incase of VPN/robot-use/multiple entry from same or different IP and others. Note : only winning bets will be voided.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">IPL Special 2024 Valid Only For First 21 Matches.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Total 30s: Average 2 Thirties will be given in case match abandoned or over reduced</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Most Balls Faced By a Batsman of IPL : Maximum balls Faced by an Individual Batsman in the Single Match.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Most Dot balls By a Bowler in an Innings of IPL : Maximum Dot balls Bowled by a Bowler in his Quota. Wickets, Leg byes and Byes Considered as Dot ball.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Super over will not be included</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">for live streaming and animation :- Although the current score, time elapsed, video and other data provided on this site is sourced from "live" feeds provided by third parties, you should be aware that this data may be subject to a time delay and/or be inaccurate. Please also be aware that other customers may have access to data that is faster and/or more accurate than the data shown on the site. If you rely on this data to place bets, you do so entirely at your own risk. provides this data AS IS with no warranty as to the accuracy, completeness or timeliness of such data and accepts no responsibility for any loss (direct or indirect) suffered by you as a result of your reliance on it. </span></td>
+                                                            </tr>
+                                                         </tbody>
+                                                      </table>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div id="rulegame20" class="tab-pane container pl-0 pr-0">
+                                    <div class="game-listing-container" id="football_event"
+                                       style=" overflow-x: auto;">
+                                       <div class="game-list pt-1 pb-1 container-fluid">
+                                          <div class="row row5">
+                                             <div class="col-12">
+                                                <div class="rules-content-title">fancy</div>
+                                                <div class="rules-content-desc">
+                                                   <div class="table-responsive">
+                                                      <table class="table table-bordered">
+                                                         <tbody>
+                                                            <tr>
+                                                               <td><span class="">1. This event is to decide the winner of various legislative assemblies of india.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">2. The final result declared by election commission of india for assembly elections of various states of india for a particular year will be valid in our exchange ,The customers are entirely responsible for their bets at all times.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">3. All bets will be voided if the election doesn't take place in given time by election commission or as per our exchange management decision.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">4. Company reserves the right to suspend/void any bets on this event at any time if we find the same not to be legitimate with the certainty of the outcome.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">5. Accidental issues during assembly elections will not be counted in our exchange If required Additional candidates may be added on request.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">6. Kindly be informed no candidates will be partially settled and will remain in the market until it is fully settled. This is to ensure that all customers can continue trading for the candidates that they have positions on, since each candidate is still a valid runner in this market.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">7. Please be informed that the transmissions described as "live" by few broadcasters may actually be delayed due to multiple scenarios.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">8. If any candidate withdraws for any reason, including death, all bets on the market will be valid and be settled as per the defined rules.</span></td>
+                                                            </tr>
+                                                         </tbody>
+                                                      </table>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div id="rulegame21" class="tab-pane container pl-0 pr-0">
+                                    <div class="game-listing-container" id="football_event"
+                                       style=" overflow-x: auto;">
+                                       <div class="game-list pt-1 pb-1 container-fluid">
+                                          <div class="row row5">
+                                             <div class="col-12">
+                                                <div class="rules-content-title">match</div>
+                                                <div class="rules-content-desc">
+                                                   <div class="table-responsive">
+                                                      <table class="table table-bordered">
+                                                         <tbody>
+                                                            <tr>
+                                                               <td><span class="text-danger">Company reserves the right to suspend/void any id/bets if the same is found to be illegitimate. For example incase of VPN/robot-use/multiple entry from same or different IP and others. Note : only winning bets will be voided.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">for live streaming and animation :- Although the current score, time elapsed, video and other data provided on this site is sourced from "live" feeds provided by third parties, you should be aware that this data may be subject to a time delay and/or be inaccurate. Please also be aware that other customers may have access to data that is faster and/or more accurate than the data shown on the site. If you rely on this data to place bets, you do so entirely at your own risk. provides this data AS IS with no warranty as to the accuracy, completeness or timeliness of such data and accepts no responsibility for any loss (direct or indirect) suffered by you as a result of your reliance on it. </span></td>
+                                                            </tr>
+                                                         </tbody>
+                                                      </table>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div id="rulegame22" class="tab-pane container pl-0 pr-0">
+                                    <div class="game-listing-container" id="football_event"
+                                       style=" overflow-x: auto;">
+                                       <div class="game-list pt-1 pb-1 container-fluid">
+                                          <div class="row row5">
+                                             <div class="col-12">
+                                                <div class="rules-content-title">match</div>
+                                                <div class="rules-content-desc">
+                                                   <div class="table-responsive">
+                                                      <table class="table table-bordered">
+                                                         <tbody>
+                                                            <tr>
+                                                               <td><span class="text-danger">Company reserves the right to suspend/void any id/bets if the same is found to be illegitimate. For example incase of VPN/robot-use/multiple entry from same or different IP and others. Note : only winning bets will be voided.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">for live streaming and animation :- Although the current score, time elapsed, video and other data provided on this site is sourced from "live" feeds provided by third parties, you should be aware that this data may be subject to a time delay and/or be inaccurate. Please also be aware that other customers may have access to data that is faster and/or more accurate than the data shown on the site. If you rely on this data to place bets, you do so entirely at your own risk. provides this data AS IS with no warranty as to the accuracy, completeness or timeliness of such data and accepts no responsibility for any loss (direct or indirect) suffered by you as a result of your reliance on it. </span></td>
+                                                            </tr>
+                                                         </tbody>
+                                                      </table>
+                                                   </div>
+                                                </div>
+                                                <div class="rules-content-title">bookmaker</div>
+                                                <div class="rules-content-desc">
+                                                   <div class="table-responsive">
+                                                      <table class="table table-bordered">
+                                                         <tbody>
+                                                            <tr>
+                                                               <td><span class="">All race bets are settled on the official classification from the Federation Internationale de l’Automobile (FIA),the sport’s governing body, at the time of podium presentation.
+                                                                  </span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">If a race is postponed ( Either before the start or via an interruption mid-race) but is concluded within 72 hours of the original scheduled start time , then all bets will stand.
+                                                                  </span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Our exchange management decision will be the final decision.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Any query about the result should be contacted within 7 days of the specific event, the same will not be considered valid post 7 days from&nbsp;the&nbsp;event.</span></td>
+                                                            </tr>
+                                                         </tbody>
+                                                      </table>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div id="rulegame23" class="tab-pane container pl-0 pr-0">
+                                    <div class="game-listing-container" id="football_event"
+                                       style=" overflow-x: auto;">
+                                       <div class="game-list pt-1 pb-1 container-fluid">
+                                          <div class="row row5">
+                                             <div class="col-12">
+                                                <div class="rules-content-title">match</div>
+                                                <div class="rules-content-desc">
+                                                   <div class="table-responsive">
+                                                      <table class="table table-bordered">
+                                                         <tbody>
+                                                            <tr>
+                                                               <td><span class="text-danger">Company reserves the right to suspend/void any id/bets if the same is found to be illegitimate. For example incase of VPN/robot-use/multiple entry from same or different IP and others. Note : only winning bets will be voided.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">for live streaming and animation :- Although the current score, time elapsed, video and other data provided on this site is sourced from "live" feeds provided by third parties, you should be aware that this data may be subject to a time delay and/or be inaccurate. Please also be aware that other customers may have access to data that is faster and/or more accurate than the data shown on the site. If you rely on this data to place bets, you do so entirely at your own risk. provides this data AS IS with no warranty as to the accuracy, completeness or timeliness of such data and accepts no responsibility for any loss (direct or indirect) suffered by you as a result of your reliance on it. </span></td>
+                                                            </tr>
+                                                         </tbody>
+                                                      </table>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div id="rulegame24" class="tab-pane container pl-0 pr-0">
+                                    <div class="game-listing-container" id="football_event"
+                                       style=" overflow-x: auto;">
+                                       <div class="game-list pt-1 pb-1 container-fluid">
+                                          <div class="row row5">
+                                             <div class="col-12">
+                                                <div class="rules-content-title">match</div>
+                                                <div class="rules-content-desc">
+                                                   <div class="table-responsive">
+                                                      <table class="table table-bordered">
+                                                         <tbody>
+                                                            <tr>
+                                                               <td><span class="text-danger">Company reserves the right to suspend/void any id/bets if the same is found to be illegitimate. For example incase of VPN/robot-use/multiple entry from same or different IP and others. Note : only winning bets will be voided.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">for live streaming and animation :- Although the current score, time elapsed, video and other data provided on this site is sourced from "live" feeds provided by third parties, you should be aware that this data may be subject to a time delay and/or be inaccurate. Please also be aware that other customers may have access to data that is faster and/or more accurate than the data shown on the site. If you rely on this data to place bets, you do so entirely at your own risk. provides this data AS IS with no warranty as to the accuracy, completeness or timeliness of such data and accepts no responsibility for any loss (direct or indirect) suffered by you as a result of your reliance on it. </span></td>
+                                                            </tr>
+                                                         </tbody>
+                                                      </table>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div id="rulegame25" class="tab-pane container pl-0 pr-0">
+                                    <div class="game-listing-container" id="football_event"
+                                       style=" overflow-x: auto;">
+                                       <div class="game-list pt-1 pb-1 container-fluid">
+                                          <div class="row row5">
+                                             <div class="col-12">
+                                                <div class="rules-content-title">match</div>
+                                                <div class="rules-content-desc">
+                                                   <div class="table-responsive">
+                                                      <table class="table table-bordered">
+                                                         <tbody>
+                                                            <tr>
+                                                               <td><span class="text-danger">Company reserves the right to suspend/void any id/bets if the same is found to be illegitimate. For example incase of VPN/robot-use/multiple entry from same or different IP and others. Note : only winning bets will be voided.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">for live streaming and animation :- Although the current score, time elapsed, video and other data provided on this site is sourced from "live" feeds provided by third parties, you should be aware that this data may be subject to a time delay and/or be inaccurate. Please also be aware that other customers may have access to data that is faster and/or more accurate than the data shown on the site. If you rely on this data to place bets, you do so entirely at your own risk. provides this data AS IS with no warranty as to the accuracy, completeness or timeliness of such data and accepts no responsibility for any loss (direct or indirect) suffered by you as a result of your reliance on it. </span></td>
+                                                            </tr>
+                                                         </tbody>
+                                                      </table>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div id="rulegame26" class="tab-pane container pl-0 pr-0">
+                                    <div class="game-listing-container" id="football_event"
+                                       style=" overflow-x: auto;">
+                                       <div class="game-list pt-1 pb-1 container-fluid">
+                                          <div class="row row5">
+                                             <div class="col-12">
+                                                <div class="rules-content-title">match</div>
+                                                <div class="rules-content-desc">
+                                                   <div class="table-responsive">
+                                                      <table class="table table-bordered">
+                                                         <tbody>
+                                                            <tr>
+                                                               <td><span class="text-danger">Company reserves the right to suspend/void any id/bets if the same is found to be illegitimate. For example incase of VPN/robot-use/multiple entry from same or different IP and others. Note : only winning bets will be voided.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">for live streaming and animation :- Although the current score, time elapsed, video and other data provided on this site is sourced from "live" feeds provided by third parties, you should be aware that this data may be subject to a time delay and/or be inaccurate. Please also be aware that other customers may have access to data that is faster and/or more accurate than the data shown on the site. If you rely on this data to place bets, you do so entirely at your own risk. provides this data AS IS with no warranty as to the accuracy, completeness or timeliness of such data and accepts no responsibility for any loss (direct or indirect) suffered by you as a result of your reliance on it. </span></td>
+                                                            </tr>
+                                                         </tbody>
+                                                      </table>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div id="rulegame27" class="tab-pane container pl-0 pr-0">
+                                    <div class="game-listing-container" id="football_event"
+                                       style=" overflow-x: auto;">
+                                       <div class="game-list pt-1 pb-1 container-fluid">
+                                          <div class="row row5">
+                                             <div class="col-12">
+                                                <div class="rules-content-title">match</div>
+                                                <div class="rules-content-desc">
+                                                   <div class="table-responsive">
+                                                      <table class="table table-bordered">
+                                                         <tbody>
+                                                            <tr>
+                                                               <td><span class="text-danger">Company reserves the right to suspend/void any id/bets if the same is found to be illegitimate. For example incase of VPN/robot-use/multiple entry from same or different IP and others. Note : only winning bets will be voided.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">for live streaming and animation :-
+                                                                     Although the current score, time elapsed, video and other data provided on this site is sourced from "live" feeds provided by third parties, you should be aware that this data may be subject to a time delay and/or be inaccurate.
+                                                                     Please also be aware that other customers may have access to data that is faster and/or more accurate than the data shown on the site. If you rely on this data to place bets, you do so entirely at your own risk.
+                                                                     provides this data AS IS with no warranty as to the accuracy, completeness or timeliness of such data and accepts no responsibility for any loss (direct or indirect) suffered by you as a result of your reliance on it.</span>
+                                                               </td>
+                                                            </tr>
+                                                         </tbody>
+                                                      </table>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div id="rulegame28" class="tab-pane container pl-0 pr-0">
+                                    <div class="game-listing-container" id="football_event"
+                                       style=" overflow-x: auto;">
+                                       <div class="game-list pt-1 pb-1 container-fluid">
+                                          <div class="row row5">
+                                             <div class="col-12">
+                                                <div class="rules-content-title">match</div>
+                                                <div class="rules-content-desc">
+                                                   <div class="table-responsive">
+                                                      <table class="table table-bordered">
+                                                         <tbody>
+                                                            <tr>
+                                                               <td><span class="">Match Odds:-
+                                                                     Predict which player will win the match.
+                                                                     In the event of a match starting but not being completed the player progressing to the next
+                                                                     round or being awarded the victory will be deemed the winner for settlement purposes.
+                                                                     In the event of a match not starting at all, all bets are refunded.</span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Frame Winner :- If the nominated frame is not played bets will be void. Similarly, if the nominated frame is
+                                                                     awarded to a player without a shot being played, then all bets will be void.</span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Company reserves the right to suspend/void any id/bets if the same is found to be illegitimate. For example incase of VPN/robot-use/multiple entry from same or different IP and others. Note : only winning bets will be voided.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">for live streaming and animation :- Although the current score, time elapsed, video and other data provided on this site is sourced from "live" feeds provided by third parties, you should be aware that this data may be subject to a time delay and/or be inaccurate. Please also be aware that other customers may have access to data that is faster and/or more accurate than the data shown on the site. If you rely on this data to place bets, you do so entirely at your own risk. provides this data AS IS with no warranty as to the accuracy, completeness or timeliness of such data and accepts no responsibility for any loss (direct or indirect) suffered by you as a result of your reliance on it. </span></td>
+                                                            </tr>
+                                                         </tbody>
+                                                      </table>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div id="rulegame29" class="tab-pane container pl-0 pr-0">
+                                    <div class="game-listing-container" id="football_event"
+                                       style=" overflow-x: auto;">
+                                       <div class="game-list pt-1 pb-1 container-fluid">
+                                          <div class="row row5">
+                                             <div class="col-12">
+                                                <div class="rules-content-title">match</div>
+                                                <div class="rules-content-desc">
+                                                   <div class="table-responsive">
+                                                      <table class="table table-bordered">
+                                                         <tbody>
+                                                            <tr>
+                                                               <td><span class="text-danger">Company reserves the right to suspend/void any id/bets if the same is found to be illegitimate. For example incase of VPN/robot-use/multiple entry from same or different IP and others. Note : only winning bets will be voided.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">for live streaming and animation :- Although the current score, time elapsed, video and other data provided on this site is sourced from "live" feeds provided by third parties, you should be aware that this data may be subject to a time delay and/or be inaccurate. Please also be aware that other customers may have access to data that is faster and/or more accurate than the data shown on the site. If you rely on this data to place bets, you do so entirely at your own risk. provides this data AS IS with no warranty as to the accuracy, completeness or timeliness of such data and accepts no responsibility for any loss (direct or indirect) suffered by you as a result of your reliance on it. </span></td>
+                                                            </tr>
+                                                         </tbody>
+                                                      </table>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div id="rulegame30" class="tab-pane container pl-0 pr-0">
+                                    <div class="game-listing-container" id="football_event"
+                                       style=" overflow-x: auto;">
+                                       <div class="game-list pt-1 pb-1 container-fluid">
+                                          <div class="row row5">
+                                             <div class="col-12">
+                                                <div class="rules-content-title">match</div>
+                                                <div class="rules-content-desc">
+                                                   <div class="table-responsive">
+                                                      <table class="table table-bordered">
+                                                         <tbody>
+                                                            <tr>
+                                                               <td><span class="text-danger">Company reserves the right to suspend/void any id/bets if the same is found to be illegitimate. For example incase of VPN/robot-use/multiple entry from same or different IP and others. Note : only winning bets will be voided.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">for live streaming and animation :- Although the current score, time elapsed, video and other data provided on this site is sourced from "live" feeds provided by third parties, you should be aware that this data may be subject to a time delay and/or be inaccurate. Please also be aware that other customers may have access to data that is faster and/or more accurate than the data shown on the site. If you rely on this data to place bets, you do so entirely at your own risk. provides this data AS IS with no warranty as to the accuracy, completeness or timeliness of such data and accepts no responsibility for any loss (direct or indirect) suffered by you as a result of your reliance on it. </span></td>
+                                                            </tr>
+                                                         </tbody>
+                                                      </table>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div id="rulegame31" class="tab-pane container pl-0 pr-0">
+                                    <div class="game-listing-container" id="football_event"
+                                       style=" overflow-x: auto;">
+                                       <div class="game-list pt-1 pb-1 container-fluid">
+                                          <div class="row row5">
+                                             <div class="col-12">
+                                                <div class="rules-content-title">match</div>
+                                                <div class="rules-content-desc">
+                                                   <div class="table-responsive">
+                                                      <table class="table table-bordered">
+                                                         <tbody>
+                                                            <tr>
+                                                               <td><span class="text-danger">Company reserves the right to suspend/void any id/bets if the same is found to be illegitimate. For example incase of VPN/robot-use/multiple entry from same or different IP and others. Note : only winning bets will be voided.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">for live streaming and animation :- Although the current score, time elapsed, video and other data provided on this site is sourced from "live" feeds provided by third parties, you should be aware that this data may be subject to a time delay and/or be inaccurate. Please also be aware that other customers may have access to data that is faster and/or more accurate than the data shown on the site. If you rely on this data to place bets, you do so entirely at your own risk. provides this data AS IS with no warranty as to the accuracy, completeness or timeliness of such data and accepts no responsibility for any loss (direct or indirect) suffered by you as a result of your reliance on it. </span></td>
+                                                            </tr>
+                                                         </tbody>
+                                                      </table>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div id="rulegame32" class="tab-pane container pl-0 pr-0">
+                                    <div class="game-listing-container" id="football_event"
+                                       style=" overflow-x: auto;">
+                                       <div class="game-list pt-1 pb-1 container-fluid">
+                                          <div class="row row5">
+                                             <div class="col-12">
+                                                <div class="rules-content-title">match</div>
+                                                <div class="rules-content-desc">
+                                                   <div class="table-responsive">
+                                                      <table class="table table-bordered">
+                                                         <tbody>
+                                                            <tr>
+                                                               <td><span class="">for live streaming and animation :- Although the current score, time elapsed, video and other data provided on this site is sourced from "live" feeds provided by third parties, you should be aware that this data may be subject to a time delay and/or be inaccurate. Please also be aware that other customers may have access to data that is faster and/or more accurate than the data shown on the site. If you rely on this data to place bets, you do so entirely at your own risk. provides this data AS IS with no warranty as to the accuracy, completeness or timeliness of such data and accepts no responsibility for any loss (direct or indirect) suffered by you as a result of your reliance on it. </span></td>
+                                                            </tr>
+                                                         </tbody>
+                                                      </table>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div id="rulegame33" class="tab-pane container pl-0 pr-0">
+                                    <div class="game-listing-container" id="football_event"
+                                       style=" overflow-x: auto;">
+                                       <div class="game-list pt-1 pb-1 container-fluid">
+                                          <div class="row row5">
+                                             <div class="col-12">
+                                                <div class="rules-content-title">fancy</div>
+                                                <div class="rules-content-desc">
+                                                   <div class="table-responsive">
+                                                      <table class="table table-bordered">
+                                                         <tbody>
+                                                            <tr>
+                                                               <td><span class="">1. In any circumstances management decision will be final related to all Fancy of kabaddi of our exchange.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">2. All fancy bets will be validated when match has been tied.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">3. Result of individual player of fancy will be validated only when player play that match.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">4. In any case wrong rate has been given in fancy that particular bets will be deleted.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">5. For Playoffs Final Result Of 40 Minutes Of Two Halves Will Be Valid In Our Exchange</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">6. In case, company will find Ground bets, Group betting, Punching bets, Multiple entries with same IP or any fraud or unusual activities are detected then Company will be void winning bets and charge penalty of 2X (Two times) from winning amount.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">7. If any player will get injured during the match, then all the bets will be valid of that individual player</span></td>
+                                                            </tr>
+                                                         </tbody>
+                                                      </table>
+                                                   </div>
+                                                </div>
+                                                <div class="rules-content-title">match</div>
+                                                <div class="rules-content-desc">
+                                                   <div class="table-responsive">
+                                                      <table class="table table-bordered">
+                                                         <tbody>
+                                                            <tr>
+                                                               <td><span class="text-danger">Company reserves the right to suspend/void any id/bets if the same is found to be illegitimate. For example incase of VPN/robot-use/multiple entry from same or different IP and others. Note : only winning bets will be voided.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">for live streaming and animation :- Although the current score, time elapsed, video and other data provided on this site is sourced from "live" feeds provided by third parties, you should be aware that this data may be subject to a time delay and/or be inaccurate. Please also be aware that other customers may have access to data that is faster and/or more accurate than the data shown on the site. If you rely on this data to place bets, you do so entirely at your own risk. provides this data AS IS with no warranty as to the accuracy, completeness or timeliness of such data and accepts no responsibility for any loss (direct or indirect) suffered by you as a result of your reliance on it. </span></td>
+                                                            </tr>
+                                                         </tbody>
+                                                      </table>
+                                                   </div>
+                                                </div>
+                                                <div class="rules-content-title">bookmaker</div>
+                                                <div class="rules-content-desc">
+                                                   <div class="table-responsive">
+                                                      <table class="table table-bordered">
+                                                         <tbody>
+                                                            <tr>
+                                                               <td><span class="">In case, company will find Ground bets, Group betting, Punching bets, Multiple entries with same IP or any fraud or unusual activities are detected then Company will be void winning bets and charge penalty of 2X (Two times) from winning amount.</span></td>
+                                                            </tr>
+                                                         </tbody>
+                                                      </table>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div id="rulegame34" class="tab-pane container pl-0 pr-0">
+                                    <div class="game-listing-container" id="football_event"
+                                       style=" overflow-x: auto;">
+                                       <div class="game-list pt-1 pb-1 container-fluid">
+                                          <div class="row row5">
+                                             <div class="col-12">
+                                                <div class="rules-content-title">match</div>
+                                                <div class="rules-content-desc">
+                                                   <div class="table-responsive">
+                                                      <table class="table table-bordered">
+                                                         <tbody>
+                                                            <tr>
+                                                               <td><span class="">for live streaming and animation :- Although the current score, time elapsed, video and other data provided on this site is sourced from "live" feeds provided by third parties, you should be aware that this data may be subject to a time delay and/or be inaccurate. Please also be aware that other customers may have access to data that is faster and/or more accurate than the data shown on the site. If you rely on this data to place bets, you do so entirely at your own risk. provides this data AS IS with no warranty as to the accuracy, completeness or timeliness of such data and accepts no responsibility for any loss (direct or indirect) suffered by you as a result of your reliance on it. </span></td>
+                                                            </tr>
+                                                         </tbody>
+                                                      </table>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div id="rulegame35" class="tab-pane container pl-0 pr-0">
+                                    <div class="game-listing-container" id="football_event"
+                                       style=" overflow-x: auto;">
+                                       <div class="game-list pt-1 pb-1 container-fluid">
+                                          <div class="row row5">
+                                             <div class="col-12">
+                                                <div class="rules-content-title">match</div>
+                                                <div class="rules-content-desc">
+                                                   <div class="table-responsive">
+                                                      <table class="table table-bordered">
+                                                         <tbody>
+                                                            <tr>
+                                                               <td><span class="">for live streaming and animation :- Although the current score, time elapsed, video and other data provided on this site is sourced from "live" feeds provided by third parties, you should be aware that this data may be subject to a time delay and/or be inaccurate. Please also be aware that other customers may have access to data that is faster and/or more accurate than the data shown on the site. If you rely on this data to place bets, you do so entirely at your own risk. provides this data AS IS with no warranty as to the accuracy, completeness or timeliness of such data and accepts no responsibility for any loss (direct or indirect) suffered by you as a result of your reliance on it. </span></td>
+                                                            </tr>
+                                                         </tbody>
+                                                      </table>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div id="rulegame36" class="tab-pane container pl-0 pr-0">
+                                    <div class="game-listing-container" id="football_event"
+                                       style=" overflow-x: auto;">
+                                       <div class="game-list pt-1 pb-1 container-fluid">
+                                          <div class="row row5">
+                                             <div class="col-12">
+                                                <div class="rules-content-title">match</div>
+                                                <div class="rules-content-desc">
+                                                   <div class="table-responsive">
+                                                      <table class="table table-bordered">
+                                                         <tbody>
+                                                            <tr>
+                                                               <td><span class="text-danger">Company reserves the right to suspend/void any id/bets if the same is found to be illegitimate. For example incase of VPN/robot-use/multiple entry from same or different IP and others. Note : only winning bets will be voided.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">for live streaming and animation :- Although the current score, time elapsed, video and other data provided on this site is sourced from "live" feeds provided by third parties, you should be aware that this data may be subject to a time delay and/or be inaccurate. Please also be aware that other customers may have access to data that is faster and/or more accurate than the data shown on the site. If you rely on this data to place bets, you do so entirely at your own risk. provides this data AS IS with no warranty as to the accuracy, completeness or timeliness of such data and accepts no responsibility for any loss (direct or indirect) suffered by you as a result of your reliance on it. </span></td>
+                                                            </tr>
+                                                         </tbody>
+                                                      </table>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div id="rulegame37" class="tab-pane container pl-0 pr-0">
+                                    <div class="game-listing-container" id="football_event"
+                                       style=" overflow-x: auto;">
+                                       <div class="game-list pt-1 pb-1 container-fluid">
+                                          <div class="row row5">
+                                             <div class="col-12">
+                                                <div class="rules-content-title">match</div>
+                                                <div class="rules-content-desc">
+                                                   <div class="table-responsive">
+                                                      <table class="table table-bordered">
+                                                         <tbody>
+                                                            <tr>
+                                                               <td><span class="">Match odds :-
+                                                                     Predict which player will win the match.
+                                                                     In the event of any of the named players in a match changing before the match starts then all
+                                                                     bets are void. In the event of a match starting but not being completed, all bets will be void.</span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Set Winner :-
+                                                                     The specified set must be completed for bets to stand, unless the specific market outcome is
+                                                                     already determined.</span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Under / Over Points :-
+                                                                     For example, a game is abandoned at 9-7: bets on Over/Under 16.5 Game - Total Points are
+                                                                     settled as winners/losers respectively, since any natural conclusion to the game would have
+                                                                     yielded at least 18 points.</span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Company reserves the right to suspend/void any id/bets if the same is found to be illegitimate. For example incase of VPN/robot-use/multiple entry from same or different IP and others. Note : only winning bets will be voided.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">for live streaming and animation :- Although the current score, time elapsed, video and other data provided on this site is sourced from "live" feeds provided by third parties, you should be aware that this data may be subject to a time delay and/or be inaccurate. Please also be aware that other customers may have access to data that is faster and/or more accurate than the data shown on the site. If you rely on this data to place bets, you do so entirely at your own risk. provides this data AS IS with no warranty as to the accuracy, completeness or timeliness of such data and accepts no responsibility for any loss (direct or indirect) suffered by you as a result of your reliance on it. </span></td>
+                                                            </tr>
+                                                         </tbody>
+                                                      </table>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div id="rulegame38" class="tab-pane container pl-0 pr-0">
+                                    <div class="game-listing-container" id="football_event"
+                                       style=" overflow-x: auto;">
+                                       <div class="game-list pt-1 pb-1 container-fluid">
+                                          <div class="row row5">
+                                             <div class="col-12">
+                                                <div class="rules-content-title">match</div>
+                                                <div class="rules-content-desc">
+                                                   <div class="table-responsive">
+                                                      <table class="table table-bordered">
+                                                         <tbody>
+                                                            <tr>
+                                                               <td><span class="text-danger">Match Odds:-
+                                                                     Bets will be void if the match is not completed.</span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Next Goal :-
+                                                                     Predict which team will score the X-th goal. </span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">1st Half Winner:-
+                                                                     Half bets will be settled at the end of the 1
+                                                                     st half. In the event of a 1
+                                                                     st half not being completed
+                                                                     bets will be void.</span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">Highest Scoring Half:-
+                                                                     Predict in which Event Part will be scored most.</span>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="text-danger">Company reserves the right to suspend/void any id/bets if the same is found to be illegitimate. For example incase of VPN/robot-use/multiple entry from same or different IP and others. Note : only winning bets will be voided.</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td><span class="">for live streaming and animation :- Although the current score, time elapsed, video and other data provided on this site is sourced from "live" feeds provided by third parties, you should be aware that this data may be subject to a time delay and/or be inaccurate. Please also be aware that other customers may have access to data that is faster and/or more accurate than the data shown on the site. If you rely on this data to place bets, you do so entirely at your own risk. provides this data AS IS with no warranty as to the accuracy, completeness or timeliness of such data and accepts no responsibility for any loss (direct or indirect) suffered by you as a result of your reliance on it. </span></td>
+                                                            </tr>
+                                                         </tbody>
+                                                      </table>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="modal-footer"><button  aria-label="Close" data-dismiss="modal" class="btn btn-danger">Close</button></div>
+         </div>
+     
+   </div>
+</div>
+
+
+<!-- <script type="text/javascript" src="js/socket.io.js"></script> -->
+<script>
+/*  var socket123 = io("<?php echo SITE_IP; ?>");
+ socket123.on('connect', function() {
+      		
+	  });
+socket123.on("pinged",function(args){
+		socket123.emit('ponged',{user_id:"<?php echo $_SESSION['CLIENT_LOGIN_ID'];?>", siteId: <?php echo SITE_ID; ?>});
+	});  */
+	/* window.setInterval(function(){
+        jQuery.ajax({
+             type: 'POST',
+             url: 'ajaxfiles/continue_login_chk.php',
+             dataType: 'json',
+             data: {},
+             success: function(response) {
+                
+                if(response.status == "error"){
+                    location.href="/login";
+                }
+            }
+               
+    });
+}, 2000); */
+
+function tab_view_btn(tab_name) {
+      $(".tabsbox").removeClass("active");
+      $("." + tab_name + "_tab_btn").addClass("active");
+      $("#gamesbtn").hide();
+      $("#casinobtn").hide();
+      $("#" + tab_name).show();
+   }
+    
+    jQuery(document).on("click", "#edit_stake_save", function() {
+
+      $(".loader").show();
+      $("#bet-error-class").removeClass("b-toast-danger");
+      $("#bet-error-class").removeClass("b-toast-success");
+      button_1 = $("#stakeEdit_1").val();
+      button_2 = $("#stakeEdit_2").val();
+      button_3 = $("#stakeEdit_3").val();
+      button_4 = $("#stakeEdit_4").val();
+      button_5 = $("#stakeEdit_5").val();
+      button_6 = $("#stakeEdit_6").val();
+      button_7 = $("#stakeEdit_7").val();
+      button_8 = $("#stakeEdit_8").val();
+      button_9 = $("#stakeEdit_9").val();
+      button_10 = $("#stakeEdit_10").val();
+
+      all_button_value = button_1 + "," + button_2 + "," + button_3 + "," + button_4 + "," + button_5 + "," + button_6 + "," + button_7 + "," + button_8 + "," + button_9 + "," + button_10;
+
+      $.ajax({
+         type: 'POST',
+         url: '../ajaxfiles/button_value_change.php',
+         dataType: 'json',
+         data: {
+            all_button_value: all_button_value,
+            type: 'games',
+         },
+         success: function(response) {
+            $(".loader").hide();
+            var check_status = response['status'];
+            var message = response['message'];
+
+            if (check_status == "ok") {
+
+               toastr.clear()
+					toastr.success("", message, {
+						"timeOut": "3000",
+						"iconClass":"toast-success",
+						"positionClass":"toast-top-center",
+						"extendedTImeout": "0"
+					});
+               // $("#bet-error-class").addClass("b-toast-success");
+
+            } else {
+toastr.clear()
+					toastr.warning("", message, {
+						"timeOut": "3000",
+						"iconClass":"toast-warning",
+						"positionClass":"toast-top-center",
+						"extendedTImeout": "0"
+					});
+               // $("#bet-error-class").addClass("b-toast-danger");
+
+            }
+            // $("#errorMsgText").text(message);
+            // $("#errorMsg").fadeIn('fast').delay(3000).hide(0);
+
+         }
+      });
+   });
+   jQuery(document).on("click", "#edit_stake_save_casino", function() {
+
+      $(".loader").show();
+      $("#bet-error-class").removeClass("b-toast-danger");
+      $("#bet-error-class").removeClass("b-toast-success");
+      button_1 = $("#casino_stakeEdit_1").val();
+      button_2 = $("#casino_stakeEdit_2").val();
+      button_3 = $("#casino_stakeEdit_3").val();
+      button_4 = $("#casino_stakeEdit_4").val();
+      button_5 = $("#casino_stakeEdit_5").val();
+      button_6 = $("#casino_stakeEdit_6").val();
+      button_7 = $("#casino_stakeEdit_7").val();
+      button_8 = $("#casino_stakeEdit_8").val();
+      button_9 = $("#casino_stakeEdit_9").val();
+      button_10 = $("#casino_stakeEdit_10").val();
+
+      all_button_value = button_1 + "," + button_2 + "," + button_3 + "," + button_4 + "," + button_5 + "," + button_6 + "," + button_7 + "," + button_8 + "," + button_9 + "," + button_10;
+
+      $.ajax({
+         type: 'POST',
+         url: '../ajaxfiles/button_value_change.php',
+         dataType: 'json',
+         data: {
+            all_button_value: all_button_value,
+            type: 'casino',
+         },
+         success: function(response) {
+            $(".loader").hide();
+            var check_status = response['status'];
+            var message = response['message'];
+
+            if (check_status == "ok") {
+
+               toastr.clear()
+					toastr.success("", message, {
+						"timeOut": "3000",
+						"iconClass":"toast-success",
+						"positionClass":"toast-top-center",
+						"extendedTImeout": "0"
+					});
+               // $("#bet-error-class").addClass("b-toast-success");
+
+            } else {
+               toastr.clear()
+					toastr.warning("", message, {
+						"timeOut": "3000",
+						"iconClass":"toast-warning",
+						"positionClass":"toast-top-center",
+						"extendedTImeout": "0"
+					});
+               // $("#bet-error-class").addClass("b-toast-danger");
+
+            }
+            // $("#errorMsgText").text(message);
+            // $("#errorMsg").fadeIn('fast').delay(3000).hide(0);
+
+         }
+      });
+   });
+</script>
+
+<div id="games_modal" class="modal" role="dialog" >
+   <div class="modal-dialog" style="max-width: 100% !important;">
+        <div class="modal-dialog modal-lg">
+            <div role="document" id="__BVID__51___BV_modal_content_" tabindex="-1" class="modal-content">
+                <header id="__BVID__51___BV_modal_header_" class="modal-header">
+                    <!-- <h5 class="modal-title" id="Rules">Bookmaker Rules</h5> -->
+                    <button type="button" aria-label="Close" data-dismiss="modal" class="close">&times;</button>
+                </header>
+                <div id="__BVID__51___BV_modal_body_" class="modal-body">
+                    
+					
+					<div class="">
+						<span class="text-danger">Coming Soon</span>
+					</div>
+					
+                </div>
+                <!---->
+            </div></div>
+    </div>
+    
+</div>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>                 -->
+                    
+                    
