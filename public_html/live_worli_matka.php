@@ -1074,7 +1074,7 @@ include("open_bet.php");
     <?
 
 include("betpopcss.php");
-??
+?>
 
      <script>
 jQuery(document).on("click", ".commontabsworli", function () {
@@ -1126,8 +1126,7 @@ jQuery(document).on("click", ".commontabsworli", function () {
 
  <script type="text/javascript">
     var site_url = '<?php echo WEB_URL; ?>';
-    var websocketurl = '
-        <? php echo GAME_IP; ?> ';
+    var websocketurl = '<?php echo GAME_IP; ?> ';
     var clock = new FlipClock($(".clock"), {
         clockFace: "Counter"
     });
@@ -1162,7 +1161,7 @@ jQuery(document).on("click", ".commontabsworli", function () {
                     setTimeout(function () {
                         clearCards();
                     },
-    <? php echo CASINO_RESULT_TIMEOUT; ?>);
+    <?php echo CASINO_RESULT_TIMEOUT; ?>);
     }
     oldGameId = data.t1[0].mid;
     if (data.t1[0].mid != 0 && data.t1[0].mid != "0" && oldGameId != resultGameLast) {
