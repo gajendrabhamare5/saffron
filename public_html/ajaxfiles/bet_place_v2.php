@@ -166,7 +166,7 @@ $oddsmarketId = $conn->real_escape_string($_POST['oddsmarketId']);
 $marketId = $conn->real_escape_string($_POST['marketId']);
 $market_runner_name = $conn->real_escape_string($_POST['market_runner_name']);
 $marketName = $conn->real_escape_string($_POST['market_runner_name']);
-$market_odd_name = $conn->real_escape_string($_POST['market_odd_name']);
+/* $market_odd_name = $conn->real_escape_string($_POST['market_odd_name']); */
 $market_type = $conn->real_escape_string($_POST['bet_market_type']);
 $stack = $conn->real_escape_string($_POST['stack']);
 $odds = $conn->real_escape_string($_POST['odds']);
@@ -342,7 +342,7 @@ if ($chk_sleep) {
 		}else{
 			usleep($other_delay);
 		} */
-	$market_type_display = $market_odd_name;
+	$market_type_display = $_POST['market_odd_name'];
 		usleep($other_delay_new);
 	}
 }
