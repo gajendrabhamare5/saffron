@@ -15,7 +15,7 @@
   rel="stylesheet"
 />
 
-    <link href="/storage/front/theme/theme.css" rel="stylesheet">
+    <link href="<?php echo WEB_URL; ?>/storage/front/theme/theme.css" rel="stylesheet">
     <link href="storage/front/css/style.css?631" rel="stylesheet">
     <link href="storage/front/css/custom.css?7" rel="stylesheet">  
   <link href="storage/front/css/pagination.css" rel="stylesheet">

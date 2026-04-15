@@ -30,8 +30,8 @@
 
 </footer>
 </div>
-<link href="../../toastr/toastr.min.css?319" rel="stylesheet">
-<script src="../../toastr/toastr.min.js?213" type="text/javascript"></script>
+<link href="../toastr/toastr.min.css?319" rel="stylesheet">
+<script src="../toastr/toastr.min.js?213" type="text/javascript"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>

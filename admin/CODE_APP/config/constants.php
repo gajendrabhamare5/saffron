@@ -87,8 +87,8 @@ defined('EXIT__AUTO_MAX') OR define('EXIT__AUTO_MAX', 125); // highest automatic
 
 
 defined('LIMIT') OR define('LIMIT', 100);
-defined('MASTER_URL') OR define('MASTER_URL', '/admin');
-defined('MASTER_DIR') OR define('MASTER_DIR', 'admin');
+defined('MASTER_URL') OR define('MASTER_URL', 'http://localhost/gaju/saffron/admin');
+defined('MASTER_DIR') OR define('MASTER_DIR', 'http://localhost/gaju/saffron/admin');
 defined('SPORTS') OR define('SPORTS', serialize(array(4 => 'Cricket', 1 => 'Football', 2 => 'Tennis', 3 => 'Other')));
 defined('CONTROLLER_ID') OR define('CONTROLLER_ID', 1);
 defined('CONTROLLER_POWER') OR define('CONTROLLER_POWER', 6);
@@ -110,7 +110,7 @@ define('LOGINDEMOID', "8");
 
 define('GAME_IP', SITE_IP);
 
-define('WEB_URL', "https://saffronexch247.com/");
+define('WEB_URL', "http://localhost/gaju/saffron/");
 define('PROJECTNAME', "Saffronexch247");
 define('SUFFIXNAME', ".com");
 /*define('tv_url', 'https://dpmatka.in/anm.php?type=video');*/

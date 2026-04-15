@@ -22,7 +22,7 @@ $privileges = [];
         <link rel="icon" href="<?php echo MASTER_URL; ?>/favicon.ico">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.1.0-10/css/all.css">
         <link rel="stylesheet" type="text/css" href="<?php echo MASTER_URL; ?>/assets/vendors/datatables/css/jquery.dataTables.min.css">
-        <link rel="stylesheet" type="text/css" href="/storage/front/theme/theme.css?v=<?php echo time();?>">
+        <link rel="stylesheet" type="text/css" href="<?php echo WEB_URL; ?>/storage/front/theme/theme.css?v=<?php echo time();?>">
         <link rel="stylesheet" type="text/css" href="<?php echo MASTER_URL; ?>/assets/css/all.css">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.standalone.min.css" rel="stylesheet" type="text/css" />
         <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.12/css/select2.min.css" rel="stylesheet" />

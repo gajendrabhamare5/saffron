@@ -54,9 +54,9 @@ define('LOGINDEMOPASS', "Abcd@@1234");
 
 
 
-define('WEB_URL', "https://saffronexch247.com/");
-define('MOBILE_URL', "https://saffronexch247.com/m/");
-define('MOBILE_URLlogin', "https://saffronexch247.com/m/");
+define('WEB_URL', "http://localhost/gaju/saffron/");
+define('MOBILE_URL', "http://localhost/gaju/saffron/m/");
+define('MOBILE_URLlogin', "http://localhost/gaju/saffron/m/");
 define('CASINO_DELAY_TIME', 3);
 define('SKIP_FANCY', '30065956,30065961,30065962,30065965');
 

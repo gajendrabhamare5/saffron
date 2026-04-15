@@ -1,5 +1,5 @@
-            <link href="/toastr/toastr.min.css?319" rel="stylesheet">
-            <script src="/toastr/toastr.min.js?213" type="text/javascript"></script>
+            <link href="<?php echo WEB_URL; ?>/toastr/toastr.min.css?319" rel="stylesheet">
+            <script src="<?php echo WEB_URL; ?>/toastr/toastr.min.js?213" type="text/javascript"></script>
 <section class="footer">
     <div class="footer-top">
         <div class="footer-links">
