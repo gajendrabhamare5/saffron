@@ -673,18 +673,18 @@ var cricket_tree_html = '';
        // setInterval(auth,1000 * 6);
     });
     
-	function updateUserStatus(){
+	/* function updateUserStatus(){
 		$.ajax({
 			url		:	MASTER_URL + "/reports/common/update_user_status",
 			success	:	function(response){
 			}
 		});
-	}
+	} */
 
-	updateUserStatus();
+	/* updateUserStatus();
 	setInterval(function(){
 		updateUserStatus();
-	},5000);
+	},5000); */
     function auth(){
        //  $.get(MASTER_URL + "/home/auth",function (responce){
 //             if(!responce.is_login){

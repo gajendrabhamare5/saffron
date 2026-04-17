@@ -1,5 +1,5 @@
 <?php
-	session_start();
+	/* session_start();
 	$userId = $_SESSION['CONTROLLER_LOGIN_ID'];
 	$it = NULL;
 	$activeUsers = [];
@@ -16,5 +16,5 @@
 	$return = array(
 				'status' => "ok",'list' => $activeUsers
 				);
-	echo json_encode($return);
+	echo json_encode($return); */
 ?>

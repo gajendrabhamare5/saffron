@@ -607,7 +607,7 @@ if ($event_id == ELECTION_EVENT_ID) {
 
                                     <div>
                                         <li class="form-group active-button m-l-20 d-inline-block FancyActive" style="padding-top: 5px;margin-bottom: 6px;text-transform: uppercase;margin-right: 5px;">
-                                            <a href="javascript:void(0)" class="btn btn-back active" id="btn-fancy_bet_lock">Bet
+                                            <a href="javascript:void(0)" class="btn btn-back active" data-block_type="2" id="btn-fancy_bet_lock">Bet
                                                 Lock</a>
                                             <!-- <ul class="sub-button">
                                                 <li>
@@ -4719,11 +4719,13 @@ if ($event_id == ELECTION_EVENT_ID) {
         }
 
         function update_user_fancy_bet_status(status, users, tpassword) {
+            var block_type = $('#userwisefancy_bet').data('block_type');
             $.post(MASTER_URL + '/events_analysis/user_fancy_bet_status', {
-                'status': status,
+                status: status,
                 users: users,
                 event_id: eid,
-                tpassword: tpassword
+                tpassword: tpassword,
+                block_type: block_type
             }, function(responce) {
                 refresh_active_bets_users(1);
                 if (responce.status == 1) {
@@ -4825,28 +4827,30 @@ if ($event_id == ELECTION_EVENT_ID) {
             });
 
             /* $('#btn-modal_userwisebetsttus, #btn-modal_userwisefencybetsttus').on('click', function() { */
-            $(document).on('click', '#btn-modal_userwisebetsttus, #btn-fancy_bet_lock', function() {
-                var id = $(this).attr('id');
-                var is_fancy = false;
+            $(document).on('click', '#btn-fancy_bet_lock', function() {
 
-                selectedStatus = $(this).data('status') !== undefined ? $(this).data('status') : 0;
-                selectedType   = $(this).data('type') !== undefined ? $(this).data('type') : 'fancy';
+                var block_type = $(this).data('block_type');
+                /* var id = $(this).attr('id'); */
+               /*  var is_fancy = false; */
 
-                if (id == 'btn-fancy_bet_lock' || id == 'fancy_bet_lock')
-                    is_fancy = true;
-                $.get(MASTER_URL + '/events_analysis/getusers_block_data/' + eid, function(responce) {
+                selectedStatus = $(this).data('status') || 0;
+               /*  selectedType   = $(this).data('type') !== undefined ? $(this).data('type') : 'fancy'; */
+
+               /*  if (id == 'btn-fancy_bet_lock' || id == 'fancy_bet_lock')
+                    is_fancy = true; */
+                $.get(MASTER_URL + '/events_analysis/getusers_block_data/' + eid,{ block_type: block_type }, function(responce) {
 
                     var html = '';
                     $.each(responce.results, function(index, rowdata) {
                        
-                        var status = rowdata.status;
-                        if (is_fancy)
-                            status = rowdata.fstatus;
-                            if (selectedType == 'is_fancy') {
-                                    status = rowdata.fstatus;
-                                } else if (selectedType == 'matchodds') {
+                        var status = 0;
+                       /*  if (is_fancy)
+                            status = rowdata.fstatus; */
+                            if (block_type  == 1) {
                                     status = rowdata.mstatus;
-                                }else if (selectedType == 'bookmaker') {
+                                } else if (block_type == 2) {
+                                    status = rowdata.fstatus;
+                                }else if (block_type == 3) {
                                     status = rowdata.bstatus;
                                 }
                         html +=
@@ -4864,25 +4868,26 @@ if ($event_id == ELECTION_EVENT_ID) {
                             '    <td>' + rowdata.username + '</td>' +
                             '</tr>';
                     });
-                    if (is_fancy)
+                   /*  if (is_fancy) */
                         $('#tbody_fancy_betstatus').html(html);
-                    else
-                        $('#tbody_betstatus').html(html);
+                        $('#userwisefancy_bet').data('block_type', block_type);
+                   /*  else
+                        $('#tbody_betstatus').html(html); */
                 });
-                if (is_fancy){
+                /* if (is_fancy){ */
 
                     $('#userwisefancy_bet').modal('show');
                 refresh_active_bets_users(1);
-                }
+                /* }
                 else{
 
                     $('#userwisebet').modal('show');
-                }
+                } */
             });
-            $('#tbody_betstatus').on('change', '.check-users_bet_active', function() {
+           /*  $('#tbody_betstatus').on('change', '.check-users_bet_active', function() {
                 var status = ($(this).prop("checked")) ? 0 : 1;
                 update_user_bet_status(status, $(this).val());
-            });
+            }); */
             /* $('#btn-bet_active_all').on('click', function() { */
             $(document).on('click', '#btn-bet_active_all', function() {
                 var status = $(this).attr('data-status');
@@ -4918,7 +4923,7 @@ if ($event_id == ELECTION_EVENT_ID) {
             });
 
             $('#tbody_fancy_betstatus').on('change', '.check-users_bet_active', function() {
-                var status = ($(this).prop("checked")) ? 0 : 1;
+                /* var status = ($(this).prop("checked")) ? 0 : 1; */
                 tpassword = $('#tpassword').val();
                 if (!tpassword) {
 
@@ -4936,7 +4941,10 @@ if ($event_id == ELECTION_EVENT_ID) {
                     return;
                 }
 
-                update_user_fancy_bet_status(status, $(this).val(), tpassword);
+                var status = $(this).is(':checked') ? 0 : 1;
+                var user = $(this).val();
+
+                update_user_fancy_bet_status(status, user, tpassword);
             });
             /* $('#btn-fancy_bet_active_all').on('click', function() { */
             $(document).on('click', '#btn-fancy_bet_active_all', function() {

@@ -310,7 +310,7 @@
   // Function to handle socket updates
   function setupSocket() {
     // const socket = io(); 
-
+  
     // Emit request for matches
     socket.emit("getMatches", { eventType: 4 });
 

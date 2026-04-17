@@ -21,18 +21,18 @@ $.ajax({
     }
 });
 
-function updateUserStatus(){
+/* function updateUserStatus(){
 	$.ajax({
 		url		:	'../ajaxfiles/update_user_status.php',
 		success	:	function(response){
 		}
 	});
-}
+} */
 
-updateUserStatus();
+/* updateUserStatus();
 setInterval(function(){
 	updateUserStatus();
-},5000);
+},5000); */
 setTimeout(function() {
     if (typeof markettype === 'undefined') {
         markettype = 1;

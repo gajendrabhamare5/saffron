@@ -15,13 +15,13 @@ $.ajax({
         $("#betWinningExposure").text(account_winning_exposure);
     }
 });
-function updateUserStatus(){
+/* function updateUserStatus(){
 	$.ajax({
 		url		:	'ajaxfiles/update_user_status.php',
 		success	:	function(response){
 		}
 	});
-}
+} */
 
 updateUserStatus();
 setInterval(function(){

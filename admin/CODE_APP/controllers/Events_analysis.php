@@ -2575,6 +2575,7 @@ class Events_analysis extends CI_Controller
         if (!$this->users->require_power(2))
             return;
 
+        $block_type = $this->input->get_post('block_type');
         $user_data = $this->users->data();
         $login_user_id = (int) $user_data['Id'];
 
@@ -2602,17 +2603,18 @@ class Events_analysis extends CI_Controller
         // STEP 3: Fetch ALL block data in ONE query
         // -------------------------------
         $blocks = $this->db->query("
-            SELECT user_id, block_type 
+            SELECT user_id
             FROM bet_block_details
             WHERE added_by = $login_user_id
             AND event_id = $event_id
+            AND block_type = $block_type
             AND user_id IN ($user_ids_str)
         ")->result_array();
 
         // -------------------------------
         // STEP 4: Build block map
         // -------------------------------
-        $blockMap = [];
+       /*  $blockMap = [];
 
         foreach ($blocks as $b) {
             $uid = $b['user_id'];
@@ -2629,7 +2631,10 @@ class Events_analysis extends CI_Controller
             } else if ($b['block_type'] == 2) {
                 $blockMap[$uid]['fancy'] = 1;
             }
-        }
+        } */
+
+        $blockedUsers = array_column($blocks, 'user_id');
+    $blockedMap = array_flip($blockedUsers);
 
         // -------------------------------
         // STEP 5: Build final response
@@ -3000,6 +3005,7 @@ class Events_analysis extends CI_Controller
         $event_id = $this->input->post('event_id');
         $status_post = $this->input->post('status'); // 1 = block, 0 = unblock
         $tpassword = $this->input->post('tpassword');
+        $block_type = $this->input->post('block_type');
 
          $returnArr = [
             'msg' => 'Error! Something went wrong.',
@@ -3026,7 +3032,7 @@ class Events_analysis extends CI_Controller
     
         if (!empty($users) && !empty($event_id)) {
 
-            $block_type = 2; // Fancy bet block
+           /*  $block_type = 2; */ // Fancy bet block
 
             // Determine which users to process
             if ($users === 'all') {

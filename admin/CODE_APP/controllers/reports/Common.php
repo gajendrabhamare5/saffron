@@ -343,7 +343,7 @@ class Common extends CI_Controller {
                 set_output(json_encode($array));
     }
 
-      public function update_user_status() {
+     /*  public function update_user_status() {
         $this->load->database();
         $this->load->library('users', $this);
         $user_data = $this->users->data();
@@ -353,7 +353,7 @@ class Common extends CI_Controller {
             $redis->connect('127.0.0.1', 6379);
             $redis->setex("active_user:$login_id", 15, time());
         }
-    }
+    } */
 
     public function useralldetails() {
         $this->load->database();

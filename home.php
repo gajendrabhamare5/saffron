@@ -46,8 +46,8 @@ if (preg_match('/android|iphone|ipad|ipod|blackberry|iemobile|opera mini/i', $us
 include("head_css.php");
 ?>
 
-<script type="text/javascript" src="js/socket.io.js"></script>
 <script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="<?php echo WEB_URL;?>/js/socket.io.js"></script>
 
 <style>
     .casinoicons img {
@@ -981,6 +981,8 @@ include("head_css.php");
 
 
         if (data) {
+            console.log("data",data);
+            
             if (data.sport) {
                 if (data.sport.body) {
                     var list_sport = data.sport.body;
