@@ -30,6 +30,7 @@ if (preg_match('/android|iphone|ipad|ipod|blackberry|iemobile|opera mini/i', $us
 <html lang="en">
 <meta charset="UTF-8" />
 <script type="text/javascript">
+    console.log("dfjosd");
     var check = false;
     (function(a) {
         if (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i
@@ -919,7 +920,7 @@ include("head_css.php");
             <script type="text/javascript" src="js/jquery.min.js"></script>
 
             <?php
-            include("footer.php");
+            //include("footer.php");
             ?>
         </div>
     </div>
@@ -927,12 +928,14 @@ include("head_css.php");
 
     <?php
     include("footer-js.php");
+    echo "1111";
     ?>
 
 </body>
 
 </html>
 <script type="text/javascript">
+    console.log("fdlesjcf");
     var cricket_html = "";
     var football_html = "";
     var tennis_html = "";
@@ -959,14 +962,9 @@ include("head_css.php");
         mlist = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
         return mlist[dt.getMonth()];
     };
-
-
-    var site_url = '<?php echo WEB_URL; ?>';
-    var socket = io("<?php echo SITE_SPORTS_IP; ?>", {
-        transports: ['websocket']
-    });
-
-    $.ajax({
+    console.log("JDFG");
+ console.log("SITE_SPORTS_IP",SITE_SPORTS_IP);
+     $.ajax({
         type: 'GET',
         url: '<?php echo SITE_SPORTS_IP; ?>getCricketMatches',
         success: function(data) {
@@ -974,6 +972,13 @@ include("head_css.php");
             setData(data);
         }
     });
+
+    var site_url = '<?php echo WEB_URL; ?>';
+    var socket = io("<?php echo SITE_SPORTS_IP; ?>", {
+        transports: ['websocket']
+    });
+
+   
     var event_type_array = {};
 
     function setData(data) {
@@ -981,7 +986,7 @@ include("head_css.php");
 
 
         if (data) {
-            console.log("data",data);
+           
             
             if (data.sport) {
                 if (data.sport.body) {

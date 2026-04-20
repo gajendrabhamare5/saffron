@@ -5,6 +5,7 @@ include('../session.php');
 include('../include/market_limit.php');
 $user_id = $_SESSION['CLIENT_LOGIN_ID'];
 
+
 $get_parent_ids = $conn->query("select parentDL,parentMDL,parentSuperMDL from user_login_master where UserID=$user_id");
 $fetch_parent_ids = mysqli_fetch_assoc($get_parent_ids);
 $parentDL = $fetch_parent_ids['parentDL'];
@@ -5147,7 +5148,7 @@ include("head_css.php");
 								$button_array = explode(",", $fetch_button_value);
 							}
 							foreach ($button_array as $button_value) {
-								$labelprint = $button_value / 1000;
+								$labelprint = (float)$button_value / 1000;
 								?>
 								<div class="col-4" style="flex: 0 0 24%;">
 									<button type="button" class="btn btn-secondary btn-block mb-2 label_stake"

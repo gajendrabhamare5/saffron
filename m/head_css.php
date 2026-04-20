@@ -10,7 +10,7 @@
  
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link href="../storage/front/theme/theme.css?1" rel="stylesheet">
-    <link href="../storage/mobile/css/style.css?92" rel="stylesheet">
+    <link href="../storage/mobile/css/style.css?94" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&amp;display=swap" rel="stylesheet">
     <link href="../storage/mobile/css/custom.css?1" rel="stylesheet">
     <link rel="stylesheet" href="../storage/mobile/css/flipclock.css">

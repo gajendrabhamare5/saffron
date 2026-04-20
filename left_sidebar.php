@@ -322,7 +322,12 @@
 
   // Initialize on page load
   document.addEventListener("DOMContentLoaded", function () {
+    console.log("I AM CALLED");
     fetchInitialData(); // Fetch initial data via AJAX
-    setupSocket(); // Set up socket listeners for updates
+   // setupSocket();
+    setTimeout(function(){
+      
+    },2000)
+    
   });
 </script>

@@ -1448,7 +1448,7 @@ button:focus {
 }
 
 .suspended:before {
-    background-image: url(/storage/front/img/lock.svg);
+    background-image: url("/storage/front/img/lock.svg");
     background-size: 17px 17px;
     filter: invert(1);
     -webkit-filter: invert(1);
