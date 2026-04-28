@@ -1933,9 +1933,9 @@ class Events_analysis extends CI_Controller
         // STEP 1: Get allowed user IDs
         // -------------------------------
         $user_ids = [];
-
+        $flag = false;
         if ($user_data['power'] < 5 || $user_data['power'] == 7) {
-
+            $flag = true;
             $users = $this->db->query("
 				SELECT UserID 
 				FROM user_login_master
@@ -1955,7 +1955,12 @@ class Events_analysis extends CI_Controller
 
         if (!empty($user_ids)) {
             $this->db->where_in('user_id', $user_ids);
-        }
+        } 
+        else if($flag){
+				$this->db->where([
+					'user_id' => -1,
+				]);
+			}
 
         $this->db->where([
             'event_id' => $event_id,
@@ -1974,6 +1979,11 @@ class Events_analysis extends CI_Controller
             if (!empty($user_ids)) {
                 $this->db->where_in('user_id', $user_ids);
             }
+            	else if($flag){
+				$this->db->where([
+					'user_id' => -1,
+				]);
+			}
             $this->db->where([
                 'event_id' => $event_id,
                 'bet_status' => 1
