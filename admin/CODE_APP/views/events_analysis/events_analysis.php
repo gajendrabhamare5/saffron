@@ -4696,8 +4696,8 @@ if ($event_id == ELECTION_EVENT_ID) {
                 users: users,
                 event_id: eid
             }, function(responce) {
-                refresh_active_bets_users();
-                if (responce.status == 1) {
+                refresh_active_bets_users(1);
+                if (responce.status == 0) {
                     // alert(responce.msg);
                     toastr.clear()
                     toastr.success("", responce.msg, {
@@ -4715,6 +4715,8 @@ if ($event_id == ELECTION_EVENT_ID) {
                         "extendedTImeout": "0"
                     });
                 }
+                $('#tbody_fancy_betstatus .check-users_bet_active').prop('checked', status == 1);
+                $('#fancy_check_all').prop('checked', status == 1);
             });
         }
 
@@ -4843,7 +4845,7 @@ if ($event_id == ELECTION_EVENT_ID) {
                     var html = '';
                     $.each(responce.results, function(index, rowdata) {
                        
-                        var status = 0;
+                        var status = 1;
                        /*  if (is_fancy)
                             status = rowdata.fstatus; */
                             if (block_type  == 1) {
@@ -4860,7 +4862,7 @@ if ($event_id == ELECTION_EVENT_ID) {
                             '    <td>' +
                             '        <div class="form-check form-check-inline ">' +
                             '            <label class="form-check-label">' +
-                            '                <input class="form-check-input check-users_bet_active" value="' + rowdata.username + '" ' + ((status == 0) ? 'checked=""' : '') + ' type="checkbox" name="userArr[]">' +
+                            '                <input class="form-check-input check-users_bet_active" value="' + rowdata.username + '" ' + ((status == 1) ? 'checked=""' : '') + ' type="checkbox" name="userArr[]">' +
                             '                <span class="checkmark"></span>' +
                             '            </label>' +
                             '        </div>' +
@@ -4911,15 +4913,16 @@ if ($event_id == ELECTION_EVENT_ID) {
                         "closeButton": true,
                         "progressBar": false,
                     });
-                    $(this).prop('checked', !isChecked);
-                    // toastr.error("");
+                    $('.check-users_bet_active').prop('checked', isChecked);
+                   /*  $(this).prop('checked', !isChecked); */
+                   
                     return;
                 }
 
                 update_user_fancy_bet_status(status, 'all', tpassword);
 
                 // Optional: update all row checkboxes UI
-                $('.user-checkbox').prop('checked', isChecked);
+                $('.check-users_bet_active').prop('checked', isChecked);
             });
 
             $('#tbody_fancy_betstatus').on('change', '.check-users_bet_active', function() {

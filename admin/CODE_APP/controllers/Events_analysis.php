@@ -2634,7 +2634,7 @@ class Events_analysis extends CI_Controller
         } */
 
         $blockedUsers = array_column($blocks, 'user_id');
-    $blockedMap = array_flip($blockedUsers);
+        $blockedMap = array_flip($blockedUsers);
 
         // -------------------------------
         // STEP 5: Build final response
@@ -2645,13 +2645,13 @@ class Events_analysis extends CI_Controller
 
             $uid = $u['Id'];
 
-            $match_status = isset($blockMap[$uid]) ? $blockMap[$uid]['match'] : 0;
-            $fancy_status = isset($blockMap[$uid]) ? $blockMap[$uid]['fancy'] : 0;
+            // bstatus: 1 = blocked, 0 = not blocked
+            $bstatus = isset($blockedMap[$uid]) ? 1 : 0;
 
             $return_data[] = [
                 "username" => $u['Email_ID'],
-                "status" => $match_status,
-                "fstatus" => $fancy_status,
+                "status" => $bstatus,
+                "fstatus" => $bstatus,
             ];
         }
 
@@ -3056,8 +3056,8 @@ class Events_analysis extends CI_Controller
                     // Block users: bulk insert
                     $now = date("Y-m-d H:i:s");
                     $insert_data = [];
-                    foreach ($user_ids as $uid) {
-                        $insert_data[] = [
+                   foreach ($user_ids as $uid) {
+                       /*   $insert_data[] = [
                             'event_id' => $event_id,
                             'user_id' => $uid,
                             'block_type' => $block_type,
@@ -3069,18 +3069,40 @@ class Events_analysis extends CI_Controller
                         $this->db->insert_batch('bet_block_details', $insert_data);
                         $returnArr['msg'] = 'Success! Users have been blocked.';
                         $returnArr['status'] = 1;
-                    }
-                } else {
-                    // Unblock users: bulk delete
-                    $this->db->where_in('user_id', $user_ids);
-                    $this->db->where('event_id', $event_id);
-                    $this->db->where('block_type', $block_type);
-                    $this->db->where('added_by', $login_user_id);
-                    $this->db->delete('bet_block_details');
+                    } */
+                    $exists = $this->db->where([
+                        'event_id' => $event_id,
+                        'user_id' => $uid,
+                        'block_type' => $block_type
+                    ])->get('bet_block_details')->row();
 
-                    $returnArr['msg'] = 'Success! Users have been unblocked.';
-                    $returnArr['status'] = 1;
-                }
+                    if (!$exists) {
+                        $insert_data[] = [
+                            'event_id' => $event_id,
+                            'user_id' => $uid,
+                            'block_type' => $block_type,
+                            'added_by' => $login_user_id,
+                            'added_datetime' => $now
+                        ];
+                    }
+                   }
+                    if (!empty($insert_data)) {
+                            $this->db->insert_batch('bet_block_details', $insert_data);
+                        }
+
+                        $returnArr['msg'] = 'Success! Users have been blocked.';
+                        $returnArr['status'] = 1;
+                } else  if ($status_post == 0) {
+
+                        $this->db->where_in('user_id', $user_ids);
+                        $this->db->where('event_id', $event_id);
+                        $this->db->where_in('block_type',$block_type);
+                        $this->db->where('added_by', $login_user_id);
+                        $this->db->delete('bet_block_details');
+
+                        $returnArr['msg'] = 'Success! Users have been unblocked.';
+                        $returnArr['status'] = 1;
+                    }
             }
         }
 
