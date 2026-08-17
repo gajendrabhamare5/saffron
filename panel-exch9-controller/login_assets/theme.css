@@ -1,0 +1,251 @@
+html, body
+{
+    height: 100%;
+    /*font-family: Tahoma, Helvetica, sans-serif;*/
+    font-family: Arial,Tahoma,Verdana,Helvetica,sans-serif;
+    color: #1E1E1E;
+    font-size: 14px;
+    line-height: 15px;
+    color: #1E1E1E;
+    background-color: #fff;
+}
+.header
+{
+    background-color: #5c868d;
+    color: #fff;
+}
+.header a
+{
+    color: #fff;
+}
+.search .fa-search-plus
+{
+    color: #000;
+}
+.ui-autocomplete
+{
+    background-color: #fff;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+}
+.header-bottom
+{
+    background-color: #5c3d46;
+}
+.header-bottom  li a
+{
+    color: #fff;
+}
+
+.header-bottom  li a:hover
+{
+    color: #000;
+    background-color: #fff;
+}
+.account ul
+{
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 4px;
+    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+}
+.header-top .account ul li a, .header-top .account ul h6
+{
+    color: #000;
+}
+.sidebar
+{
+    background-color: #eee;
+    color: #000;
+}
+.sidebar .mtree li a
+{
+    color: #000;
+}
+ul.mtree.transit li.mtree-node > a::after
+{
+    color: #000;
+}
+.mtree-open ul li::after
+{
+    border-left: 1px solid #000;
+}
+.sidebar .report-menu li a
+{
+    color: #000;
+}
+marquee
+{
+    color: #fff;
+}
+.game-header
+{
+    background-color: #5c3d46;
+    border-radius: 2px 2px 0 0;
+    box-shadow: 1px 1px 3px 0 rgba(0,0,0,.4);
+}
+.game-header h2
+{
+    color: #fff;
+}
+.coupon-navigation-filter
+{
+    color: #1e1e1e;
+    border: 1px solid #bfbfbf;
+    background-color: #bfbfbf;
+}
+.coupon-navigation-filter.active
+{
+    border-color: #fff;
+    background-color: #fff;
+}
+.coupon-navigation-filter.inplay
+{
+    color: #fff;
+    border-color: #20a052;
+    background-color: #20a052;
+}
+.coupon-card .card-header
+{
+    color: #fff;
+    background-color: #5c868d;
+}
+.coupon-table thead th
+{
+    color: #303030;
+}
+.coupon-table td:first-child .active
+{
+    background-color: #28a745;
+}
+.card-header
+{
+    background-color: #5c3d46;
+}
+/*.report-main-content .table-striped tbody tr:nth-of-type(2n+1)
+{
+    background-color: rgba(0,136,204,0.5);
+}*/
+.card-title
+{
+    color: #fff;
+}
+footer
+{
+    background-color: #5c868d;
+    color: #fff;
+}
+.login,.login .main
+{
+    background-color: #5c868d;
+}
+.featured-box-login
+{
+    background: #fff;
+}
+.error
+{
+    color: #ff0000;
+}
+.btn-submit
+{
+    background-color: #5c868d;
+    border-color: #5c868d;
+    color: #fff;
+}
+.download-apk a:hover
+{
+    color: #fff;
+}
+.featured-box-login h4
+{
+    color: #5c868d;
+}
+.table input
+{
+    /*background-color: transparent;*/
+    border: 1px solid #ddd;
+}
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active
+{
+    background-color: #5c3d46;
+    border-color: transparent;
+    color: #fff;
+}
+.lay,.lay-color
+{
+    background-color: #FAA9BA;
+}
+.back,.back-color
+{
+    background-color: #72BBEF;
+}
+.layx
+{
+    background-color: #FAA9BA;
+}
+.backx
+{
+    background-color: #72BBEF;
+}
+.coupon-table button
+{
+    color: #273a47;
+    border: 0;
+}
+.nav-tabs .nav-link
+{
+    color: #000;
+}
+.game-heading
+{
+    background-color: #5c3d46;
+    color: #fff;
+}
+.place-bet .value-buttons .btn
+{
+    background-color: #ddd;
+}
+.place-bet thead tr,.my-bet thead tr
+{
+    background-color: #eee;
+}
+.place-bet .table input
+{
+    background-color: #fff;
+}
+.table tr.bet-info
+{
+    background-color: rgba(0,0,0,.05);
+}
+.table tr.bet-message
+{
+    background-color: #fff;
+}
+.fancy-marker-title h4
+{
+    background-color: #5C3D46;
+    color: #fff;
+    font-size: 16px;
+}
+.table-diamond tbody tr:nth-of-type(2n+1)
+{
+    background-color: rgba(44,62,80,0.5);
+}
+.table-diamond tbody tr:nth-of-type(2n+2)
+{
+    background-color: rgba(204,204,204,0.5);
+}
+.mtree-open ul li::before
+{
+    background: #5c868d;
+}
+.logo img
+{
+    width: 180px;
+    height: auto;
+}
+.game-heading .card-header-title
+{
+    font-size: 16px;
+}

@@ -1,0 +1,4 @@
+{"sessionId":"d61eaa","runId":"live-perf","hypothesisId":"A","location":"live-boot.js","message":"loader hidden early","data":{"msSinceStart":70},"timestamp":1782546686536}
+{"sessionId":"d61eaa","runId":"live-perf","hypothesisId":"A","location":"live-boot.js","message":"loader hidden early","data":{"msSinceStart":38},"timestamp":1782546691231}
+{"sessionId":"d61eaa","runId":"live-goal","hypothesisId":"E","location":"live_goal.php:socket","message":"casino connect","data":{"ms":581,"transport":"websocket"},"timestamp":1782546691774}
+{"sessionId":"d61eaa","runId":"live-goal","hypothesisId":"E","location":"live_goal.php:game","message":"first game event","data":{"ms":726,"hasData":true},"timestamp":1782546691919}

@@ -1,0 +1,26 @@
+.sixplayer-image img {
+    width: 40px;
+}
+.winner-img{
+	width: 50px;
+	margin-top: 10px;
+}
+.br1{
+	border-right: 1px solid #bfbfbf;
+}
+.rules-table td, .rules-table th{
+	padding: 7px;
+}
+.sidebar-right-inner{
+	height: 90vh;
+}
+
+
+.b-table-sticky-header, .table-responsive, [class*="table-responsive-"]{
+	margin-bottom: 0 !important;
+}
+
+.table{
+	margin-bottom: 0 !important;
+}
+

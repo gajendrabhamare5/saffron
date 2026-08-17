@@ -1,0 +1,1 @@
+<iframe src="https://premium.lagaikhaipro.com/diamondvideo/?id=3052" width="100%" height="400" style="border: 0px;"></iframe>

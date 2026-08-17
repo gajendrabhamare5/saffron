@@ -1,0 +1,32 @@
+<?php
+	include "../../include/conn.php";
+	include "../session.php";
+	$user_id =$_SESSION['CONTROLLER_LOGIN_ID']; 
+	$login_type = $_SESSION['CONTROLLER_LOGIN_SESSION_TYPE'];
+	
+	
+	if($login_type == 5){
+		/* $get_pnl_report  = $conn->query("select * from bet_details as b left outer join  user_login_master as ulm on ulm.UserID=b.user_id where b.bet_status =1 order by b.event_id, b.market_type , b.market_id, b.bet_type"); */
+	}else{
+		header("Location: ../logout.php");
+	}
+	
+	$event_type = $_REQUEST['sport_id'];
+	
+	$get_active_market_name = $conn->query("select  * from bet_details where bet_status=1 and  event_type='$event_type' GROUP BY event_id,oddsmarketId ORDER BY event_type DESC");
+	while($fetch_get_active_market_name = mysqli_fetch_assoc($get_active_market_name)){
+		$event_id = $fetch_get_active_market_name['event_id'];
+		$event_name = $fetch_get_active_market_name['event_name'];
+		$oddsmarketId = $fetch_get_active_market_name['oddsmarketId'];
+		
+		$market_name_data[] = array(
+								"event_id"=>$event_id,
+								"event_name"=>$event_name,
+								"oddsmarketId"=>$oddsmarketId,
+								);
+	}
+	$return_array = array(
+						"status"=>"ok",
+						"event_name_data"=>$market_name_data
+						);
+	echo json_encode($return_array);
