@@ -33,21 +33,28 @@ if ($_GET['eventType']) {
 	header("Location: index");
 }
 
-$market_limit_data = get_market_limit($conn, $event_id, $marketId, false, $eventType);
+$market_limit_data = get_market_limit($conn, $event_id, $marketId, true, $eventType);
 
 $match_max = $bookmaker_min = $bookmaker_max = $bookmakersmall_max = 1;
-	if (!empty($market_limit_data)) {
+if (!empty($market_limit_data)) {
 	$match_max = $market_limit_data['match_max'];
 	$bookmaker_min = $market_limit_data['bookmaker_min'];
-	$bookmaker_max1 = $market_limit_data['bookmaker_max'];
+	if (get_inplay_status($marketId))
+		$bookmaker_max = $market_limit_data['bookmaker_live'];
+	else
+		$bookmaker_max1 = $market_limit_data['bookmaker_max'];
 
 	$bookmakersmall_max = "5L";
 } else {
 	$match_max = 50000;
 	$bookmaker_min = 100;
-	$bookmaker_max1 = 50000;
-	if ($eventType == 4) {
-		$bookmaker_max1 = 200000;
+	if (get_inplay_status($marketId)) {
+		$bookmaker_max1 = 50000;
+	} else {
+		$bookmaker_max1 = 50000;
+		if ($eventType == 4) {
+			$bookmaker_max1 = 200000;
+		}
 	}
 }
 
@@ -62,8 +69,7 @@ $event_name = '';
 if ($event_id == ELECTION_EVENT_ID) {
 	$event_name = ELECTION_MARKET_NAME;
 } elseif ($event_id == IPL_EVENT_ID) {
-	$event_name = IPL_MARKET_NAME;
-	;
+	$event_name = IPL_MARKET_NAME;;
 }
 $get_url = $conn->query("select * from tv_url_master where event_id=$event_id");
 $fetch_get_url = mysqli_fetch_assoc($get_url);
@@ -71,6 +77,15 @@ $iframe_score_url = $fetch_get_url['score_url'];
 if (empty($iframe_score_url)) {
 	$iframe_score_url = "";
 }
+
+$sport_max_limit = 0;
+$sql_sport_limit = $conn->query("SELECT max_limit  FROM event_max_limit WHERE sport_id = '$eventType'");
+$sport_limit_count = mysqli_num_rows($sql_sport_limit);
+if ($sport_limit_count > 0) {
+	$sport_limit_data = mysqli_fetch_assoc($sql_sport_limit);
+	$sport_max_limit = $sport_limit_data['max_limit'];
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -78,8 +93,6 @@ if (empty($iframe_score_url)) {
 <?php
 include("head_css.php");
 ?>
-<link rel="preconnect" href="<?php echo rtrim(SITE_SPORTS_IP, '/'); ?>" crossorigin>
-<link rel="dns-prefetch" href="<?php echo rtrim(SITE_SPORTS_IP, '/'); ?>">
 <style>
 	div#matchDate1 {
 		padding: 0px;
@@ -158,22 +171,6 @@ include("head_css.php");
 </style>
 
 <body cz-shortcut-listen="true" class="eventfull">
-<script>
-window.destroySportsSocket = window.destroySportsSocket || function(reason) {
-    var s = window.sportsSocket;
-    if (!s) return;
-    window.sportsSocket = null;
-    window._matchSportsSocketActive = false;
-    try {
-        s.io.opts.reconnection = false;
-        s.removeAllListeners();
-        if (s.io && s.io.engine) s.io.engine.close();
-        if (s.io) s.io.close();
-        s.disconnect();
-        s.close();
-    } catch (e) {}
-};
-</script>
 	<div id="app">
 		<?php
 		include("loader.php");
@@ -184,7 +181,7 @@ window.destroySportsSocket = window.destroySportsSocket || function(reason) {
 			?>
 
 			<div class="loader_page" style="display:none;"><i class="fa fa-spinner fa-spin"
-					style="font-size: 24px;"></i></div>
+					style="font-size: 38px;"></i></div>
 			<div class="main-content">
 				<!---->
 				<!---->
@@ -206,16 +203,16 @@ window.destroySportsSocket = window.destroySportsSocket || function(reason) {
 									class="match-name event_name_heading"><?php echo $event_name; ?></span> <span
 									class="float-right" id="matchdate"></span></div>
 
-							<div class="col-xl-12" style="border: 3px solid #000;padding: 0px;">
+							<div class="col-xl-12" style="padding: 0px;">
 
-								<div id="scoreboard-box" style="background: black;">
+								<div id="scoreboard-box1" style="">
 									<?
-									if ($eventType != 4 && $eventType != 8) {
-										?>
-										<iframe style="    width: 100%;height:250px;" src="about:blank"
-											id="scoreboard_iframe"></iframe>
-										<?
-									}
+									/* if ($eventType != 4 && $eventType != 8) { */
+									?>
+									<iframe style="    width: 100%;height:115px;" src=""
+										id="scoreboard_iframe"></iframe>
+									<?
+									/* } */
 									?>
 								</div>
 
@@ -469,17 +466,17 @@ window.destroySportsSocket = window.destroySportsSocket || function(reason) {
 			transports: ['websocket']
 		});
 
-		socketScoreBoard.on("connect", function () {
+		socketScoreBoard.on("connect", function() {
 
 			socketScoreBoard.emit("subscribe", {
 				type: 1,
 				rooms: [parseInt(GAME_ID)]
 			});
 		});
-		socketScoreBoard.on("error", function (abc) {
+		socketScoreBoard.on("error", function(abc) {
 
 		});
-		socketScoreBoard.on("update", function (response) {
+		socketScoreBoard.on("update", function(response) {
 
 			if (
 				response.data != undefined &&
@@ -500,7 +497,7 @@ window.destroySportsSocket = window.destroySportsSocket || function(reason) {
 				}
 			}
 		});
-		socketScoreBoard.on("disconnect", function () { });
+		socketScoreBoard.on("disconnect", function() {});
 	}
 
 	function updateScoreBoard(data) {
@@ -561,7 +558,7 @@ window.destroySportsSocket = window.destroySportsSocket || function(reason) {
 		scoreboardStr += "        <\/div>";
 		scoreboardStr += "        <div class=\"col-6 ball-runs-container m-t-5\">";
 		scoreboardStr += "            <p class=\"text-right ball-by-ball\">";
-		$.each(data.balls, function (key, ballVal) {
+		$.each(data.balls, function(key, ballVal) {
 			if (ballVal != "") {
 				var b_class = "";
 				if (ballVal == '4') {
@@ -586,29 +583,18 @@ window.destroySportsSocket = window.destroySportsSocket || function(reason) {
 		var name = "collapseTV";
 		if ($("#collapseTV").length > 0 && $('#collapseTV').is(':visible')) {
 			$("#collapseTV").hide();
+
+
 		} else {
 			$("#collapseTV").show();
-			if (typeof ipAddress === 'undefined' || !ipAddress) {
-				$.ajax({
-					url: 'https://api.ipify.org?format=json',
-					timeout: 3000,
-					success: function (response) {
-						if (response && socket && socket.connected) {
-							ipAddress = response.ip;
-							socket.emit('getLiveVideoUrl', {
-								eventId: '<?php echo $event_id; ?>',
-								ipAddress: ipAddress
-							});
-						}
-					}
-				});
-			}
+
 		}
 	}
 </script>
 <script>
 	var SKIP_FANCY_EVENTID = ('<?php echo SKIP_FANCY; ?>').split(',');
-	var argsTv = "<? echo tv_url; ?>&sportid=<?php echo $eventType; ?>&gmid=<? echo $event_id; ?>";
+	/* var argsTv = "<? echo tv_url; ?>&sportid=<?php echo $eventType; ?>&gmid=<? echo $event_id; ?>"; */
+	var argsTv = "<? echo tv_url; ?><? echo $event_id; ?>";
 	$("#matchDate1").append('<div data-v-68a8f00a="" style="display : none;    height: 206px;" id="collapseTV"><iframe data-v-68a8f00a="" src="' + argsTv + '" width="100%" style="height:206px;" id="myiFrame" class="video-iframe"></iframe></div>');
 	var html_fancy_market_new = "";
 	var html_fancy_market_new1 = "";
@@ -699,72 +685,9 @@ window.destroySportsSocket = window.destroySportsSocket || function(reason) {
 	var eventIdOpenbet = <?php echo $event_id; ?>;
 
 	var callExposure = true;
-	var _matchLoaderHidden = false;
-	function hideMatchLoaderOnce(source) {
-		if (_matchLoaderHidden) return;
-		_matchLoaderHidden = true;
-		$(".loader_page").hide();
-		$(".main-footer-id").show();
-	}
 
 	var site_url = '<?php echo WEB_URL; ?>';
-	if (window.sportsSocket) {
-		window.destroySportsSocket('match-page-init');
-	}
-	var socket = io.connect("<?php echo SITE_SPORTS_IP; ?>", {
-		transports: ['websocket', 'polling'],
-		forceNew: true,
-		timeout: 10000,
-		reconnection: true,
-		reconnectionAttempts: 3,
-		reconnectionDelay: 3000,
-		reconnectionDelayMax: 10000
-	});
-	window.sportsSocket = socket;
-	window._matchSportsSocketActive = true;
-	window._matchOddsSid = null;
-
-	socket.on('disconnect', function(reason) {
-		if (reason === 'io client disconnect') window._matchSportsSocketActive = false;
-	});
-
-	socket.on('connect', function () {
-		var sid = (socket.io && socket.io.engine) ? socket.io.engine.id : null;
-		if (sid && sid === window._matchOddsSid) return;
-		window._matchOddsSid = sid;
-		var transport = (socket.io && socket.io.engine && socket.io.engine.transport) ? socket.io.engine.transport.name : '';
-		if (transport === 'websocket') sessionStorage.setItem('sportsTransport', 'websocket');
-		socket.emit('getOddData', { eventId: '<?php echo $marketId; ?>' });
-		socket.emit('getMatches', {
-			eventType: '<?php echo $eventType; ?>'
-		});
-		callExposure = true;
-		setTimeout(function() {
-			socket.emit('getOddData1', { "user": 1 });
-		}, 500);
-	});
-
-	if (!window._matchSocketListenersBound) {
-		window._matchSocketListenersBound = true;
-		window.addEventListener('pagehide', function() {
-			window.destroySportsSocket('match-pagehide');
-		});
-		window.addEventListener('beforeunload', function() {
-			window.destroySportsSocket('match-beforeunload');
-		});
-		document.addEventListener('visibilitychange', function() {
-			var s = window.sportsSocket;
-			if (!s || !window._matchSportsSocketActive) return;
-			if (document.hidden) {
-				s.io.opts.reconnection = false;
-				if (s.connected) s.disconnect();
-			} else if (s.disconnected) {
-				window._matchOddsSid = null;
-				s.io.opts.reconnection = true;
-				s.connect();
-			}
-		});
-	}
+	var socket = io.connect("<?php echo SITE_SPORTS_IP; ?>");
 	var first_time = true;
 
 	function kFormatter(num) {
@@ -789,13 +712,35 @@ window.destroySportsSocket = window.destroySportsSocket || function(reason) {
 		mainclass = "main-market";
 		hiddenclass = "hidden-portrait";
 	}
+	socket.on('connect', function() {
+		socket.emit('getOddData1', {
+			"user": 1
+		});
+		callExposure = true;
+		socket.emit('getOddData', {
+			eventId: '<?php echo $marketId; ?>'
+		});
 
-	setTimeout(function() {
-		hideMatchLoaderOnce('socket-connect-timeout');
-	}, 8000);
+		socket.emit('getMatches', {
+			eventType: '<?php echo $eventType; ?>'
+		});
 
-	socket.on('liveURLForMatch', function (args) {
-		console.log("args=", args);
+		$.ajax({
+			url: 'https://api.ipify.org?format=json',
+			success: function(response) {
+				if (response) {
+					ipAddress = response.ip;
+					socket.emit('getLiveVideoUrl', {
+						eventId: '<?php echo $event_id; ?>',
+						ipAddress: ipAddress
+					})
+				}
+			}
+		});
+	});
+
+	socket.on('liveURLForMatch', function(args) {
+
 		/* if (args) {
 			//args = "https://dpmatka.in/dtv.php?id="+<?php echo $event_id; ?>+"&sportid=" + <?php echo $eventType; ?>;
 		args = "<? echo tv_url; ?>?id=<? echo $event_id; ?>";
@@ -804,14 +749,15 @@ window.destroySportsSocket = window.destroySportsSocket || function(reason) {
 	});
 	$(".loader_page").show();
 	$(".main-footer-id").hide();
-	socket.on('eventGetLiveEventName', function (data) {
+	socket.on('eventGetLiveEventName', function(data) {
 		if (data) {
 			if (data.sport) {
 				if (data.sport.body) {
 
 					var result = Object.keys(data.sport.body).length;
 					if (result > 0) {
-						hideMatchLoaderOnce('eventGetLiveEventName');
+						$(".loader_page").hide();
+						$(".main-footer-id").show();
 						var main_datas = data;
 
 						data = main_datas.sport;
@@ -900,12 +846,16 @@ window.destroySportsSocket = window.destroySportsSocket || function(reason) {
 	var display_runners_tied_bm = [];
 	var display_runners_sbm = [];
 
-	socket.on('eventGetLiveEventFancyData', function (args) {
+	socket.on('eventGetLiveEventFancyData', function(args) {
+
+
 		if (args.body == undefined) {
 			//window.location.href = "/index";
 		} else {
-			hideMatchLoaderOnce('eventGetLiveEventFancyData');
+			$(".loader_page").hide();
+			$(".main-footer-id").show();
 			if (args.body.data) {
+				console.log("eventGetLiveEventFancyData", args.body.data);
 				if (args.body.data[0]) {
 
 					matchdate = args.body.data[0].matchdate;
@@ -922,47 +872,82 @@ window.destroySportsSocket = window.destroySportsSocket || function(reason) {
 					oldGameIdId = args.body.data[0].oldGameIdId;
 					betfairGameId = args.body.data[0].betFairId || oldGameId;
 					GAME_ID = oldGameId;
-					var eventTypeId = args.body.data[0].eventTypeId
-					if (parseInt(eventTypeId) == 4) { } else {
+					var eventTypeId = args.body.data[0].eventTypeId;
+
+					var sport_max_limit = '<?php echo (int)$sport_max_limit; ?>';
+					if (parseInt(eventTypeId) == 4) {} else {
 						iframe_score_url = "<?php echo LATEST_SCORE_URL; ?>&eventid=" + betfairGameId + "&sportid=<?php echo $eventType; ?>";
 						$("#scoreboard_iframe").attr('src', iframe_score_url);
 					}
+					var eventTypeIdDis = "cricket";
+
+					$("#scoreboard-box1").css({
+						'height': 'unset',
+						'overflow-y': 'unset'
+					});
+					$("#scoreboard_iframe").css({
+						'height': '102PX',
+						'overflow-y': 'unset'
+					});
+					if (eventTypeId == "2") {
+						eventTypeIdDis = "tennis";
+						$("#scoreboard-box1").css({
+							'height': '245PX',
+							'overflow-y': 'auto'
+						});
+						$("#scoreboard_iframe").css({
+							'height': '245PX',
+							'overflow-y': 'auto'
+						});
+					}
+					if (eventTypeId == "1") {
+						eventTypeIdDis = "football";
+						$("#scoreboard-box1").css({
+							'height': '245PX',
+							'overflow-y': 'auto'
+						});
+						$("#scoreboard_iframe").css({
+							'height': '245PX',
+							'overflow-y': 'auto'
+						});
+					}
+					iframe_score_url = "https://api.trubets365.com/api/scoreboard/" + eventTypeIdDis + "/" + betfairGameId;
+					$("#scoreboard_iframe").attr('src', iframe_score_url);
 					var inPlay = 1;
 					html_match_odds = "";
 					html_match_tie_odds = "";
 					html_match_odds += "";
 					match_odds_lay_place_status = "";
-
 					for (k = 0; k < args.body.data.length; k++) {
 						market_type_name = args.body.data[k].market_name;
+
 						market_market_id = args.body.data[k].marketid;
 						market_odd_name = market_type_name;
 
 						if (market_type_name == "Tied Match") {
 							if (market_type_name == "Match Odds") {
 								marketType = "MATCH_ODDS";
-							}
-							else if (market_type_name == "Tied Match") {
+							} else if (market_type_name == "Tied Match") {
 								marketType = "TIED_MATCH";
-							}
-							else if (market_type_name == "To Win the Toss") {
+							} else if (market_type_name == "To Win the Toss") {
 								marketType = "TOSS_ODDS";
-							}
-							else {
+							} else {
+
 								if (market_type_name) {
 									market_type_name = market_type_name.split(".").join("_");
 									market_type_name = market_type_name.split(" ").join("_");
 									market_type_name = market_type_name.split("/").join("_");
 									market_type_name = market_type_name.split(" ").join("_");
 									marketType = market_type_name.toUpperCase();
+
 								}
 							}
 							var disableCashout = marketType + "_dis";
-							
-						var hideBtn = "";
-						if (args.body.data[k].runners && args.body.data[k].runners.length > 2) {
-							hideBtn = "style= display:none;";
-						}
+
+							var hideBtn = "";
+							if (args.body.data[k].runners && args.body.data[k].runners.length > 2) {
+								hideBtn = "style= display:none;";
+							}
 
 							html_match_tie_odds += "<div class='market-title cashout mt-1'>" + market_type_name + "<button markettype='" + marketType + "' class='btn btn-success btn-sm  cashoutClick " + disableCashout + "' " + hideBtn + " disabled=''>Cashout</button></div><div class='" + mainclass + "'><div class='table-header'><div class='float-left country-name box-6 min-max'><b>Min:100 Max:<span id='match_odds_tied_max_bet_" + k + "'>0</span></b></div> <div class='back box-1 float-left text-center lablesize'><b>Back</b></div> <div class='lay box-1 float-left text-center lablesize'><b>Lay</b></div></div>";
 							market_type_name2 = marketType.toUpperCase();;
@@ -995,6 +980,8 @@ window.destroySportsSocket = window.destroySportsSocket || function(reason) {
 											market_type_name = market_type_name.split("/").join("_");
 											market_type_name = market_type_name.split(" ").join("_");
 											marketType = market_type_name.toUpperCase();
+
+
 										}
 										marketType = market_type_name.toUpperCase();
 									}
@@ -1179,21 +1166,25 @@ window.destroySportsSocket = window.destroySportsSocket || function(reason) {
 								marketType = "TOSS_ODDS";
 							} else {
 								if (market_type_name) {
+									/* console.log("market type 3",market_type_name); */
 									market_type_name = market_type_name.split(".").join("_");
 									market_type_name = market_type_name.split(" ").join("_");
 									market_type_name = market_type_name.split("/").join("_");
 									market_type_name = market_type_name.split(" ").join("_");
+
 									marketType = market_type_name.toUpperCase();
+
+
 								}
 							}
 							var disableCashout = marketType + "_dis";
-							
-						var hideBtn = "";
-						if (args.body.data[k].runners && args.body.data[k].runners.length > 2) {
-							hideBtn = "style= display:none;";
-						}
 
-							html_match_odds += "<div class='market-title cashout mt-1'>" + market_type_name + "<button markettype='" + marketType + "' class='btn btn-success btn-sm cashoutClick "  + disableCashout + "' " + hideBtn + " disabled=''>Cashout</button></div>";
+							var hideBtn = "";
+							if (args.body.data[k].runners && args.body.data[k].runners.length > 2) {
+								hideBtn = "style= display:none;";
+							}
+
+							html_match_odds += "<div class='market-title cashout mt-1 " + market_type_name + "'>" + market_type_name + " <button markettype='" + marketType + "' class='btn btn-success btn-sm cashoutClick " + disableCashout + "' " + hideBtn + " disabled=''>Cashout</button></div>";
 							market_type_name2 = marketType.toUpperCase();
 							market_marketid = market_type_name2;
 							var classdesign = "fancy-market";
@@ -1202,7 +1193,17 @@ window.destroySportsSocket = window.destroySportsSocket || function(reason) {
 								classdesign = "bookmaker-market";
 								hiddenclass2 = "";
 							}
-							html_match_odds += "<div class='" + classdesign + "'><div class='table-header'><div class='float-left country-name box-6 min-max'><b>Max:<span id='match_odds_max_bet_" + k + "'>1</span></b></div> <div class='back box-1 float-left text-center lablesize'><b>Back</b></div> <div class='lay box-1 float-left text-center lablesize'><b>Lay</b></div></div>";
+
+							var max_bet_new = 1;
+
+							/* if (max_bet_new < sport_max_limit  && sport_max_limit <= 0) {
+								max_bet_new = max_bet_new;
+							} else {
+								max_bet_new = sport_max_limit;
+							} */
+							max_bet_new = Math.min(max_bet_new, sport_max_limit);
+
+							html_match_odds += "<div class='" + classdesign + " " + market_type_name2 + "'><div class='table-header'><div class='float-left country-name box-6 min-max'><b>Max:<span id='match_odds_max_bet_" + k + "'>" + max_bet_new + "</span></b></div> <div class='back box-1 float-left text-center lablesize'><b>Back</b></div> <div class='lay box-1 float-left text-center lablesize'><b>Lay</b></div></div>";
 							if (args.body.data[k].runners) {
 								var xc = 0;
 								for (j = 0; j < args.body.data[k].runners.length; j++) {
@@ -1373,7 +1374,7 @@ window.destroySportsSocket = window.destroySportsSocket || function(reason) {
 										is_suspended = 'suspended';
 									}
 
-									html_match_odds += "<div data-title='" + bet_suspended + "' class='bb table-row " + is_suspended + "' id='fullSelection_" + selectionId + "_" + market_marketid + "'  eventtype='4' eventid='" + eventId + "' marketid='" + market_market_id + "' selectionid='" + selectionId + "' eventname='" + runnerName + "' status='" + status + "'><div class='float-left country-name box-4'><span class='team-name'><b>" + runnerName + "</b></span><p><span class='float-left live_match_points' style='color: black;' id='live_match_points_" + selectionId + "_" + market_marketid + "'></span> <span class='float-right' style='display: none; color: black;'>0</span></p></div><div id='back_3_" + selectionId + "_" + market_marketid + "' class='box-1 back1 float-left " + hiddenclass2 + " text-center' side='Back'  selectionid='" + selectionId + "' runner='" + runnerName + "' marketname='" + runnerName + "' markettype='" + marketType + "' fullmarketodds='" + one_price_1 + "'  oddsmarketId=" + oddsmarketId + " event_name='" + eventName2 + "' market_odd_name='" + market_odd_name + "' marketId='" + selectionId + "' eventId='" + eventId + "'   inplay='" + inPlay + "' ><button><span class='odd d-block'>" + one_price_1 + "</span> <span class='d-block'>" + one_size_1 + "</span></button></div><div class='box-1 back2 float-left back-2 " + hiddenclass2 + " text-center' id='back_2_" + selectionId + "_" + market_marketid + "' side='Back'  selectionid='" + selectionId + "' runner='" + runnerName + "' marketname='" + runnerName + "' markettype='" + marketType + "' fullmarketodds='" + one_price_2 + "'  oddsmarketId=" + oddsmarketId + " event_name='" + eventName2 + "' market_odd_name='" + market_odd_name + "' marketId='" + selectionId + "' eventId='" + eventId + "'   inplay='" + inPlay + "'><button><span class='odd d-block'>" + one_price_2 + "</span> <span class='d-block'>" + one_size_2 + "</span></button></div><div class='box-1 back float-left back lock text-center back-1'  id='back_1_" + selectionId + "_" + market_marketid + "' side='Back'  selectionid='" + selectionId + "' runner='" + runnerName + "' marketname='" + runnerName + "' markettype='" + marketType + "' fullmarketodds='" + one_price_3 + "'  oddsmarketId=" + oddsmarketId + " event_name='" + eventName2 + "' market_odd_name='" + market_odd_name + "' marketId='" + selectionId + "' eventId='" + eventId + "'   inplay='" + inPlay + "' other_fancy='" + other_fancy + "'><button><span class='odd d-block'>" + one_price_3 + "</span> <span class='d-block'>" + one_size_3 + "</span></button></div><div class='box-1 lay float-left text-center lay-1' id='lay_1_" + selectionId + "_" + market_marketid + "' side='Lay' selectionid='" + selectionId + "' runner='" + runnerName + "' marketname='" + runnerName + "' markettype='" + marketType + "' fullmarketodds='" + lay_one_price_1 + "' oddsmarketId=" + oddsmarketId + " event_name='" + eventName2 + "' market_odd_name='" + market_odd_name + "' marketId='" + selectionId + "' eventId='" + eventId + "'   inplay='" + inPlay + "' other_fancy='" + other_fancy + "'><button><span class='odd d-block'>" + lay_one_price_1 + "</span> <span class='d-block'>" + lay_one_size_1 + "</span></button></div><div class='box-1 lay-2 float-left " + hiddenclass2 + " text-center' id='lay_2_" + selectionId + "_" + market_marketid + "' side='Lay' selectionid='" + selectionId + "' runner='" + runnerName + "' marketname='" + runnerName + "' markettype='" + marketType + "' fullmarketodds='" + lay_one_price_2 + "' oddsmarketId=" + oddsmarketId + " event_name='" + eventName2 + "' market_odd_name='" + market_odd_name + "' marketId='" + selectionId + "' eventId='" + eventId + "'   inplay='" + inPlay + "'><button><span class='odd d-block'>" + lay_one_price_2 + "</span> <span class='d-block'>" + lay_one_size_2 + "</span></button></div><div class='box-1 float-left " + hiddenclass2 + " text-center lay1' id='lay_3_" + selectionId + "_" + market_marketid + "'><button><span class='odd d-block' side='Lay' selectionid='" + selectionId + "' runner='" + runnerName + "' marketname='" + runnerName + "' markettype='" + marketType + "' fullmarketodds='" + lay_one_price_3 + "' oddsmarketId=" + oddsmarketId + " event_name='" + eventName2 + "' market_odd_name='" + market_odd_name + "' marketId='" + selectionId + "' eventId='" + eventId + "'   inplay='" + inPlay + "'>" + lay_one_price_3 + "</span> <span class='d-block'>" + lay_one_size_3 + "</span></button></div></div>";
+									html_match_odds += "<div data-title='" + bet_suspended + "' class='bb table-row " + is_suspended + "' id='fullSelection_" + selectionId + "_" + market_marketid + "'  eventtype='4' eventid='" + eventId + "' marketid='" + market_market_id + "' selectionid='" + selectionId + "' eventname='" + runnerName + "' marketname='" + market_odd_name + "' status='" + status + "'><div class='float-left country-name box-4'><span class='team-name'><b>" + runnerName + "</b></span><p><span class='float-left live_match_points' style='color: black;' id='live_match_points_" + selectionId + "_" + market_marketid + "'></span> <span class='float-right' style='display: none; color: black;'>0</span></p></div><div id='back_3_" + selectionId + "_" + market_marketid + "' class='box-1 back1 float-left " + hiddenclass2 + " text-center' side='Back'  selectionid='" + selectionId + "' runner='" + runnerName + "' marketname='" + runnerName + "' markettype='" + marketType + "' fullmarketodds='" + one_price_1 + "'  oddsmarketId=" + oddsmarketId + " event_name='" + eventName2 + "' market_odd_name='" + market_odd_name + "' marketId='" + selectionId + "' eventId='" + eventId + "'   inplay='" + inPlay + "' ><button><span class='odd d-block'>" + one_price_1 + "</span> <span class='d-block'>" + one_size_1 + "</span></button></div><div class='box-1 back2 float-left back-2 " + hiddenclass2 + " text-center' id='back_2_" + selectionId + "_" + market_marketid + "' side='Back'  selectionid='" + selectionId + "' runner='" + runnerName + "' marketname='" + runnerName + "' markettype='" + marketType + "' fullmarketodds='" + one_price_2 + "'  oddsmarketId=" + oddsmarketId + " event_name='" + eventName2 + "' market_odd_name='" + market_odd_name + "' marketId='" + selectionId + "' eventId='" + eventId + "'   inplay='" + inPlay + "'><button><span class='odd d-block'>" + one_price_2 + "</span> <span class='d-block'>" + one_size_2 + "</span></button></div><div class='box-1 back float-left back lock text-center back-1'  id='back_1_" + selectionId + "_" + market_marketid + "' side='Back'  selectionid='" + selectionId + "' runner='" + runnerName + "' marketname='" + runnerName + "' markettype='" + marketType + "' fullmarketodds='" + one_price_3 + "'  oddsmarketId=" + oddsmarketId + " event_name='" + eventName2 + "' market_odd_name='" + market_odd_name + "' marketId='" + selectionId + "' eventId='" + eventId + "'   inplay='" + inPlay + "' other_fancy='" + other_fancy + "'><button><span class='odd d-block'>" + one_price_3 + "</span> <span class='d-block'>" + one_size_3 + "</span></button></div><div class='box-1 lay float-left text-center lay-1' id='lay_1_" + selectionId + "_" + market_marketid + "' side='Lay' selectionid='" + selectionId + "' runner='" + runnerName + "' marketname='" + runnerName + "' markettype='" + marketType + "' fullmarketodds='" + lay_one_price_1 + "' oddsmarketId=" + oddsmarketId + " event_name='" + eventName2 + "' market_odd_name='" + market_odd_name + "' marketId='" + selectionId + "' eventId='" + eventId + "'   inplay='" + inPlay + "' other_fancy='" + other_fancy + "'><button><span class='odd d-block'>" + lay_one_price_1 + "</span> <span class='d-block'>" + lay_one_size_1 + "</span></button></div><div class='box-1 lay-2 float-left " + hiddenclass2 + " text-center' id='lay_2_" + selectionId + "_" + market_marketid + "' side='Lay' selectionid='" + selectionId + "' runner='" + runnerName + "' marketname='" + runnerName + "' markettype='" + marketType + "' fullmarketodds='" + lay_one_price_2 + "' oddsmarketId=" + oddsmarketId + " event_name='" + eventName2 + "' market_odd_name='" + market_odd_name + "' marketId='" + selectionId + "' eventId='" + eventId + "'   inplay='" + inPlay + "'><button><span class='odd d-block'>" + lay_one_price_2 + "</span> <span class='d-block'>" + lay_one_size_2 + "</span></button></div><div class='box-1 float-left " + hiddenclass2 + " text-center lay1' id='lay_3_" + selectionId + "_" + market_marketid + "'><button><span class='odd d-block' side='Lay' selectionid='" + selectionId + "' runner='" + runnerName + "' marketname='" + runnerName + "' markettype='" + marketType + "' fullmarketodds='" + lay_one_price_3 + "' oddsmarketId=" + oddsmarketId + " event_name='" + eventName2 + "' market_odd_name='" + market_odd_name + "' marketId='" + selectionId + "' eventId='" + eventId + "'   inplay='" + inPlay + "'>" + lay_one_price_3 + "</span> <span class='d-block'>" + lay_one_size_3 + "</span></button></div></div>";
 									xc++;
 
 
@@ -1406,7 +1407,6 @@ window.destroySportsSocket = window.destroySportsSocket || function(reason) {
 						<?php if ($eventType != 4) { ?>
 							if (marketType == "MATCH_ODDS") {
 								if (args.body.data[0]) {
-									console.log("data=", args.body.data[0]);
 									if (args.body.data[0][0]) {
 										args.body.data[0] = args.body.data[0][0];
 									}
@@ -1431,11 +1431,11 @@ window.destroySportsSocket = window.destroySportsSocket || function(reason) {
 
 										/* <p class='float-right mb-0' data-target='#view_bookmaker_rules' data-toggle='modal'><i class='fas fa-info-circle'></i></p> */
 										var disableCashout = "BOOKMAKER_ODDS_dis";
-												
-											var hideBtn = "";
-											if (args.body.data[0].bookmaker && args.body.data[0].bookmaker.length > 2) {
-												hideBtn = "style= display:none;";
-											}
+
+										var hideBtn = "";
+										if (args.body.data[0].bookmaker && args.body.data[0].bookmaker.length > 2) {
+											hideBtn = "style= display:none;";
+										}
 
 										html_bookmaker_odds += "<div id='bookmaker_market_div_0'><div class='market-title cashout mt-1'>Bookmaker <button markettype='BOOKMAKER_ODDS' class='btn btn-success btn-sm cashoutClick " + disableCashout + "' " + hideBtn + " disabled=''>Cashout</button></div><div class='" + classdesignbook + "'><div class='table-header'><div class='float-left country-name box-6 min-max'><b>Min:  <span id='bookmaker_min'></span> Max: <span id='bookmaker_max'></span> </b></div><div class='back box-1 float-left text-center lablesize'><b>Back</b></div><div class='lay box-1 float-left text-center lablesize'><b>Lay</b></div></div>";
 										var xc = 0;
@@ -1790,11 +1790,11 @@ window.destroySportsSocket = window.destroySportsSocket || function(reason) {
 												bm_small1_datas.sort((a, b) => a.SelectionId - b.SelectionId);
 												html_bookmaker_odds = "";
 												var disableCashout = "BOOKMAKERSMALL_ODDS_dis";
-												
-											var hideBtn = "";
-											if (args.body.data[0].bm1 && args.body.data[0].bm1.length > 2) {
-												hideBtn = "style= display:none;";
-											}
+
+												var hideBtn = "";
+												if (args.body.data[0].bm1 && args.body.data[0].bm1.length > 2) {
+													hideBtn = "style= display:none;";
+												}
 
 												html_bookmaker_odds += "<div id='bookmakersmall_market_div_0'><div class='market-title mt-1 cashout'>Bookmaker <button markettype='BOOKMAKERSMALL_ODDS' class='btn btn-success btn-sm cashoutClick " + disableCashout + "' " + hideBtn + " disabled=''>Cashout</button></div><div class='fancy-market'><div class='table-header'><div class='float-left country-name box-6 min-max'><b>Min:<?php echo $bookmaker_min; ?> Max:<?php echo $bookmakersmall_max; ?> </b></div><div class='back box-1 float-left text-center lablesize'><b>Back</b></div><div class='lay box-1 float-left text-center lablesize'><b>Lay</b></div></div>";
 												var xc = 0;
@@ -1967,10 +1967,12 @@ window.destroySportsSocket = window.destroySportsSocket || function(reason) {
 
 					$(".event_name_heading").attr("eventid", eventId);
 					$(".event_name_heading").attr("marketid", oddsmarketId);
-					//						$(".event_name_heading").attr("event_name", eventName);
+					// $(".event_name_heading").attr("event_name", eventName);
 					// $(".event_name_heading").text(eventName);
-					$("#match_odds_all_full_markets").html(html_match_odds);
-					$("#match_odds_all_tie_markets").html(html_match_tie_odds);
+					
+					// Skipping rendering here as requested, eventGetLiveEventsFancyData will handle appending
+					// $("#match_odds_all_full_markets").html(html_match_odds);
+					// $("#match_odds_all_tie_markets").html(html_match_tie_odds);
 				}
 			}
 			<?php if ($eventType == 4) { ?>
@@ -1992,12 +1994,11 @@ window.destroySportsSocket = window.destroySportsSocket || function(reason) {
 						}
 						html_bookmaker_odds = "";
 						var disableCashout = "BOOKMAKER_ODDS_dis";
-						console.log("runners length", args.body.data[0].bookmaker.length);
-						
-					var hideBtn = "";
-					if (args.body.data[0].bookmaker && args.body.data[0].bookmaker.length > 2) {
-						hideBtn = "style= display:none;";
-					}
+
+						var hideBtn = "";
+						if (args.body.data[0].bookmaker && args.body.data[0].bookmaker.length > 2) {
+							hideBtn = "style= display:none;";
+						}
 
 						html_bookmaker_odds += "<div id='bookmaker_market_div_0'><div class='market-title mt-1 cashout'>Bookmaker<button markettype='BOOKMAKER_ODDS' class='btn btn-success btn-sm cashoutClick " + disableCashout + "' " + hideBtn + " disabled=''>Cashout</button></div><div class='bookmaker-market'><div class='table-header'><div class='float-left country-name box-6 min-max'><b>Min:  <span id='bookmaker_min'></span> Max: <span id='bookmaker_max'></span> </b></div><div class='back box-1 float-left text-center lablesize'><b>Back</b></div><div class='lay box-1 float-left text-center lablesize'><b>Lay</b></div></div>";
 						var xc = 0;
@@ -2174,11 +2175,11 @@ window.destroySportsSocket = window.destroySportsSocket || function(reason) {
 						}
 						html_bookmaker_tied_odds = "";
 						var disableCashout = "BOOKMAKER_TIED_ODDS_dis";
-						
-					var hideBtn = "";
-					if (args.body.data[0].bookmaker_tied && args.body.data[0].bookmaker_tied.length > 2) {
-						hideBtn = "style= display:none;";
-					}
+
+						var hideBtn = "";
+						if (args.body.data[0].bookmaker_tied && args.body.data[0].bookmaker_tied.length > 2) {
+							hideBtn = "style= display:none;";
+						}
 
 						html_bookmaker_tied_odds += "<div id='bookmaker_tied_market_div_0'><div class='market-title mt-1 cashout'>Tied Match<button markettype='BOOKMAKER_TIED_ODDS' class='btn btn-success btn-sm cashoutClick " + disableCashout + "' " + hideBtn + " disabled=''>Cashout</button></div><div class='fancy-market'><div class='table-header'><div class='float-left country-name box-6 min-max'><b>Min:  <span id='bookmaker_tied_min'></span> Max: <span id='bookmaker_tied_max'></span> </b></div><div class='back box-1 float-left text-center lablesize'><b>Back</b></div><div class='lay box-1 float-left text-center lablesize'><b>Lay</b></div></div>";
 						var xc = 0;
@@ -2355,11 +2356,11 @@ window.destroySportsSocket = window.destroySportsSocket || function(reason) {
 						bm_small1_datas.sort((a, b) => a.SelectionId - b.SelectionId);
 						html_bookmaker_odds = "";
 						var disableCashout = "BOOKMAKERSMALL_ODDS_dis";
-						
-					var hideBtn = "";
-					if (args.body.data[0].bm1 && args.body.data[0].bm1.length > 2) {
-						hideBtn = "style= display:none;";
-					}
+
+						var hideBtn = "";
+						if (args.body.data[0].bm1 && args.body.data[0].bm1.length > 2) {
+							hideBtn = "style= display:none;";
+						}
 
 						html_bookmaker_odds += "<div id='bookmakersmall_market_div_0'><div class='market-title mt-1 cashout'>Bookmaker 2 <button markettype='BOOKMAKERSMALL_ODDS' class='btn btn-success btn-sm cashoutClick " + disableCashout + "' " + hideBtn + " disabled=''>Cashout</button></div><div class='fancy-market'><div class='table-header'><div class='float-left country-name box-6 min-max'><b>Min:<?php echo $bookmaker_min; ?> Max:<?php echo $bookmakersmall_max; ?> </b></div><div class='back box-1 float-left text-center lablesize'><b>Back</b></div><div class='lay box-1 float-left text-center lablesize'><b>Lay</b></div></div>";
 						var xc = 0;
@@ -2527,10 +2528,11 @@ window.destroySportsSocket = window.destroySportsSocket || function(reason) {
 	});
 
 
-	socket.on('eventGetLiveEventsFancyData', function (args) {
-		/* console.log("dataa=",args.body); */
+	socket.on('eventGetLiveEventsFancyData', function(args) {
+		console.log("eventGetLiveEventsFancyData=", args.body);
 		if (args && args.body && args.body.cricket) {
-			hideMatchLoaderOnce('eventGetLiveEventsFancyData');
+			$(".loader_page").hide();
+			$(".main-footer-id").show();
 			if (args.body.cricket[0]) {
 				if (args.body.cricket[0]) {
 					if (args.body.cricket[0][0]) {
@@ -2553,12 +2555,24 @@ window.destroySportsSocket = window.destroySportsSocket || function(reason) {
 					var statusLabel = "";
 					var status = "";
 					var max_bet = 1;
+					var sport_max_limit = '<?php echo (int)$sport_max_limit; ?>';
+
+					var incomingCricketmarketName = [];
+
 
 					for (k = 0; k < args.body.cricket.length; k++) {
+
 						market_type_name = args.body.cricket[k].marketName;
+						var eventTypeId = args.body.cricket[k].eventTypeId;
 
+						var incoming_max_bet = args.body.cricket[0].maxBet;
 
-						max_bet = args.body.cricket[k].maxBet;
+						/*  if (incoming_max_bet < sport_max_limit  && sport_max_limit <= 0) {
+							max_bet = incoming_max_bet;
+						} else {
+							max_bet = sport_max_limit;
+						} */
+						max_bet = Math.min(incoming_max_bet, sport_max_limit);
 
 						if (args.body.cricket[k].bookmaker) {
 							bookmaker_min = args.body.cricket[k].min;
@@ -2591,11 +2605,43 @@ window.destroySportsSocket = window.destroySportsSocket || function(reason) {
 							}
 							marketType = market_type_name.toUpperCase();;
 						}
-						market_type_name2 = marketType.toUpperCase();;
+						market_type_name2 = marketType.toUpperCase();
+						if (args.body.cricket[k].marketName) {
+							incomingCricketmarketName.push(
+								String(market_type_name2)
+							);
+						}
 						market_marketid = market_type_name2;
 						if (market_marketid) {
 							market_marketid = market_marketid.split(".").join("_");
 						}
+
+						var marketTypeClass = market_type_name2.toUpperCase();
+						var classdesign = "fancy-market";
+						var hiddenclass2 = "hidden-portrait";
+						if (market_marketid == "MATCH_ODDS") {
+							classdesign = "bookmaker-market";
+							hiddenclass2 = "";
+						}
+
+						var marketExists = $(".market-title." + market_type_name).length > 0 || $("." + classdesign + "." + market_type_name2).length > 0;
+						var new_market_html = "";
+
+						if (!marketExists) {
+							var disableCashout = marketType + "_dis";
+							var hideBtn = "";
+							if (args.body.cricket[k].runners && args.body.cricket[k].runners.length > 2) {
+								hideBtn = "style= display:none;";
+							}
+
+							new_market_html += "<div class='market-title cashout mt-1 " + market_type_name + "'>" + market_type_name + " <button markettype='" + marketType + "' class='btn btn-success btn-sm cashoutClick " + disableCashout + "' " + hideBtn + " disabled=''>Cashout</button></div>";
+
+							var max_bet_new = 1;
+							max_bet_new = Math.min(max_bet_new, sport_max_limit);
+
+							new_market_html += "<div class='" + classdesign + " " + market_type_name2 + "'><div class='table-header'><div class='float-left country-name box-6 min-max'><b>Max:<span id='match_odds_max_bet_" + k + "'>" + max_bet_new + "</span></b></div> <div class='back box-1 float-left text-center lablesize'><b>Back</b></div> <div class='lay box-1 float-left text-center lablesize'><b>Lay</b></div></div>";
+						}
+
 						if (args.body.cricket[k].runners) {
 							for (j = 0; j < args.body.cricket[k].runners.length; j++) {
 								var selectionId = args.body.cricket[k].runners[j].id;
@@ -2753,47 +2799,71 @@ window.destroySportsSocket = window.destroySportsSocket || function(reason) {
 								if (!display_cashProfit[marketType][selectionId]['exposure']) {
 									display_cashProfit[marketType][selectionId]['exposure'] = 0;
 								}
-								if ($("#back_3_" + selectionId + "_" + market_marketid).attr("fullmarketodds") != one_price_1)
-									$("#back_3_" + selectionId + "_" + market_marketid).addClass('rate_change_link');
-								else
-									$("#back_3_" + selectionId + "_" + market_marketid).removeClass('rate_change_link');
-								if ($("#back_2_" + selectionId + "_" + market_marketid).attr("fullmarketodds") != one_price_2)
-									$("#back_2_" + selectionId + "_" + market_marketid).addClass('rate_change_link');
-								else
-									$("#back_2_" + selectionId + "_" + market_marketid).removeClass('rate_change_link');
-								if ($("#lay_2_" + selectionId + "_" + market_marketid).attr("fullmarketodds") != lay_one_price_2)
-									$("#lay_2_" + selectionId + "_" + market_marketid).addClass('rate_change_link');
-								else
-									$("#lay_2_" + selectionId + "_" + market_marketid).removeClass('rate_change_link');
-								if ($("#lay_3_" + selectionId + "_" + market_marketid).attr("fullmarketodds") != lay_one_price_3)
-									$("#lay_3_" + selectionId + "_" + market_marketid).addClass('rate_change_link');
-								else
-									$("#lay_3_" + selectionId + "_" + market_marketid).removeClass('rate_change_link');
-								$("#back_3_" + selectionId + "_" + market_marketid).attr("fullmarketodds", one_price_1);
-								$("#back_2_" + selectionId + "_" + market_marketid).attr("fullmarketodds", one_price_2);
-								$("#back_1_" + selectionId + "_" + market_marketid).attr("fullmarketodds", one_price_3);
-								back_1_html = "<button><span class='odd d-block'>" + one_price_1 + "</span> <span class='d-block'>" + one_size_1 + "</span></button>";
-								back_2_html = "<button><span class='odd d-block'>" + one_price_2 + "</span> <span class='d-block'>" + one_size_2 + "</span></button>";
-								back_3_html = "<button><span class='odd d-block'>" + one_price_3 + "</span> <span class='d-block'>" + one_size_3 + "</span></button>";
-								$("#back_1_" + selectionId + "_" + market_marketid).html(back_3_html);
-								$("#back_2_" + selectionId + "_" + market_marketid).html(back_2_html);
-								$("#back_3_" + selectionId + "_" + market_marketid).html(back_1_html);
-								$('#fullSelection_' + selectionId + '_' + market_marketid).attr("title", bet_suspended);
-								$("#fullSelection_" + selectionId).attr("data-title", bet_suspended);
-								if (bet_suspended != "ACTIVE" && bet_suspended != "OPEN") {
-									$('#fullSelection_' + selectionId + '_' + market_marketid).addClass("suspended");
+
+								if (marketExists) {
+
+
+
+									if ($("#back_3_" + selectionId + "_" + market_marketid).attr("fullmarketodds") != one_price_1)
+										$("#back_3_" + selectionId + "_" + market_marketid).addClass('rate_change_link');
+									else
+										$("#back_3_" + selectionId + "_" + market_marketid).removeClass('rate_change_link');
+									if ($("#back_2_" + selectionId + "_" + market_marketid).attr("fullmarketodds") != one_price_2)
+										$("#back_2_" + selectionId + "_" + market_marketid).addClass('rate_change_link');
+									else
+										$("#back_2_" + selectionId + "_" + market_marketid).removeClass('rate_change_link');
+									if ($("#lay_2_" + selectionId + "_" + market_marketid).attr("fullmarketodds") != lay_one_price_2)
+										$("#lay_2_" + selectionId + "_" + market_marketid).addClass('rate_change_link');
+									else
+										$("#lay_2_" + selectionId + "_" + market_marketid).removeClass('rate_change_link');
+									if ($("#lay_3_" + selectionId + "_" + market_marketid).attr("fullmarketodds") != lay_one_price_3)
+										$("#lay_3_" + selectionId + "_" + market_marketid).addClass('rate_change_link');
+									else
+										$("#lay_3_" + selectionId + "_" + market_marketid).removeClass('rate_change_link');
+									$("#back_3_" + selectionId + "_" + market_marketid).attr("fullmarketodds", one_price_1);
+									$("#back_2_" + selectionId + "_" + market_marketid).attr("fullmarketodds", one_price_2);
+									$("#back_1_" + selectionId + "_" + market_marketid).attr("fullmarketodds", one_price_3);
+									back_1_html = "<button><span class='odd d-block'>" + one_price_1 + "</span> <span class='d-block'>" + one_size_1 + "</span></button>";
+									back_2_html = "<button><span class='odd d-block'>" + one_price_2 + "</span> <span class='d-block'>" + one_size_2 + "</span></button>";
+									back_3_html = "<button><span class='odd d-block'>" + one_price_3 + "</span> <span class='d-block'>" + one_size_3 + "</span></button>";
+									$("#back_1_" + selectionId + "_" + market_marketid).html(back_3_html);
+									$("#back_2_" + selectionId + "_" + market_marketid).html(back_2_html);
+									$("#back_3_" + selectionId + "_" + market_marketid).html(back_1_html);
+									$('#fullSelection_' + selectionId + '_' + market_marketid).attr("title", bet_suspended);
+									$("#fullSelection_" + selectionId).attr("data-title", bet_suspended);
+									if (bet_suspended != "ACTIVE" && bet_suspended != "OPEN") {
+										$('#fullSelection_' + selectionId + '_' + market_marketid).addClass("suspended");
+									} else {
+										$('#fullSelection_' + selectionId + '_' + market_marketid).removeClass("suspended");
+									}
+									lay_1_html = "<button><span class='odd d-block'>" + lay_one_price_1 + "</span> <span class='d-block'>" + lay_one_size_1 + "</span></button>";
+									lay_2_html = "<button><span class='odd d-block'>" + lay_one_price_2 + "</span> <span class='d-block'>" + lay_one_size_2 + "</span></button>";
+									lay_3_html = "<button><span class='odd d-block'>" + lay_one_price_3 + "</span> <span class='d-block'>" + lay_one_size_3 + "</span></button>";
+									$("#lay_1_" + selectionId + "_" + market_marketid).html(lay_1_html);
+									$("#lay_2_" + selectionId + "_" + market_marketid).html(lay_2_html);
+									$("#lay_3_" + selectionId + "_" + market_marketid).html(lay_3_html);
+									$("#lay_1_" + selectionId + "_" + market_marketid).attr("fullmarketodds", lay_one_price_1);
+									$("#lay_2_" + selectionId + "_" + market_marketid).attr("fullmarketodds", lay_one_price_2);
+									$("#lay_3_" + selectionId + "_" + market_marketid).attr("fullmarketodds", lay_one_price_3);
 								} else {
-									$('#fullSelection_' + selectionId + '_' + market_marketid).removeClass("suspended");
+									console.log("market_type_name missing runner added", runnerName);
+									var is_suspended = '';
+									if (bet_suspended != "ACTIVE" && bet_suspended != "OPEN") {
+										is_suspended = 'suspended';
+									}
+									var inPlay = 1;
+									var market_odd_name = market_type_name;
+									var other_fancy = "";
+									if (marketType != "MATCH_ODDS" && marketType != "TIED_MATCH" && marketType != "TOSS_ODDS") {
+										other_fancy = "other";
+									}
+									
+									new_market_html += "<div data-title='" + bet_suspended + "' class='bb table-row " + is_suspended + "' id='fullSelection_" + selectionId + "_" + market_marketid + "'  eventtype='4' eventid='" + eventId + "' marketid='" + market_marketid + "' selectionid='" + selectionId + "' eventname='" + runnerName + "' marketname='" + market_odd_name + "' status='" + status + "'><div class='float-left country-name box-4'><span class='team-name'><b>" + runnerName + "</b></span><p><span class='float-left live_match_points' style='color: black;' id='live_match_points_" + selectionId + "_" + market_marketid + "'></span> <span class='float-right' style='display: none; color: black;'>0</span></p></div><div id='back_3_" + selectionId + "_" + market_marketid + "' class='box-1 back1 float-left " + hiddenclass2 + " text-center' side='Back'  selectionid='" + selectionId + "' runner='" + runnerName + "' marketname='" + runnerName + "' markettype='" + marketType + "' fullmarketodds='" + one_price_1 + "'  oddsmarketId=" + oddsmarketId + " event_name='" + eventName2 + "' market_odd_name='" + market_odd_name + "' marketId='" + selectionId + "' eventId='" + eventId + "'   inplay='" + inPlay + "' ><button><span class='odd d-block'>" + one_price_1 + "</span> <span class='d-block'>" + one_size_1 + "</span></button></div><div class='box-1 back2 float-left back-2 " + hiddenclass2 + " text-center' id='back_2_" + selectionId + "_" + market_marketid + "' side='Back'  selectionid='" + selectionId + "' runner='" + runnerName + "' marketname='" + runnerName + "' markettype='" + marketType + "' fullmarketodds='" + one_price_2 + "'  oddsmarketId=" + oddsmarketId + " event_name='" + eventName2 + "' market_odd_name='" + market_odd_name + "' marketId='" + selectionId + "' eventId='" + eventId + "'   inplay='" + inPlay + "'><button><span class='odd d-block'>" + one_price_2 + "</span> <span class='d-block'>" + one_size_2 + "</span></button></div><div class='box-1 back float-left back lock text-center back-1'  id='back_1_" + selectionId + "_" + market_marketid + "' side='Back'  selectionid='" + selectionId + "' runner='" + runnerName + "' marketname='" + runnerName + "' markettype='" + marketType + "' fullmarketodds='" + one_price_3 + "'  oddsmarketId=" + oddsmarketId + " event_name='" + eventName2 + "' market_odd_name='" + market_odd_name + "' marketId='" + selectionId + "' eventId='" + eventId + "'   inplay='" + inPlay + "' other_fancy='" + other_fancy + "'><button><span class='odd d-block'>" + one_price_3 + "</span> <span class='d-block'>" + one_size_3 + "</span></button></div><div class='box-1 lay float-left text-center lay-1' id='lay_1_" + selectionId + "_" + market_marketid + "' side='Lay' selectionid='" + selectionId + "' runner='" + runnerName + "' marketname='" + runnerName + "' markettype='" + marketType + "' fullmarketodds='" + lay_one_price_1 + "' oddsmarketId=" + oddsmarketId + " event_name='" + eventName2 + "' market_odd_name='" + market_odd_name + "' marketId='" + selectionId + "' eventId='" + eventId + "'   inplay='" + inPlay + "' other_fancy='" + other_fancy + "'><button><span class='odd d-block'>" + lay_one_price_1 + "</span> <span class='d-block'>" + lay_one_size_1 + "</span></button></div><div class='box-1 lay-2 float-left " + hiddenclass2 + " text-center' id='lay_2_" + selectionId + "_" + market_marketid + "' side='Lay' selectionid='" + selectionId + "' runner='" + runnerName + "' marketname='" + runnerName + "' markettype='" + marketType + "' fullmarketodds='" + lay_one_price_2 + "' oddsmarketId=" + oddsmarketId + " event_name='" + eventName2 + "' market_odd_name='" + market_odd_name + "' marketId='" + selectionId + "' eventId='" + eventId + "'   inplay='" + inPlay + "'><button><span class='odd d-block'>" + lay_one_price_2 + "</span> <span class='d-block'>" + lay_one_size_2 + "</span></button></div><div class='box-1 float-left " + hiddenclass2 + " text-center lay1' id='lay_3_" + selectionId + "_" + market_marketid + "'><button><span class='odd d-block' side='Lay' selectionid='" + selectionId + "' runner='" + runnerName + "' marketname='" + runnerName + "' markettype='" + marketType + "' fullmarketodds='" + lay_one_price_3 + "' oddsmarketId=" + oddsmarketId + " event_name='" + eventName2 + "' market_odd_name='" + market_odd_name + "' marketId='" + selectionId + "' eventId='" + eventId + "'   inplay='" + inPlay + "'>" + lay_one_price_3 + "</span> <span class='d-block'>" + lay_one_size_3 + "</span></button></div></div>";
 								}
-								lay_1_html = "<button><span class='odd d-block'>" + lay_one_price_1 + "</span> <span class='d-block'>" + lay_one_size_1 + "</span></button>";
-								lay_2_html = "<button><span class='odd d-block'>" + lay_one_price_2 + "</span> <span class='d-block'>" + lay_one_size_2 + "</span></button>";
-								lay_3_html = "<button><span class='odd d-block'>" + lay_one_price_3 + "</span> <span class='d-block'>" + lay_one_size_3 + "</span></button>";
-								$("#lay_1_" + selectionId + "_" + market_marketid).html(lay_1_html);
-								$("#lay_2_" + selectionId + "_" + market_marketid).html(lay_2_html);
-								$("#lay_3_" + selectionId + "_" + market_marketid).html(lay_3_html);
-								$("#lay_1_" + selectionId + "_" + market_marketid).attr("fullmarketodds", lay_one_price_1);
-								$("#lay_2_" + selectionId + "_" + market_marketid).attr("fullmarketodds", lay_one_price_2);
-								$("#lay_3_" + selectionId + "_" + market_marketid).attr("fullmarketodds", lay_one_price_3);
+							}
+							if (!marketExists) {
+								new_market_html += "</div>";
+								$("#match_odds_all_full_markets").append(new_market_html);
 							}
 						}
 						if (args.body.cricket[k].bookmaker && args.body.cricket[k].bookmaker != null) {
@@ -3056,6 +3126,22 @@ window.destroySportsSocket = window.destroySportsSocket || function(reason) {
 						}
 
 					}
+
+					$(".table-row[marketname]").each(function() {
+
+						var domMarketName = String($(this).attr("marketname"));
+
+						domMarketName = domMarketName.split(".").join("_");
+						domMarketName = domMarketName.split(" ").join("_");
+						domMarketName = domMarketName.split("/").join("_");
+						domMarketName = domMarketName.split(" ").join("_");
+						domMarketName = domMarketName.toUpperCase();
+
+						if (!incomingCricketmarketName.includes(domMarketName)) {
+							$("." + domMarketName).remove();
+						}
+					});
+
 				}
 			}
 			if (args.body) {
@@ -3284,7 +3370,7 @@ window.destroySportsSocket = window.destroySportsSocket || function(reason) {
 									html_fancy_market_new = "";
 									var eventId = <?php echo $event_id; ?>;
 									marketId = args.body.session[0].value.session[i].SelectionId;
-									if (marketId == "" || args.body.session[0].value.session[i].GameStatus.toUpperCase() == "OFFLINE" || args.body.session[0].value.session[i].GameStatus.toUpperCase() == "CLOSED") { } else {
+									if (marketId == "" || args.body.session[0].value.session[i].GameStatus.toUpperCase() == "OFFLINE" || args.body.session[0].value.session[i].GameStatus.toUpperCase() == "CLOSED") {} else {
 										min_stack = args.body.session[0].value.session[i].Min;
 										max_stack = args.body.session[0].value.session[i].Max;
 										marketName = args.body.session[0].value.session[i].RunnerName;
@@ -3369,14 +3455,13 @@ window.destroySportsSocket = window.destroySportsSocket || function(reason) {
 												counter2++;
 												back_attribute = " event_name='" + event_name + "' fullmarketodds='" + runsYes + "' side='Lay' marketid='" + marketId + "' eventid='" + eventId + "'  selectionid='" + marketId + "' market_odd_name='' runner='" + marketName + "' marketname='" + marketName + "' markettype='FANCY_ODDS' inplay='1' fullfancymarketrate='" + oddsYes + "'";
 												lay_attribute = " event_name='" + event_name + "' fullmarketodds='" + runsNo + "' side='Lay' marketid='" + marketId + "' eventid='" + eventId + "' selectionid='" + marketId + "' market_odd_name='' runner='" + marketName + "' marketname='" + marketName + "' markettype='FANCY_ODDS' inplay='1' fullfancymarketrate='" + oddsNo + "'";
-											/* <div class='float-right'> <div class='info-block'> <a href='javascript:void(0);' data-toggle='collapse' data-target='#min-max-" + marketId + "' aria-expanded='false' class='info-icon collapsed'> <i class='fas fa-info-circle m-l-10'></i> </a> <div id='min-max-" + marketId + "' class='min-max-info collapse'> <span><b>Min:</b> " + min_stack + " </span> <span><b>Max:</b> " + max_stack + " </span> </div> </div> </div> */
+												/* <div class='float-right'> <div class='info-block'> <a href='javascript:void(0);' data-toggle='collapse' data-target='#min-max-" + marketId + "' aria-expanded='false' class='info-icon collapsed'> <i class='fas fa-info-circle m-l-10'></i> </a> <div id='min-max-" + marketId + "' class='min-max-info collapse'> <span><b>Min:</b> " + min_stack + " </span> <span><b>Max:</b> " + max_stack + " </span> </div> </div> </div> */
 												html_fancy_market_new += "<div id='spc_fancyBetMarket_" + eventId + "_" + marketId + "'><div id='fancyBetMarket_" + eventId + "_" + marketId + "'><div class='fancy-tripple' > <div data-title='SUSPENDED' class='table-row suspended fancy-suspend-tr_" + marketId + "'><div class='float-left country-name custbold box-4 d-flex justify-content-between align-items-center'><span onclick='view_fancy_bet_book(" + eventId + "," + marketId + ")'><b>" + marketName + "</b></span>  <p class='live_match_points m-0' id='live_match_points_" + marketId + "_FANCY_ODDS'><span class='float-left' style='color: black;'></span></p></div><div class='box-1 lay float-left text-center lay-1' id='fancy_market_lay_btn_" + marketId + "' " + lay_attribute + "><button><span class='odd d-block'>" + runsNo + "</span> <span class='d-block'>" + oddsNo + "</span></button></div><div class='box-1 back float-left text-center back-1' id='fancy_market_back_btn_" + marketId + "' " + back_attribute + "><button><span class='odd d-block'>" + runsYes + "</span> <span class='d-block'>" + oddsYes + "</span></button></div></div></div></div><div class='table-remark  remark' style='display:none;color:var(--theme2-bg85);' id='remakrs_" + marketId + "'></div></div>";
 												lastrunsNo = runsNo;
 												lastrunsYes = runsYes;
 												if (!last_market_id || !last_event_id) {
 													$("#secure").after(html_fancy_market_new);
-												}
-												else {
+												} else {
 													var id_to_place_after = "#spc_fancyBetMarket_" + last_event_id + "_" + last_market_id;
 													$(id_to_place_after).after(html_fancy_market_new);
 												}
@@ -3388,8 +3473,8 @@ window.destroySportsSocket = window.destroySportsSocket || function(reason) {
 								}
 								if (html_fancy_market_new != "") {
 									$("#fancy_odds_market").show();
-								} else { }
-								var z = $.grep(marketIdArray, function (el) {
+								} else {}
+								var z = $.grep(marketIdArray, function(el) {
 									return $.inArray(el, marketIdArrayNew) == -1
 								});
 								if (z) {
@@ -3423,7 +3508,7 @@ window.destroySportsSocket = window.destroySportsSocket || function(reason) {
 
 									var eventId = <?php echo $event_id; ?>;
 									marketId = args.body.overByOver[0].value.session[i].SelectionId;
-									if (marketId == "" || args.body.overByOver[0].value.session[i].GameStatus.toUpperCase() == "OFFLINE" || args.body.overByOver[0].value.session[i].GameStatus.toUpperCase() == "CLOSED") { } else {
+									if (marketId == "" || args.body.overByOver[0].value.session[i].GameStatus.toUpperCase() == "OFFLINE" || args.body.overByOver[0].value.session[i].GameStatus.toUpperCase() == "CLOSED") {} else {
 										min_stack = args.body.overByOver[0].value.session[i].Min;
 										max_stack = args.body.overByOver[0].value.session[i].Max;
 										marketName = args.body.overByOver[0].value.session[i].RunnerName;
@@ -3513,8 +3598,7 @@ window.destroySportsSocket = window.destroySportsSocket || function(reason) {
 												lastrunsYes = runsYes;
 												if (!last_market_id || !last_event_id) {
 													$("#secure_over").after(html_fancy_market_new);
-												}
-												else {
+												} else {
 													var id_to_place_after = "#spc_fancyOverBetMarket_" + last_event_id + "_" + last_market_id;
 													$(id_to_place_after).after(html_fancy_market_new);
 												}
@@ -3527,8 +3611,8 @@ window.destroySportsSocket = window.destroySportsSocket || function(reason) {
 								}
 								if (html_fancy_market_new != "") {
 									$("#over_odds_market").show();
-								} else { }
-								var z = $.grep(marketIdArrayOver, function (el) {
+								} else {}
+								var z = $.grep(marketIdArrayOver, function(el) {
 									return $.inArray(el, marketIdArrayOverNew) == -1
 								});
 								if (z) {
@@ -3669,8 +3753,7 @@ window.destroySportsSocket = window.destroySportsSocket || function(reason) {
 												lastrunsYes = runsYes;
 												if (!last_market_id || !last_event_id) {
 													$("#secure1").after(html_fancy_market_new1);
-												}
-												else {
+												} else {
 													var id_to_place_after = "#spc_fancy1BetMarket_" + last_event_id + "_" + last_market_id;
 													$(id_to_place_after).after(html_fancy_market_new1);
 												}
@@ -3682,8 +3765,8 @@ window.destroySportsSocket = window.destroySportsSocket || function(reason) {
 								}
 								if (html_fancy_market_new1 != "") {
 									$("#fancy_odds_market1").show();
-								} else { }
-								var z = $.grep(marketIdArrayFancy1, function (el) {
+								} else {}
+								var z = $.grep(marketIdArrayFancy1, function(el) {
 									return $.inArray(el, marketIdArrayNewFancy1) == -1
 								});
 								if (z) {
@@ -3827,8 +3910,7 @@ window.destroySportsSocket = window.destroySportsSocket || function(reason) {
 
 												if (!last_market_id || !last_event_id) {
 													$("#secure_khado").after(html_khado_market_new);
-												}
-												else {
+												} else {
 													var id_to_place_after = "#spc_khadoBetMarket_" + last_event_id + "_" + last_market_id;
 													$(id_to_place_after).after(html_khado_market_new);
 												}
@@ -3841,8 +3923,8 @@ window.destroySportsSocket = window.destroySportsSocket || function(reason) {
 								}
 								if (html_khado_market_new != "") {
 									$("#khado_odds_market").show();
-								} else { }
-								var z = $.grep(marketIdArrayKhado, function (el) {
+								} else {}
+								var z = $.grep(marketIdArrayKhado, function(el) {
 									return $.inArray(el, marketIdArrayNewKhado) == -1
 								});
 								if (z) {
@@ -3988,8 +4070,7 @@ window.destroySportsSocket = window.destroySportsSocket || function(reason) {
 
 												if (!last_market_id || !last_event_id) {
 													$("#secure_ball").after(html_ball_market_new);
-												}
-												else {
+												} else {
 													var id_to_place_after = "#spc_ballBetMarket_" + last_event_id + "_" + last_market_id;
 													$(id_to_place_after).after(html_ball_market_new);
 												}
@@ -4002,7 +4083,7 @@ window.destroySportsSocket = window.destroySportsSocket || function(reason) {
 								if (html_ball_market_new != "") {
 									$("#ball_odds_market").show();
 								}
-								var z = $.grep(marketIdArrayBall, function (el) {
+								var z = $.grep(marketIdArrayBall, function(el) {
 									return $.inArray(el, marketIdArrayNewBall) == -1
 								});
 								if (z) {
@@ -4147,8 +4228,7 @@ window.destroySportsSocket = window.destroySportsSocket || function(reason) {
 
 												if (!last_market_id || !last_event_id) {
 													$("#secure_oddeven").after(html_oddeven_market_new);
-												}
-												else {
+												} else {
 													var id_to_place_after = "#spc_oddevenBetMarket_" + last_event_id + "_" + last_market_id;
 													$(id_to_place_after).after(html_oddeven_market_new);
 												}
@@ -4161,8 +4241,8 @@ window.destroySportsSocket = window.destroySportsSocket || function(reason) {
 								if (html_oddeven_market_new != "") {
 									$('#oddeven').find('.fancy-message').hide();
 									$("#oddeven_odds_market").show();
-								} else { }
-								var z = $.grep(marketIdArrayOddeven, function (el) {
+								} else {}
+								var z = $.grep(marketIdArrayOddeven, function(el) {
 									return $.inArray(el, marketIdArrayNewOddeven) == -1
 								});
 								if (z) {
@@ -4303,8 +4383,7 @@ window.destroySportsSocket = window.destroySportsSocket || function(reason) {
 												$("#secure_meter").after(html_meter_market_new);
 												if (!last_market_id || !last_event_id) {
 													$("#secure_meter").after(html_meter_market_new);
-												}
-												else {
+												} else {
 													var id_to_place_after = "#spc_meterBetMarket_" + last_event_id + "_" + last_market_id;
 													$(id_to_place_after).after(html_meter_market_new);
 												}
@@ -4316,8 +4395,8 @@ window.destroySportsSocket = window.destroySportsSocket || function(reason) {
 								}
 								if (html_meter_market_new != "") {
 									$("#meter_odds_market").show();
-								} else { }
-								var z = $.grep(marketIdArrayMeter, function (el) {
+								} else {}
+								var z = $.grep(marketIdArrayMeter, function(el) {
 									return $.inArray(el, marketIdArrayNewMeter) == -1
 								});
 								if (z) {
@@ -4349,7 +4428,7 @@ window.destroySportsSocket = window.destroySportsSocket || function(reason) {
 						oddsmarketId = '<? echo $marketId; ?>';
 						eventId = $(".event_name_heading").attr("eventid");
 						event_name = $(".event_name_heading").attr("event_name");
-						$.each(args.body.cricketcasino[0].value.session, function (key, val) {
+						$.each(args.body.cricketcasino[0].value.session, function(key, val) {
 
 							market_type_name = val[0].header;
 							market_odd_name = market_type_name;
@@ -4473,9 +4552,9 @@ window.destroySportsSocket = window.destroySportsSocket || function(reason) {
 		}
 	});
 
-	$(function () {
+	$(function() {
 
-		$("#open_back_place_bet").on("hidden.bs.modal", function () {
+		$("#open_back_place_bet").on("hidden.bs.modal", function() {
 			$('#inputStake').val('');
 			getlive_match_point();
 		});
@@ -4495,7 +4574,7 @@ window.destroySportsSocket = window.destroySportsSocket || function(reason) {
 				eventId: eventId,
 				market_ids: selectorIdArray
 			},
-			success: function (response) {
+			success: function(response) {
 
 				var status = response.status;
 				$(".live_match_points").text('');
@@ -4619,7 +4698,6 @@ window.destroySportsSocket = window.destroySportsSocket || function(reason) {
 										display_cashProfit[i][market_2]['exposure'] = team_2_exposure;
 									}
 								}
-								console.log("market_3", market_3);
 								if (market_3 != "") {
 									if (display_cashProfit[i] && display_cashProfit[i][market_3]) {
 										display_cashProfit[i][market_3]['exposure'] = team_3_exposure;
@@ -4647,7 +4725,7 @@ window.destroySportsSocket = window.destroySportsSocket || function(reason) {
 								for (j in response.data[i]) {
 
 									var fancy_market_idsnew = response.data[i].market_ids;
-									$.each(fancy_market_idsnew, function (key, val) {
+									$.each(fancy_market_idsnew, function(key, val) {
 
 
 										var fancy_market_ids = $.trim(val);
@@ -4706,22 +4784,22 @@ window.destroySportsSocket = window.destroySportsSocket || function(reason) {
 	if (iframe_score_url != null && iframe_score_url != "") {
 		$("#scoreboard-box").html('<iframe id="iframe-tracker-1" width="100%" height="230px" src="' + iframe_score_url + '" style="overflow: hidden; border: 0px; height: 230px;" class="visible"></iframe>');
 	} else {
-		socket.on('liveScore', function (args) {
+		socket.on('liveScore', function(args) {
 
 
 
 			if (args && args.data) {
 				<?php
 				if ($eventType == 4) {
-					?>
+				?>
 					updateScoreBoard(args.data);
-					<?php
+				<?php
 				}
 				?>
 			} else if (args && args.score) {
 				<?php
 				if ($eventType == 1) {
-					?>
+				?>
 					if (args.score.home) {
 						if (args.score.home.name) {
 							home_team_name = args.score.home.name;
@@ -4812,181 +4890,181 @@ window.destroySportsSocket = window.destroySportsSocket || function(reason) {
 						$("#scoreboard-box").html(html_score_card);
 					}
 
-					<?php
+				<?php
 				} else if ($eventType == 2) {
-					?>
+				?>
 
-						if (args.score.home) {
-							if (args.score.home.name) {
-								home_team_name = args.score.home.name;
-								home_team_score = args.score.home.score;
-								home_team_halfTimeScore = args.score.home.halfTimeScore;
-								if (home_team_halfTimeScore == "") {
-									home_team_halfTimeScore = 0;
-								}
-
-
-								home_team_gameSequence = "";
-								home_team_gameSequence2 = "";
-								home_team_gameSequence3 = "";
-
-								home_gameSequenceLength = args.score.home.gameSequence.length;
-								if (home_gameSequenceLength >= 2) {
-									home_team_gameSequence = args.score.home.gameSequence[home_gameSequenceLength - 2];
-									home_team_gameSequence2 = args.score.home.gameSequence[home_gameSequenceLength - 1];
-									home_team_gameSequence3 = args.score.home.games;
-								} else if (home_gameSequenceLength == 1) {
-									home_team_gameSequence = args.score.home.gameSequence[home_gameSequenceLength - 1];
-									home_team_gameSequence2 = args.score.home.games;
-									home_team_gameSequence3 = "-";
-								} else {
-									home_team_gameSequence = args.score.home.games;
-									home_team_gameSequence2 = "-";
-									home_team_gameSequence3 = "-";
-								}
-
-
-								home_team_fullTimeScore = args.score.home.fullTimeScore;
-								home_team_penaltiesScore = args.score.home.penaltiesScore;
-								home_team_sets = args.score.home.sets;
-								home_team_games = args.score.home.games;
-								home_team_isServing = args.score.home.isServing;
-
-								if (home_team_isServing == true) {
-									home_team_serving_true = '<span class="serviceon"><img data-src="/images/tennis_ball_1.png" width="20" height="20"></span>';
-								} else {
-									home_team_serving_true = '<span class="serviceoff">&nbsp;</span>';
-								}
-
-
-
+					if (args.score.home) {
+						if (args.score.home.name) {
+							home_team_name = args.score.home.name;
+							home_team_score = args.score.home.score;
+							home_team_halfTimeScore = args.score.home.halfTimeScore;
+							if (home_team_halfTimeScore == "") {
+								home_team_halfTimeScore = 0;
 							}
-						}
-
-						if (args.score.away) {
-							if (args.score.away.name) {
-								away_team_name = args.score.away.name;
-
-								away_team_score = args.score.away.score;
-								away_team_halfTimeScore = args.score.away.halfTimeScore;
-								if (away_team_halfTimeScore == "") {
-									away_team_halfTimeScore = 0;
-								}
 
 
-								away_team_gameSequence = "";
-								away_team_gameSequence2 = "";
-								away_team_gameSequence3 = "";
+							home_team_gameSequence = "";
+							home_team_gameSequence2 = "";
+							home_team_gameSequence3 = "";
 
-								away_gameSequenceLength = args.score.away.gameSequence.length;
-								if (away_gameSequenceLength >= 2) {
-									away_team_gameSequence = args.score.away.gameSequence[away_gameSequenceLength - 2];
-									away_team_gameSequence2 = args.score.away.gameSequence[away_gameSequenceLength - 1];
-									away_team_gameSequence3 = args.score.away.games;
-								} else if (away_gameSequenceLength == 1) {
-									away_team_gameSequence = args.score.away.gameSequence[away_gameSequenceLength - 1];
-									away_team_gameSequence2 = args.score.away.games;
-									away_team_gameSequence3 = "-";
-								} else {
-									away_team_gameSequence = args.score.away.games;
-									away_team_gameSequence2 = "-";
-									away_team_gameSequence3 = "-";
-								}
-
-
-								away_team_fullTimeScore = args.score.away.fullTimeScore;
-								away_team_penaltiesScore = args.score.away.penaltiesScore;
-								away_team_sets = args.score.away.sets;
-								away_team_games = args.score.away.games;
-
-								away_team_isServing = args.score.away.isServing;
-
-								if (away_team_isServing == true) {
-									away_team_serving_true = '<span class="serviceon"><img data-src="/images/tennis_ball_1.png" width="20" height="20"></span>';
-								} else {
-									away_team_serving_true = '<span class="serviceoff">&nbsp;</span>';
-								}
-
+							home_gameSequenceLength = args.score.home.gameSequence.length;
+							if (home_gameSequenceLength >= 2) {
+								home_team_gameSequence = args.score.home.gameSequence[home_gameSequenceLength - 2];
+								home_team_gameSequence2 = args.score.home.gameSequence[home_gameSequenceLength - 1];
+								home_team_gameSequence3 = args.score.home.games;
+							} else if (home_gameSequenceLength == 1) {
+								home_team_gameSequence = args.score.home.gameSequence[home_gameSequenceLength - 1];
+								home_team_gameSequence2 = args.score.home.games;
+								home_team_gameSequence3 = "-";
+							} else {
+								home_team_gameSequence = args.score.home.games;
+								home_team_gameSequence2 = "-";
+								home_team_gameSequence3 = "-";
 							}
+
+
+							home_team_fullTimeScore = args.score.home.fullTimeScore;
+							home_team_penaltiesScore = args.score.home.penaltiesScore;
+							home_team_sets = args.score.home.sets;
+							home_team_games = args.score.home.games;
+							home_team_isServing = args.score.home.isServing;
+
+							if (home_team_isServing == true) {
+								home_team_serving_true = '<span class="serviceon"><img data-src="/images/tennis_ball_1.png" width="20" height="20"></span>';
+							} else {
+								home_team_serving_true = '<span class="serviceoff">&nbsp;</span>';
+							}
+
+
+
 						}
+					}
 
-						currentSet = "";
-						if (args.currentSet) {
-							currentSet = args.currentSet;
-						}
+					if (args.score.away) {
+						if (args.score.away.name) {
+							away_team_name = args.score.away.name;
 
-						currentGame = "";
-						if (args.currentGame) {
-							currentGame = args.currentGame;
-						}
+							away_team_score = args.score.away.score;
+							away_team_halfTimeScore = args.score.away.halfTimeScore;
+							if (away_team_halfTimeScore == "") {
+								away_team_halfTimeScore = 0;
+							}
 
-						var fullTimeShowMix = "";
-						if (args.fullTimeElapsed) {
-							if (args.fullTimeElapsed.hour && args.fullTimeElapsed.min && args.fullTimeElapsed.sec) {
 
-								fullTimeHours = args.fullTimeElapsed.hour;
-								fullTimeMin = args.fullTimeElapsed.min;
-								fullTimeSec = args.fullTimeElapsed.sec;
+							away_team_gameSequence = "";
+							away_team_gameSequence2 = "";
+							away_team_gameSequence3 = "";
 
-								fullTimeShowMix = fullTimeHours + ":" + fullTimeMin + ":" + fullTimeSec;
+							away_gameSequenceLength = args.score.away.gameSequence.length;
+							if (away_gameSequenceLength >= 2) {
+								away_team_gameSequence = args.score.away.gameSequence[away_gameSequenceLength - 2];
+								away_team_gameSequence2 = args.score.away.gameSequence[away_gameSequenceLength - 1];
+								away_team_gameSequence3 = args.score.away.games;
+							} else if (away_gameSequenceLength == 1) {
+								away_team_gameSequence = args.score.away.gameSequence[away_gameSequenceLength - 1];
+								away_team_gameSequence2 = args.score.away.games;
+								away_team_gameSequence3 = "-";
+							} else {
+								away_team_gameSequence = args.score.away.games;
+								away_team_gameSequence2 = "-";
+								away_team_gameSequence3 = "-";
+							}
 
+
+							away_team_fullTimeScore = args.score.away.fullTimeScore;
+							away_team_penaltiesScore = args.score.away.penaltiesScore;
+							away_team_sets = args.score.away.sets;
+							away_team_games = args.score.away.games;
+
+							away_team_isServing = args.score.away.isServing;
+
+							if (away_team_isServing == true) {
+								away_team_serving_true = '<span class="serviceon"><img data-src="/images/tennis_ball_1.png" width="20" height="20"></span>';
+							} else {
+								away_team_serving_true = '<span class="serviceoff">&nbsp;</span>';
 							}
 
 						}
+					}
 
-						html_score_card = "<div class='table-container table-responsive' style='margin:0px'>" +
-							"<div class='' style='width:100%'>" +
-							"  <div class='col-sm-12' style='color:#FFFFFF;' id=''>" +
-							"	 <table style='width:100%'>" +
-							"		<tbody>" +
-							"		   <tr>" +
-							"			  <td style='text-align:center'><span class='badge badge-score' style='background-color:#55c331;padding:8px;'>LIVE</span></td>" +
-							"		   </tr>" +
-							"		   <tr>" +
-							"			  <td style='text-align:center'>" +
-							"				 <table style='width:100%'>" +
-							"					<thead>" +
-							"					   <tr>" +
-							"						  <th></th>" +
-							"						  <th width='16%' style='text-align:center;font-size:12px;'>1</th>" +
-							"						  <th width='16%' style='text-align:center;font-size:12px;'>2</th>" +
-							"						  <th width='16%' style='text-align:center;font-size:12px;'>3</th>" +
-							"						  <th style='text-align:center;font-size:12px;width:16%'>Sets</th>" +
-							"						  <th style='text-align:center;font-size:12px;width:16%'>Points</th>" +
-							"					   </tr>" +
-							"					</thead>" +
-							"				<tbody>" +
-							"					   <tr style='background:#ffc722 !important;color:#000;font-weight:bold;'>" +
-							"						  <td style='text-align:left;font-size:12px;height:40px;padding:5px;'>" + home_team_serving_true + "" + home_team_name + "</td>" +
-							"						  <td width='16%' style='text-align:center;font-size:12px;'>" + home_team_gameSequence + "</td>" +
-							"						  <td width='16%' style='text-align:center;font-size:12px;'>" + home_team_gameSequence2 + "</td>" +
-							"						  <td width='16%' style='text-align:center;font-size:12px;'>" + home_team_gameSequence3 + "</td>" +
-							"						  <td style='text-align:center;font-size:12px;'>" + home_team_sets + "</td>" +
-							"						  <td style='text-align:center;font-size:12px;'>" + home_team_score + "</td>" +
-							"					   </tr>" +
-							"					   <tr style='background:#ffc722 !important;border-top:1px solid #000;color:#000;font-weight:bold;'>" +
-							"						  <td style='text-align:left;font-size:12px;height:40px;padding:5px;'>" + away_team_serving_true + "" + away_team_name + "</td>" +
-							"						  <td width='16%' style='text-align:center;font-size:12px;'>" + away_team_gameSequence + "</td>" +
-							"						  <td width='16%' style='text-align:center;font-size:12px;'>" + away_team_gameSequence2 + "</td>" +
-							"						  <td width='16%' style='text-align:center;font-size:12px;'>" + away_team_gameSequence3 + "</td>" +
-							"						  <td style='text-align:center;font-size:12px;'>" + away_team_sets + "</td>" +
-							"						  <td style='text-align:center;font-size:12px;'>" + away_team_score + "</td>" +
-							"					   </tr>" +
-							"					</tbody>" +
-							"				 </table>" +
-							"			  </td>" +
-							"		   </tr>" +
-							"		</tbody>" +
-							"	 </table>" +
-							" </div>" +
-							"</div>" +
-							"</div>";
+					currentSet = "";
+					if (args.currentSet) {
+						currentSet = args.currentSet;
+					}
+
+					currentGame = "";
+					if (args.currentGame) {
+						currentGame = args.currentGame;
+					}
+
+					var fullTimeShowMix = "";
+					if (args.fullTimeElapsed) {
+						if (args.fullTimeElapsed.hour && args.fullTimeElapsed.min && args.fullTimeElapsed.sec) {
+
+							fullTimeHours = args.fullTimeElapsed.hour;
+							fullTimeMin = args.fullTimeElapsed.min;
+							fullTimeSec = args.fullTimeElapsed.sec;
+
+							fullTimeShowMix = fullTimeHours + ":" + fullTimeMin + ":" + fullTimeSec;
+
+						}
+
+					}
+
+					html_score_card = "<div class='table-container table-responsive' style='margin:0px'>" +
+						"<div class='' style='width:100%'>" +
+						"  <div class='col-sm-12' style='color:#FFFFFF;' id=''>" +
+						"	 <table style='width:100%'>" +
+						"		<tbody>" +
+						"		   <tr>" +
+						"			  <td style='text-align:center'><span class='badge badge-score' style='background-color:#55c331;padding:8px;'>LIVE</span></td>" +
+						"		   </tr>" +
+						"		   <tr>" +
+						"			  <td style='text-align:center'>" +
+						"				 <table style='width:100%'>" +
+						"					<thead>" +
+						"					   <tr>" +
+						"						  <th></th>" +
+						"						  <th width='16%' style='text-align:center;font-size:12px;'>1</th>" +
+						"						  <th width='16%' style='text-align:center;font-size:12px;'>2</th>" +
+						"						  <th width='16%' style='text-align:center;font-size:12px;'>3</th>" +
+						"						  <th style='text-align:center;font-size:12px;width:16%'>Sets</th>" +
+						"						  <th style='text-align:center;font-size:12px;width:16%'>Points</th>" +
+						"					   </tr>" +
+						"					</thead>" +
+						"				<tbody>" +
+						"					   <tr style='background:#ffc722 !important;color:#000;font-weight:bold;'>" +
+						"						  <td style='text-align:left;font-size:12px;height:40px;padding:5px;'>" + home_team_serving_true + "" + home_team_name + "</td>" +
+						"						  <td width='16%' style='text-align:center;font-size:12px;'>" + home_team_gameSequence + "</td>" +
+						"						  <td width='16%' style='text-align:center;font-size:12px;'>" + home_team_gameSequence2 + "</td>" +
+						"						  <td width='16%' style='text-align:center;font-size:12px;'>" + home_team_gameSequence3 + "</td>" +
+						"						  <td style='text-align:center;font-size:12px;'>" + home_team_sets + "</td>" +
+						"						  <td style='text-align:center;font-size:12px;'>" + home_team_score + "</td>" +
+						"					   </tr>" +
+						"					   <tr style='background:#ffc722 !important;border-top:1px solid #000;color:#000;font-weight:bold;'>" +
+						"						  <td style='text-align:left;font-size:12px;height:40px;padding:5px;'>" + away_team_serving_true + "" + away_team_name + "</td>" +
+						"						  <td width='16%' style='text-align:center;font-size:12px;'>" + away_team_gameSequence + "</td>" +
+						"						  <td width='16%' style='text-align:center;font-size:12px;'>" + away_team_gameSequence2 + "</td>" +
+						"						  <td width='16%' style='text-align:center;font-size:12px;'>" + away_team_gameSequence3 + "</td>" +
+						"						  <td style='text-align:center;font-size:12px;'>" + away_team_sets + "</td>" +
+						"						  <td style='text-align:center;font-size:12px;'>" + away_team_score + "</td>" +
+						"					   </tr>" +
+						"					</tbody>" +
+						"				 </table>" +
+						"			  </td>" +
+						"		   </tr>" +
+						"		</tbody>" +
+						"	 </table>" +
+						" </div>" +
+						"</div>" +
+						"</div>";
 
 
-						$("#scoreboard-box").html(html_score_card);
+					$("#scoreboard-box").html(html_score_card);
 
 
-					<?php
+				<?php
 				}
 				?>
 
@@ -4997,7 +5075,7 @@ window.destroySportsSocket = window.destroySportsSocket || function(reason) {
 </script>
 
 <script>
-	jQuery(document).on("click", ".back-1", function () {
+	jQuery(document).on("click", ".back-1", function() {
 		$("#popup_color").removeClass("back");
 		$("#popup_color").removeClass("lay");
 		$("#popup_color").addClass("back");
@@ -5077,7 +5155,7 @@ window.destroySportsSocket = window.destroySportsSocket || function(reason) {
 		}
 	});
 
-	jQuery(document).on("click", ".lay-1", function () {
+	jQuery(document).on("click", ".lay-1", function() {
 		$("#popup_color").removeClass("back");
 		$("#popup_color").removeClass("lay");
 		$("#popup_color").addClass("lay");
@@ -5153,9 +5231,11 @@ window.destroySportsSocket = window.destroySportsSocket || function(reason) {
 			$('#open_back_place_bet').modal("show");
 		}
 	});
+
 	function getCashoutBet(pA, pB, marketA, marketB, mtypeNew) {
 
 		const results = [];
+
 		function pushResult(team, action, odds, stake, newPA, newPB) {
 
 			const guaranteed = Math.min(newPA, newPB);
@@ -5238,8 +5318,6 @@ window.destroySportsSocket = window.destroySportsSocket || function(reason) {
 
 		}
 
-		console.log(results);
-
 		// pick best (maximum guaranteed profit)
 		results.sort((a, b) => b.guaranteed - a.guaranteed);
 		if (results[0]) {
@@ -5263,18 +5341,16 @@ window.destroySportsSocket = window.destroySportsSocket || function(reason) {
 
 
 
-	jQuery(document).on("click", ".cashoutClick", function () {
+	jQuery(document).on("click", ".cashoutClick", function() {
 		/* console.log("in"); */
 		//const profits = [-100, 50]; 
 
 		var market_typeee = $(this).attr('markettype');
-		console.log("sdsafc=", market_typeee);
-		console.log("display_cashProfit=", JSON.stringify(display_cashProfit[market_typeee]));
 
 		const results = [];
 
 		const ids = Object.keys(display_cashProfit[market_typeee]);
-		console.log("ids=", ids);
+
 		// assuming 2 selections (like A vs B)
 		if (ids.length === 2) {
 			const idA = ids[0];
@@ -5298,9 +5374,15 @@ window.destroySportsSocket = window.destroySportsSocket || function(reason) {
 
 			const result = getCashoutBet(
 				A.exposure,
-				B.exposure,
-				{ back: A.back_1, lay: A.lay_1, selectionId: idA },
-				{ back: B.back_1, lay: B.lay_1, selectionId: idB }, market_typeee
+				B.exposure, {
+					back: A.back_1,
+					lay: A.lay_1,
+					selectionId: idA
+				}, {
+					back: B.back_1,
+					lay: B.lay_1,
+					selectionId: idB
+				}, market_typeee
 			);
 
 
@@ -5419,7 +5501,7 @@ window.destroySportsSocket = window.destroySportsSocket || function(reason) {
 		console.log(results);
 	});
 
-	jQuery(document).on("input", "#inputStake", function () {
+	jQuery(document).on("input", "#inputStake", function() {
 		var stake = $("#inputStake").val();
 		eventId = $("#fullMarketBetsWrap").attr("eventid");
 		$("#inputStake").val(stake);
@@ -5437,7 +5519,7 @@ window.destroySportsSocket = window.destroySportsSocket || function(reason) {
 				for (var market_id in display_cashProfit[bet_markettype]) {
 
 					var index = display_cashProfit[bet_markettype][market_id];
-					console.log("",);
+
 
 					/* $(".last_data_" + bet_markettype).text(index.exposure); */
 					$("#last_data_" + market_id + "_" + bet_markettype).text(index.exposure);
@@ -5499,7 +5581,7 @@ window.destroySportsSocket = window.destroySportsSocket || function(reason) {
 					bet_stake_side: bet_stake_side,
 					market_ids: selectorIdArray
 				},
-				success: function (response) {
+				success: function(response) {
 					var status = response.status;
 					if (status == 'ok') {
 
@@ -5535,7 +5617,7 @@ window.destroySportsSocket = window.destroySportsSocket || function(reason) {
 		}
 	});
 
-	jQuery(document).on("click", ".label_stake", function () {
+	jQuery(document).on("click", ".label_stake", function() {
 		/* stake = $(this).attr("stake"); */
 		eventId = $("#fullMarketBetsWrap").attr("eventid");
 
@@ -5620,7 +5702,7 @@ window.destroySportsSocket = window.destroySportsSocket || function(reason) {
 					bet_stake_side: bet_stake_side,
 					market_ids: selectorIdArray
 				},
-				success: function (response) {
+				success: function(response) {
 					var status = response.status;
 					if (status == 'ok') {
 
@@ -5656,7 +5738,7 @@ window.destroySportsSocket = window.destroySportsSocket || function(reason) {
 		}
 	});
 
-	jQuery(document).on("click", "#placeBet", function () {
+	jQuery(document).on("click", "#placeBet", function() {
 
 		$("#placeBet").html('<i class="fa fa-spinner  fa-spin"></i> Submit');
 		$("#placeBet").addClass('disabled');
@@ -5748,7 +5830,7 @@ window.destroySportsSocket = window.destroySportsSocket || function(reason) {
 				bet_type: bet_type,
 				other_fancy: other_fancy,
 			},
-			success: function (response) {
+			success: function(response) {
 				var check_status = response['status'];
 				var message = response['message'];
 				if (check_status == 'ok') {
@@ -5807,7 +5889,7 @@ window.destroySportsSocket = window.destroySportsSocket || function(reason) {
 				event_id: event_id,
 				market_id: market_id
 			},
-			success: function (response) {
+			success: function(response) {
 				//$(".loader").hide();
 				$("#fancy_bet_book_run").html(response);
 				$("#view_fancy_bet_book").modal('show');
@@ -5816,13 +5898,13 @@ window.destroySportsSocket = window.destroySportsSocket || function(reason) {
 	}
 
 	function infoBlock() {
-		$(".info-block").click(function () {
+		$(".info-block").click(function() {
 
 
 			$($(this).children('div')[0]).toggle();
 		});
 	}
-	setTimeout(function () {
+	setTimeout(function() {
 		infoBlock();
 
 	}, 2000);
@@ -5918,7 +6000,6 @@ window.destroySportsSocket = window.destroySportsSocket || function(reason) {
 								$button_array[] = 100000;
 								$button_array[] = 200000;
 								$button_array[] = 500000;
-								
 							} else {
 								$fetch_button_value_data = mysqli_fetch_assoc($get_button_value);
 								$fetch_button_value = $fetch_button_value_data['button_value'];
@@ -5929,14 +6010,14 @@ window.destroySportsSocket = window.destroySportsSocket || function(reason) {
 							}
 							foreach ($button_array as $button_value) {
 								$labelprint = $button_value / 1000;
-								?>
+							?>
 								<div class="col-4" style="flex: 0 0 24%;">
 									<button type="button" class="btn btn-secondary btn-block mb-2 label_stake"
 										stake='<?php echo $button_value; ?>'>
 										+<?php echo $labelprint; ?>k
 									</button>
 								</div>
-								<?php
+							<?php
 							}
 							?>
 						</div>
@@ -6007,9 +6088,9 @@ include "event_full_market_rules_popup.php";
 
 </html>
 <script>
-	$(document).ready(function () {
+	$(document).ready(function() {
 
-		jQuery(document).on("click", ".minuss", function () {
+		jQuery(document).on("click", ".minuss", function() {
 			var bet_markettype = $("#bet_markettype").val();
 
 			/*if(bet_markettype == "MATCH_ODDS"){
@@ -6034,7 +6115,7 @@ include "event_full_market_rules_popup.php";
 
 		});
 
-		jQuery(document).on("click", ".pluss", function () {
+		jQuery(document).on("click", ".pluss", function() {
 			var bet_markettype = $("#bet_markettype").val();
 
 			/*if(bet_markettype == "MATCH_ODDS"){
@@ -6057,19 +6138,18 @@ include "event_full_market_rules_popup.php";
 		});
 	});
 
-	jQuery(document).on("click", ".place-bet-clear-btn", function () {
+	jQuery(document).on("click", ".place-bet-clear-btn", function() {
 		$("#inputStake").val('').trigger("input");
 		$('.clear_exposure').val('0');
 		$('#profitLiability').text('0');
 	});
 
-	jQuery(document).on("click", ".close-bet-slip", function () {
+	jQuery(document).on("click", ".close-bet-slip", function() {
 		$('.bet-slip-data').remove();
 		$(".back-1").removeClass("select");
 		$(".lay-1").removeClass("select");
 		$("#inputStake").val('').trigger("input");
 		getlive_match_point();
 	});
-
 </script>
 <script type="text/javascript" src='footer-js.js'></script>
